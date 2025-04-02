@@ -47,7 +47,7 @@ export const hero = {
         "hero-image rounded-2xl mb-2 max-md:mt-28 2xl:w-11/12 xl:w-11/12 max-lg:w-10/12 max-md:w-full max-lg:mx-auto",
     title: "Where Health Challenges Finally Meet Understanding",
     description:
-        "Find expert practitioners who truly listen, look beyond standard bloodwork, and understand conditions like chronic fatigue, autoimmunity, and digestive issues.  Your health is finally back in your hands.",
+        "We connect you with certified experts near you who truly listen, look beyond standard bloodwork, and understand chronic conditions like chronic fatigue, autoimmunity, and digestive issues.",
     buttons: {
         id: "1",
         label: "See How It Works",

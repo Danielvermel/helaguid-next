@@ -36,8 +36,8 @@ export default function Partners() {
     return (
         <>
             <Meta
-                title="Join HealGuid: Grow Your Holistic Healthcare Practice"
-                description="Spend less time on admin and more time on healing. HealGuid connects you with verified patients, cuts admin by 60%, and helps you effortlessly grow your holistic practice."
+                title=" Grow Your Holistic Practice & Cut Admin Time | HealGuid"
+                description="Spend less time on admin and more time healing. HealGuid connects you with verified patients and helps grow your holistic practice — effortlessly."
                 path="partners"
             />
 

@@ -49,7 +49,7 @@ export const hero = {
         "hero-image rounded-2xl mb-2 max-md:mt-28 2xl:w-11/12 max-lg:w-10/12 max-md:w-full max-lg:mx-auto scale-x-[-1]",
     title: "Heal Your Patients, Guide Your Practice",
     description:
-        "Join our community of holistic professionals. We’re building a better way to connect with patients, simplify your practice, and focus on what matters most—healing.",
+        "Join our community of holistic professionals and grow your holistic practice. We’re building a better way for you to connect with more patients, simplify your practice, significantly cut admin time, and focus on what matters most—healing",
 
     buttons: {
         id: "1",

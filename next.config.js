@@ -1,14 +1,13 @@
-// next.config.mjs
+// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
-    output: "export", // Enable static site generation
+    output: "export",
     images: {
-        unoptimized: true, // Required for static export
+        unoptimized: true,
     },
-    // For backwards compatibility (optional)
-    trailingSlash: false, // Make sure this is set to false
-    // Ensure URLs without extensions work correctly
+    trailingSlash: false,
+    // Make sure all pages are generated correctly
     exportPathMap: async function () {
         return {
             "/": { page: "/" },
