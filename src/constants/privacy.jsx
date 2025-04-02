@@ -34,6 +34,14 @@ export const privacy = {
                 "When you subscribe to our newsletter, we securely save your information. This allows us to keep you updated with the latest news and send periodic newsletters. Your information is used solely for these purposes and will not be shared with third parties.",
         },
         {
+            id: "newsletter",
+            img: "/images/privacy/newsletter.svg",
+            alt: "email",
+            title: "Protecting Your Health Data",
+            description:
+                "Your health information is sensitive and deserves special protection. At HealGuid, we ensure: Strong encryption for all data in transit and at rest, Strict access controls to limit who can view your information, Regular security audits and vulnerability assessments, Staff training on the latest privacy and security practices, Full compliance with healthcare privacy regulations wherever we operate.",
+        },
+        {
             id: "preference",
             img: "/images/privacy/preference.svg",
             alt: "cog",
