@@ -258,7 +258,7 @@ const Hero = ({ data, func }) => {
                                 userClassName="lg:basis-3/12 max-lg:mx-auto max-lg:basis-12/12"
                             />
                             <div className="flex flex-wrap max-xl:mt-10 xl:mt-6 justify-center">
-                                <span className="basis-auto text-lg tracking-2 my-auto">
+                                <span className="basis-auto text-lg max-lg:justify-center max-lg:mb-4 tracking-2 my-auto">
                                     Want to learn morse first?
                                 </span>
                                 <div className="basis-6/12 flex items-center justify-center flex-col">
@@ -290,7 +290,7 @@ const Hero = ({ data, func }) => {
                     userClassName="basis-12/12 mx-auto"
                 />
                 <div className="flex flex-wrap mt-10 justify-center max-sm:hidden md:block">
-                    <span className="basis-6/12 text-lg max-md:text-base tracking-2 my-auto">
+                    <span className="basis-6/12 text-lg justify-center mb-2 max-md:text-base tracking-2 my-auto">
                         Want to learn more first?
                     </span>
                     <div className="basis-6/12 max-md:basis-full max-md:mt-2 flex items-center justify-center flex-col">

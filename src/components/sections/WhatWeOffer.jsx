@@ -180,64 +180,63 @@ const WhatWeOffer = ({ data, func }) => {
                                                         )}
                                                     </div>
                                                 </div>
-                                                {isSetOpenBenefit(title) && (
-                                                    <div
-                                                        className={clsx(
-                                                            "col-span-2 pt-4 pb-4 pl-3 pr-2 rounded-xl h-full",
-                                                            bgColor,
-                                                            containerClass
-                                                        )}
-                                                    >
-                                                        {data.type.includes("client") && (
-                                                            <p className="text-p1 sm:text-normal max-sm:text-sm">
-                                                                {description}
-                                                            </p>
-                                                        )}
-                                                        <ul className="list-disc max-lg:pl-8 max-sm:pl-4 lg:pl-4 mt-2 sm:text-normal max-sm:text-sm">
-                                                            {!!benefits ? (
-                                                                benefits.map(
-                                                                    ({ id: beneId, boldText, description }) => (
-                                                                        <li
-                                                                            key={beneId}
-                                                                            className="mt-2 text-base tracking-2"
-                                                                        >
-                                                                            {boldText && (
-                                                                                <span className="font-semibold">
-                                                                                    {boldText}{" "}
-                                                                                </span>
-                                                                            )}
-                                                                            {description}
-                                                                        </li>
-                                                                    )
-                                                                )
-                                                            ) : (
-                                                                <div>
-                                                                    <div className="lg:min-h-32 text-base">
-                                                                        {categories.description}
-                                                                    </div>
-                                                                    <div className="mt-4">
-                                                                        {categories.offers.map(
-                                                                            ({ id: categoriesId, title, points }) => (
-                                                                                <div key={categoriesId}>
-                                                                                    <span className="font-semibold text-lg">
-                                                                                        {title}
-                                                                                    </span>
-                                                                                    <ul className="list-disc pl-5 mb-4 text-base">
-                                                                                        {points.map(({ id, text }) => (
-                                                                                            <li key={id + "_" + text}>
-                                                                                                {text}
-                                                                                            </li>
-                                                                                        ))}
-                                                                                    </ul>
-                                                                                </div>
-                                                                            )
-                                                                        )}
-                                                                    </div>
+                                                <div
+                                                    className={clsx(
+                                                        "col-span-2 pt-4 pb-4 pl-3 pr-2 rounded-xl",
+                                                        bgColor,
+                                                        containerClass,
+                                                        {
+                                                            "h-auto max-h-[1000px] block transition-all duration-300":
+                                                                isSetOpenBenefit(title),
+                                                            "h-0 max-h-0 hidden overflow-hidden transition-all duration-0":
+                                                                !isSetOpenBenefit(title),
+                                                        }
+                                                    )}
+                                                >
+                                                    {data.type.includes("client") && (
+                                                        <p className="text-p1 sm:text-normal max-sm:text-sm">
+                                                            {description}
+                                                        </p>
+                                                    )}
+                                                    <ul className="list-disc max-lg:pl-8 max-sm:pl-4 lg:pl-4 mt-2 sm:text-normal max-sm:text-sm">
+                                                        {!!benefits ? (
+                                                            benefits.map(({ id: beneId, boldText, description }) => (
+                                                                <li key={beneId} className="mt-2 text-base tracking-2">
+                                                                    {boldText && (
+                                                                        <span className="font-semibold">
+                                                                            {boldText}{" "}
+                                                                        </span>
+                                                                    )}
+                                                                    {description}
+                                                                </li>
+                                                            ))
+                                                        ) : (
+                                                            <div>
+                                                                <div className="lg:min-h-32 text-base">
+                                                                    {categories.description}
                                                                 </div>
-                                                            )}
-                                                        </ul>
-                                                    </div>
-                                                )}
+                                                                <div className="mt-4">
+                                                                    {categories.offers.map(
+                                                                        ({ id: categoriesId, title, points }) => (
+                                                                            <div key={categoriesId}>
+                                                                                <span className="font-semibold text-lg">
+                                                                                    {title}
+                                                                                </span>
+                                                                                <ul className="list-disc pl-5 mb-4 text-base">
+                                                                                    {points.map(({ id, text }) => (
+                                                                                        <li key={id + "_" + text}>
+                                                                                            {text}
+                                                                                        </li>
+                                                                                    ))}
+                                                                                </ul>
+                                                                            </div>
+                                                                        )
+                                                                    )}
+                                                                </div>
+                                                            </div>
+                                                        )}
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     )

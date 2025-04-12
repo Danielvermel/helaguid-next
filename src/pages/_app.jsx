@@ -56,7 +56,6 @@ function MyApp({ Component, pageProps }) {
 
     return (
         <>
-            {/* Google Tag Manager (noscript) */}
             <noscript>
                 <iframe
                     src="https://www.googletagmanager.com/ns.html?id=GTM-K476PRB8"

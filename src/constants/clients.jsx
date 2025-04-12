@@ -47,7 +47,7 @@ export const hero = {
         "hero-image rounded-2xl mb-2 max-md:mt-28 2xl:w-11/12 xl:w-11/12 max-lg:w-10/12 max-md:w-full max-lg:mx-auto",
     title: "Where Health Challenges Finally Meet Understanding",
     description:
-        "We connect you with certified experts near you who truly listen, look beyond standard bloodwork, and understand chronic conditions like chronic fatigue, autoimmunity, and digestive issues. Your health is finally back in your hands.",
+        "We connect you with certified experts near you who truly listen, look beyond standard bloodwork, and understand chronic conditions like chronic fatigue, autoimmunity, and digestive issues. Your health is finally back in your hands. Your health is finally back in your hands.",
     buttons: {
         id: "1",
         label: "See How It Works",
@@ -294,7 +294,7 @@ export const howItWorks = {
     pageTitleColor: "text-p1",
     subTitle: "Your Health in Your Hands, Our Mission.",
     mainDescription:
-        "HealGuid connects you with trusted holistic experts who focus on treating your whole self, offering personalized, science-backed care that fits your lifestyle.",
+        "HealGuid connects you with trusted holistic experts who treat the whole person — offering personalised, science-backed care that fits your lifestyle. This is where health challenges finally meet understanding.",
     buttonAction: "client",
     buttonTitle: "Find My Health Partner",
     buttonArialLabel:

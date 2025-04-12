@@ -162,7 +162,7 @@ export default function FAQ() {
         <>
             <Meta
                 title="Holistic Healthcare FAQ | Natural Health & Wellness"
-                description="What conditions does holistic medicine treat? How do you choose a practitioner? Find expert answers on treatments, functional medicine, and booking your first session."
+                description="Discover how holistic medicine works, what conditions it treats, and how to find the right functional practitioner for your health journey."
                 keywords="holistic healthcare faq, natural health, wellness, chronic conditions, holistic practitioners"
                 path="faq"
                 canonicalUrl="https://healguid.com/faq"
@@ -181,7 +181,7 @@ export default function FAQ() {
                         "@type": "WebPage",
                         name: "Holistic Healthcare FAQ | Natural Health & Wellness",
                         description:
-                            "What conditions does holistic medicine treat? How do you choose a practitioner? Find expert answers on treatments, functional medicine, and booking your first session.",
+                            "Discover how holistic medicine works, what conditions it treats, and how to find the right functional practitioner for your health journey.",
                         keywords:
                             "holistic healthcare, natural health, wellness, chronic conditions, holistic practitioners",
                     },
@@ -280,7 +280,7 @@ export default function FAQ() {
                                     <div
                                         className={clsx(
                                             "mt-6 basis-full tracking-2",
-                                            !isQuestionOpen(title) && "hidden"
+                                            !isQuestionOpen(title) && "opacity-0 h-0 overflow-hidden"
                                         )}
                                     >
                                         {questions.map(({ id: qId, question, answer, button }) => (
@@ -302,89 +302,97 @@ export default function FAQ() {
                                                     />
                                                 </div>
 
-                                                {isQuestionOpen(question) && (
-                                                    <div className="mt-4 mb-2 w-full">
-                                                        <div className="prose prose-lg max-w-none mb-6">
-                                                            {answer.split("\n\n").map((paragraph, index) => (
-                                                                <p
-                                                                    key={index}
-                                                                    className="text-lg mb-4 max-md:text-base"
-                                                                >
-                                                                    {paragraph.startsWith("- ") ? (
-                                                                        <ul className="list-disc list-inside space-y-2 ml-4">
-                                                                            {paragraph.split("\n- ").map((item, i) => (
-                                                                                <li key={i}>
-                                                                                    {item.replace("- ", "")}
-                                                                                </li>
-                                                                            ))}
-                                                                        </ul>
-                                                                    ) : (
-                                                                        paragraph
-                                                                    )}
-                                                                </p>
-                                                            ))}
-                                                        </div>
-                                                        {button?.hasButton &&
-                                                            (button?.hasNewsletter ? (
+                                                <div
+                                                    className={clsx(
+                                                        "mt-4 mb-2 w-full",
+                                                        !isQuestionOpen(question) && "opacity-0 h-0 overflow-hidden"
+                                                    )}
+                                                >
+                                                    <div className="prose prose-lg max-w-none mb-6">
+                                                        {answer.split("\n\n").map((paragraph, index) => {
+                                                            if (paragraph.startsWith("- ")) {
+                                                                return (
+                                                                    <ul
+                                                                        key={index}
+                                                                        className="list-disc list-inside space-y-2 ml-4 text-lg mb-4 max-md:text-base"
+                                                                    >
+                                                                        {paragraph.split("\n- ").map((item, i) => (
+                                                                            <li key={i}>{item.replace("- ", "")}</li>
+                                                                        ))}
+                                                                    </ul>
+                                                                );
+                                                            } else {
+                                                                return (
+                                                                    <p
+                                                                        key={index}
+                                                                        className="text-lg mb-4 max-md:text-base"
+                                                                    >
+                                                                        {paragraph}
+                                                                    </p>
+                                                                );
+                                                            }
+                                                        })}
+                                                    </div>
+                                                    {button?.hasButton &&
+                                                        (button?.hasNewsletter ? (
+                                                            <Button
+                                                                arialLabelText={button.alt}
+                                                                containerClassName={button.containerClass}
+                                                                textClassName={button.textClass}
+                                                                onClick={() => {
+                                                                    setNewsletterType(button.newsletterType);
+                                                                    handleOpenModal();
+                                                                }}
+                                                            >
+                                                                {button.label}
+                                                            </Button>
+                                                        ) : (
+                                                            <a href={button.href}>
                                                                 <Button
                                                                     arialLabelText={button.alt}
                                                                     containerClassName={button.containerClass}
                                                                     textClassName={button.textClass}
-                                                                    onClick={() => {
-                                                                        setNewsletterType(button.newsletterType);
-                                                                        handleOpenModal();
-                                                                    }}
                                                                 >
                                                                     {button.label}
                                                                 </Button>
-                                                            ) : (
-                                                                <a href={button.href}>
-                                                                    <Button
-                                                                        arialLabelText={button.alt}
-                                                                        containerClassName={button.containerClass}
-                                                                        textClassName={button.textClass}
-                                                                    >
-                                                                        {button.label}
-                                                                    </Button>
-                                                                </a>
-                                                            ))}
+                                                            </a>
+                                                        ))}
 
-                                                        {/* Feedback mechanism */}
-                                                        <div className="mt-6 flex items-center justify-end space-x-4 text-sm text-gray-500">
-                                                            <span>Was this answer helpful?</span>
-                                                            <button
-                                                                onClick={(e) => {
-                                                                    e.stopPropagation();
-                                                                    handleFeedback(qId, true);
-                                                                }}
-                                                                className={clsx(
-                                                                    "px-3 py-1 rounded-full",
-                                                                    activeFeedback[qId] === true
-                                                                        ? "bg-green-100 text-green-700"
-                                                                        : "bg-gray-100 hover:bg-green-50"
-                                                                )}
-                                                                aria-label="This answer was helpful"
-                                                            >
-                                                                Yes
-                                                            </button>
-                                                            <button
-                                                                onClick={(e) => {
-                                                                    e.stopPropagation();
-                                                                    handleFeedback(qId, false);
-                                                                }}
-                                                                className={clsx(
-                                                                    "px-3 py-1 rounded-full",
-                                                                    activeFeedback[qId] === false
-                                                                        ? "bg-red-100 text-red-700"
-                                                                        : "bg-gray-100 hover:bg-red-50"
-                                                                )}
-                                                                aria-label="This answer was not helpful"
-                                                            >
-                                                                No
-                                                            </button>
-                                                        </div>
+                                                    {/* Feedback mechanism */}
+                                                    <div className="mt-6 flex items-center justify-end space-x-4 text-sm text-gray-500">
+                                                        <span>Was this answer helpful?</span>
+                                                        <button
+                                                            onClick={(e) => {
+                                                                e.stopPropagation();
+                                                                handleFeedback(qId, true);
+                                                            }}
+                                                            className={clsx(
+                                                                "px-3 py-1 rounded-full",
+                                                                activeFeedback[qId] === true
+                                                                    ? "bg-green-100 text-green-700"
+                                                                    : "bg-gray-100 hover:bg-green-50"
+                                                            )}
+                                                            aria-label="This answer was helpful"
+                                                        >
+                                                            Yes
+                                                        </button>
+                                                        <button
+                                                            onClick={(e) => {
+                                                                e.stopPropagation();
+                                                                handleFeedback(qId, false);
+                                                            }}
+                                                            className={clsx(
+                                                                "px-3 py-1 rounded-full",
+                                                                activeFeedback[qId] === false
+                                                                    ? "bg-red-100 text-red-700"
+                                                                    : "bg-gray-100 hover:bg-red-50"
+                                                            )}
+                                                            aria-label="This answer was not helpful"
+                                                        >
+                                                            No
+                                                        </button>
                                                     </div>
-                                                )}
+                                                </div>
                                             </div>
                                         ))}
                                     </div>

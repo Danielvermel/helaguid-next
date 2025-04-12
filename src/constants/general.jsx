@@ -212,7 +212,7 @@ export const aboutUs = {
             title: "Putting Your Health in Your Hands",
             bgColor: "bg-b7",
             description:
-                "No more endless searches. No more uncertainty. HealGuid is the bridge between your health challenges and practitioners who truly see you—fully, deeply, and compassionately. We believe in crafting personalized care journeys that empoweryou to not just survive, but truly thrive.",
+                "No more endless searches. No more uncertainty and misunderstandings. At HealGuid, we’re here for the moments when health challenges feel overwhelming — this is where they finally meet understanding through holistic guidance and trusted care. We believe in providing understanding to health challenges as the basis, in crafting personalized care journeys that empower you to not just survive, but truly thrive.",
             joinButton: {
                 text: "Visit Our Client Page",
                 containerClass: "bg-s1 xs:w-72 xs:h-10 sm:w-96 sm:h-12",
@@ -224,16 +224,16 @@ export const aboutUs = {
         {
             id: "3",
             video: "/videos/about-us/practitioners-v2.webm",
-            img: "/images/about-us/practitioners.webp",
+            img: "/images/about-us/practitioners-v2.webp",
             jsonLdProperty: "practitioners",
             title: "For Practitioners: Your calling, simplified",
             bgColor: "bg-b4",
             description:
-                "You didn't train for years to become a social media marketer—you became a healer to transform lives. HealGuid is your comprehensive ally, seamlessly connecting you with patients who deeply value your unique expertise. We handle the complex logistics so you can do what you do best: guide people towards genuine healing.",
+                "You didn't train for years to become a social media marketer—you became a healer to transform lives. HealGuid is your comprehensive ally, seamlessly connecting you with patients who deeply value your unique expertise. We take care of the complex logistics, so you can focus on what matters most — guiding people to meet understanding and move toward true healing.",
 
             joinButton: {
                 text: "Visit HealGuid for Partners",
-                containerClass: "bg-s1 xs:w-72 xs:h-10 sm:w-96 sm:h-12",
+                containerClass: "bg-s1 xs:w-72 xs:h-10 sm:w-96 sm:h-12 mt-4",
                 textClass: "tracking-wide font-semibold xs:text-base sm:text-xl",
                 arial: "Button to find and connect with a trusted health partner.",
                 url: "/partners",
