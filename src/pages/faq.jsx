@@ -127,18 +127,6 @@ export default function FAQ() {
         return processed;
     };
 
-    const faqSchema = faqs.questionGroups.flatMap(({ questions }) =>
-        questions.map(({ question, answer }) => ({
-            "@type": "Question",
-            name: question,
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: processAnswerForSchema(answer),
-            },
-        }))
-    );
-
-    // Create a structure for breadcrumbs schema
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -158,34 +146,183 @@ export default function FAQ() {
         ],
     };
 
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": "https://www.healguid.com/faq#faqpage",
+        mainEntity: [
+            {
+                "@type": "Question",
+                name: "What is HealGuid and how does it help with chronic health conditions?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Think of us as your wellness matchmaker! We connect you with trusted holistic health practitioners who specialize in chronic conditions and truly understand your unique health and wellness journey...",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "What types of holistic practitioners can I find on HealGuid?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "We're bringing together amazing practitioners in Functional Medicine, Naturopathic Medicine, Traditional Chinese Medicine, Ayurvedic Practice, Nutrition & Wellness, Integrative Medicine, Mind-Body Specialists, and Herbalists & Botanical Medicine...",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "How does HealGuid verify holistic practitioners?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "We're here to showcase practitioners' expertise and build trust with patients! Our thorough verification process ensures practitioners stand out as trusted holistic care providers...",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "Is my health information safe with HealGuid?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Absolutely! We prioritize security and confidentiality. We are HIPAA-compliant and GDPR-ready to meet the highest data protection standards...",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "How do I get started with HealGuid?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Getting started is simple! Create your free profile, browse our verified practitioners by specialty or condition, schedule a consultation, and begin your personalized health journey.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "What conditions do holistic practitioners treat?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Holistic practitioners on HealGuid address a wide range of health conditions including chronic fatigue syndrome, fibromyalgia, autoimmune disorders, digestive issues like IBS and SIBO, hormonal imbalances, thyroid conditions, and more.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "Can I use HealGuid if I'm already seeing a conventional doctor?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Absolutely! Many users work with both conventional and holistic practitioners to create a comprehensive approach to health.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "Are virtual consultations available through HealGuid?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes, most practitioners on HealGuid offer secure virtual consultations, making holistic healthcare accessible regardless of your location.",
+                },
+            },
+        ],
+    };
+
+    const webPageSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://www.healguid.com/faq#webpage",
+        url: "https://www.healguid.com/faq",
+        name: "Holistic Healthcare FAQ | Natural Health & Wellness",
+        description:
+            "Discover how holistic medicine works, what conditions it treats, and how to find the right functional practitioner for your health journey.",
+        isPartOf: {
+            "@id": "https://www.healguid.com/#website",
+        },
+        about: {
+            "@type": "Thing",
+            name: "Holistic Healthcare",
+            description:
+                "Comprehensive approach to health that treats the whole person and addresses root causes of health conditions.",
+        },
+        keywords: "holistic healthcare faq, natural health, wellness, chronic conditions, holistic practitioners",
+        datePublished: "2025-01-15T08:00:00Z",
+        dateModified: "2025-04-01T10:30:00Z",
+        inLanguage: "en-US",
+    };
+
+    const popularTopicsSchema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "@id": "https://www.healguid.com/faq#popularTopics",
+        name: "Popular Holistic Health Topics",
+        description: "Frequently searched holistic health topics on HealGuid",
+        itemListElement: [
+            {
+                "@type": "ListItem",
+                position: 1,
+                name: "Natural Medicine",
+                url: "https://www.healguid.com/topics/natural-medicine",
+            },
+            {
+                "@type": "ListItem",
+                position: 2,
+                name: "Chronic Fatigue",
+                url: "https://www.healguid.com/topics/chronic-fatigue",
+            },
+            {
+                "@type": "ListItem",
+                position: 3,
+                name: "Autoimmune Support",
+                url: "https://www.healguid.com/topics/autoimmune-support",
+            },
+            {
+                "@type": "ListItem",
+                position: 4,
+                name: "Gut Health",
+                url: "https://www.healguid.com/topics/gut-health",
+            },
+            {
+                "@type": "ListItem",
+                position: 5,
+                name: "Naturopathy",
+                url: "https://www.healguid.com/topics/naturopathy",
+            },
+            {
+                "@type": "ListItem",
+                position: 6,
+                name: "Hormone Balance",
+                url: "https://www.healguid.com/topics/hormone-balance",
+            },
+            {
+                "@type": "ListItem",
+                position: 7,
+                name: "Integrative Health",
+                url: "https://www.healguid.com/topics/integrative-health",
+            },
+            {
+                "@type": "ListItem",
+                position: 8,
+                name: "Natural Wellness",
+                url: "https://www.healguid.com/topics/natural-wellness",
+            },
+        ],
+    };
+
+    // Helper to render any schema
+    const renderSchema = (schema) => (
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+                __html: JSON.stringify(schema),
+            }}
+        />
+    );
     return (
         <>
+            <Head>
+                {renderSchema(breadcrumbSchema)}
+                {renderSchema(faqSchema)}
+                {renderSchema(webPageSchema)}
+                {renderSchema(popularTopicsSchema)}
+            </Head>
+
             <Meta
                 title="Holistic Healthcare FAQ | Natural Health & Wellness"
                 description="Discover how holistic medicine works, what conditions it treats, and how to find the right functional practitioner for your health journey."
                 keywords="holistic healthcare faq, natural health, wellness, chronic conditions, holistic practitioners"
                 path="faq"
                 canonicalUrl="https://healguid.com/faq"
-            />
-
-            <Schema
-                schemas={[
-                    {
-                        "@context": "https://schema.org",
-                        "@type": "FAQPage",
-                        mainEntity: faqSchema,
-                    },
-                    breadcrumbSchema,
-                    {
-                        "@context": "https://schema.org",
-                        "@type": "WebPage",
-                        name: "Holistic Healthcare FAQ | Natural Health & Wellness",
-                        description:
-                            "Discover how holistic medicine works, what conditions it treats, and how to find the right functional practitioner for your health journey.",
-                        keywords:
-                            "holistic healthcare, natural health, wellness, chronic conditions, holistic practitioners",
-                    },
-                ]}
             />
 
             <section className="py-16 max-md:pt-20 max-lg:pt-28 lg:pt-44 bg-b3 lg:min-h-lvh">
@@ -484,4 +621,11 @@ export default function FAQ() {
             </section>
         </>
     );
+}
+
+// For SSG, ensure the page is pre-rendered
+export async function getStaticProps() {
+    return {
+        props: {},
+    };
 }

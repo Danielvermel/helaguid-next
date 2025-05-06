@@ -41,14 +41,14 @@ const AboutUs = ({ data }) => {
                     </div>
 
                     <div className="lg:ml-auto flex mb-3 lg:-mt-8 container">
-                        <span className="lg:font-semibold max-lg:font-medium text-xl max-lg:mt-2 lg:ml-auto max-lg:mx-auto max-md:text-center">
+                        <h3 className="lg:font-semibold max-lg:font-medium text-xl max-lg:mt-2 lg:ml-auto max-lg:mx-auto max-md:text-center">
                             {aboutUs.subTitle}
-                        </span>
+                        </h3>
                     </div>
 
-                    <h2 className="text-center text-p1 lg:text-3xl max-lg:text-2xl lg:mt-24 max-lg:mt-6 max-sm:mt-20 lg:mb-10 max-lg:mb-4 font-semibold">
+                    <h3 className="text-center text-p1 lg:text-3xl max-lg:text-2xl lg:mt-24 max-lg:mt-6 max-sm:mt-20 lg:mb-10 max-lg:mb-4 font-semibold">
                         {aboutUs.mainMessage}
-                    </h2>
+                    </h3>
                     <p className="text-center text-xl max-md:text-lg lg:leading-10 max-lg:mt-8 lg:mx-32 max-lg:mx-20 max-md:mx-12 max-sm:mx-6">
                         {aboutUs.description}
                     </p>
@@ -160,16 +160,16 @@ const AboutUs = ({ data }) => {
                     {/* end Info */}
                     <div className="w-full bg-b6">
                         <div className="container pt-16 text-center">
-                            <h2 className="text-p1 lg:text-3xl max-lg:text-2xl lg:mb-10 max-lg:mb-4 font-semibold">
+                            <h3 className="text-p1 lg:text-3xl max-lg:text-2xl lg:mb-10 max-lg:mb-4 font-semibold">
                                 {aboutUs.endInfo.title}
-                            </h2>
-                            <h4 className="text-p1 text-xl mb-4 font-medium italic">{aboutUs.endInfo.subTitle}</h4>
+                            </h3>
+                            <p className="text-p1 text-xl mb-4 font-medium italic">{aboutUs.endInfo.subTitle}</p>
                             <p className="lg:text-xl lg:leading-10 mb-4 lg:mx-48 md:mx-24 max-md:mx-4 whitespace-pre-line italic">
                                 {aboutUs.endInfo.description}
                             </p>
-                            <h3 className="text-p1 lg:text-3xl max-lg:text-2xl mb-6 font-semibold mt-6">
+                            <h4 className="text-p1 lg:text-3xl max-lg:text-2xl mb-6 font-semibold mt-6">
                                 {aboutUs.endInfo.text}
-                            </h3>
+                            </h4>
                         </div>
                         <div className="flex flex-wrap justify-between container-no-padding -mt-24 max-lg:hidden">
                             {videoErrors[aboutUs.endInfo.altStart] || data.isSafari ? (

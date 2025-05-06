@@ -68,17 +68,14 @@ const Footer = ({ data }) => {
                 const Swal = (await import("sweetalert2")).default;
 
                 // Store form data in Firestore
-                await addDoc(collection(db, dbCollection), {
+                const response = await addDoc(collection(db, dbCollection), {
                     email: formData.email,
                     extra: formData.extra,
                 });
 
-                // Facebook tracking - Check if fbq exists first
-                if (typeof fbq === "function") {
-                    fbq("track", "CompleteRegistration", {
-                        value: 0.0,
-                        currency: "GBP",
-                    });
+                if (response.id) {
+                    // Redirect after successful submission
+                    window.location.href = "/thank-you";
                 }
 
                 Swal.fire({
@@ -121,6 +118,7 @@ const Footer = ({ data }) => {
                     <img
                         src={footer?.newsletter?.logo}
                         alt={footer?.newsletter?.alt}
+                        title={footer?.newsletter?.title}
                         loading="lazy"
                         className="mb-3 max-md:h-10 max-md:mb-6 max-sm:hidden"
                     />
@@ -164,7 +162,7 @@ const Footer = ({ data }) => {
                             <div className="md:px-10 max-md:px-4" key={id + "_" + mainTitle}>
                                 <strong className="text-p1 font-semibold mb-4">{mainTitle}</strong>
                                 <ul>
-                                    {list.map(({ id, title, url, alt }) => (
+                                    {list.map(({ id, title, url, alt, titleAttribute }) => (
                                         <li
                                             key={id + title}
                                             className="cursor-pointer hover:text-s1 md:my-2 md:text-base"
@@ -172,6 +170,7 @@ const Footer = ({ data }) => {
                                             <a
                                                 href={url}
                                                 aria-label={alt || title}
+                                                title={titleAttribute}
                                                 target={
                                                     url.startsWith("http") || url.startsWith("mailto:")
                                                         ? "_blank"

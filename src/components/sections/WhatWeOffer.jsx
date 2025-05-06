@@ -94,9 +94,9 @@ const WhatWeOffer = ({ data, func }) => {
                     </PageTitle>
                     <div className="lg:w-1/2 max-lg:w-full lg:text-xl max-lg:text-base flex flex-row lg:justify-end mt-2">
                         <div className="lg:text-right max-lg:text-left">
-                            <span className="font-semibold tracking-2 md:text-xl max-lg:text-lg">
+                            <h3 className="font-semibold tracking-2 md:text-xl max-lg:text-lg">
                                 {data.offers.subTitle}
-                            </span>
+                            </h3>
                             <span className="block max-md:text-base md:text-lg tracking-2">
                                 {data.offers.description}
                             </span>
@@ -126,6 +126,7 @@ const WhatWeOffer = ({ data, func }) => {
                                         id: cardId,
                                         image,
                                         alt,
+                                        altTitle,
                                         bgColor,
                                         bgTitleColor,
                                         title,
@@ -158,20 +159,22 @@ const WhatWeOffer = ({ data, func }) => {
                                                             <img
                                                                 src={image}
                                                                 alt={alt}
+                                                                title={altTitle}
                                                                 loading="lazy"
                                                                 className="h-8 mx-auto"
                                                             />
                                                         </div>
                                                     )}
 
-                                                    <span className="flex-1 sm:font-semibold max-sm:font-semibold sm:text-lg max-sm:text-lg text-center m-auto">
+                                                    <h4 className="flex-1 sm:font-semibold max-sm:font-semibold sm:text-lg max-sm:text-lg text-center m-auto">
                                                         {title}
-                                                    </span>
+                                                    </h4>
                                                     <div className="flex items-center w-1/12">
                                                         {!!index && (
                                                             <img
                                                                 src={"/images/offers/pointer.png"}
                                                                 alt="chevron"
+                                                                title="Click to expand or collapse the section"
                                                                 loading="lazy"
                                                                 className={clsx("h-3 mx-auto mt-auto", {
                                                                     "rotate-90": isSetOpenBenefit(title),
@@ -212,9 +215,9 @@ const WhatWeOffer = ({ data, func }) => {
                                                             ))
                                                         ) : (
                                                             <div>
-                                                                <div className="lg:min-h-32 text-base">
+                                                                <b className="lg:min-h-32 text-base font-normal">
                                                                     {categories.description}
-                                                                </div>
+                                                                </b>
                                                                 <div className="mt-4">
                                                                     {categories.offers.map(
                                                                         ({ id: categoriesId, title, points }) => (

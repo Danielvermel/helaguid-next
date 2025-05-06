@@ -10,7 +10,8 @@ module.exports = {
             },
             colors: {
                 //  Primary Colors
-                p1: "#1A7C7F",
+                // p1: "#1A7C7F",
+                p1: "#006D77",
                 p2: "#006d77",
                 p3: "#2d2d34",
 

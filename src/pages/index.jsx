@@ -37,11 +37,11 @@ export default function Home() {
     return (
         <>
             <Meta
-                title="Find Certified Experts for Chronic Illness Near You | HealGuid"
-                description="Struggling with chronic fatigue, fibromyalgia, or long COVID? HealGuid connects you with trusted holistic specialists online or near you. Start healing today!"
+                title=" Find Certified Experts for Chronic Illness Near You | HealGuid"
+                description="Struggling with chronic fatigue, fibromyalgia, or long COVID? HealGuid connects you with trusted holistic specialists online or near you. Start healing today"
             />
 
-            <Schema
+            {/* <Schema
                 schemas={[
                     {
                         "@context": "https://schema.org",
@@ -109,7 +109,7 @@ export default function Home() {
                         },
                     },
                 ]}
-            />
+            /> */}
 
             <main className="overflow-hidden">
                 {isModalOpen && (
@@ -130,3 +130,10 @@ export default function Home() {
         </>
     );
 }
+
+// // For SSG, ensure the page is pre-rendered
+// export async function getStaticProps() {
+//     return {
+//         props: {},
+//     };
+// }

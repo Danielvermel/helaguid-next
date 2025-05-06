@@ -18,6 +18,32 @@ export default function Meta({ title, description, path = "", ogImage = "/images
             <meta property="og:image" content={ogImage} />
             <meta property="og:type" content="website" />
 
+            {/* OpenGraph Tags */}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:site" content="@HealGuid" />
+            <meta name="twitter:title" content="Holistic Healthcare FAQ | Natural Health & Wellness" />
+            <meta
+                name="twitter:description"
+                content="Discover how holistic medicine works, what conditions it treats, and how to find the right functional practitioner for your health journey."
+            />
+            <meta name="twitter:image" content="https://www.healguid.com/images/social/healguid-twitter-card.jpg" />
+            <meta
+                name="twitter:image:alt"
+                content="HealGuid - Connecting patients with verified holistic practitioners"
+            />
+
+            {/* Robots */}
+            <meta
+                name="robots"
+                content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+            />
+
+            {/* Keywords */}
+            <meta
+                name="keywords"
+                content="holistic healthcare, functional medicine, naturopathic doctors, chronic illness specialists, chronic fatigue treatment, fibromyalgia specialists, autoimmune support, gut health experts, verified practitioners, telehealth consultations, integrative medicine, long COVID recovery, digestive health, hormone balancing, holistic verification, root cause medicine, evidence-based natural medicine, patient-centered care"
+            />
+
             {/* Standard Favicons - consistent across all pages */}
             <link rel="icon" href="/favicon.ico" type="image/x-icon" />
             <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />

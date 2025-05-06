@@ -9,7 +9,12 @@ const Review = ({ item, containerClassName, commentClassName, userClassName }) =
                 {item?.profile.image && (
                     <div>
                         <div className="mx-auto size-14 shrink-0 rounded-half">
-                            <img src={item.profile.image} alt={item.profile.title} className="size-full object-cover" />
+                            <img
+                                src={item.profile.image}
+                                alt={item.profile.title}
+                                title={item.profile.altTitle}
+                                className="size-full object-cover"
+                            />
                         </div>
                         <div className="text-xs text-center font-semibold tracking-2">{item.profile.title}</div>
                         <div className="text-xs text-center tracking-2">{item.profile.work}</div>

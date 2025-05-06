@@ -88,6 +88,7 @@ const WhyUs = ({ data, func }) => {
                                     src="/images/why-us/doctor-conventional.webp"
                                     loading="lazy"
                                     alt="image of a doctor holding a herbal cup and a stethoscope, symbolizing integrative medicine"
+                                    title="integrative medicine"
                                     className="rounded-xl mt-6 max-w-full h-auto max-h-32 max-lg:mx-auto"
                                 />
                             </div>
@@ -140,7 +141,7 @@ const WhyUs = ({ data, func }) => {
                         <div className="max-w-lg mx-auto space-y-12 sm:hidden">
                             {data.comparisonTable.map(({ id, feature, companyInfo, conventionMedicineInfo }) => (
                                 <div key={id}>
-                                    <h3 className="text-xl font-semibold text-teal-700 mb-3">{feature}</h3>
+                                    <span className="text-xl font-semibold text-teal-700 mb-3">{feature}</span>
                                     <div className="space-y-3 ">
                                         {/* HealGuid's Vision */}
                                         <div className="border bg-e1  rounded-lg p-5 flex flex-wrap shadow-sm">

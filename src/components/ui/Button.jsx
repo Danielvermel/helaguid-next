@@ -5,6 +5,7 @@ const Button = ({
     children,
     href,
     containerClassName,
+    textContainerClassName,
     textClassName,
     onClick,
     arialLabelText,
@@ -13,7 +14,13 @@ const Button = ({
 }) => {
     const Inner = () => (
         <>
-            <span className={clsx("relative flex justify-center items-center min-h-[42px] px-4", textClassName)}>
+            <span
+                className={clsx(
+                    "relative flex justify-center items-center min-h-[42px] px-4",
+                    textClassName,
+                    textContainerClassName
+                )}
+            >
                 <span className={clsx("relative z-2", textClassName)}>{children}</span>
             </span>
         </>

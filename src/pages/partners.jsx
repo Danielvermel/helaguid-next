@@ -36,12 +36,12 @@ export default function Partners() {
     return (
         <>
             <Meta
-                title=" Grow Your Holistic Practice & Cut Admin Time | HealGuid"
+                title="Grow Your Holistic Practice & Cut Admin Time | HealGuid"
                 description="Spend less time on admin and more time healing. HealGuid connects you with verified patients and helps grow your holistic practice — effortlessly."
                 path="partners"
             />
 
-            <Schema
+            {/* <Schema
                 schemas={[
                     {
                         "@context": "https://schema.org",
@@ -140,7 +140,7 @@ export default function Partners() {
                         },
                     },
                 ]}
-            />
+            /> */}
 
             <main className="overflow-hidden">
                 {isModalOpen && (
@@ -162,3 +162,10 @@ export default function Partners() {
         </>
     );
 }
+
+// For SSG, ensure the page is pre-rendered
+// export async function getStaticProps() {
+//     return {
+//         props: {},
+//     };
+// }

@@ -16,7 +16,6 @@ const Newsletter = ({ type, onClose }) => {
 
     const data = type.includes("client") ? clientNewsletter : partnerNewsletter;
     const dbCollection = type.includes("client") ? "clients" : "partners";
-    console.log("dbCollection: ", dbCollection);
 
     const validateEmail = (email) => {
         // Simple email validation regex
@@ -45,7 +44,7 @@ const Newsletter = ({ type, onClose }) => {
 
             try {
                 // Store form data in Firestore
-                await addDoc(collection(db, dbCollection), {
+                const response = await addDoc(collection(db, dbCollection), {
                     name: formData.name,
                     email: formData.email,
                     extra: formData.extra,
@@ -53,55 +52,17 @@ const Newsletter = ({ type, onClose }) => {
 
                 onClose();
 
+                // open thank you page
+                if (response.id) {
+                    // Redirect after successful submission
+                    window.location.href = "/thank-you";
+                }
+
                 // Facebook tracking
-                fbq("track", "CompleteRegistration", {
-                    value: 0.0,
-                    currency: "GBP",
-                });
-
-                Swal.fire({
-                    title: "Thank You for Joining HealGuid! 🌿",
-                    html: `
-                    <p style="text-align: left; font-family: sans-serif; line-height: 1.5;">
-                    ${
-                        type.includes("client")
-                            ? "Your early access signup is confirmed, and we're building something extraordinary—with your health journey in mind."
-                            : "Your early access signup is confirmed, and we're building something extraordinary—with practitioners like you leading the way."
-                    }<br><br>
-
-                    Here's what's next:<br>
-                   
-                    *  ${
-                        type.includes("client")
-                            ? "Be first to connect with verified holistic practitioners"
-                            : "You'll be the first to receive insights into our platform's evolution"
-                    }<br>
-                    *  ${
-                        type.includes("client")
-                            ? "Receive exclusive wellness insights from our expert community"
-                            : "Exclusive updates about our mission to reimagine holistic healthcare"
-                    }<br>
-                    *  ${
-                        type.includes("client")
-                            ? "Help shape a platform that puts your health needs first"
-                            : "Early opportunities to shape our development roadmap"
-                    }<br><br>
-
-${
-    type.includes("client")
-        ? "Your wellness matters to us. Together, we're not just creating a platform—we're making holistic healthcare more accessible for everyone."
-        : "Your expertise is our compass. Together, we're not just creating a platform—we're sparking a healthcare revolution."
-}<br><br>
-
-${
-    type.includes("client")
-        ? "Stay tuned—your path to better health starts here."
-        : "Stay tuned—something remarkable is coming."
-}
-                    </p>
-                `,
-                    icon: "success",
-                });
+                // fbq("track", "CompleteRegistration", {
+                //     value: 0.0,
+                //     currency: "GBP",
+                // });
             } catch (error) {
                 console.error("Error adding document: ", error);
 
@@ -264,11 +225,12 @@ ${
                             </div>
                             <div className="flex flex-row sm:mt-8 max-sm:mt-4 justify-end max-sm:basis-1/2 ">
                                 {newsletterGeneralData.socialMedia.length &&
-                                    newsletterGeneralData.socialMedia.map(({ id, icon, alt, link }) => (
+                                    newsletterGeneralData.socialMedia.map(({ id, icon, alt, title, link }) => (
                                         <a key={id} href={link}>
                                             <img
                                                 id={id + "_" + link}
                                                 alt={alt}
+                                                title={title}
                                                 src={"/images/socials/" + icon + ".svg"}
                                                 className="sm:ml-10 max-sm:ml-6 sm:max-h-8 max-sm:max-h-5 cursor-pointer"
                                             />

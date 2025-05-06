@@ -114,12 +114,12 @@ const HowItWorks = ({ data, func }) => {
 
                     <div className="lg:w-1/2 max-lg:w-full lg:text-xl max-lg:text-base flex flex-row lg:justify-end mt-2 max-lg:mb-6">
                         <div className="lg:text-right max-lg:text-left">
-                            <span className="font-semibold tracking-2 md:text-xl max-lg:text-lg">
+                            <h3 className="font-semibold tracking-2 md:text-xl max-lg:text-lg">
                                 {data.howItWorks.subTitle}
-                            </span>
-                            <span className="block max-md:text-base md:text-lg tracking-wide">
+                            </h3>
+                            <p className="block max-md:text-base md:text-lg tracking-wide">
                                 {data.howItWorks.mainDescription}
-                            </span>
+                            </p>
 
                             <Button
                                 containerClassName={clsx(
@@ -139,7 +139,19 @@ const HowItWorks = ({ data, func }) => {
                 </div>
                 <div className="flex flex-row flex-wrap items-start text-center lg:gap-8 max-lg:gap-4 lg:-mt-12 justify-center">
                     {data.howItWorks.steps.map(
-                        ({ id, icon, iconColor, textColor, alt, bgColor, title, caption, reasons, jsonLdProperty }) => (
+                        ({
+                            id,
+                            icon,
+                            iconColor,
+                            textColor,
+                            alt,
+                            altTitle,
+                            bgColor,
+                            title,
+                            caption,
+                            reasons,
+                            jsonLdProperty,
+                        }) => (
                             <div className="flex-1 min-w-60 max-w-72" key={`steps_` + id}>
                                 <div className={clsx("rounded-full inline-flex")}>
                                     <Head>
@@ -150,13 +162,14 @@ const HowItWorks = ({ data, func }) => {
                                     <img
                                         src={"/images/how-it-works/" + icon}
                                         alt={alt}
+                                        title={altTitle}
                                         loading="lazy"
                                         className="h-28 mx-auto mt-8 mb-6"
                                     />
                                 </div>
                                 <div className="relative">
                                     <div className={clsx("sm:py-4 max-sm:py-2", "arrow-step", iconColor)}>
-                                        <strong className="sm:text-xl max-sm:text-lg font-semibold">{title}</strong>
+                                        <h4 className="sm:text-xl max-sm:text-lg font-semibold">{title}</h4>
                                         <p className="max-lg:text-base lg:text-base text-gray-800 mt-1 italic tracking-2">
                                             {caption}
                                         </p>
@@ -204,6 +217,7 @@ const HowItWorks = ({ data, func }) => {
                                 <img
                                     src={data.howItWorks.sideImage}
                                     alt={data.howItWorks.sideAlt}
+                                    title={data.howItWorks.sideAltTitle}
                                     loading="lazy"
                                     className=" mx-auto mt-8 mb-6"
                                 />

@@ -29,7 +29,7 @@ export default function Privacy() {
                 canonicalUrl="https://healguid.com/privacy-policy"
             />
 
-            <Schema
+            {/* <Schema
                 schemas={[
                     {
                         "@context": "https://schema.org",
@@ -68,7 +68,7 @@ export default function Privacy() {
                         ],
                     },
                 ]}
-            />
+            /> */}
 
             <section className="py-16 max-md:pt-20 max-lg:pt-28 lg:pt-44 bg-b3 lg:min-h-lvh">
                 {isModalOpen && (
@@ -334,4 +334,11 @@ function IconForSection({ sectionId }) {
             {iconPaths[sectionId] || iconPaths["default"]}
         </svg>
     );
+}
+
+// For SSG, ensure the page is pre-rendered
+export async function getStaticProps() {
+    return {
+        props: {},
+    };
 }

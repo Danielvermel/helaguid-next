@@ -74,29 +74,32 @@ const Cause = ({ data }) => {
             <div id="Cause" className="container">
                 <div className="flex flex-col">
                     <PageTitle containerClass="text-center mx-auto">{data.causes.title}</PageTitle>
-                    <p className="text-center sm:mx-10 max-lg:mx-28 max-md:mx-12 max-sm:mx-2 font-light lg:mt-6 max-lg:mt-6  max-md:mt-4 lg:text-2xl max-lg:text-xl max-md:text-lg max-sm:text-base leading-8">
-                        {data.causes.description}
-                    </p>
+                    <div className="text-center sm:mx-10 max-lg:mx-28 max-md:mx-12 max-sm:mx-2 font-light lg:mt-6 max-lg:mt-6  max-md:mt-4 lg:text-2xl max-lg:text-xl max-md:text-lg max-sm:text-base leading-8">
+                        <span className="inline">{data.causes?.secondDescription}</span>
+                        <h3 className="inline">{data.causes.description}</h3>
+                        <span className="inline">{data.causes?.thirdDescription}</span>
+                    </div>
 
                     <div className="sm:mt-8 max-sm:mt-4 flex-row flex flex-wrap justify-center max-md:mx-0 md:gap-4 xl:mx-8 lg:mx-12 max-lg:mx-4 max-sm:mx-2">
-                        {data.causes.points.map(({ id, icon, text, alt, description, jsonLdProperty }) => (
+                        {data.causes.points.map(({ id, icon, text, alt, altTitle, description, jsonLdProperty }) => (
                             <div
                                 key={`cause_` + id}
                                 className="items-center flex-1 sm:min-w-[calc(50%-1rem)] sm:px-2 max-sm:basis-full flex flex-row lg:gap-3 max-lg:gap-x-2 sm:my-2 max-sm:my-5"
                             >
-                                <Head>
+                                {/* <Head>
                                     <script type="application/ld+json">
                                         {JSON.stringify(jsonLdCauses[jsonLdProperty])}
                                     </script>
-                                </Head>
+                                </Head> */}
                                 <img
                                     src={`/images/causes/${icon}`}
                                     alt={alt}
+                                    title={altTitle}
                                     loading="lazy"
                                     className="sm:w-12 sm:h-12 max-sm:w-7 max-sm:h-7"
                                 />
                                 <div className="sm:font-semibold max-sm:font-medium tracking-2">
-                                    <strong className="font-semibold md:text-xl max-md:text-lg text-p1">{text}</strong>
+                                    <h4 className="font-semibold md:text-xl max-md:text-lg text-p1">{text}</h4>
                                     {description && (
                                         <span className="block font-light text-p1 md:text-lg max-md:text-base">
                                             {description}
@@ -129,6 +132,7 @@ const Cause = ({ data }) => {
                             <img
                                 src="/images/causes/arrow-down.svg"
                                 loading="lazy"
+                                title="Scroll down or expand"
                                 alt="arrow down"
                                 className="cursor-pointer lg:ml-4"
                             />

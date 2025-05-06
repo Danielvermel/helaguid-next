@@ -8,46 +8,54 @@ export const menus = [
         id: "0",
         title: "Why Us",
         url: "#why-us",
+        titleAttribute: "Learn why you should choose us",
     },
     {
         id: "1",
         title: "Our Offer",
         url: "#our-offer",
+        titleAttribute: "Explore our range of services and offerings",
     },
     {
         id: "2",
         title: "How It Works",
         url: "#how-it-works",
+        titleAttribute: "Understand how our platform works",
     },
     {
         id: "3",
         title: "About",
         url: "#about",
+        titleAttribute: "Learn more about our company and mission",
     },
     {
         id: "4",
         title: "For Partners",
         url: "/partners",
+        titleAttribute: "For businesses interested in partnering with us",
     },
 ];
-
 // 1. Hero
 export const hero = {
     accentColor: "bg-b11",
     newsletter: {
         alt: "HealGuid logo - connecting patients with holistic health solutions",
-        title: "Start your healing journey today and get exclusive updates:",
+        altTitle: "HealGuid - Holistic Health Connection Platform",
+        title: "Get Your Health Back In Your Hands",
         privacyPolicy: "By joining, you agree to our Privacy Policy",
         class: "bg-b11 p-6 rounded-2xl lg:mr-10 tracking-2",
     },
-
+    alt: "Illustration of a patient and a holistic practitioner having a conversation",
     image: "images/hero/patient-practitioner-v2.webp",
+    altTitle: "Patient-Practitioner Holistic Connection",
     imageMobile: "images/hero/patient-practitioner-v2-mobile.webp",
-    imageClass:
-        "hero-image rounded-2xl mb-2 max-md:mt-28 2xl:w-11/12 xl:w-11/12 max-lg:w-10/12 max-md:w-full max-lg:mx-auto",
+    altTitleMobile: "Patient-Practitioner Mobile Connection",
+    imageClass: "",
     title: "Where Health Challenges Finally Meet Understanding",
-    description:
-        "We connect you with certified experts near you who truly listen, look beyond standard bloodwork, and understand chronic conditions like chronic fatigue, autoimmunity, and digestive issues. Your health is finally back in your hands. Your health is finally back in your hands.",
+    description: "Connect With Certified Holistic Experts Specialising in Chronic Conditions.",
+    secondDescription:
+        "We connect you with experts near you who truly listen, look beyond standard bloodwork, and understand chronic fatigue, autoimmunity, digestive issues, long covid, and many more.",
+
     buttons: {
         id: "1",
         label: "See How It Works",
@@ -68,6 +76,7 @@ export const hero = {
             width: "32px",
             height: "33px",
             alt: "Icon representing a comprehensive understanding of a patient's health story.",
+            altTitle: "Root Cause Analysis",
             text: "Understanding your complete health story",
         },
         {
@@ -77,6 +86,7 @@ export const hero = {
             width: "29px",
             height: "44px",
             alt: "Icon showcasing verified practitioners with trusted qualifications.",
+            altTitle: "Verified Practitioner Expertise",
             text: "Every practitioner carefully selected",
         },
         {
@@ -86,6 +96,7 @@ export const hero = {
             height: "29px",
             title: "Personalised Care",
             alt: "Icon highlighting personalized and adaptable healthcare.",
+            altTitle: "Personalized Holistic Care",
             text: "Healthcare that adapts to you",
         },
     ],
@@ -96,6 +107,7 @@ export const hero = {
         profile: {
             image: "/images/hero/profile.webp",
             title: "Dr. Emily Carter, MD",
+            altTitle: "Dr. Emily Carter - Health Advisor Profile",
             work: "Health Advisor",
         },
     },
@@ -123,8 +135,9 @@ export const hero = {
 // 2. Causes
 export const causes = {
     title: "Struggling to Find Real Solutions for Your Health?",
-    description:
-        "We understand that the current healthcare system often overlooks chronic illness, leaving patients searching for answers. You're not alone in this journey.",
+    secondDescription:
+        "We understand that the current healthcare system often overlooks chronic illness, leaving patients searching for answers.",
+    description: "You're not alone in this journey.",
     subDescription:
         "We're building HealGuid to change this - connecting you with verified practitioners who understand complex conditions and focus on root causes.",
     buttonText: "Find Your Path to Healing",
@@ -136,6 +149,7 @@ export const causes = {
             icon: "search.svg",
             jsonLdProperty: "search",
             alt: "Magnifying glass icon representing feeling overlooked by traditional healthcare.",
+            altTitle: "Healthcare Oversight Challenge",
             text: "Feeling Overlooked",
             description: "1 in 2 patients with chronic conditions feel unsupported by their healthcare providers",
         },
@@ -144,6 +158,7 @@ export const causes = {
             icon: "lock.svg",
             jsonLdProperty: "lock",
             alt: "Lock icon representing limited access to holistic experts.",
+            altTitle: "Limited Holistic Care Access",
             text: "Limited Access to Holistic Experts",
             description:
                 "Only 32% can easily find holistic practitioners in their area, and 75% do not pay attention to credentials",
@@ -153,6 +168,7 @@ export const causes = {
             icon: "calendar.svg",
             jsonLdProperty: "calendar",
             alt: "Calendar icon symbolizing endless appointments without solutions.",
+            altTitle: "Ineffective Treatment Cycle",
             text: "Endless Appointments Without Answers",
             description:
                 "73% of chronic illness patients are frustrated with treatments focused only on managing symptoms",
@@ -162,6 +178,7 @@ export const causes = {
             icon: "cog.svg",
             jsonLdProperty: "cog",
             alt: "Gear icon depicting the time and cost burden of managing chronic illness.",
+            altTitle: "Healthcare Management Burden",
             text: "Time and Cost Burden",
             description: "Patients spend 12 hours monthly coordinating appointments, facing unpredictable costs",
         },
@@ -175,7 +192,7 @@ export const whyUs = {
     company: "HealGuid's Vision",
     competitor: "Mainstream Approach",
     exclusiveBenefits: {
-        title: "A Different Approach to Healthcare",
+        title: "A Different Approach to Holistic Healthcare",
         majorPoints: [
             {
                 id: "1",
@@ -305,12 +322,14 @@ export const howItWorks = {
     sideVideo: "videos/how-it-works/verification.webm",
     sideAlt:
         "Illustration of a practitioner presenting a patient network chart, symbolizing transparency and trust in the verification process.",
+    sideAltTitle: "Practitioner Verification System",
     steps: [
         {
             id: "0",
             icon: "explore.webp",
             jsonLdProperty: "explore",
             alt: "Illustration of diverse individuals interacting with a touchscreen, representing taking control of health through digital tools.",
+            altTitle: "Health Exploration Interface",
             iconColor: "bg-amber-300",
             textColor: "text-orange-600",
             bgColor: "bg-amber-100",
@@ -340,6 +359,7 @@ export const howItWorks = {
             icon: "meet.webp",
             jsonLdProperty: "meet",
             alt: "Illustration of a patient discussing a personalized plan with a practitioner, symbolizing collaboration in holistic care.",
+            altTitle: "Patient-Practitioner Connection",
             iconColor: "bg-orange-200",
             textColor: "text-green-600",
             bgColor: "bg-orange-100",
@@ -369,6 +389,7 @@ export const howItWorks = {
             icon: "best-health.webp",
             jsonLdProperty: "best-health",
             alt: "Illustration of a woman surrounded by nature and healing symbols, representing progress and balance through holistic care.",
+            altTitle: "Holistic Health Achievement",
             iconColor: "bg-orange-300",
             textColor: "text-orange-600",
             bgColor: "bg-orange-200",
@@ -416,6 +437,7 @@ export const offers = {
                     id: "0",
                     image: "/images/offers/access.png",
                     alt: "Icon representing personalized care with interconnected circles symbolizing holistic health.",
+                    altTitle: "Personalized Holistic Care System",
                     bgColor: "bg-lime-100",
                     bgTitleColor: "bg-lime-200",
                     title: "Personalized Care",
@@ -441,6 +463,7 @@ export const offers = {
                     id: "1",
                     image: "/images/offers/professional.png",
                     alt: "Award ribbon icon symbolizing verified expertise in holistic health.",
+                    altTitle: "Verified Practitioner Excellence",
                     bgColor: "bg-sky-100",
                     bgTitleColor: "bg-sky-200",
                     title: "Verified Expertise",
@@ -466,6 +489,7 @@ export const offers = {
                     id: "2",
                     image: "/images/offers/manage.png",
                     alt: "Gear icon symbolizing flexible and patient-focused care options.",
+                    altTitle: "Customizable Healthcare Options",
                     bgColor: "bg-yellow-100",
                     bgTitleColor: "bg-yellow-200",
                     title: "Care On Your Terms",
@@ -491,6 +515,7 @@ export const offers = {
                     id: "3",
                     image: "/images/offers/support.png",
                     alt: "Two-person figure icon representing support and collaboration in healthcare journeys.",
+                    altTitle: "Collaborative Healing Support",
                     bgColor: "bg-orange-100",
                     bgTitleColor: "bg-orange-200",
                     title: "Supported Journey",
@@ -523,6 +548,7 @@ export const offers = {
                     id: "0",
                     image: "/images/offers/digestive.png",
                     alt: "Stomach icon representing care for digestive and gut health.",
+                    altTitle: "Digestive Health Solutions",
                     bgColor: "bg-green-100",
                     bgTitleColor: "bg-green-200",
                     title: "Digestive & Gut Health",
@@ -653,6 +679,7 @@ export const offers = {
                     id: "1",
                     image: "/images/offers/integrative.png",
                     alt: "DNA strand icon symbolizing energy and chronic fatigue care.",
+                    altTitle: "Integrative Medicine Approach",
                     bgColor: "bg-slate-100",
                     bgTitleColor: "bg-slate-200",
                     title: "Chronic Fatigue & Energy Issues",
@@ -783,6 +810,7 @@ export const offers = {
                     id: "2",
                     image: "/images/offers/mind.png",
                     alt: "Brain icon symbolizing mental health and anxiety support.",
+                    altTitle: "Mental Wellbeing Support",
                     bgColor: "bg-amber-100",
                     bgTitleColor: "bg-amber-200",
                     title: "Anxiety & Mental Wellbeing",
@@ -909,6 +937,7 @@ export const offers = {
                     id: "3",
                     image: "/images/offers/holistic.png",
                     alt: "Hormone diagram icon representing hormonal health support.",
+                    altTitle: "Holistic Hormone Balance",
                     bgColor: "bg-indigo-100",
                     bgTitleColor: "bg-indigo-200",
                     title: "Hormonal Imbalances",
@@ -1043,6 +1072,7 @@ export const offers = {
                     id: "4",
                     image: "/images/offers/bodywork.png",
                     alt: "Spine icon symbolizing chronic pain management and recovery.",
+                    altTitle: "Physical Recovery & Pain Management",
                     bgColor: "bg-fuchsia-100",
                     bgTitleColor: "bg-fuchsia-200",
                     title: "Chronic Pain & Recovery",
@@ -1169,6 +1199,7 @@ export const offers = {
                     id: "5",
                     image: "/images/offers/sleep.png",
                     alt: "Moon and stars icon symbolizing sleep and stress management",
+                    altTitle: "Sleep & Stress Optimization",
                     bgColor: "bg-blue-100",
                     bgTitleColor: "bg-blue-200",
                     title: "Sleep & Stress Management",
@@ -1295,6 +1326,7 @@ export const offers = {
                     id: "6",
                     image: "/images/offers/autoimune.png",
                     alt: "Paw print icon symbolizing care for autoimmune conditions.",
+                    altTitle: "Autoimmune Support System",
                     bgColor: "bg-red-100",
                     bgTitleColor: "bg-red-200",
                     title: "Autoimmune Conditions",
@@ -1425,6 +1457,7 @@ export const offers = {
                     id: "7",
                     image: "/images/offers/balance.png",
                     alt: "Leaf and heart icon symbolizing preventive health strategies.",
+                    altTitle: "Holistic Health Balance",
                     bgColor: "bg-green-100",
                     bgTitleColor: "bg-green-200",
                     title: "Preventive Health & Optimization",
@@ -1558,6 +1591,7 @@ export const offers = {
                     id: "0",
                     image: "/images/offers/shield.png",
                     alt: "Shield icon representing verified practitioner licensing for patient trust.",
+                    altTitle: "Practitioner Credentialing Shield",
                     bgColor: "bg-yellow-100",
                     bgTitleColor: "bg-yellow-200",
                     title: "1 - License Verification",
@@ -1582,8 +1616,9 @@ export const offers = {
                 {
                     id: "1",
                     image: "/images/offers/magnifying.png",
-                    bgColor: "bg-emerald-100",
                     alt: "Magnifying glass with checkmark icon symbolizing comprehensive background checks for practitioners",
+                    altTitle: "Comprehensive Background Verification",
+                    bgColor: "bg-emerald-100",
                     bgTitleColor: "bg-emerald-200",
                     title: "2 - Background Checks",
                     benefits: [
@@ -1608,6 +1643,7 @@ export const offers = {
                     id: "2",
                     image: "/images/offers/professional.png",
                     alt: "Ribbon icon representing practitioner membership in recognized healthcare associations",
+                    altTitle: "Professional Excellence Recognition",
                     bgColor: "bg-cyan-100",
                     bgTitleColor: "bg-cyan-200",
                     title: "3 - Association Membership",
@@ -1633,6 +1669,7 @@ export const offers = {
                     id: "3",
                     image: "/images/offers/checkList.png",
                     alt: "Clipboard icon representing practitioner coverage with professional insurance.",
+                    altTitle: "Insurance & Standards Compliance",
                     bgColor: "bg-lime-100",
                     bgTitleColor: "bg-lime-300",
                     title: "4 - Professional Insurance",
@@ -1681,6 +1718,7 @@ export const socials = [
         title: "instagram",
         icon: "images/socials/instagram-white.svg",
         alt: "Instagram icon to follow HealGuid for updates.",
+        altTitle: "Follow HealGuid on Instagram",
         url: "https://www.instagram.com/healguid",
     },
     {
@@ -1688,6 +1726,7 @@ export const socials = [
         title: "facebook",
         icon: "images/socials/facebook-white.svg",
         alt: "facebook",
+        altTitle: "Join HealGuid's Facebook Community",
         url: "https://www.facebook.com/HealGuid",
     },
     {
@@ -1695,7 +1734,15 @@ export const socials = [
         title: "linkedin",
         icon: "/images/socials/linkedin-white.svg",
         alt: "LinkedIn icon to connect with HealGuid's professional network.",
+        altTitle: "Connect with HealGuid on LinkedIn",
         url: "https://www.linkedin.com/company/healguid",
     },
-    { id: "3", title: "email", icon: "images/socials/email-white.svg", alt: "email", url: "mailto:info@healguid.com" },
+    {
+        id: "3",
+        title: "email",
+        icon: "images/socials/email-white.svg",
+        alt: "email",
+        altTitle: "Contact HealGuid via Email",
+        url: "mailto:info@healguid.com",
+    },
 ];

@@ -102,12 +102,13 @@ const Header = ({ data, func }) => {
         }
     };
 
-    const NavLink = ({ title, url }) => {
+    const NavLink = ({ title, url, titleAttribute }) => {
         // For external links or links to other pages
         if (url && !url.startsWith("#")) {
             return (
                 <a
                     href={url}
+                    title={titleAttribute}
                     className="font-semibold text-lg text-p1 transition-colors duration-500 cursor-pointer hover:text-s1 max-lg:my-4 max-lg:h5"
                     onClick={() => setIsOpen(false)}
                 >
@@ -122,6 +123,7 @@ const Header = ({ data, func }) => {
         return (
             <a
                 href={`#${targetId}`}
+                title={titleAttribute}
                 className="font-semibold text-lg text-p1 transition-colors duration-500 cursor-pointer hover:text-s1 max-lg:my-4 max-lg:h5"
                 onClick={(e) => scrollToSection(e, targetId)}
             >
@@ -160,6 +162,7 @@ const Header = ({ data, func }) => {
                             src="/images/logos/healGuid.svg"
                             className="lg:w-72 h-auto max-lg:w-44 lg:-mt-2"
                             alt="HealGuid logo - connecting patients with holistic health solutions"
+                            title="logo"
                         />
                     </a>
                     <div
@@ -171,23 +174,28 @@ const Header = ({ data, func }) => {
                         <div className="max-lg:relative max-lg:flex max-lg:flex-col max-lg:min-h-screen max-lg:p-6 max-lg:overflow-hidden sidebar-before max-md:px-4">
                             <nav className="max-lg:relative max-lg:z-2 max-lg:my-auto">
                                 <ul className="flex max-lg:block max-lg:px-12">
-                                    {data.menus.map(({ id, title, url }) => (
+                                    {data.menus.map(({ id, title, url, titleAttribute }) => (
                                         <li className="nav-li" key={`menu_` + id}>
-                                            <NavLink title={title} url={url} />
+                                            <NavLink title={title} url={url} titleAttribute={titleAttribute} />
                                         </li>
                                     ))}
 
                                     <li className="nav-li">
-                                        <Button
-                                            containerClassName="bg-s1 m-6 mx-0"
-                                            textClassName="tracking-wide font-bold"
-                                            onClick={() => {
-                                                func.handleOpenModal();
-                                                setIsOpen(false);
-                                            }}
-                                        >
-                                            Join Us
-                                        </Button>
+                                        {func && (
+                                            <>
+                                                {" "}
+                                                <Button
+                                                    containerClassName="bg-s1 m-6 mx-0"
+                                                    textClassName="tracking-wide font-bold"
+                                                    onClick={() => {
+                                                        func.handleOpenModal();
+                                                        setIsOpen(false);
+                                                    }}
+                                                >
+                                                    Join Us
+                                                </Button>
+                                            </>
+                                        )}
                                     </li>
                                 </ul>
                             </nav>
@@ -195,6 +203,23 @@ const Header = ({ data, func }) => {
                             <div className="lg:hidden block absolute top-1/2 left-0 w-[960px] h-[380px] translate-x-[-290px] -translate-y-1/2 rotate-90"></div>
                         </div>
                     </div>
+
+                    {func && (
+                        <>
+                            {" "}
+                            <Button
+                                containerClassName="bg-s1 m-0 text-sm text-white sm:hidden"
+                                textClassName="tracking-wide font-bold px-2 p-0"
+                                textContainerClassName="min-h-[32px]"
+                                onClick={() => {
+                                    func.handleOpenModal();
+                                    setIsOpen(false);
+                                }}
+                            >
+                                Join Us
+                            </Button>
+                        </>
+                    )}
                     <button
                         className="lg:hidden z-2 size-10 rounded-full flex justify-center items-center"
                         onClick={() => setIsOpen((prevState) => !prevState)}
@@ -203,6 +228,7 @@ const Header = ({ data, func }) => {
                         <img
                             src={"/images/header/" + (isOpen ? "close" : "hamburger") + ".svg"}
                             alt={isOpen ? "Close menu" : "Open menu"}
+                            title={isOpen ? "Close menu" : "Open menu"}
                             className="size-6 object-contain"
                         />
                     </button>
