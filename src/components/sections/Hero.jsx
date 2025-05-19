@@ -209,7 +209,6 @@ const Hero = ({ data, func }) => {
                         {data.type.includes("partner") && (
                             <ul className="list-disc pl-5 max-md:text-sm">
                                 <li className="text-red-800 my-2">Only 19 of 50 founding spots left</li>
-                                {JSON.stringify(formData)}
                             </ul>
                         )}
                         <div className="flex flex-wrap">
