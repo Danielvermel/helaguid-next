@@ -126,16 +126,22 @@ const Hero = ({ data, func }) => {
                 const { db, addDoc, collection } = await initializeFirebase();
                 const Swal = (await import("sweetalert2")).default;
 
+                const dataType = data.type.includes("client") ? " (patients)" : " (partners)";
+                const extraData = formData.extra ? formData.extra + dataType : dataType;
+                console.log("extraData: ", extraData);
+
                 // Store form data in Firestore
                 const response = await addDoc(collection(db, dbCollection), {
                     email: formData.email,
-                    extra: formData.extra + data.type.includes("client") ? " (patients)" : " (partners)",
+                    extra: extraData,
                 });
+
+                console.log("response: ", response);
 
                 if (response.id) {
                     // Redirect after successful submission
-                    const type = data.type.includes("client") ? "client" : "partner";
-                    window.location.href = "/thank-you?type=" + type;
+                    // const type = data.type.includes("client") ? "client" : "partner";
+                    // window.location.href = "/thank-you?type=" + type;
                 }
             } catch (error) {
                 console.error("Error adding document: ", error);
@@ -203,6 +209,7 @@ const Hero = ({ data, func }) => {
                         {data.type.includes("partner") && (
                             <ul className="list-disc pl-5 max-md:text-sm">
                                 <li className="text-red-800 my-2">Only 19 of 50 founding spots left</li>
+                                {JSON.stringify(formData)}
                             </ul>
                         )}
                         <div className="flex flex-wrap">
