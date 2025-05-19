@@ -4,10 +4,13 @@ import { useState, useEffect, useMemo } from "react";
 import Head from "next/head";
 import { jsonLdHero } from "../../constants/jsonLdData.jsx";
 import { initializeFirebase } from "../../utils/lazyFirebase.js";
+import { clientNewsletter, partnerNewsletter } from "../../constants/general.jsx";
 
 const Hero = ({ data, func }) => {
     // Replace multiple windowSize checks with responsive CSS classes
     const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const newsletterData = data.type.includes("client") ? clientNewsletter : partnerNewsletter;
 
     useEffect(() => {
         if (data.isModalOpen) {
@@ -95,7 +98,7 @@ const Hero = ({ data, func }) => {
 
     const [formData, setFormData] = useState({
         email: "",
-        extra: data.type.includes("client") ? "patients" : "partners",
+        extra: "",
     });
 
     const [isEmailValid, setIsEmailValid] = useState(true);
@@ -126,12 +129,13 @@ const Hero = ({ data, func }) => {
                 // Store form data in Firestore
                 const response = await addDoc(collection(db, dbCollection), {
                     email: formData.email,
-                    extra: formData.extra,
+                    extra: formData.extra + data.type.includes("client") ? " (patients)" : " (partners)",
                 });
 
                 if (response.id) {
                     // Redirect after successful submission
-                    window.location.href = "/thank-you";
+                    const type = data.type.includes("client") ? "client" : "partner";
+                    window.location.href = "/thank-you?type=" + type;
                 }
             } catch (error) {
                 console.error("Error adding document: ", error);
@@ -198,10 +202,37 @@ const Hero = ({ data, func }) => {
                         <h3 className="text-p1 text-lg font-semibold mb-3">{data.hero.newsletter.title}</h3>
                         {data.type.includes("partner") && (
                             <ul className="list-disc pl-5 max-md:text-sm">
-                                <li className="text-red-800 my-2">Only accepting 50 founding practitioners</li>
+                                <li className="text-red-800 my-2">Only 19 of 50 founding spots left</li>
                             </ul>
                         )}
                         <div className="flex flex-wrap">
+                            {data.type.includes("partner") && (
+                                <>
+                                    <label htmlFor="email" className="sm:hidden text-black mb-2 font-medium">
+                                        What's your specialty?
+                                    </label>
+                                    <div
+                                        className={`sm:hidden flex rounded-full overflow-hidden mb-2 bg-white border-2 w-full xl:mr-12
+                                ${!isEmailValid ? "border-rose-600 border-1" : "border-p1"}`}
+                                    >
+                                        <select
+                                            className="flex-1 px-4 py-2 text-gray-600 outline-none bg-white"
+                                            name="extra"
+                                            value={formData.extra}
+                                            onChange={handleChange}
+                                        >
+                                            <option value="" disabled>
+                                                Select your Specialisation
+                                            </option>
+                                            {newsletterData.listOfType.map((op, index) => (
+                                                <option value={op} key={index}>
+                                                    {op}
+                                                </option>
+                                            ))}
+                                        </select>
+                                    </div>
+                                </>
+                            )}
                             <div
                                 className={`flex rounded-full overflow-hidden mb-2 bg-white border-2 w-full xl:mr-12
                                 ${!isEmailValid ? "border-rose-600 border-1" : "border-p1"}`}
@@ -210,7 +241,7 @@ const Hero = ({ data, func }) => {
                                     type="email"
                                     placeholder="Enter your email"
                                     aria-label="Input field to enter email address for exclusive updates about HealGuid's launch."
-                                    className="flex-1 px-4 py-2 text-gray-600 outline-none bg-white "
+                                    className="flex-1 px-4 py-2 text-gray-600 outline-none bg-white"
                                     name="email"
                                     onChange={handleChange}
                                 />
@@ -288,7 +319,7 @@ const Hero = ({ data, func }) => {
 
             <div className={`${data.hero.expertise.class} max-2xl:hidden 2xl:block`}>
                 <span className="flex justify-center text-base tracking-2">
-                    {data.hero.expertise.points.map(({ id, text }) => (
+                    {data.hero.expertise.points.map(({ id, text, textBold }) => (
                         <div className="basis-auto" key={id}>
                             <img
                                 src="/images/general/check-primary.svg"
@@ -298,6 +329,7 @@ const Hero = ({ data, func }) => {
                                 alt="check icon"
                                 title="Checkmark icon indicating expertise point"
                             />
+                            {textBold && <strong className="inline">{textBold} </strong>}
                             <span className="inline">{text}</span>
                         </div>
                     ))}

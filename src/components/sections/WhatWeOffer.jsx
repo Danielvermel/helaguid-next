@@ -150,7 +150,7 @@ const WhatWeOffer = ({ data, func }) => {
                                             >
                                                 <div
                                                     className={clsx(
-                                                        "flex rounded-xl p-3 md:min-h-20 hover:shadow-xl",
+                                                        "flex rounded-xl p-3 md:min-h-20 hover:shadow-2xl",
                                                         bgTitleColor
                                                     )}
                                                 >

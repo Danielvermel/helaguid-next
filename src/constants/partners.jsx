@@ -75,15 +75,18 @@ export const hero = {
         points: [
             {
                 id: "0",
-                text: "Built on insights from 100+ practitioners",
+                text: "Estimated Practice Growth",
+                textBold: "30%",
             },
             {
                 id: "1",
-                text: "Co-designed with holistic healthcare leaders",
+                text: "Admin Time Saved",
+                textBold: "20hrs",
             },
             {
                 id: "2",
-                text: "Developed with tech, patients and practitioner input",
+                text: "Practitioner Insights",
+                textBold: "50+",
             },
         ],
     },

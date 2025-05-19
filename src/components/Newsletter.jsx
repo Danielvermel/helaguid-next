@@ -12,6 +12,8 @@ const Newsletter = ({ type, onClose }) => {
         email: "",
         extra: "",
     });
+
+    const [validEmail, setValidEmail] = useState(false);
     const [emailError, setEmailError] = useState("");
 
     const data = type.includes("client") ? clientNewsletter : partnerNewsletter;
@@ -21,6 +23,10 @@ const Newsletter = ({ type, onClose }) => {
         // Simple email validation regex
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
+    };
+
+    const handleEmail = () => {
+        setValidEmail(validateEmail(formData.email));
     };
 
     const handleChange = (e) => {
@@ -54,8 +60,8 @@ const Newsletter = ({ type, onClose }) => {
 
                 // open thank you page
                 if (response.id) {
-                    // Redirect after successful submission
-                    window.location.href = "/thank-you";
+                    const pageType = type.includes("client") ? "client" : "partner"; // Assuming you have a way to know the type
+                    window.location.href = `/thank-you?type=${pageType}`;
                 }
 
                 // Facebook tracking
@@ -104,7 +110,7 @@ const Newsletter = ({ type, onClose }) => {
                                 htmlFor="email"
                                 className="text-black lg:text-lg max-lg:text-base max-md:text-sm w-1/4"
                             >
-                                E-mail:
+                                E-mail<span>*</span>:
                             </label>
                             <input
                                 type="email"
@@ -112,6 +118,7 @@ const Newsletter = ({ type, onClose }) => {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
+                                onBlur={handleEmail}
                                 className="w-full lg:p-2 max-lg:p-1 max-md:px-1 max-md:py-0 rounded-lg bg-white text-black shadow-sm"
                                 placeholder="Enter your email"
                             />
@@ -175,12 +182,12 @@ const Newsletter = ({ type, onClose }) => {
                                     "bg-p1 sm:w-72 max-sm:w-64 lg:h-14 max-lg:h-10 max-md:h-8 md:m-3 max-md:my-2 mx-auto justify-center",
                                     data.buttonColor,
                                     {
-                                        "opacity-30 cursor-not-allowed": !formData.email,
+                                        "opacity-30 cursor-not-allowed": !validEmail,
                                     }
                                 )}
                                 textClassName="tracking-wide font-arial font-normal lg:text-xl max-lg:text-lg max-md:text-base  max-md:min-h-4"
-                                onClick={formData.email ? handleSubmitForm : undefined}
-                                disabled={!formData.email}
+                                onClick={validEmail ? handleSubmitForm : undefined}
+                                disabled={!validEmail}
                             >
                                 {type.includes("client") ? "Start Your Health Journey" : " Get Early Access"}
                             </Button>

@@ -120,7 +120,7 @@ const Footer = ({ data }) => {
                         alt={footer?.newsletter?.alt}
                         title={footer?.newsletter?.title}
                         loading="lazy"
-                        className="mb-3 max-md:h-10 max-md:mb-6 max-sm:hidden"
+                        className="mb-3 max-md:h-10 md:h-12 max-md:mb-6 max-sm:hidden"
                     />
                     <strong className="text-p1 text-lg font-semibold mb-3">{footer.newsletter.title}</strong>
                     <p className="font-light mb-2">{footer.newsletter.description}</p>

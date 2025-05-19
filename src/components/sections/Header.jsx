@@ -142,19 +142,7 @@ const Header = ({ data, func }) => {
                 )}
             >
                 <div className="container flex h-14 items-center max-lg:px-5">
-                    <a
-                        className="max-lg:flex-1 cursor-pointer z-2"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            // Scroll to top smoothly
-                            window.scrollTo({
-                                top: 0,
-                                behavior: "smooth",
-                            });
-                            // Update URL to remove hash
-                            window.history.pushState(null, null, window.location.pathname);
-                        }}
-                    >
+                    <a className="max-lg:flex-1 cursor-pointer z-2" href="/">
                         <Head>
                             <script type="application/ld+json">{JSON.stringify(jsonLdHeader.logo)}</script>
                         </Head>

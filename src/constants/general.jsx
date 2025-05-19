@@ -111,7 +111,7 @@ export const partnerNewsletter = {
 //  2. Footer
 export const footer = {
     newsletter: {
-        logo: "/images/logos/healGuid.png",
+        logo: "/images/logos/healGuid-v2.png",
         alt: "HealGuid logo - connecting patients with holistic health solutions",
         title: "Stay in the loop",
         description: "Be the first to know about our launch and get exclusive updates:",
