@@ -41,7 +41,7 @@ export const hero = {
     newsletter: {
         alt: "HealGuid logo - connecting patients with holistic health solutions",
         altTitle: "HealGuid - Holistic Health Connection Platform",
-        title: "Get Your Health Back In Your Hands",
+        title: "Join the Waitlist for Early Access",
         privacyPolicy: "By joining, you agree to our Privacy Policy",
         class: "bg-b11 p-6 rounded-2xl lg:mr-10 tracking-2",
     },
@@ -51,8 +51,8 @@ export const hero = {
     imageMobile: "images/hero/patient-practitioner-v2-mobile.webp",
     altTitleMobile: "Patient-Practitioner Mobile Connection",
     imageClass: "",
-    title: "Where Health Challenges Finally Meet Understanding",
-    description: "Connect With Certified Holistic Experts Specialising in Chronic Conditions.",
+    title: "Where Chronic Conditions Meet Holistic Solutions",
+    description: "Connect with verified practitioners near you who see your whole health story",
     secondDescription:
         "We connect you with experts near you who truly listen, look beyond standard bloodwork, and understand chronic fatigue, autoimmunity, digestive issues, long covid, and many more.",
 
@@ -140,7 +140,7 @@ export const causes = {
     description: "You're not alone in this journey.",
     subDescription:
         "We're building HealGuid to change this - connecting you with verified practitioners who understand complex conditions and focus on root causes.",
-    buttonText: "Find Your Path to Healing",
+    buttonText: "Join Our Waitlist to Find Solutions",
     buttonArialLabelText: "Button encouraging users to find their path to healing with HealGuid.",
     jumpToNext: "our-offer",
     points: [
@@ -311,7 +311,7 @@ export const howItWorks = {
     pageTitleColor: "text-p1",
     subTitle: "Your Health in Your Hands, Our Mission.",
     mainDescription:
-        "HealGuid connects you with trusted holistic experts who treat the whole person — offering personalised, science-backed care that fits your lifestyle. This is where health challenges finally meet understanding.",
+        "HealGuid connects you with trusted holistic experts who treat the whole person — offering personalised, science-backed care that fits your lifestyle. This is where health conditions finally meet understanding and solutions.",
     buttonAction: "client",
     buttonTitle: "Find My Health Partner",
     buttonArialLabel:

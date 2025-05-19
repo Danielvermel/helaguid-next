@@ -54,8 +54,8 @@ export const hero = {
     imageMobile: "/images/hero/patient-practitioner-v2-mobile.webp",
     altTitleMobile: "Patient-Practitioner Mobile Connection",
     imageClass: " scale-x-[-1]",
-    title: "Heal Your Patients, Guide Your Practice",
-    description: "Join Our Community of Top Holistic Experts and Grow Your Holistic Practice.",
+    title: "Grow Your Practice, Transform More Lives",
+    description: "Join our growing community of verified holistic practitioners",
     secondDescription:
         "We’re building a better way to connect with patients, simplify your practice, and focus on what matters most—healing.",
     buttons: {

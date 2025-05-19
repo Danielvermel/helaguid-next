@@ -259,7 +259,7 @@ const Hero = ({ data, func }) => {
                                     >
                                         <span className="text-base transition-transform duration-200 ease-in-out group-hover:scale-110 inline-block">
                                             {/* ➔ */}
-                                            {data.type.includes("partner") ? "Secure Your Spot" : "Get Started Now"}
+                                            {data.type.includes("partner") ? "Secure Your Spot" : "Get Early Access"}
                                         </span>
                                     </button>
                                 </div>
@@ -271,7 +271,7 @@ const Hero = ({ data, func }) => {
                                 <span className="group/arrow-2 text-base transition-transform duration-200 ease-in-out group-hover:scale-110 inline-block">
                                     <span className="mr-3">
                                         {" "}
-                                        {data.type.includes("partner") ? "Secure Your Spot" : "Get Started Now"}
+                                        {data.type.includes("partner") ? "Secure Your Spot" : "Get Early Access"}
                                     </span>
                                     ➔
                                 </span>
