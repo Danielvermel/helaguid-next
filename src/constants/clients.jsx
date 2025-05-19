@@ -204,11 +204,11 @@ export const whyUs = {
                     },
                     {
                         id: "1",
-                        text: "Direct practitioner communication",
+                        text: "Direct communication with your practitioner",
                     },
                     {
                         id: "2",
-                        text: "Ongoing support and guidance",
+                        text: "Ongoing support & guidance",
                     },
                 ],
             },
@@ -233,7 +233,7 @@ export const whyUs = {
             },
             {
                 id: "0",
-                subTitle: "Evidence-Based and Verified Excellence",
+                subTitle: "Evidence-Based & Verified Excellence",
                 points: [
                     {
                         id: "0",
@@ -241,7 +241,7 @@ export const whyUs = {
                     },
                     {
                         id: "1",
-                        text: "Verified practitioners using proven protocols",
+                        text: "Verified practitioners using scientific-proven protocols",
                     },
                     {
                         id: "2",
