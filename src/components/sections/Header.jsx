@@ -134,6 +134,14 @@ const Header = ({ data, func }) => {
 
     return (
         <>
+        {/* --- SKIP LINK FOR KEYBOARD USERS --- */}
+    <a
+      href="#hero"
+      className="sr-only focus:not-sr-only absolute top-0 left-0 bg-white text-s1 p-2 z-50"
+    >
+      Skip to main content
+    </a>
+
             <header
                 className={clsx(
                     "fixed xs:bg-b13 top-0 left-0 z-10 w-full transition-all duration-500 max-lg:py-4 max-sm:py-0",

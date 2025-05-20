@@ -87,7 +87,7 @@ const Hero = ({ data, func }) => {
         if (!data?.hero?.title) return null;
 
         const words = data.hero.title.split(" ");
-        const indicesToStyle = data.type.includes("client") ? [1, 5] : [0, 3];
+        const indicesToStyle = data.type.includes("client") ? [4, 5] : [0, 3];
 
         return words.map((word, index) => (
             <span key={index} className={indicesToStyle.includes(index) ? "text-s1" : ""}>
