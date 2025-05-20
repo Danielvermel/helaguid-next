@@ -139,16 +139,13 @@ const Header = ({ data, func }) => {
       href="#hero"
       className="sr-only focus:not-sr-only absolute top-0 left-0 bg-white text-s1 p-2 z-50"
     >
-      Skip to main content
-    </a>
-
+      Skip to main content</a>
             <header
                 className={clsx(
                     "fixed xs:bg-b13 top-0 left-0 z-10 w-full transition-all duration-500 max-lg:py-4 max-sm:py-0",
                     hasScrolled ? "pt-2 pb-2" : "pt-8 pb-6",
                     hasScrolled && "backdrop-blur-[24px] shadow-box"
-                )}
-            >
+                )}>
                 <div className="container flex h-14 items-center max-lg:px-5">
                     <a className="max-lg:flex-1 cursor-pointer z-2" href="/">
                         <Head>

@@ -11,26 +11,27 @@ export default function Meta({ title, description, path = "", ogImage = "/images
             <title>{title}</title>
             <meta name="description" content={description} />
 
-            {/* OpenGraph Tags */}
-            <meta property="og:title" content={title} />
-            <meta property="og:description" content={description} />
-            <meta property="og:url" content={canonicalUrl} />
-            <meta property="og:image" content={ogImage} />
-            <meta property="og:type" content="website" />
+            <meta
+                name="keywords"
+                content="holistic healthcare, functional medicine, chronic illness specialists, gut health experts, verified practitioners"
+            />
 
             {/* OpenGraph Tags */}
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:site" content="@HealGuid" />
-            <meta name="twitter:title" content="Holistic Healthcare FAQ | Natural Health & Wellness" />
-            <meta
-                name="twitter:description"
-                content="Discover how holistic medicine works, what conditions it treats, and how to find the right functional practitioner for your health journey."
-            />
-            <meta name="twitter:image" content="https://www.healguid.com/images/social/healguid-twitter-card.jpg" />
-            <meta
-                name="twitter:image:alt"
-                content="HealGuid - Connecting patients with verified holistic practitioners"
-            />
+            <meta property="og:title"         content={title} />
+            <meta property="og:description"   content={description} />
+            <meta property="og:url"           content={canonicalUrl} />
+            <meta property="og:image"         content={ogImage} />   ← ① dynamic
+            <meta property="og:type"          content="website" />
+
+            {/* Twitter */}
+            <meta name="twitter:card"        content="summary_large_image" />
+            <meta name="twitter:site"        content="@HealGuid" />
+            <meta name="twitter:title"       content={title} />
+            <meta name="twitter:description" content={description} />
+            <meta name="twitter:image"       content="https://www.healguid.com/images/social/healguid-twitter-card.jpg" />
+            <meta name="twitter:image:alt"   content="HealGuid – Connecting patients with verified holistic practitioners" />
+            <meta name="twitter:image"        content="https://www.healguid.com/images/social/healguid-twitter-card.jpg" />
+            <meta name="twitter:image:alt"    content="HealGuid – Connecting patients with verified holistic practitioners" />
 
             {/* Robots */}
             <meta

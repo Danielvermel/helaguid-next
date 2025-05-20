@@ -140,7 +140,7 @@ export const causes = {
     description: "You're not alone in this journey.",
     subDescription:
         "We're building HealGuid to change this - connecting you with verified practitioners who understand complex conditions and focus on root causes.",
-    buttonText: "Join Our Waitlist to Find Solutions",
+    buttonText: "Explore More to Find Solutions",
     buttonArialLabelText: "Button encouraging users to find their path to healing with HealGuid.",
     jumpToNext: "our-offer",
     points: [
