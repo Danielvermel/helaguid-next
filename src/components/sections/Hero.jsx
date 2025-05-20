@@ -177,7 +177,6 @@ const Hero = ({ data, func }) => {
                     <div className="max-sm:text-base max-md:text-xl md:text-xl md:leading-8 tracking-2 lg:text-left max-lg:text-center lg:mr-2 2xl:mr-10 lg:mt-12 max-lg:mt-4 max-lg:mx-20 max-md:mx-12 max-sm:mx-0">
                         <h2 className="block text-wrap mb-2 font-semibold">{data.hero.description}</h2>
                         <p className="inline font-normal"> {data.hero?.secondDescription}</p>
-                        <h3 className="inline"> {data.hero?.thirdDescription}</h3>
                     </div>
                 </div>
 
