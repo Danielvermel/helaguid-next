@@ -64,6 +64,19 @@
     input {
         @apply tracking-[-0.03em];
     }
+
+    a[href="#hero"]:focus {
+        position: absolute;        /* already absolute – just locking it in */
+        top: 0;
+        left: 0;
+        margin: 0;                 /* prevent vertical nudge */
+        border-width: 0;
+        outline-offset: 0;
+      }
+
+      #hero {
+        scroll-margin-top: 6rem;   /* ≈ header height (adjust if header size changes) */
+      }
 }
 
 @layer utilities {

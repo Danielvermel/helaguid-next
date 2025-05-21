@@ -20,7 +20,7 @@ export default function Meta({ title, description, path = "", ogImage = "/images
             <meta property="og:title"         content={title} />
             <meta property="og:description"   content={description} />
             <meta property="og:url"           content={canonicalUrl} />
-            <meta property="og:image"         content={ogImage} />   ← ① dynamic
+            <meta property="og:image"         content={`https://www.healguid.com${ogImage}`} />
             <meta property="og:type"          content="website" />
 
             {/* Twitter */}
@@ -30,8 +30,6 @@ export default function Meta({ title, description, path = "", ogImage = "/images
             <meta name="twitter:description" content={description} />
             <meta name="twitter:image"       content="https://www.healguid.com/images/social/healguid-twitter-card.jpg" />
             <meta name="twitter:image:alt"   content="HealGuid – Connecting patients with verified holistic practitioners" />
-            <meta name="twitter:image"        content="https://www.healguid.com/images/social/healguid-twitter-card.jpg" />
-            <meta name="twitter:image:alt"    content="HealGuid – Connecting patients with verified holistic practitioners" />
 
             {/* Robots */}
             <meta
