@@ -15,8 +15,9 @@ const nextConfig = {
             "/faq": { page: "/faq" },
             "/privacy-policy": { page: "/privacy-policy" },
             "/404": { page: "/404" },
-            // "/admin": { page: "/admin" },
             "/thank-you": { page: "/thank-you" },
+            // Fix soft 404 - create the problematic page to return proper 404
+            "/topics/integrative-health": { page: "/404" },
         };
     },
 };
