@@ -65,7 +65,7 @@ const Footer = ({ data }) => {
             try {
                 // Dynamically import Firebase Firestore
                 const { db, addDoc, collection } = await initializeFirebase();
-                const Swal = (await import("sweetalert2")).default;
+                // const Swal = (await import("sweetalert2")).default;
 
                 // Store form data in Firestore
                 const response = await addDoc(collection(db, dbCollection), {
@@ -99,12 +99,12 @@ const Footer = ({ data }) => {
             } catch (error) {
                 console.error("Error adding document: ", error);
 
-                const Swal = await import("sweetalert2").then((module) => module.default);
-                Swal.fire({
-                    title: "Error",
-                    text: "There was an error. Please try again.",
-                    icon: "error",
-                });
+                // const Swal = await import("sweetalert2").then((module) => module.default);
+                // Swal.fire({
+                //     title: "Error",
+                //     text: "There was an error. Please try again.",
+                //     icon: "error",
+                // });
             }
         } else {
             setIsEmailValid(false);

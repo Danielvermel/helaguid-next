@@ -9,13 +9,13 @@
         "export": "next build && next export"
     },
     "dependencies": {
+        "@next/bundle-analyzer": "^15.4.0-canary.51",
         "bowser": "^2.11.0",
         "clsx": "^2.1.1",
         "firebase": "^11.5.0",
-        "next": "^15.2.4",
-        "react": "^19.0.0",
-        "react-dom": "^19.0.0",
-        "sweetalert2": "^11.17.2"
+        "next": "^15.3.2",
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.16",

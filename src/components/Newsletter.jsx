@@ -46,7 +46,7 @@ const Newsletter = ({ type, onClose }) => {
         if (validateEmail(formData.email)) {
             setEmailError("");
 
-            const Swal = (await import("sweetalert2")).default;
+            // const Swal = (await import("sweetalert2")).default;
 
             try {
                 // Store form data in Firestore
@@ -72,11 +72,11 @@ const Newsletter = ({ type, onClose }) => {
             } catch (error) {
                 console.error("Error adding document: ", error);
 
-                Swal.fire({
-                    title: "Error",
-                    text: "There was an error. Please try again.",
-                    icon: "error",
-                });
+                // Swal.fire({
+                //     title: "Error",
+                //     text: "There was an error. Please try again.",
+                //     icon: "error",
+                // });
             }
         } else {
             setEmailError("Please enter a valid email address.");

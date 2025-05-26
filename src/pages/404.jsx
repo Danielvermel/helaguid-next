@@ -7,14 +7,14 @@ import Meta from "../components/Meta";
 export default function NotFound() {
     return (
         <>
-            <Head>
+            {/* <Head>
                 <meta name="robots" content="noindex,follow" />
             </Head>
 
             <Meta
                 title="Page Not Found | HealGuid - Return to Wellness"
                 description="Oops! The page you're looking for doesn't exist. Let HealGuid guide you back to your wellness journey."
-            />
+            /> */}
 
             <main className="min-h-screen bg-gradient-to-br from-teal-50 to-orange-50 flex flex-col items-center justify-center px-4 py-8">
                 <div className="text-center max-w-md w-full">

@@ -124,7 +124,7 @@ const Hero = ({ data, func }) => {
             try {
                 // Dynamically import Firebase Firestore
                 const { db, addDoc, collection } = await initializeFirebase();
-                const Swal = (await import("sweetalert2")).default;
+                // const Swal = (await import("sweetalert2")).default;
 
                 const dataType = data.type.includes("client") ? " (patients)" : " (partners)";
                 const extraData = formData.extra ? formData.extra + dataType : dataType;
@@ -146,12 +146,12 @@ const Hero = ({ data, func }) => {
             } catch (error) {
                 console.error("Error adding document: ", error);
 
-                const Swal = await import("sweetalert2").then((module) => module.default);
-                Swal.fire({
-                    title: "Error",
-                    text: "There was an error. Please try again.",
-                    icon: "error",
-                });
+                // const Swal = await import("sweetalert2").then((module) => module.default);
+                // Swal.fire({
+                //     title: "Error",
+                //     text: "There was an error. Please try again.",
+                //     icon: "error",
+                // });
             }
         } else {
             setIsEmailValid(false);
@@ -166,7 +166,7 @@ const Hero = ({ data, func }) => {
             {/* flow left to right (contain 4 + 1 divs)  */}
             <div className="container flex flex-wrap max-md:flex-wrap justify-between lg:mt-12">
                 {/* 1. Main Text + Description */}
-                <div className="lg:w-5/12 max-lg:w-full max-lg:order-2 max-lg:mt-8 flex flex-col">
+                <div className="lg:w-5/12 max-lg:w-full max-lg:order-2 max-lg:mt-8 flex flex-col lg:min-h-96">
                     <h1
                         className="text-p1 md:font-semibold max-md:font-medium 
                                         max-sm:text-3xl max-xs:text-sm max-md:text-4xl md:text-5xl max-lg:h2 max-md:leading-12
@@ -188,8 +188,6 @@ const Hero = ({ data, func }) => {
                     </Head>
                     <img
                         src={data.hero.image}
-                        width="883"
-                        height="525"
                         alt={data.hero.alt}
                         title={data.hero.altTitle}
                         loading="eager"

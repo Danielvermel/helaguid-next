@@ -3,7 +3,6 @@ import Head from "next/head";
 
 export default function Meta({ title, description, path = "", ogImage = "/images/logos/healGuid.webp" }) {
     const canonicalUrl = `https://www.healguid.com${path ? `/${path}` : ""}`;
-    console.log("canonicalUrl: ", canonicalUrl);
 
     return (
         <Head>
@@ -17,19 +16,22 @@ export default function Meta({ title, description, path = "", ogImage = "/images
             />
 
             {/* OpenGraph Tags */}
-            <meta property="og:title"         content={title} />
-            <meta property="og:description"   content={description} />
-            <meta property="og:url"           content={canonicalUrl} />
-            <meta property="og:image"         content={`https://www.healguid.com${ogImage}`} />
-            <meta property="og:type"          content="website" />
+            <meta property="og:title" content={title} />
+            <meta property="og:description" content={description} />
+            <meta property="og:url" content={canonicalUrl} />
+            <meta property="og:image" content={`https://www.healguid.com${ogImage}`} />
+            <meta property="og:type" content="website" />
 
             {/* Twitter */}
-            <meta name="twitter:card"        content="summary_large_image" />
-            <meta name="twitter:site"        content="@HealGuid" />
-            <meta name="twitter:title"       content={title} />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:site" content="@HealGuid" />
+            <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={description} />
-            <meta name="twitter:image"       content="https://www.healguid.com/images/social/healguid-twitter-card.jpg" />
-            <meta name="twitter:image:alt"   content="HealGuid – Connecting patients with verified holistic practitioners" />
+            <meta name="twitter:image" content="https://www.healguid.com/images/social/healguid-twitter-card.jpg" />
+            <meta
+                name="twitter:image:alt"
+                content="HealGuid – Connecting patients with verified holistic practitioners"
+            />
 
             {/* Robots */}
             <meta
