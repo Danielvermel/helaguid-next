@@ -1,18 +1,23 @@
-// Lazy load Firebase only when needed
-let db, addDoc, collection;
+// utils/staticFirebase.js
+let firebasePromise;
 
-export const initializeFirebase = async () => {
-    const { initializeApp } = await import("firebase/app");
-    const { getFirestore, addDoc: addDocFn, collection: collectionFn } = await import("firebase/firestore");
+export const getFirebase = () => {
+    if (!firebasePromise) {
+        firebasePromise = loadFirebase();
+    }
+    return firebasePromise;
+};
+
+const loadFirebase = async () => {
+    // Only load when actually needed
+    const [{ initializeApp }, { getFirestore }, { addDoc }, { collection }] = await Promise.all([
+        import("firebase/app"),
+        import("firebase/firestore/lite"),
+        import("firebase/firestore/lite"),
+        import("firebase/firestore/lite"),
+    ]);
 
     const firebaseConfig = {
-        // apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-        // authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-        // projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-        // storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-        // messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-        // appId: import.meta.env.VITE_FIREBASE_APP_ID,
-        // measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
         apiKey: "AIzaSyBLgXPel1z_DbxIZC8BL_cQg0hRzVq_jCU",
         authDomain: "healguid.firebaseapp.com",
         projectId: "healguid",
@@ -22,13 +27,13 @@ export const initializeFirebase = async () => {
         measurementId: "G-9447KTB9ZJ",
     };
 
-    // Initialize Firebase only when needed
     const app = initializeApp(firebaseConfig);
-    db = getFirestore(app);
-    addDoc = addDocFn;
-    collection = collectionFn;
+    const db = getFirestore(app);
 
     return { db, addDoc, collection };
 };
 
-export { db, addDoc, collection };
+export const submitToFirestore = async (collectionName, data) => {
+    const { db, addDoc, collection } = await getFirebase();
+    return addDoc(collection(db, collectionName), data);
+};

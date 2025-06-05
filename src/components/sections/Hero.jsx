@@ -1,9 +1,9 @@
 import Button from "../ui/Button.jsx";
 import Review from "../Review.jsx";
+import Image from "next/image";
 import { useState, useEffect, useMemo } from "react";
 import Head from "next/head";
 import { jsonLdHero } from "../../constants/jsonLdData.jsx";
-import { initializeFirebase } from "../../utils/lazyFirebase.js";
 import { clientNewsletter, partnerNewsletter } from "../../constants/general.jsx";
 
 const Hero = ({ data, func }) => {
@@ -22,49 +22,49 @@ const Hero = ({ data, func }) => {
     }, [data.isModalOpen]);
 
     // Handle smooth scrolling when hash changes
-    useEffect(() => {
-        // Function to handle smooth scrolling
-        const handleSmoothScroll = (e) => {
-            // Check if the hash exists
-            if (window.location.hash) {
-                e.preventDefault();
+    // useEffect(() => {
+    //     // Function to handle smooth scrolling
+    //     const handleSmoothScroll = (e) => {
+    //         // Check if the hash exists
+    //         if (window.location.hash) {
+    //             e.preventDefault();
 
-                const targetId = window.location.hash.substring(1);
-                const targetElement = document.getElementById(targetId);
+    //             const targetId = window.location.hash.substring(1);
+    //             const targetElement = document.getElementById(targetId);
 
-                if (targetElement) {
-                    // Add offset to account for fixed header
-                    const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - 100;
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: "smooth",
-                    });
-                }
-            }
-        };
+    //             if (targetElement) {
+    //                 // Add offset to account for fixed header
+    //                 const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - 100;
+    //                 window.scrollTo({
+    //                     top: offsetTop,
+    //                     behavior: "smooth",
+    //                 });
+    //             }
+    //         }
+    //     };
 
-        // Handle initial load with hash
-        if (window.location.hash) {
-            setTimeout(() => {
-                const targetId = window.location.hash.substring(1);
-                const targetElement = document.getElementById(targetId);
+    //     // Handle initial load with hash
+    //     if (window.location.hash) {
+    //         setTimeout(() => {
+    //             const targetId = window.location.hash.substring(1);
+    //             const targetElement = document.getElementById(targetId);
 
-                if (targetElement) {
-                    const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - 100;
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: "smooth",
-                    });
-                }
-            }, 100);
-        }
+    //             if (targetElement) {
+    //                 const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - 100;
+    //                 window.scrollTo({
+    //                     top: offsetTop,
+    //                     behavior: "smooth",
+    //                 });
+    //             }
+    //         }, 100);
+    //     }
 
-        window.addEventListener("hashchange", handleSmoothScroll);
+    //     window.addEventListener("hashchange", handleSmoothScroll);
 
-        return () => {
-            window.removeEventListener("hashchange", handleSmoothScroll);
-        };
-    }, []);
+    //     return () => {
+    //         window.removeEventListener("hashchange", handleSmoothScroll);
+    //     };
+    // }, []);
 
     // Function to handle smooth scrolling when clicking on anchors
     const scrollToSection = (e, targetId) => {
@@ -122,26 +122,24 @@ const Hero = ({ data, func }) => {
         if (isValid) {
             setIsEmailValid(isValid);
             try {
-                // Dynamically import Firebase Firestore
-                const { db, addDoc, collection } = await initializeFirebase();
-                // const Swal = (await import("sweetalert2")).default;
+                // Lazy load Firebase only when needed
+                const { submitToFirestore } = await import("../../utils/lazyFirebase.js");
 
                 const dataType = data.type.includes("client") ? " (patients)" : " (partners)";
                 const extraData = formData.extra ? formData.extra + dataType : dataType;
-                console.log("extraData: ", extraData);
 
-                // Store form data in Firestore
-                const response = await addDoc(collection(db, dbCollection), {
+                const submissionData = {
                     email: formData.email,
                     extra: extraData,
-                });
+                    timestamp: new Date().toISOString(),
+                };
 
-                console.log("response: ", response);
+                const response = await submitToFirestore(dbCollection, submissionData);
 
                 if (response.id) {
                     // Redirect after successful submission
-                    // const type = data.type.includes("client") ? "client" : "partner";
-                    // window.location.href = "/thank-you?type=" + type;
+                    const type = data.type.includes("client") ? "client" : "partner";
+                    window.location.href = "/thank-you?type=" + type;
                 }
             } catch (error) {
                 console.error("Error adding document: ", error);
@@ -166,7 +164,7 @@ const Hero = ({ data, func }) => {
             {/* flow left to right (contain 4 + 1 divs)  */}
             <div className="container flex flex-wrap max-md:flex-wrap justify-between lg:mt-12">
                 {/* 1. Main Text + Description */}
-                <div className="lg:w-5/12 max-lg:w-full max-lg:order-2 max-lg:mt-8 flex flex-col lg:min-h-96">
+                <div className="lg:w-5/12 max-lg:w-full max-lg:order-2 max-lg:mt-8 flex flex-col text-container">
                     <h1
                         className="text-p1 md:font-semibold max-md:font-medium 
                                         max-sm:text-3xl max-xs:text-sm max-md:text-4xl md:text-5xl max-lg:h2 max-md:leading-12
@@ -192,12 +190,24 @@ const Hero = ({ data, func }) => {
                         title={data.hero.altTitle}
                         loading="eager"
                         decoding="async"
-                        className={
+                        className={"hero-image rounded-2xl max-md:mt-20 mx-auto" + data.hero.imageClass}
+                    />
+                    {/* 
+                    <Image
+                        src={data.hero.image}
+                        alt={data.hero.alt}
+                        title={data.hero.altTitle}
+                        priority={true}
+                        className={"hero-image rounded-2xl max-md:mt-20 mx-auto" + data.hero.imageClass}
+                        placeholder="blur"
+                        blurDataURL="data:image/webp;base64,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" // Add blur placeholder
+                    /> */}
+                </div>
+
+                {/* className={
                             "hero-image rounded-2xl 2xl:w-12/12 xl:w-12/12 lg:w-10/12 max-lg:w-10/12 max-sm:w-full max-md:mt-20 mx-auto" +
                             data.hero.imageClass
-                        }
-                    />
-                </div>
+                        } */}
 
                 {/* 3. Email */}
                 <div className="lg:w-5/12 max-lg:w-full max-lg:order-3 max-lg:mt-8 lg:mt-8 2xl:mt-20 max-lg:mx-20 max-md:mx-12 max-sm:mx-0">

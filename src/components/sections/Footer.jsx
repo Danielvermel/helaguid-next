@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { footer } from "../../constants/general.jsx";
-import { initializeFirebase } from "../../utils/lazyFirebase.js";
 
 const Footer = ({ data }) => {
     const [formData, setFormData] = useState({
@@ -63,15 +62,16 @@ const Footer = ({ data }) => {
         if (isValid) {
             setIsEmailValid(isValid);
             try {
-                // Dynamically import Firebase Firestore
-                const { db, addDoc, collection } = await initializeFirebase();
-                // const Swal = (await import("sweetalert2")).default;
+                // Lazy load Firebase only when needed
+                const { submitToFirestore } = await import("../../utils/lazyFirebase");
 
-                // Store form data in Firestore
-                const response = await addDoc(collection(db, dbCollection), {
+                const submissionData = {
                     email: formData.email,
-                    extra: formData.extra,
-                });
+                    extra: formData.extra || "newsletter-signup",
+                    timestamp: new Date().toISOString(),
+                };
+
+                const response = await submitToFirestore(dbCollection, submissionData);
 
                 if (response.id) {
                     // Redirect after successful submission

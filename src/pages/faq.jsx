@@ -2,7 +2,6 @@
 import Head from "next/head";
 import { faqs } from "../constants/faq";
 import { useState, useEffect } from "react";
-import clsx from "clsx";
 import Button from "../components/ui/Button";
 import Header from "../components/sections/Header";
 import dynamic from "next/dynamic";
@@ -103,7 +102,7 @@ export default function FAQ() {
 
     const ChevronIcon = ({ isOpen, className }) => (
         <svg
-            className={clsx("size-6 ml-2 text-p1", className)}
+            className={`"size-6 ml-2 text-p1" ${className}`}
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
@@ -415,10 +414,10 @@ export default function FAQ() {
 
                                     {/* Group of Questions */}
                                     <div
-                                        className={clsx(
-                                            "mt-6 basis-full tracking-2",
-                                            !isQuestionOpen(title) && "opacity-0 h-0 overflow-hidden"
-                                        )}
+                                        className={`
+                                            "mt-6 basis-full tracking-2"
+                                            ${!isQuestionOpen(title) && "opacity-0 h-0 overflow-hidden"}
+                                        `}
                                     >
                                         {questions.map(({ id: qId, question, answer, button }) => (
                                             <div
@@ -440,10 +439,10 @@ export default function FAQ() {
                                                 </div>
 
                                                 <div
-                                                    className={clsx(
-                                                        "mt-4 mb-2 w-full",
-                                                        !isQuestionOpen(question) && "opacity-0 h-0 overflow-hidden"
-                                                    )}
+                                                    className={`
+                                                        "mt-4 mb-2 w-full"
+                                                        ${!isQuestionOpen(question) && "opacity-0 h-0 overflow-hidden"}
+                                                    `}
                                                 >
                                                     <div className="prose prose-lg max-w-none mb-6">
                                                         {answer.split("\n\n").map((paragraph, index) => {
@@ -503,12 +502,14 @@ export default function FAQ() {
                                                                 e.stopPropagation();
                                                                 handleFeedback(qId, true);
                                                             }}
-                                                            className={clsx(
-                                                                "px-3 py-1 rounded-full",
-                                                                activeFeedback[qId] === true
-                                                                    ? "bg-green-100 text-green-700"
-                                                                    : "bg-gray-100 hover:bg-green-50"
-                                                            )}
+                                                            className={`
+                                                                "px-3 py-1 rounded-full"
+                                                                ${
+                                                                    activeFeedback[qId] === true
+                                                                        ? "bg-green-100 text-green-700"
+                                                                        : "bg-gray-100 hover:bg-green-50"
+                                                                }
+                                                            `}
                                                             aria-label="This answer was helpful"
                                                         >
                                                             Yes
@@ -518,12 +519,13 @@ export default function FAQ() {
                                                                 e.stopPropagation();
                                                                 handleFeedback(qId, false);
                                                             }}
-                                                            className={clsx(
-                                                                "px-3 py-1 rounded-full",
-                                                                activeFeedback[qId] === false
-                                                                    ? "bg-red-100 text-red-700"
-                                                                    : "bg-gray-100 hover:bg-red-50"
-                                                            )}
+                                                            className={`
+                                                                "px-3 py-1 rounded-full"
+                                                                ${
+                                                                    activeFeedback[qId] === false
+                                                                        ? "bg-red-100 text-red-700"
+                                                                        : "bg-gray-100 hover:bg-red-50"
+                                                                }`}
                                                             aria-label="This answer was not helpful"
                                                         >
                                                             No

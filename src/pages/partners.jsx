@@ -1,6 +1,7 @@
 // src/pages/partners.js
 import Head from "next/head";
 import Header from "../components/sections/Header";
+// import HeroPartner from "../components/sections/HeroPartner";
 import Hero from "../components/sections/Hero";
 import Cause from "../components/sections/Cause";
 import WhyUs from "../components/sections/WhyUs";
@@ -148,10 +149,10 @@ export default function Partners() {
                         <Newsletter type="partners" onClose={handleCloseModal} />
                     </Modal>
                 )}
-
                 {/* <Banner data={{ banner }} /> */}
                 <Header data={{ menus, type: "partners" }} func={{ handleOpenModal }} />
                 <Hero data={{ hero, type: "partners", isModalOpen, isSafari }} func={{ handleOpenModal }} />
+                {/* <HeroPartner data={{ hero, isModalOpen, isSafari }} func={{ handleOpenModal }} /> */}
                 <Cause data={{ causes, type: "partners" }} />
                 <WhyUs data={{ whyUs, comparisonTable, type: "partners", isModalOpen }} func={{ handleOpenModal }} />
                 <WhatWeOffer data={{ offers, type: "partners", isModalOpen }} func={{ handleOpenModal }} />

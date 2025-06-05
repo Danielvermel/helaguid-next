@@ -1,10 +1,7 @@
 import { useState } from "react";
 import Button from "./ui/Button";
 import { clientNewsletter, partnerNewsletter, newsletterGeneralData } from "../constants/general.jsx";
-// import { db, addDoc, collection } from "../firebase.js"; // Adjust the path as needed
-// import { addDoc, collection } from "firebase/firestore";
 import clsx from "clsx";
-import { initializeFirebase } from "../utils/lazyFirebase";
 
 const Newsletter = ({ type, onClose }) => {
     const [formData, setFormData] = useState({
@@ -40,8 +37,7 @@ const Newsletter = ({ type, onClose }) => {
 
     const handleSubmitForm = async (e) => {
         e.preventDefault();
-        const { db, addDoc, collection } = await initializeFirebase();
-        // const { db, collection, addDoc } = (await import("../firebase.js")).default;
+        // const { db, addDoc, collection } = await initializeFirebase();
 
         if (validateEmail(formData.email)) {
             setEmailError("");
@@ -49,12 +45,24 @@ const Newsletter = ({ type, onClose }) => {
             // const Swal = (await import("sweetalert2")).default;
 
             try {
-                // Store form data in Firestore
-                const response = await addDoc(collection(db, dbCollection), {
+                // Lazy load Firebase only when needed
+                const { submitToFirestore } = await import("../utils/lazyFirebase");
+
+                const submissionData = {
                     name: formData.name,
                     email: formData.email,
-                    extra: formData.extra,
-                });
+                    extra: formData.extra || "newsletter-signup",
+                    timestamp: new Date().toISOString(),
+                };
+
+                const response = await submitToFirestore(dbCollection, submissionData);
+
+                // Store form data in Firestore
+                // const response = await addDoc(collection(db, dbCollection), {
+                //     name: formData.name,
+                //     email: formData.email,
+                //     extra: formData.extra,
+                // });
 
                 onClose();
 

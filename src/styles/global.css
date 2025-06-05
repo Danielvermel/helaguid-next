@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
         @apply text-[16px] tracking-[-0.03em] text-p3;
         /* @apply font-poppins text-[16px] tracking-[-0.03em] text-p3; */
@@ -315,6 +319,10 @@
         aspect-ratio: 883/525; /* Maintain original proportions */
         width: 100%;
         height: auto;
+    }
+
+    .text-container {
+        min-height: 400px; /* Reserve space before content loads */
     }
 
     /* END of Hero */
