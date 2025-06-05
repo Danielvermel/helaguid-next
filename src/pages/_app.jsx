@@ -403,7 +403,7 @@ function MyApp({ Component, pageProps }) {
                 'ad_storage': 'denied',
                 'ad_user_data': 'denied',
                 'ad_personalization': 'denied',
-                'analytics_storage': 'granted', // Allow analytics by default
+                'analytics_storage': 'denied', // Allow analytics by default
                 'functionality_storage': 'granted',
                 'security_storage': 'granted',
                 'wait_for_update': 500
