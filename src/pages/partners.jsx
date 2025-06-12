@@ -1,5 +1,6 @@
 // src/pages/partners.js
 import Head from "next/head";
+import Banner from "../components/ui/Banner";
 import Header from "../components/sections/Header";
 // import HeroPartner from "../components/sections/HeroPartner";
 import Hero from "../components/sections/Hero";
@@ -9,7 +10,7 @@ import HowItWorks from "../components/sections/HowItWorks";
 import WhatWeOffer from "../components/sections/WhatWeOffer";
 import AboutUs from "../components/sections/AboutUs";
 import Footer from "../components/sections/Footer";
-import { menus, hero, causes, whyUs, comparisonTable, howItWorks, offers } from "../constants/partners";
+import { banner, menus, hero, causes, whyUs, comparisonTable, howItWorks, offers } from "../constants/partners";
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import Meta from "../components/Meta";
@@ -149,8 +150,8 @@ export default function Partners() {
                         <Newsletter type="partners" onClose={handleCloseModal} />
                     </Modal>
                 )}
-                {/* <Banner data={{ banner }} /> */}
-                <Header data={{ menus, type: "partners" }} func={{ handleOpenModal }} />
+                {/* <Banner data={{ banner, type: "partners" }} /> */}
+                <Header data={{ menus, type: "partners" }} />
                 <Hero data={{ hero, type: "partners", isModalOpen, isSafari }} func={{ handleOpenModal }} />
                 {/* <HeroPartner data={{ hero, isModalOpen, isSafari }} func={{ handleOpenModal }} /> */}
                 <Cause data={{ causes, type: "partners" }} />

@@ -1,20 +1,21 @@
 export const banner = {
-    text: "| Be one of our founding practitioners • Shape the future of holistic care • Early access benefits |",
+    text: "| Are you a holistic health expert ? • Help patients find more verified practitioners like you • ",
+    boldText: " Apply now!",
 };
 
 // 0. Header
 export const menus = [
     {
         id: "0",
-        title: "Why Us",
-        url: "#why-us",
-        titleAttribute: "Learn why you should choose us",
+        title: "For Partners",
+        url: "/partners",
+        titleAttribute: "For businesses interested in partnering with us",
     },
     {
         id: "1",
-        title: "Our Offer",
-        url: "#our-offer",
-        titleAttribute: "Explore our range of services and offerings",
+        title: "Directory",
+        url: "https://book.healguid.com/",
+        titleAttribute: "For businesses interested in partnering with us",
     },
     {
         id: "2",
@@ -28,21 +29,17 @@ export const menus = [
         url: "#about",
         titleAttribute: "Learn more about our company and mission",
     },
-    {
-        id: "4",
-        title: "For Partners",
-        url: "/partners",
-        titleAttribute: "For businesses interested in partnering with us",
-    },
 ];
+
 // 1. Hero
 export const hero = {
     accentColor: "bg-b11",
     newsletter: {
         alt: "HealGuid logo - connecting patients with holistic health solutions",
         altTitle: "HealGuid - Holistic Health Connection Platform",
-        title: "Join the Waitlist for Early Access",
+        title: "Get Your Health Back in Your Hands",
         privacyPolicy: "By joining, you agree to our Privacy Policy",
+        emailPolicy: "*We'll email your personalised mach - no spam, ever.",
         class: "bg-b11 p-6 rounded-2xl lg:mr-10 tracking-2",
     },
     alt: "Illustration of a patient and a holistic practitioner having a conversation",

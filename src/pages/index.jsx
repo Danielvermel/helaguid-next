@@ -1,5 +1,6 @@
 // src/pages/index.js
 import Head from "next/head";
+import Banner from "../components/ui/Banner";
 import Header from "../components/sections/Header";
 // import HeroClient from "../components/sections/HeroClient";
 import Hero from "../components/sections/Hero";
@@ -9,7 +10,7 @@ import HowItWorks from "../components/sections/HowItWorks";
 import WhatWeOffer from "../components/sections/WhatWeOffer";
 import AboutUs from "../components/sections/AboutUs";
 import Footer from "../components/sections/Footer";
-import { menus, hero, causes, whyUs, comparisonTable, howItWorks, offers } from "../constants/clients";
+import { banner, menus, hero, causes, whyUs, comparisonTable, howItWorks, offers } from "../constants/clients";
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 
@@ -48,8 +49,8 @@ export default function Home() {
                         <Newsletter type="clients" onClose={handleCloseModal} />
                     </Modal>
                 )}
-
-                <Header data={{ menus, type: "clients" }} func={{ handleOpenModal }} />
+                <Banner data={{ banner, type: "clients" }} />
+                <Header data={{ menus, type: "clients" }} />
                 {/* <HeroClient data={{ hero, isModalOpen, isSafari }} func={{ handleOpenModal }} /> */}
                 <Hero data={{ hero, type: "clients", isModalOpen, isSafari }} func={{ handleOpenModal }} />
                 <WhyUs data={{ whyUs, comparisonTable, type: "clients", isModalOpen }} func={{ handleOpenModal }} />

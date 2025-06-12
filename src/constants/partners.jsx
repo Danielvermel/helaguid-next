@@ -1,42 +1,36 @@
-//  Banner
-
 export const banner = {
-    text: "| Be one of our founding practitioners • Shape the future of holistic care • Early access benefits |",
+    text: "| Are you a holistic health expert ? • Help patients find more verified practitioners like you • ",
+    boldText: " Apply now!",
 };
 
 // 0. Header
 export const menus = [
     {
         id: "0",
-        title: "Why Us",
-        url: "#why-us",
-        titleAttribute: "Discover why you should choose us",
+        title: "For Patients",
+        url: "/",
+        titleAttribute: "Find information and resources for patients",
     },
     {
         id: "1",
-        title: "Our Offer",
-        url: "#our-offer",
-        titleAttribute: "Explore our services and offerings",
+        title: "Directory",
+        url: "https://book.healguid.com/",
+        titleAttribute: "For businesses interested in partnering with us",
     },
     {
         id: "2",
         title: "How It Works",
         url: "#how-it-works",
-        titleAttribute: "Learn how our platform works",
+        titleAttribute: "Understand how our platform works",
     },
     {
         id: "3",
         title: "About",
         url: "#about",
-        titleAttribute: "Get to know more about our company",
-    },
-    {
-        id: "4",
-        title: "For Patients",
-        url: "/",
-        titleAttribute: "Find information and resources for patients",
+        titleAttribute: "Learn more about our company and mission",
     },
 ];
+
 // 1. Hero
 
 export const hero = {
@@ -44,8 +38,9 @@ export const hero = {
     newsletter: {
         alt: "HealGuid logo - connecting patients with holistic health solutions",
         altTitle: "HealGuid - Holistic Health Connection Platform",
-        title: "Join our Founding Circle - Limited Early Access Available",
-        privacyPolicy: "By joining, you agree to our Privacy Policy",
+        title: "Ready to Scale Your Practice?",
+        privacyPolicy: "15-minute free call - no commitment required",
+        emailPolicy: "*Takes 2 min. Our team reviews will emaill you within 24h.",
         class: "bg-b12 p-6 rounded-2xl lg:mr-10 tracking-2",
     },
     alt: "Illustration of a patient and a holistic practitioner having a conversation",
@@ -54,10 +49,10 @@ export const hero = {
     imageMobile: "/images/hero/patient-practitioner-v2-mobile.webp",
     altTitleMobile: "Patient-Practitioner Mobile Connection",
     imageClass: " scale-x-[-1]",
-    title: "Grow Your Practice, Transform More Lives",
-    description: "Join our growing community of verified holistic practitioners",
+    title: "Heal More Patients, Guide Your Practice",
+    description: "Join our community of top holistic experts and grow your practice",
     secondDescription:
-        "We’re building a better way to connect with patients, simplify your practice, and focus on what matters most—healing.",
+        "We’re building a better way to connect with qualified patients, simplify your practice, and focus on what matters most—healing.",
     buttons: {
         id: "1",
         label: "Learn About Early Access",

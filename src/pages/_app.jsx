@@ -1,6 +1,6 @@
 // src/pages/_app.js
 import Head from "next/head";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import "../styles/global.css";
 
 // Global Schema - contains all site-wide structured data
@@ -326,55 +326,55 @@ const globalSchema = {
 };
 
 // Modified analytics initialization to work with CookieYes// Modified analytics initialization to work with CookieYes
-function initializeAnalytics() {
-    if (typeof window !== "undefined") {
-        // GTM loading should be triggered by consent being established
-        window.addEventListener("cookieyes_loaded", function () {
-            console.log("CookieYes loaded - consent initialized");
+// function initializeAnalytics() {
+//     if (typeof window !== "undefined") {
+//         // GTM loading should be triggered by consent being established
+//         window.addEventListener("cookieyes_loaded", function () {
+//             console.log("CookieYes loaded - consent initialized");
 
-            // Now that consent is established, we can proceed with GTM
-            // No need to check consent status for GTM - it will respect the consent settings
-            setTimeout(() => {
-                (function (w, d, s, l, i) {
-                    w[l] = w[l] || [];
-                    w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-                    var f = d.getElementsByTagName(s)[0],
-                        j = d.createElement(s),
-                        dl = l !== "dataLayer" ? "&l=" + l : "";
-                    j.async = true;
-                    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-                    f.parentNode.insertBefore(j, f);
-                })(window, document, "script", "dataLayer", "GTM-K476PRB8");
+//             // Now that consent is established, we can proceed with GTM
+//             // No need to check consent status for GTM - it will respect the consent settings
+//             setTimeout(() => {
+//                 (function (w, d, s, l, i) {
+//                     w[l] = w[l] || [];
+//                     w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+//                     var f = d.getElementsByTagName(s)[0],
+//                         j = d.createElement(s),
+//                         dl = l !== "dataLayer" ? "&l=" + l : "";
+//                     j.async = true;
+//                     j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+//                     f.parentNode.insertBefore(j, f);
+//                 })(window, document, "script", "dataLayer", "GTM-K476PRB8");
 
-                console.log("GTM loaded with consent management enabled");
-            }, 500); // Small delay to ensure consent is fully processed
-        });
+//                 console.log("GTM loaded with consent management enabled");
+//             }, 500); // Small delay to ensure consent is fully processed
+//         });
 
-        // Fallback - if CookieYes doesn't load within 3 seconds
-        setTimeout(() => {
-            if (!window.cookieyes || !window.cookieyes.getConsentStatus) {
-                console.log("CookieYes not detected after timeout - loading GTM with default consent");
+//         // Fallback - if CookieYes doesn't load within 3 seconds
+//         setTimeout(() => {
+//             if (!window.cookieyes || !window.cookieyes.getConsentStatus) {
+//                 console.log("CookieYes not detected after timeout - loading GTM with default consent");
 
-                // Load GTM with default consent settings
-                (function (w, d, s, l, i) {
-                    w[l] = w[l] || [];
-                    w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-                    var f = d.getElementsByTagName(s)[0],
-                        j = d.createElement(s),
-                        dl = l !== "dataLayer" ? "&l=" + l : "";
-                    j.async = true;
-                    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-                    f.parentNode.insertBefore(j, f);
-                })(window, document, "script", "dataLayer", "GTM-K476PRB8");
-            }
-        }, 3000);
-    }
-}
+//                 // Load GTM with default consent settings
+//                 (function (w, d, s, l, i) {
+//                     w[l] = w[l] || [];
+//                     w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+//                     var f = d.getElementsByTagName(s)[0],
+//                         j = d.createElement(s),
+//                         dl = l !== "dataLayer" ? "&l=" + l : "";
+//                     j.async = true;
+//                     j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+//                     f.parentNode.insertBefore(j, f);
+//                 })(window, document, "script", "dataLayer", "GTM-K476PRB8");
+//             }
+//         }, 3000);
+//     }
+// }
 
 function MyApp({ Component, pageProps }) {
-    useEffect(() => {
-        initializeAnalytics();
-    }, []);
+    // useEffect(() => {
+    //     initializeAnalytics();
+    // }, []);
 
     // Safely stringify the schema with error handling
     const schemaString = (() => {
@@ -412,6 +412,20 @@ function MyApp({ Component, pageProps }) {
             // Signal that consent has been initialized
             dataLayer.push({'event': 'consent_initialized'});
             `,
+                    }}
+                />
+
+                {/* Google Tag Manager */}
+                <script
+                    type="text/javascript"
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                        })(window,document,'script','dataLayer','GTM-K476PRB8');
+                        `,
                     }}
                 />
 

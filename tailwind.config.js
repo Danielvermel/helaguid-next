@@ -14,6 +14,7 @@ module.exports = {
                 p1: "#006D77",
                 p2: "#006d77",
                 p3: "#2d2d34",
+                p4: "#3a7e82",
 
                 // Secondary Colors
                 s1: "#ff8c42",
@@ -21,6 +22,7 @@ module.exports = {
                 s3: "#e4f577",
                 s4: "#1959AD",
                 s5: "#f8eb7c",
+                s6: "#ef866e",
 
                 // background Colors
                 b1: "#f6f4f3",

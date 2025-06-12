@@ -4,7 +4,7 @@ import clsx from "clsx";
 import Head from "next/head";
 import { jsonLdHeader } from "../../constants/jsonLdData.jsx";
 
-const Header = ({ data, func }) => {
+const Header = ({ data }) => {
     const [progress, setProgress] = useState(0);
     const [hasScrolled, setHasScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
@@ -141,7 +141,8 @@ const Header = ({ data, func }) => {
             <header
                 className={clsx(
                     "fixed xs:bg-b13 top-0 left-0 z-10 w-full transition-all duration-500 max-lg:py-4 max-sm:py-0",
-                    hasScrolled ? "pt-2 pb-2" : "pt-8 pb-6",
+                    hasScrolled ? "pt-2 pb-2" : "",
+                    data?.type?.includes("partner") ? "pt-6 pb-6" : "pt-12 pb-0",
                     hasScrolled && "backdrop-blur-[24px] shadow-box"
                 )}
             >
@@ -173,21 +174,18 @@ const Header = ({ data, func }) => {
                                     ))}
 
                                     <li className="nav-li">
-                                        {func && (
-                                            <>
-                                                {" "}
-                                                <Button
-                                                    containerClassName="bg-s1 m-6 mx-0"
-                                                    textClassName="tracking-wide font-bold"
-                                                    onClick={() => {
-                                                        func.handleOpenModal();
-                                                        setIsOpen(false);
-                                                    }}
-                                                >
-                                                    Join Us
-                                                </Button>
-                                            </>
-                                        )}
+                                        <Button
+                                            containerClassName="bg-s1 m-6 mx-0"
+                                            textClassName="tracking-wide font-bold"
+                                            href={
+                                                data?.type?.includes("client")
+                                                    ? "https://book.healguid.com/book-consultation"
+                                                    : "https://book.healguid.com/apply"
+                                            }
+                                        >
+                                            {/* Join Us */}
+                                            {data?.type?.includes("client") ? "Get Matched" : "Apply Now"}
+                                        </Button>
                                     </li>
                                 </ul>
                             </nav>
@@ -196,22 +194,20 @@ const Header = ({ data, func }) => {
                         </div>
                     </div>
 
-                    {func && (
-                        <>
-                            {" "}
-                            <Button
-                                containerClassName="bg-s1 m-0 text-sm text-white sm:hidden"
-                                textClassName="tracking-wide font-bold px-2 p-0"
-                                textContainerClassName="min-h-[32px]"
-                                onClick={() => {
-                                    func.handleOpenModal();
-                                    setIsOpen(false);
-                                }}
-                            >
-                                Join Us
-                            </Button>
-                        </>
-                    )}
+                    <Button
+                        containerClassName="bg-s1 m-0 text-sm text-white sm:hidden"
+                        textClassName="tracking-wide font-bold px-2 p-0"
+                        textContainerClassName="min-h-[32px]"
+                        href={
+                            data?.type?.includes("client")
+                                ? "https://book.healguid.com/book-consultation"
+                                : "https://book.healguid.com/apply"
+                        }
+                    >
+                        {/* Join Us */}
+                        {data?.type?.includes("client") ? "Get Matched" : "Apply Now"}
+                    </Button>
+
                     <button
                         className="lg:hidden z-2 size-10 rounded-full flex justify-center items-center"
                         onClick={() => setIsOpen((prevState) => !prevState)}

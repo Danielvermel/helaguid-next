@@ -20,11 +20,15 @@ const Banner = ({ data }) => {
     return (
         <div
             className={clsx(
-                "bg-b11 z-40 w-full py-2 max-lg:hidden transition-all duration-300 ease-in-out",
+                " z-40 w-full py-2 max-lg:hidden transition-all duration-300 ease-in-out",
+                data.type.includes("client") ? "bg-b11" : "bg-b12",
                 hasScrolled ? "sticky -top-5 -translate-y-5 shadow-md" : "fixed -translate-y-0"
             )}
         >
-            <span className="flex justify-center text-base">{data.banner.text}</span>
+            <span className="flex justify-center text-base">
+                {data.banner.text}
+                <strong>{data.banner.boldText}</strong>
+            </span>
         </div>
     );
 };
