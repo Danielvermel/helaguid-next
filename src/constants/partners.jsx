@@ -13,7 +13,7 @@ export const menus = [
     },
     {
         id: "1",
-        title: "Directory",
+        title: "Our Partners",
         url: "https://book.healguid.com/",
         titleAttribute: "For businesses interested in partnering with us",
     },
@@ -49,7 +49,7 @@ export const hero = {
     imageMobile: "/images/hero/patient-practitioner-v2-mobile.webp",
     altTitleMobile: "Patient-Practitioner Mobile Connection",
     imageClass: " scale-x-[-1]",
-    title: "Heal More Patients, Guide Your Practice",
+    title: "Patients Seek Holistic Care — Meet Them Here",
     description: "Join our community of top holistic experts and grow your practice",
     secondDescription:
         "We’re building a better way to connect with qualified patients, simplify your practice, and focus on what matters most—healing.",

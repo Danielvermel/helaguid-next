@@ -41,7 +41,7 @@ export const faqs = {
                 {
                     id: "early-access",
                     question: "When is HealGuid launching and how can I get early access?",
-                    answer: "🚀 Our platform is launching in March 2025, and we'd love for you to be part of our founding community. Join our waitlist today for early access to our network of verified practitioners specializing in natural healthcare approaches.\n\nEarly members receive:\n- Priority access to our network of verified holistic practitioners\n- Exclusive early-bird pricing on consultations for chronic conditions\n- First access to educational resources about natural approaches to wellness\n- The chance to help shape a platform that's transforming healthcare delivery",
+                    answer: "🚀 Our platform is launching in Q3 2025, and we'd love for you to be part of our founding community. Join our waitlist today for early access to our network of verified practitioners specializing in natural healthcare approaches.\n\nEarly members receive:\n- Priority access to our network of verified holistic practitioners\n- Exclusive early-bird pricing on consultations for chronic conditions\n- First access to educational resources about natural approaches to wellness\n- The chance to help shape a platform that's transforming healthcare delivery",
                     button: {
                         label: "Join the Waitlist →",
                         href: "",
