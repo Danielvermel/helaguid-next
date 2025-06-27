@@ -50,9 +50,9 @@ export const hero = {
     altTitleMobile: "Patient-Practitioner Mobile Connection",
     imageClass: " scale-x-[-1]",
     title: "Patients Seek Holistic Care — Meet Them Here",
-    description: "Join our community of top holistic experts and grow your practice",
+    description: "Join a fast-growing community and reach 100 + UK patients who searched holistic care this month",
     secondDescription:
-        "We’re building a better way to connect with qualified patients, simplify your practice, and focus on what matters most—healing.",
+        "Patients come to HealGuid actively seeking solutions from our verified top experts — our verification system and care provide an alternative to conventional care.",
     buttons: {
         id: "1",
         label: "Learn About Early Access",
@@ -75,12 +75,12 @@ export const hero = {
             },
             {
                 id: "1",
-                text: "Admin Time Saved",
-                textBold: "20hrs",
+                text: "Monthly Patient Searches",
+                textBold: "400+",
             },
             {
                 id: "2",
-                text: "Practitioner Insights",
+                text: "Practitioners Already With Us",
                 textBold: "50+",
             },
         ],
