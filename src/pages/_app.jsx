@@ -144,7 +144,7 @@ const globalSchema = {
             "@context": "https://schema.org",
             "@type": "HealthcareService",
             "@id": "https://www.healguid.com/#healthcareservice",
-            name: "HealGuid Holistic Healthcare Platform",
+            name: "HealGuid - Holistic Healthcare Platform",
             description:
                 "Connecting individuals with certified holistic and functional medicine practitioners who specialize in chronic conditions, unexplained symptoms, and holistic wellness.",
             provider: {

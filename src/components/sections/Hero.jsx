@@ -135,7 +135,6 @@ const Hero = ({ data, func }) => {
                     <img
                         src={data.hero.image}
                         alt={data.hero.alt}
-                        title={data.hero.altTitle}
                         loading="eager"
                         decoding="async"
                         className="hero-image rounded-2xl max-md:mt-20 w-4/5 lg:w-4/5 xl:w-3/4 2xl:w-3/5 object-cover"
@@ -171,16 +170,16 @@ const Hero = ({ data, func }) => {
                                 <ul className="pl-3 max-md:text-sm">
                                     <li className="flex items-center">
                                         <span className="mr-2 font-semibold text-2xl">•</span>
-                                        <span className="max-md:text-sm">Free founding member pricing</span>
+                                        <span className="max-md:text-sm">Match with people searching for experts</span>
                                     </li>
                                     <li className="flex items-center">
                                         <span className="mr-2 font-semibold text-2xl">•</span>
                                         <span className="max-md:text-sm">
-                                            Priority matching with qualified patients
+                                            Join the #1 Holistic Community in the UK
                                         </span>
                                     </li>
                                     <li className="text-red-800 mt-2 text-left">
-                                        Only accepting 50 founding practitioners
+                                        Only 27 founding spots remaining
                                     </li>
                                 </ul>
                             </div>
@@ -280,7 +279,7 @@ const Hero = ({ data, func }) => {
                                     <>
                                         <a className="" href="https://calendly.com/healguid/healguid-partner-discovery">
                                             <button
-                                                className="max-md:hidden group bg-p1 hover:bg-s1 border-p1 mx-auto flex items-center justify-center font-medium md:h-14 md:w-38 max-md:h-10 max-md:w-10 text-white hover:text-black md:px-8 md:py-2 rounded-full "
+                                                className=" max-md:hidden group bg-transparent border-2 border-p1 text-p1 hover:bg-p1 hover:text-white md:h-14 md:px-8 rounded-full font-semibold mx-auto flex items-center justify-center font-medium hover:text-black md:px-8 md:py-2 rounded-full "
                                                 aria-label="Submit button with arrow icon to join the HealGuid mailing list."
                                             >
                                                 <span className="md:text-xl transition-transform duration-200 ease-in-out group-hover:scale-110">

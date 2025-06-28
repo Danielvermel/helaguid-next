@@ -15,13 +15,13 @@ export const menus = [
         id: "1",
         title: "Our Partners",
         url: "https://book.healguid.com/",
-        titleAttribute: "For businesses interested in partnering with us",
+        titleAttribute: "Open HealGuid practitioner directory in a new tab",
     },
     {
         id: "2",
         title: "How It Works",
         url: "#how-it-works",
-        titleAttribute: "Understand how our platform works",
+        titleAttribute: "Understand how our platform works for practitioners",
     },
     {
         id: "3",
@@ -38,21 +38,21 @@ export const hero = {
     newsletter: {
         alt: "HealGuid logo - connecting patients with holistic health solutions",
         altTitle: "HealGuid - Holistic Health Connection Platform",
-        title: "Ready to Scale Your Practice?",
+        title: "Ready to Help More People?",
         privacyPolicy: "15-minute free call - no commitment required",
         emailPolicy: "*Takes 2 min. Our team reviews will emaill you within 24h.",
         class: "bg-b12 p-6 rounded-2xl lg:mr-10 tracking-2",
     },
-    alt: "Illustration of a patient and a holistic practitioner having a conversation",
+    alt: "Holistic practitioner supporting a patient during consultation",
     image: "/images/hero/patient-practitioner-v2.webp",
     altTitle: "Patient-Practitioner Holistic Connection",
     imageMobile: "/images/hero/patient-practitioner-v2-mobile.webp",
     altTitleMobile: "Patient-Practitioner Mobile Connection",
     imageClass: " scale-x-[-1]",
-    title: "Patients Seek Holistic Care — Meet Them Here",
-    description: "Join a fast-growing community and reach 100 + UK patients who searched holistic care this month",
+    title: "Patients Seek Holistic Care — Be the One To Help Them",
+    description: "Join our fast-growing community and connect with over 500 people who searched for holistic care only this month",
     secondDescription:
-        "Patients come to HealGuid actively seeking solutions from our verified top experts — our verification system and care provide an alternative to conventional care.",
+        "Patients arrive at HealGuid actively seeking holistic solutions from verified experts—your credentials become their reason to choose you.",
     buttons: {
         id: "1",
         label: "Learn About Early Access",
@@ -70,8 +70,8 @@ export const hero = {
         points: [
             {
                 id: "0",
-                text: "Estimated Practice Growth",
-                textBold: "30%",
+                text: "More Consultations with Our Verified System",
+                textBold: "3X",
             },
             {
                 id: "1",
@@ -88,7 +88,7 @@ export const hero = {
 
     review: {
         comment:
-            "As a holistic practitioner, I didn't train for years to become an influencer. I collaborate with HealGuid because we deserve a platform dedicated to uplift holistic care, connect us with patients, and offer tailor-made tools for our practice.",
+            "HealGuid brings me patients who understand holistic care. The verification takes minutes and elevates our community—the trust it creates means we start every session on the right foot.",
         profile: {
             image: "/images/hero/profile.webp",
             altTitle: "Dr. Emily Carter - Health Advisor Profile",
