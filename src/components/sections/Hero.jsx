@@ -170,7 +170,7 @@ const Hero = ({ data, func }) => {
                                 <ul className="pl-3 max-md:text-sm">
                                     <li className="flex items-center">
                                         <span className="mr-2 font-semibold text-2xl">•</span>
-                                        <span className="max-md:text-sm">Match with people searching for experts</span>
+                                        <span className="max-md:text-sm">Founding members: £0 setup fees</span>
                                     </li>
                                     <li className="flex items-center">
                                         <span className="mr-2 font-semibold text-2xl">•</span>
@@ -178,7 +178,7 @@ const Hero = ({ data, func }) => {
                                             Join the #1 Holistic Community in the UK
                                         </span>
                                     </li>
-                                    <li className="text-red-800 mt-2 text-left">
+                                    <li className="text-red-800 mt-2 text-center">
                                         Only 27 founding spots remaining
                                     </li>
                                 </ul>
