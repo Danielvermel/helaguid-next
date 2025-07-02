@@ -142,11 +142,11 @@ const Header = ({ data }) => {
                 className={clsx(
                     "fixed xs:bg-b13 top-0 left-0 z-10 w-full transition-all duration-500 max-lg:py-4 max-sm:py-0",
                     hasScrolled ? "pt-2 pb-2" : "",
-                    data?.type?.includes("partner") ? "pt-6 pb-6" : "pt-12 pb-0",
+                    data?.type?.includes("partner") ? "pt-12 pb-0" : "pt-12 pb-0",
                     hasScrolled && "backdrop-blur-[24px] shadow-box"
                 )}
             >
-                <div className="container flex h-14 items-center max-lg:px-5">
+                <div className="container flex h-14 items-center max-lg:px-5 lg:pr-6 2xl:pr-12">
                     <a className="max-lg:flex-1 cursor-pointer z-2" href="/">
                         <Head>
                             <script type="application/ld+json">{JSON.stringify(jsonLdHeader.logo)}</script>
@@ -176,7 +176,7 @@ const Header = ({ data }) => {
                                     <li className="nav-li">
                                         <Button
                                             containerClassName="bg-s1 m-6 mx-0"
-                                            textClassName="tracking-wide font-bold"
+                                            textClassName="tracking-wide font-bold text-white"
                                             href={
                                                 data?.type?.includes("client")
                                                     ? "https://book.healguid.com/book-consultation"
@@ -196,8 +196,8 @@ const Header = ({ data }) => {
 
                     <Button
                         containerClassName="bg-s1 m-0 text-sm text-white sm:hidden"
-                        textClassName="tracking-wide font-bold px-2 p-0"
-                        textContainerClassName="min-h-[32px]"
+                        textClassName="tracking-wide font-bold p-0 text-sm"
+                        textContainerClassName="min-h-[32px] px-2 mx-0"
                         href={
                             data?.type?.includes("client")
                                 ? "https://book.healguid.com/book-consultation"

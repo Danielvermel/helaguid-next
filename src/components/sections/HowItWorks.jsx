@@ -182,12 +182,12 @@ const HowItWorks = ({ data, func }) => {
                                         bgColor
                                     )}
                                 >
-                                    {reasons.map(({ id: reasonId, description }) => (
+                                    {reasons.map(({ id: reasonId, description, point }) => (
                                         <li
                                             key={description + reasonId}
                                             className="text-base md:mb-3 max-md:mb-1 tracking-2 text-gray-800"
                                         >
-                                            <span className="font-semibold"> </span>
+                                            <span className="font-semibold">{point} </span>
                                             {description}
                                         </li>
                                     ))}

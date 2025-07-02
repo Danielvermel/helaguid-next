@@ -150,7 +150,6 @@ export default function Partners() {
                         <Newsletter type="partners" onClose={handleCloseModal} />
                     </Modal>
                 )}
-                {/* <Banner data={{ banner, type: "partners" }} /> */}
                 <Header data={{ menus, type: "partners" }} />
                 <Hero data={{ hero, type: "partners", isModalOpen, isSafari }} func={{ handleOpenModal }} />
                 {/* <HeroPartner data={{ hero, isModalOpen, isSafari }} func={{ handleOpenModal }} /> */}

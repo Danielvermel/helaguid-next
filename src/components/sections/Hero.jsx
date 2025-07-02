@@ -107,12 +107,12 @@ const Hero = ({ data, func }) => {
     return (
         <section
             id="hero"
-            className="relative flex flex-col justify-center xl:pt-16 2xl:pt-4 min-h-lvh max-lg:pb-16 max-sm:pb-6 max-lg:pt-20 max-md:pt-0 bg-b10"
+            className="relative flex flex-col justify-center xl:pt-16 2xl:pt-0 min-h-lvh max-lg:pb-16 max-sm:pb-6 max-lg:pt-20 max-md:pt-0 bg-b10"
         >
             {/* flow left to right (contain 4 + 1 divs)  */}
-            <div className="container flex flex-wrap max-md:flex-wrap justify-between lg:mt-12 items-center">
+            <div className="container flex flex-wrap max-md:flex-wrap justify-between lg:mt-12 2xl:mt-0 items-center">
                 {/* 1. Main Text + Description */}
-                <div className="lg:w-5/12 max-lg:w-full max-lg:order-2 flex flex-col lg:text-container lg:justify-center max-lg:mt-8 max-lg:mb-8">
+                <div className="lg:w-5/12 max-lg:w-full max-lg:order-2 flex flex-col lg:text-container lg:justify-start max-lg:mt-8 max-lg:mb-8 lg:pt-4">
                     <h1
                         className="text-p4 md:font-semibold max-md:font-medium 
                                         max-sm:text-3xl max-xs:text-sm max-md:text-4xl md:text-5xl max-lg:h2 max-md:leading-12
@@ -137,7 +137,7 @@ const Hero = ({ data, func }) => {
                         alt={data.hero.alt}
                         loading="eager"
                         decoding="async"
-                        className="hero-image rounded-2xl max-md:mt-20 w-4/5 lg:w-4/5 xl:w-3/4 2xl:w-3/5 object-cover"
+                        className="hero-image rounded-2xl max-md:mt-24 max-lg:mt-4 max-md:w-full max-lg:w-10/12 lg:w-4/5 xl:w-10/12 2xl:w-4/5 object-cover"
                     />
                 </div>
 
@@ -156,7 +156,7 @@ const Hero = ({ data, func }) => {
                             }
                         >
                             <button
-                                className="max-md:hidden group bg-s1 hover:bg-p1 border-p1 mx-auto flex items-center justify-center font-medium md:h-14 md:w-38 max-md:h-10 max-md:w-10 text-black hover:text-white md:px-6 md:py-2 rounded-full mb-4"
+                                className="group bg-s1 hover:bg-p1 border-p1 mx-auto flex items-center justify-center font-medium md:h-14 md:w-38 max-md:h-10 max-md:w-56 text-white  md:px-6 md:py-2 rounded-full mb-4"
                                 aria-label="Submit button with arrow icon to join the HealGuid mailing list."
                             >
                                 <span className="md:text-xl transition-transform duration-200 ease-in-out group-hover:scale-110">
@@ -174,13 +174,9 @@ const Hero = ({ data, func }) => {
                                     </li>
                                     <li className="flex items-center">
                                         <span className="mr-2 font-semibold text-2xl">•</span>
-                                        <span className="max-md:text-sm">
-                                            Join the #1 Holistic Community in the UK
-                                        </span>
+                                        <span className="max-md:text-sm">Join the #1 Holistic Community in the UK</span>
                                     </li>
-                                    <li className="text-red-800 mt-2 text-center">
-                                        Only 27 founding spots remaining
-                                    </li>
+                                    <li className="text-red-800 mt-2 text-center">Only 27 founding spots remaining</li>
                                 </ul>
                             </div>
                         )}
@@ -242,44 +238,53 @@ const Hero = ({ data, func }) => {
                                 </div>
                             </>
                         )} */}
-                        <div className="flex flex-wrap lg:justify-center items-center lg:mt-auto max-lg:mt-8 w-full">
-                            <span className="basis-auto text-lg max-lg:justify-center max-lg:mb-4 tracking-2 mb-3 mt-4 text-center w-full">
-                                Want to learn more first?
-                            </span>
-                            <div
-                                className={`flex rounded-full overflow-hidden mx-auto bg-white max-md:w-full
+                        <div className="lg:mr-20">
+                            <div className="flex flex-wrap lg:justify-center items-center lg:mt-auto max-lg:mt-8 w-full">
+                                <span
+                                    className={`
+                                    text-lg max-lg:justify-center max-lg:mb-4 tracking-2 mb-3 mt-4 text-center w-full
+                                    ${
+                                        data.type.includes("partner")
+                                            ? "lg:basis-1/2 lg:my-4 max-lg:basis-full"
+                                            : "basis-full"
+                                    }
+                                `}
+                                >
+                                    Want to learn more first?
+                                </span>
+                                <div
+                                    className={`flex rounded-full overflow-hidden mx-auto bg-transparent 
                                 ${!isEmailValid ? "border-rose-600 border-1" : ""}
-                                ${data.type.includes("client") ? "border-p1 border-2  md:w-3/5" : ""}`}
-                            >
-                                {data.type.includes("client") ? (
-                                    <>
-                                        <input
-                                            type="email"
-                                            placeholder="your.email@gmail.com"
-                                            aria-label="Input field to enter email address for exclusive updates about HealGuid's launch."
-                                            className={`flex-1 px-4 py-2 text-gray-600 bg-white ${
-                                                !isEmailValid ? "border-rose-600 border-1" : " outline-none"
-                                            } `}
-                                            name="email"
-                                            onChange={handleChange}
-                                        />
-                                        <div dir="rtl">
+                                ${data.type.includes("client") ? "border-p1 border-2 basis-3/5" : "lg:my-4"}`}
+                                >
+                                    {data.type.includes("client") ? (
+                                        <>
+                                            <input
+                                                type="email"
+                                                placeholder="your.email@gmail.com"
+                                                aria-label="Input field to enter email address for exclusive updates about HealGuid's launch."
+                                                className={`flex-1 px-4 py-2 text-gray-600 bg-white 
+                                                ${!isEmailValid ? "border-rose-600 border-1" : " outline-none"} 
+                                            `}
+                                                name="email"
+                                                onChange={handleChange}
+                                            />
+                                            <div dir="rtl">
+                                                <button
+                                                    className="max-md:hidden group bg-b10 hover:bg-p1 border-l-2 border-p1 md:h-14 md:w-38 max-md:h-10 max-md:w-10  text-p1 hover:text-white md:px-4 md:py-2 rounded-s-full "
+                                                    onClick={handleSubmitForm}
+                                                    aria-label="Submit button with arrow icon to join the HealGuid mailing list."
+                                                >
+                                                    <span className="text-base transition-transform duration-200 ease-in-out group-hover:scale-110 inline-block">
+                                                        Start Now
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </>
+                                    ) : (
+                                        <a href="https://calendly.com/healguid/healguid-partner-discovery">
                                             <button
-                                                className="max-md:hidden group bg-s1 hover:bg-p1 border-l-2 border-p1 md:h-14 md:w-38 max-md:h-10 max-md:w-10 text-black hover:text-white md:px-4 md:py-2 rounded-s-full "
-                                                onClick={handleSubmitForm}
-                                                aria-label="Submit button with arrow icon to join the HealGuid mailing list."
-                                            >
-                                                <span className="text-base transition-transform duration-200 ease-in-out group-hover:scale-110 inline-block">
-                                                    Start Now
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </>
-                                ) : (
-                                    <>
-                                        <a className="" href="https://calendly.com/healguid/healguid-partner-discovery">
-                                            <button
-                                                className=" max-md:hidden group bg-transparent border-2 border-p1 text-p1 hover:bg-p1 hover:text-white md:h-14 md:px-8 rounded-full font-semibold mx-auto flex items-center justify-center font-medium hover:text-black md:px-8 md:py-2 rounded-full "
+                                                className="group bg-b10 hover:bg-p1 border-p1 border-2 text-p1 hover:text-white mx-auto flex items-center justify-center font-medium md:h-14 md:w-38 max-md:h-10 max-md:w-60  md:px-8 md:py-2 rounded-full"
                                                 aria-label="Submit button with arrow icon to join the HealGuid mailing list."
                                             >
                                                 <span className="md:text-xl transition-transform duration-200 ease-in-out group-hover:scale-110">
@@ -287,31 +292,32 @@ const Hero = ({ data, func }) => {
                                                 </span>
                                             </button>
                                         </a>
-                                    </>
+                                    )}
+                                </div>
+                                {data.type.includes("client") && (
+                                    <div className="basis-full flex justify-center">
+                                        <button
+                                            className="group md:hidden text-sm bg-p1 h-10 w-28 mx-auto text-white rounded-full hover:bg-p1 my-2"
+                                            onClick={handleSubmitForm}
+                                        >
+                                            <span className="group/arrow-2 text-base transition-transform duration-200 ease-in-out group-hover:scale-110 inline-block">
+                                                <span className="">Start Now</span>
+                                            </span>
+                                        </button>
+                                    </div>
                                 )}
-                            </div>
-                            <button
-                                className="group md:hidden text-sm bg-s1 h-10 w-44 mx-auto text-white rounded-full hover:bg-p1 my-2"
-                                onClick={handleSubmitForm}
-                            >
-                                <span className="group/arrow-2 text-base transition-transform duration-200 ease-in-out group-hover:scale-110 inline-block">
-                                    <span className="mr-3">
-                                        {data.type.includes("partner") ? "Secure Your Spot" : "Get Early Access"}
+
+                                {!isEmailValid && (
+                                    <span className="text-sm text-rose-600 w-full text-center mt-2">
+                                        {" "}
+                                        ➔ email is not valid!
                                     </span>
-                                    ➔
-                                </span>
-                            </button>
+                                )}
 
-                            {!isEmailValid && (
-                                <span className="text-sm text-rose-600 w-full text-center mt-2">
-                                    {" "}
-                                    ➔ email is not valid!
+                                <span className="text-xs block opacity-70 text-center w-full mt-2">
+                                    {data.hero.newsletter.privacyPolicy}
                                 </span>
-                            )}
-
-                            <span className="text-xs block opacity-70 text-center w-full mt-2">
-                                {data.hero.newsletter.privacyPolicy}
-                            </span>
+                            </div>
                         </div>
                     </div>
                 </div>

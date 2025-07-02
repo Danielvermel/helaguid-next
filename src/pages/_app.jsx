@@ -406,11 +406,8 @@ function MyApp({ Component, pageProps }) {
                 'analytics_storage': 'denied', // Allow analytics by default
                 'functionality_storage': 'granted',
                 'security_storage': 'granted',
-                'wait_for_update': 500
             });
-            
-            // Signal that consent has been initialized
-            dataLayer.push({'event': 'consent_initialized'});
+        
             `,
                     }}
                 />
