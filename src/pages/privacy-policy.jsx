@@ -102,6 +102,11 @@ export default function Privacy() {
                                 <h1 className="text-3xl font-bold text-gray-800">{privacy.title}</h1>
                             </div>
                             <p className="mt-4 ml-14 text-gray-600 whitespace-pre-wrap">{privacy.subtitle}</p>
+                            <div className="mt-4 ml-14">
+                                <strong>Last Updated:</strong> {privacy.lastUpdated}
+                                <span className="mx-2">|</span>
+                                <strong>Effective Date:</strong> {privacy.effectiveDate}
+                            </div>
                         </div>
 
                         <div className="p-8">
@@ -119,11 +124,26 @@ export default function Privacy() {
                                             <div className="bg-gray-50 p-4 rounded-lg mb-4 w-full">
                                                 {section.content.map((paragraph, idx) => {
                                                     // Check if the paragraph is a heading (bolded text)
-                                                    if (paragraph.startsWith("**") && paragraph.endsWith("**")) {
+                                                    if (paragraph.startsWith("***") && paragraph.endsWith("***")) {
                                                         return (
-                                                            <h3 key={idx} className="font-medium mb-2">
+                                                            <h2 key={idx} className="font-bold mb-2">
+                                                                {paragraph.replace(/\*\*\*/g, "")}
+                                                            </h2>
+                                                        );
+                                                    } else if (
+                                                        paragraph.startsWith("*i*") &&
+                                                        paragraph.endsWith("*i*")
+                                                    ) {
+                                                        return (
+                                                            <i key={idx} className="font-medium mb-2">
+                                                                {paragraph.replace(/\*\i\*/g, "")}
+                                                            </i>
+                                                        );
+                                                    } else if (paragraph.startsWith("**") && paragraph.endsWith("**")) {
+                                                        return (
+                                                            <h2 key={idx} className="font-medium mb-2">
                                                                 {paragraph.replace(/\*\*/g, "")}
-                                                            </h3>
+                                                            </h2>
                                                         );
                                                     }
                                                     // Check if it's a list
@@ -131,7 +151,7 @@ export default function Privacy() {
                                                         return (
                                                             <ul
                                                                 key={idx}
-                                                                className="list-disc list-inside space-y-2 ml-4 mb-4"
+                                                                className="list-disc list-inside space-y-0 ml-4 mb-1"
                                                             >
                                                                 {paragraph.split("\n").map((item, itemIdx) => {
                                                                     // Extract text after the bullet point
@@ -150,7 +170,7 @@ export default function Privacy() {
                                                                                         return (
                                                                                             <span
                                                                                                 key={partIdx}
-                                                                                                className="font-medium"
+                                                                                                className="font-bold"
                                                                                             >
                                                                                                 {part.replace(
                                                                                                     /\*\*/g,
@@ -173,8 +193,41 @@ export default function Privacy() {
                                                     // Regular paragraph
                                                     else {
                                                         return (
-                                                            <p key={idx} className="mb-3">
-                                                                {paragraph}
+                                                            <p>
+                                                                {paragraph.split("\n").map((item, itemIdx) => {
+                                                                    // Extract text after the bullet point
+                                                                    let text = item.replace(/^\* /, "");
+
+                                                                    // Check if there's bold text inside the item
+                                                                    if (text.includes("**")) {
+                                                                        const parts = text.split(/(\*\*.*?\*\*)/);
+                                                                        return (
+                                                                            <p key={itemIdx}>
+                                                                                {parts.map((part, partIdx) => {
+                                                                                    if (
+                                                                                        part.startsWith("**") &&
+                                                                                        part.endsWith("**")
+                                                                                    ) {
+                                                                                        return (
+                                                                                            <span
+                                                                                                key={partIdx}
+                                                                                                className="font-bold"
+                                                                                            >
+                                                                                                {part.replace(
+                                                                                                    /\*\*/g,
+                                                                                                    ""
+                                                                                                )}
+                                                                                            </span>
+                                                                                        );
+                                                                                    }
+                                                                                    return part;
+                                                                                })}
+                                                                            </p>
+                                                                        );
+                                                                    }
+
+                                                                    return <span key={itemIdx}>{text}</span>;
+                                                                })}
                                                             </p>
                                                         );
                                                     }
