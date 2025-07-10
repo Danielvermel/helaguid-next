@@ -70,14 +70,17 @@ export default function Privacy() {
                 ]}
             /> */}
 
-            <section className="py-16 max-md:pt-20 max-lg:pt-28 lg:pt-44 bg-b3 lg:min-h-lvh">
+            <section className="py-16 max-md:pt-20 max-lg:pt-28 lg:pt-36 bg-b3 lg:min-h-lvh">
                 {isModalOpen && (
                     <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
                         <Newsletter type={newsletterType} onClose={handleCloseModal} />
                     </Modal>
                 )}
 
-                <Header data={{ menus: privacy.menus, type: "partners" }} func={{ handleOpenModal }} />
+                <Header
+                    data={{ menus: privacy.menus, type: "partners", extra: "privacy" }}
+                    func={{ handleOpenModal }}
+                />
                 <div className="min-h-screen bg-b3 py-12 px-6 lg:px-16">
                     <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
                         {/* Visual header with icon */}
@@ -263,15 +266,9 @@ export default function Privacy() {
                                     contacting our Privacy Team.
                                 </p>
                                 <div className="flex space-x-4">
-                                    <button
-                                        onClick={() => console.log("Open cookie preferences")}
-                                        className="px-4 py-2 bg-p1 text-white rounded-md hover:bg-opacity-90 transition-colors"
-                                    >
-                                        Manage Cookies
-                                    </button>
                                     <a
                                         href="mailto:privacy@healguid.com"
-                                        className="px-4 py-2 border border-p1 text-p1 rounded-md hover:bg-p1 hover:bg-opacity-10 transition-colors"
+                                        className="px-4 py-2 bg-p1 text-white rounded-md hover:bg-opacity-90 transition-colors"
                                     >
                                         Contact Privacy Team
                                     </a>

@@ -143,6 +143,7 @@ const Header = ({ data }) => {
                     "fixed xs:bg-b13 top-0 left-0 z-10 w-full transition-all duration-500 max-lg:py-4 max-sm:py-0",
                     hasScrolled ? "pt-2 pb-2" : "",
                     data?.type?.includes("partner") ? "pt-12 pb-0" : "pt-12 pb-0",
+                    data?.extra?.includes("privacy") && "pt-4 pb-4",
                     hasScrolled && "backdrop-blur-[24px] shadow-box"
                 )}
             >
