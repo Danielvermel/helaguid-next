@@ -70,6 +70,22 @@ export default function Privacy() {
                 ]}
             /> */}
 
+            <Schema
+                schemas={[
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "PrivacyPolicy",
+                        name: "HealGuid Privacy Policy",
+                        url: "https://www.healguid.com/privacy-policy",
+                        dateModified: "2025-07-08",
+                        publisher: {
+                            "@type": "Organization",
+                            name: "HealGuid",
+                        },
+                    },
+                ]}
+            />
+
             <section className="py-16 max-md:pt-20 max-lg:pt-28 lg:pt-36 bg-b3 lg:min-h-lvh">
                 {isModalOpen && (
                     <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
@@ -205,7 +221,7 @@ export default function Privacy() {
                                                                     if (text.includes("**")) {
                                                                         const parts = text.split(/(\*\*.*?\*\*)/);
                                                                         return (
-                                                                            <p key={itemIdx}>
+                                                                            <span key={itemIdx}>
                                                                                 {parts.map((part, partIdx) => {
                                                                                     if (
                                                                                         part.startsWith("**") &&
@@ -225,7 +241,7 @@ export default function Privacy() {
                                                                                     }
                                                                                     return part;
                                                                                 })}
-                                                                            </p>
+                                                                            </span>
                                                                         );
                                                                     }
 

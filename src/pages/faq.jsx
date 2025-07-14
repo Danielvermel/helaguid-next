@@ -331,7 +331,7 @@ export default function FAQ() {
                     </Modal>
                 )}
 
-                <Header data={{ menus: faqs.menus, type: "partners" }} func={{ handleOpenModal }} />
+                <Header data={{ menus: faqs.menus, type: "partners", extra: "faq" }} func={{ handleOpenModal }} />
 
                 <div className="container">
                     <div className="mb-16">

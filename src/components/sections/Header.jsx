@@ -144,6 +144,7 @@ const Header = ({ data }) => {
                     hasScrolled ? "pt-2 pb-2" : "",
                     data?.type?.includes("partner") ? "pt-12 pb-0" : "pt-12 pb-0",
                     data?.extra?.includes("privacy") && "pt-4 pb-4",
+                    data?.extra?.includes("faq") && "pt-4 pb-4",
                     hasScrolled && "backdrop-blur-[24px] shadow-box"
                 )}
             >
