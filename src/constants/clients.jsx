@@ -49,7 +49,7 @@ export const hero = {
     altTitleMobile: "Patient-Practitioner Mobile Connection",
     imageClass: "",
     title: "Where Chronic Conditions Meet Holistic Solutions",
-    description: "Connect with verified practitioners near you who see your whole health story",
+    description: "Connect with verified functional and holistic practitioners near you who see your whole health story",
     secondDescription:
         "We connect you with experts near you who truly listen, look beyond standard bloodwork, and understand chronic fatigue, autoimmunity, digestive issues, long covid, and many more.",
 
