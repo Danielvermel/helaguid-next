@@ -433,12 +433,12 @@ function MyApp({ Component, pageProps }) {
                     key="navigation-schema"
                 />
 
-                {/* Umami Analytics */}
-                <script
+                 {/* Umami Analytics */}
+                <script 
                     defer
                     src="https://cloud.umami.is/script.js"
                     data-website-id="a3526664-8b36-4e89-bbe4-34bc9dd08830"
-                ></script>
+                    data-domains="healguid.com,book.healguid.com"></script>
             </Head>
 
             <noscript>

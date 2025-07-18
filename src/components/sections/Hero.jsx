@@ -176,7 +176,7 @@ const Hero = ({ data, func }) => {
                                         <span className="mr-2 font-semibold text-2xl">•</span>
                                         <span className="max-md:text-sm">Join the #1 Holistic Community in the UK</span>
                                     </li>
-                                    <li className="text-red-800 mt-2 text-center">Only 27 founding spots remaining</li>
+                                    <li className="text-red-800 mt-2 text-center">Only 24 founding spots remaining</li>
                                 </ul>
                             </div>
                         )}
