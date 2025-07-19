@@ -325,7 +325,6 @@ const globalSchema = {
     ],
 };
 
-
 function MyApp({ Component, pageProps }) {
     // Safely stringify the schema with error handling
     const schemaString = (() => {
@@ -366,6 +365,8 @@ function MyApp({ Component, pageProps }) {
                 {/* Google Tag Manager */}
                 <script
                     type="text/javascript"
+                    id="google-tag-manager"
+                    strategy="afterInteractive"
                     dangerouslySetInnerHTML={{
                         __html: `
                         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -384,12 +385,13 @@ function MyApp({ Component, pageProps }) {
                     key="navigation-schema"
                 />
 
-                 {/* Umami Analytics */}
-                <script 
+                {/* Umami Analytics */}
+                <script
                     defer
                     src="https://cloud.umami.is/script.js"
                     data-website-id="a3526664-8b36-4e89-bbe4-34bc9dd08830"
-                    data-domains="healguid.com,book.healguid.com"></script>
+                    data-domains="healguid.com,book.healguid.com"
+                ></script>
             </Head>
 
             <noscript>

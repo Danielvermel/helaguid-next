@@ -2,6 +2,7 @@ import Button from "../ui/Button.jsx";
 import PageTitle from "../ui/PageTitle.jsx";
 import { useEffect } from "react";
 import clsx from "clsx";
+import Image from "next/image";
 import Head from "next/head";
 import { jsonLdWhyUs } from "../../constants/jsonLdData.jsx";
 
@@ -84,11 +85,12 @@ const WhyUs = ({ data, func }) => {
                                 <Head>
                                     <script type="application/ld+json">{JSON.stringify(jsonLdWhyUs.doctor)}</script>
                                 </Head>
-                                <img
+                                <Image
                                     src="/images/why-us/doctor-conventional.webp"
-                                    loading="lazy"
                                     alt="image of a doctor holding a herbal cup and a stethoscope, symbolizing integrative medicine"
                                     title="integrative medicine"
+                                    width={591}
+                                    height={164}
                                     className="rounded-xl mt-6 max-w-full h-auto max-h-32 max-lg:mx-auto"
                                 />
                             </div>
