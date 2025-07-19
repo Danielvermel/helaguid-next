@@ -128,16 +128,13 @@ const Hero = ({ data, func }) => {
 
                 {/* 2. Image */}
                 <div className="lg:w-7/12 max-lg:full max-lg:order-1 flex justify-center items-center">
-                    <Head>
-                        <link rel="preload" href={data.hero.image} as="image" type="image/webp" />
-                        <script type="application/ld+json">{JSON.stringify(jsonLdHero.conversation)}</script>
-                    </Head>
                     <Image
                         priority
                         src={data.hero.image}
                         alt={data.hero.alt}
                         width={883} // Use the actual width of your source image
                         height={525} // Use the actual height of your source image
+                        id="hero-image"
                         className="hero-image rounded-2xl max-md:mt-24 max-lg:mt-4 max-md:w-full max-lg:w-10/12 lg:w-4/5 xl:w-10/12 2xl:w-4/5 object-cover"
                     />
                 </div>

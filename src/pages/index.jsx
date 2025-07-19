@@ -14,6 +14,8 @@ import { banner, menus, hero, causes, whyUs, comparisonTable, howItWorks, offers
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 
+import { jsonLdHero } from "../../constants/jsonLdData.jsx";
+
 import Meta from "../components/Meta";
 import Schema from "../components/Schema";
 
@@ -52,6 +54,10 @@ export default function Home() {
                 <Banner data={{ banner, type: "clients" }} />
                 <Header data={{ menus, type: "clients" }} />
                 {/* <HeroClient data={{ hero, isModalOpen, isSafari }} func={{ handleOpenModal }} /> */}
+                <Head>
+                    <link rel="preload" href={hero.image} as="image" type="image/webp" />
+                    <script type="application/ld+json">{JSON.stringify(jsonLdHero.conversation)}</script>
+                </Head>
                 <Hero data={{ hero, type: "clients", isModalOpen, isSafari }} func={{ handleOpenModal }} />
                 <WhyUs data={{ whyUs, comparisonTable, type: "clients", isModalOpen }} func={{ handleOpenModal }} />
                 <Cause data={{ causes, type: "clients" }} />

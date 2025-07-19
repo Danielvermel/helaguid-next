@@ -82,7 +82,7 @@ const WhyUs = ({ data, func }) => {
                                     ))}
                                 </div>
 
-                                <Head>
+                                {/* <Head>
                                     <script type="application/ld+json">{JSON.stringify(jsonLdWhyUs.doctor)}</script>
                                 </Head>
                                 <Image
@@ -92,7 +92,7 @@ const WhyUs = ({ data, func }) => {
                                     width={591}
                                     height={164}
                                     className="rounded-xl mt-6 max-w-full h-auto max-h-32 max-lg:mx-auto"
-                                />
+                                /> */}
                             </div>
                         )}
                     </div>
