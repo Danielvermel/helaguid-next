@@ -1,5 +1,6 @@
 // src/pages/_app.js
 import Head from "next/head";
+import Script from "next/script"; // 1. Import the Script component
 // import { useEffect } from "react";
 import "../styles/global.css";
 
@@ -363,7 +364,7 @@ function MyApp({ Component, pageProps }) {
                 />
 
                 {/* Google Tag Manager */}
-                <script
+                <Script
                     type="text/javascript"
                     id="google-tag-manager"
                     strategy="afterInteractive"
@@ -386,12 +387,12 @@ function MyApp({ Component, pageProps }) {
                 />
 
                 {/* Umami Analytics */}
-                <script
-                    defer
+                <Script
+                    strategy="lazyOnload"
                     src="https://cloud.umami.is/script.js"
                     data-website-id="a3526664-8b36-4e89-bbe4-34bc9dd08830"
                     data-domains="healguid.com,book.healguid.com"
-                ></script>
+                ></Script>
             </Head>
 
             <noscript>
