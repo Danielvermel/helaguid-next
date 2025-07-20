@@ -485,4 +485,74 @@
     .practitioner-carousel .swiper-pagination-bullet-active {
         background-color: #14b8a6; /* A teal color, change to your brand color */
     }
+    /* Custom styles for the practitioner carousel */
+
+    .practitioner-carousel {
+        /* This allows the navigation arrows to be positioned outside the main container */
+        overflow: visible;
+        position: relative;
+    }
+
+    /* Base styles for our custom navigation arrows */
+    .swiper-button-prev-custom,
+    .swiper-button-next-custom {
+        position: absolute;
+        top: 40%; /* Adjust vertical position */
+        transform: translateY(-50%);
+        z-index: 10;
+
+        /* Appearance */
+        color: white;
+        background-color: rgba(0, 0, 0, 0.2);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+    .swiper-button-prev-custom:hover,
+    .swiper-button-next-custom:hover {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    /* Positioning the arrows */
+    .swiper-button-prev-custom {
+        left: 10px;
+    }
+    .swiper-button-prev-custom svg {
+        transform: rotate(180deg);
+    }
+
+    .swiper-button-next-custom {
+        right: 10px;
+    }
+
+    /* Hide arrows when they are at the beginning or end of the slides (if loop is false) */
+    .swiper-button-disabled {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* Styling for the pagination dots */
+    .practitioner-carousel .swiper-pagination {
+        position: relative; /* Overrides default absolute positioning */
+        bottom: auto; /* Resets default bottom value */
+        margin-top: 12px; /* Adds space between cards and dots */
+    }
+
+    .practitioner-carousel .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background-color: #d1d5db; /* gray-300 */
+        opacity: 1;
+        transition: background-color 0.2s ease;
+    }
+
+    .practitioner-carousel .swiper-pagination-bullet-active {
+        background-color: #006d77; /* teal-500 */
+    }
 }

@@ -3,7 +3,7 @@ import Head from "next/head";
 import Banner from "../components/ui/Banner";
 import Header from "../components/sections/Header";
 // import HeroPartner from "../components/sections/HeroPartner";
-import HeroLoop from "../components/sections/Hero-loop";
+import HeroLoop from "../components/sections/HeroLoop";
 import Hero from "../components/sections/Hero";
 import Cause from "../components/sections/Cause";
 import WhyUs from "../components/sections/WhyUs";
@@ -12,12 +12,14 @@ import WhatWeOffer from "../components/sections/WhatWeOffer";
 import AboutUs from "../components/sections/AboutUs";
 import Footer from "../components/sections/Footer";
 import { banner, menus, hero, causes, whyUs, comparisonTable, howItWorks, offers } from "../constants/partners";
+import { healingApproaches } from "../constants/approaches";
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import Meta from "../components/Meta";
 
 import { practitioners } from "../constants/carousel";
-import PractitionerCarousel from "../components/ui/PractitionerCarousel";
+import PractitionerCarousel from "../components/sections/Carousel";
+import Approaches from "../components/sections/Approaches";
 
 import { jsonLdHero } from "../constants/jsonLdData";
 
@@ -61,6 +63,7 @@ export default function Partners() {
                 </Head>
                 <HeroLoop data={{ menus, type: "partners" }} />
                 <PractitionerCarousel data={{ practitioners }} />
+                <Approaches data={healingApproaches} />
 
                 {/* <Hero data={{ hero, type: "partners", isModalOpen, isSafari }} func={{ handleOpenModal }} /> */}
                 {/* <HeroPartner data={{ hero, isModalOpen, isSafari }} func={{ handleOpenModal }} /> */}
