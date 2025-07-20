@@ -177,6 +177,12 @@ export const footer = {
                     url: "/privacy-policy",
                     titleAttribute: "Read our privacy policy",
                 },
+                {
+                    id: "3",
+                    title: "About Us",
+                    url: "/about",
+                    titleAttribute: "Learn more about our company and mission",
+                },
             ],
         },
         {
