@@ -175,7 +175,7 @@ const Header = ({ data }) => {
                                         </li>
                                     ))}
 
-                                    <li className="nav-li">
+                                    {/* <li className="nav-li">
                                         <Button
                                             containerClassName="bg-s1 m-6 mx-0"
                                             textClassName="tracking-wide font-bold text-white"
@@ -185,10 +185,10 @@ const Header = ({ data }) => {
                                                     : "https://book.healguid.com/apply"
                                             }
                                         >
-                                            {/* Join Us */}
+                                        
                                             {data?.type?.includes("client") ? "Get Matched" : "Apply Now"}
                                         </Button>
-                                    </li>
+                                    </li> */}
                                 </ul>
                             </nav>
 

@@ -218,6 +218,30 @@ export const footer = {
 
 //  3. About Us
 export const aboutUs = {
+    menus: [
+        {
+            id: "0",
+            title: "For Patients",
+            url: "/",
+            titleAttribute: "Find information and resources for patients",
+        },
+        {
+            id: "1",
+            title: "Our Partners",
+            url: "https://book.healguid.com/",
+            titleAttribute: "Open HealGuid practitioner directory in a new tab",
+        },
+        {
+            id: "2",
+            title: "Privacy Policy",
+            url: "/privacy-policy",
+        },
+        {
+            id: "3",
+            title: "FAQ",
+            url: "/faq",
+        },
+    ],
     title: "Our Promise To You",
     subTitle: "Building the Future of Holistic Healthcare, Together.",
     mainMessage: "Health Isn't a Transaction. It's a Human Right.",

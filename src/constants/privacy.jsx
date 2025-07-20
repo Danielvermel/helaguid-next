@@ -16,6 +16,11 @@ export const privacy = {
             title: "FAQ",
             url: "/faq",
         },
+        {
+            id: "3",
+            title: "About Us",
+            url: "/about",
+        },
     ],
     title: "Our Privacy Promise: Protecting Your Health Information with Trust & Transparency",
     subtitle:

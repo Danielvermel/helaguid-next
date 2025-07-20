@@ -15,6 +15,11 @@ export const faqs = {
             title: "Privacy Policy",
             url: "/privacy-policy",
         },
+        {
+            id: "3",
+            title: "About Us",
+            url: "/about",
+        },
     ],
     title: "Holistic Healthcare FAQs",
     description:

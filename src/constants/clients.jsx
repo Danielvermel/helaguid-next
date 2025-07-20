@@ -25,8 +25,8 @@ export const menus = [
     },
     {
         id: "3",
-        title: "About",
-        url: "#about",
+        title: "About Us",
+        url: "/about",
         titleAttribute: "Learn more about our company and mission",
     },
 ];
