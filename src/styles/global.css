@@ -475,4 +475,14 @@
     }
 
     /*  END of Footer*/
+
+    /* Custom styles for the practitioner carousel */
+    .practitioner-carousel .swiper-button-next,
+    .practitioner-carousel .swiper-button-prev {
+        color: #14b8a6; /* A teal color, change to your brand color */
+    }
+
+    .practitioner-carousel .swiper-pagination-bullet-active {
+        background-color: #14b8a6; /* A teal color, change to your brand color */
+    }
 }

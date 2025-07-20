@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 module.exports = {
     content: [
         "./src/**/*.{js,jsx,ts,tsx}", // Broader pattern to include all src files
@@ -65,10 +67,11 @@ module.exports = {
                 500: "0px 16px 24px rgba(0, 0, 0, 0.25), 0px -14px 48px rgba(40, 51, 111, 0.7)",
             },
             fontFamily: {
-                inter: ["Inter", "sans-serif"],
-                poppins: ["Poppins", "sans-serif"],
-                roman: ["Times New Roman", "Times", "ui-serif", "Georgia", "serif"],
-                arial: ["Arial", "Helvetica", "sans-serif"],
+                // --- THIS IS THE CRITICAL CHANGE ---
+                inter: ["var(--font-inter)", ...fontFamily.sans],
+                poppins: ["var(--font-poppins)", ...fontFamily.sans],
+                roman: ["Times New Roman", "Times", ...fontFamily.serif],
+                arial: ["Arial", "Helvetica", ...fontFamily.sans],
             },
             transitionProperty: {
                 borderColor: "border-color",
@@ -124,5 +127,7 @@ module.exports = {
             },
         },
     },
-    plugins: [],
+    plugins: [
+        require("@tailwindcss/aspect-ratio"), // <-- Add this line
+    ],
 };

@@ -10,13 +10,15 @@
     },
     "dependencies": {
         "@next/bundle-analyzer": "^15.4.0-canary.51",
+        "@tailwindcss/aspect-ratio": "^0.4.2",
         "bowser": "^2.11.0",
         "clsx": "^2.1.1",
         "firebase": "^11.8.1",
         "next": "^15.3.3",
         "next-image-export-optimizer": "^1.19.0",
         "react": "^18.2.0",
-        "react-dom": "^18.2.0"
+        "react-dom": "^18.2.0",
+        "swiper": "^11.2.10"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.16",

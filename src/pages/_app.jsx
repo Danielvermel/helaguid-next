@@ -3,6 +3,7 @@ import Head from "next/head";
 import Script from "next/script"; // 1. Import the Script component
 // import { useEffect } from "react";
 import "../styles/global.css";
+import { poppins, inter } from "../lib/fonts";
 
 // Global Schema - contains all site-wide structured data
 const globalSchema = {
@@ -362,38 +363,37 @@ function MyApp({ Component, pageProps }) {
             `,
                     }}
                 />
-
-                {/* Google Tag Manager */}
-                <Script
-                    type="text/javascript"
-                    id="google-tag-manager"
-                    strategy="afterInteractive"
-                    dangerouslySetInnerHTML={{
-                        __html: `
+            </Head>
+            {/* Google Tag Manager */}
+            <Script
+                type="text/javascript"
+                id="google-tag-manager"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
                         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                         })(window,document,'script','dataLayer','GTM-K476PRB8');
                         `,
-                    }}
-                />
+                }}
+            />
 
-                {/* Schema data */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: schemaString }}
-                    key="navigation-schema"
-                />
+            {/* Schema data */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: schemaString }}
+                key="navigation-schema"
+            />
 
-                {/* Umami Analytics */}
-                <Script
-                    strategy="lazyOnload"
-                    src="https://cloud.umami.is/script.js"
-                    data-website-id="a3526664-8b36-4e89-bbe4-34bc9dd08830"
-                    data-domains="healguid.com,book.healguid.com"
-                ></Script>
-            </Head>
+            {/* Umami Analytics */}
+            <Script
+                strategy="lazyOnload"
+                src="https://cloud.umami.is/script.js"
+                data-website-id="a3526664-8b36-4e89-bbe4-34bc9dd08830"
+                data-domains="healguid.com,book.healguid.com"
+            ></Script>
 
             <noscript>
                 <iframe
@@ -404,7 +404,9 @@ function MyApp({ Component, pageProps }) {
                 ></iframe>
             </noscript>
 
-            <Component {...pageProps} />
+            <div className={`${poppins.variable} ${inter.variable}`}>
+                <Component {...pageProps} />
+            </div>
         </>
     );
 }

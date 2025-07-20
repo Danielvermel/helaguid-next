@@ -2,8 +2,6 @@ import Button from "../ui/Button.jsx";
 import Review from "../Review.jsx";
 import Image from "next/image";
 import { useState, useEffect, useMemo } from "react";
-import Head from "next/head";
-import { jsonLdHero } from "../../constants/jsonLdData.jsx";
 import { clientNewsletter, partnerNewsletter } from "../../constants/general.jsx";
 
 const Hero = ({ data, func }) => {
@@ -114,7 +112,7 @@ const Hero = ({ data, func }) => {
                 {/* 1. Main Text + Description */}
                 <div className="lg:w-5/12 max-lg:w-full max-lg:order-2 flex flex-col lg:text-container lg:justify-start max-lg:mt-8 max-lg:mb-8 lg:pt-4">
                     <h1
-                        className="text-p4 md:font-semibold max-md:font-medium 
+                        className="font-sans text-p4 md:font-semibold max-md:font-medium 
                                         max-sm:text-3xl max-xs:text-sm max-md:text-4xl md:text-5xl max-lg:h2 max-md:leading-12
                                         lg:text-left max-lg:text-center max-sm:text-center"
                     >
@@ -128,15 +126,17 @@ const Hero = ({ data, func }) => {
 
                 {/* 2. Image */}
                 <div className="lg:w-7/12 max-lg:full max-lg:order-1 flex justify-center items-center">
-                    <Image
-                        priority
-                        src={data.hero.image}
-                        alt={data.hero.alt}
-                        width={883} // Use the actual width of your source image
-                        height={525} // Use the actual height of your source image
-                        id="hero-image"
-                        className="hero-image rounded-2xl max-md:mt-24 max-lg:mt-4 max-md:w-full max-lg:w-10/12 lg:w-4/5 xl:w-10/12 2xl:w-4/5 object-cover"
-                    />
+                    <div className="w-full max-lg:w-10/12 lg:w-4/5 xl:w-10/12 2xl:w-4/5 aspect-w-883 aspect-h-525 max-lg:mt-8 max-md:mt-24">
+                        <Image
+                            priority
+                            src={data.hero.image}
+                            alt={data.hero.alt}
+                            width={883} // Use the actual width of your source image
+                            height={525} // Use the actual height of your source image
+                            id="hero-image"
+                            className="w-full h-full object-cover rounded-2xl"
+                        />
+                    </div>
                 </div>
 
                 {/* 3. Email */}
@@ -325,10 +325,10 @@ const Hero = ({ data, func }) => {
                 <span className="flex justify-center text-base tracking-2">
                     {data.hero.expertise.points.map(({ id, text, textBold }) => (
                         <div className="basis-auto" key={id}>
-                            <img
+                            <Image
                                 src="/images/general/check-primary.svg"
-                                width="100%"
-                                height="100%"
+                                width={24} // A base size like 24x24
+                                height={24}
                                 className="sm:size-6 max-sm:max-h-4 max-sm:my-auto text-s1 basis-1 mr-1 ml-8 inline"
                                 alt="check icon"
                                 title="Checkmark icon indicating expertise point"

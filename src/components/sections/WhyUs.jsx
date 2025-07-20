@@ -51,8 +51,6 @@ const WhyUs = ({ data, func }) => {
                     </Button>
                 </div>
 
-                {/* <h1 className="text-center mx-auto text-p1 lg:h4 max-lg:h5">{causes.title}</h1> */}
-
                 <div className="flex lg:gap-16 lg:flex-nowrap flex-wrap max-md:gap-5 lg:-mt-8 max-lg:basis-full max-lg:mx-auto">
                     {/* Points */}
                     <div className="lg:basis-1/2 max-lg:basis-full lg:mt-14 max-lg:mt-4 max-md:mt-2 mb-3 flex">

@@ -4,17 +4,21 @@ import Banner from "../components/ui/Banner";
 import Header from "../components/sections/Header";
 // import HeroClient from "../components/sections/HeroClient";
 import Hero from "../components/sections/Hero";
+import HeroLoop from "../components/sections/Hero-loop";
 import Cause from "../components/sections/Cause";
 import WhyUs from "../components/sections/WhyUs";
 import HowItWorks from "../components/sections/HowItWorks";
 import WhatWeOffer from "../components/sections/WhatWeOffer";
 import AboutUs from "../components/sections/AboutUs";
 import Footer from "../components/sections/Footer";
+import { practitioners } from "../constants/carousel";
+import PractitionerCarousel from "../components/ui/PractitionerCarousel";
+
 import { banner, menus, hero, causes, whyUs, comparisonTable, howItWorks, offers } from "../constants/clients";
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 
-import { jsonLdHero } from "../../constants/jsonLdData.jsx";
+import { jsonLdHero } from "../constants/jsonLdData";
 
 import Meta from "../components/Meta";
 import Schema from "../components/Schema";
@@ -51,13 +55,15 @@ export default function Home() {
                         <Newsletter type="clients" onClose={handleCloseModal} />
                     </Modal>
                 )}
-                <Banner data={{ banner, type: "clients" }} />
-                <Header data={{ menus, type: "clients" }} />
+                {/* <Banner data={{ banner, type: "clients" }} /> */}
+                {/* <Header data={{ menus, type: "clients" }} /> */}
                 {/* <HeroClient data={{ hero, isModalOpen, isSafari }} func={{ handleOpenModal }} /> */}
                 <Head>
                     <link rel="preload" href={hero.image} as="image" type="image/webp" />
                     <script type="application/ld+json">{JSON.stringify(jsonLdHero.conversation)}</script>
                 </Head>
+                <HeroLoop data={{ menus, type: "clients" }} />
+                <PractitionerCarousel data={{ practitioners }} />
                 <Hero data={{ hero, type: "clients", isModalOpen, isSafari }} func={{ handleOpenModal }} />
                 <WhyUs data={{ whyUs, comparisonTable, type: "clients", isModalOpen }} func={{ handleOpenModal }} />
                 <Cause data={{ causes, type: "clients" }} />
