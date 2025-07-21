@@ -1,5 +1,5 @@
 import Button from "../ui/Button.jsx";
-import Review from "../Review.jsx";
+import Review from "../others/Review.jsx";
 import Image from "next/image";
 import { useState, useEffect, useMemo } from "react";
 import { clientNewsletter, partnerNewsletter } from "../../constants/general.jsx";

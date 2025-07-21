@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 
-import Meta from "../components/Meta";
+import Meta from "../components/others/Meta";
 
 export default function NotFound() {
     return (

@@ -22,11 +22,11 @@ import dynamic from "next/dynamic";
 
 import { jsonLdHero } from "../constants/jsonLdData";
 
-import Meta from "../components/Meta";
+import Meta from "../components/others/Meta";
 
 // Dynamically import components that need browser APIs
 const Modal = dynamic(() => import("../components/ui/Modal"), { ssr: false });
-const Newsletter = dynamic(() => import("../components/Newsletter"), { ssr: false });
+const Newsletter = dynamic(() => import("../components/others/Newsletter"), { ssr: false });
 
 export default function Home() {
     const [isModalOpen, setIsModalOpen] = useState(false);

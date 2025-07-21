@@ -5,8 +5,8 @@ import Header from "../components/sections/Header";
 import { thankYouClients, thankYouPartners } from "../constants/thanks";
 import Link from "next/link";
 
-import Meta from "../components/Meta";
-import Schema from "../components/Schema";
+import Meta from "../components/others/Meta";
+import Schema from "../components/others/Schema";
 
 export default function ThankYou() {
     const [type, setType] = useState(null);

@@ -8,12 +8,12 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import Meta from "../components/Meta";
-import Schema from "../components/Schema";
+import Meta from "../components/others/Meta";
+import Schema from "../components/others/Schema";
 
 // Dynamically import components that need browser APIs
 const Modal = dynamic(() => import("../components/ui/Modal"), { ssr: false });
-const Newsletter = dynamic(() => import("../components/Newsletter"), { ssr: false });
+const Newsletter = dynamic(() => import("../components/others/Newsletter"), { ssr: false });
 
 export default function FAQ() {
     const router = useRouter();

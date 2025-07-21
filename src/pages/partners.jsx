@@ -15,7 +15,7 @@ import { banner, menus, hero, causes, whyUs, comparisonTable, howItWorks, offers
 import { healingApproaches } from "../constants/approaches";
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
-import Meta from "../components/Meta";
+import Meta from "../components/others/Meta";
 
 import { practitioners } from "../constants/carousel";
 import PractitionerCarousel from "../components/sections/Carousel";
@@ -25,7 +25,7 @@ import { jsonLdHero } from "../constants/jsonLdData";
 
 // Dynamically import components that need browser APIs
 const Modal = dynamic(() => import("../components/ui/Modal"), { ssr: false });
-const Newsletter = dynamic(() => import("../components/Newsletter"), { ssr: false });
+const Newsletter = dynamic(() => import("../components/others/Newsletter"), { ssr: false });
 
 export default function Partners() {
     const [isModalOpen, setIsModalOpen] = useState(false);

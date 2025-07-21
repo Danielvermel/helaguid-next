@@ -5,12 +5,12 @@ import { privacy } from "../constants/privacy";
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 
-import Meta from "../components/Meta";
-import Schema from "../components/Schema";
+import Meta from "../components/others/Meta";
+import Schema from "../components/others/Schema";
 
 // Dynamically import components that need browser APIs
 const Modal = dynamic(() => import("../components/ui/Modal"), { ssr: false });
-const Newsletter = dynamic(() => import("../components/Newsletter"), { ssr: false });
+const Newsletter = dynamic(() => import("../components/others/Newsletter"), { ssr: false });
 
 export default function Privacy() {
     const [isModalOpen, setIsModalOpen] = useState(false);

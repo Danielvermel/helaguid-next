@@ -19,7 +19,7 @@ export const menus = [
     },
     {
         id: "2",
-        title: "How We Works",
+        title: "How We Work",
         url: "#how-it-works",
         titleAttribute: "Understand how our platform works",
     },

@@ -154,7 +154,7 @@ const Header = ({ data }) => {
                             <script type="application/ld+json">{JSON.stringify(jsonLdHeader.logo)}</script>
                         </Head>
                         <img
-                            src="/images/logos/healGuid.svg"
+                            src="/images/logos/healGuid-v2.svg"
                             className="lg:w-72 h-auto max-lg:w-44 lg:-mt-2"
                             alt="HealGuid logo - connecting patients with holistic health solutions"
                             title="logo"

@@ -495,7 +495,9 @@
 
     /* Base styles for our custom navigation arrows */
     .swiper-button-prev-custom,
-    .swiper-button-next-custom {
+    .swiper-button-prev-carousel,
+    .swiper-button-next-custom,
+    .swiper-button-next-carousel {
         position: absolute;
         top: 40%; /* Adjust vertical position */
         transform: translateY(-50%);
@@ -515,19 +517,24 @@
     }
 
     .swiper-button-prev-custom:hover,
-    .swiper-button-next-custom:hover {
+    .swiper-button-prev-carousel:hover,
+    .swiper-button-next-custom:hover,
+    .swiper-button-next-carousel:hover {
         background-color: rgba(0, 0, 0, 0.4);
     }
 
     /* Positioning the arrows */
-    .swiper-button-prev-custom {
+    .swiper-button-prev-custom,
+    .swiper-button-prev-carousel {
         left: 10px;
     }
-    .swiper-button-prev-custom svg {
+    .swiper-button-prev-custom svg,
+    .swiper-button-prev-carousel svg {
         transform: rotate(180deg);
     }
 
-    .swiper-button-next-custom {
+    .swiper-button-next-custom,
+    .swiper-button-next-carousel {
         right: 10px;
     }
 
@@ -538,7 +545,8 @@
     }
 
     /* Styling for the pagination dots */
-    .practitioner-carousel .swiper-pagination {
+    .practitioner-carousel .swiper-pagination,
+    .approaches-carousel .swiper-pagination {
         position: relative; /* Overrides default absolute positioning */
         bottom: auto; /* Resets default bottom value */
         margin-top: 12px; /* Adds space between cards and dots */
@@ -552,7 +560,8 @@
         transition: background-color 0.2s ease;
     }
 
-    .practitioner-carousel .swiper-pagination-bullet-active {
+    .practitioner-carousel .swiper-pagination-bullet-active,
+    .approaches-carousel .swiper-pagination-bullet-active {
         background-color: #006d77; /* teal-500 */
     }
 }
