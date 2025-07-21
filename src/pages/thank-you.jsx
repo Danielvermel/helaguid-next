@@ -110,7 +110,7 @@ export default function ThankYou() {
             /> */}
 
             <section className="py-16 max-md:pt-20 max-lg:pt-28 lg:pt-24 bg-b3 min-h-screen">
-                {thankYou.menus && <Header data={{ menus: thankYou.menus }} />}
+                {thankYou.menus && <Header data={{ menus: thankYou.menus, type: "thanks", extra: "thanks" }} />}
 
                 <div className="container mx-auto px-6 py-8 max-w-3xl">
                     <div className="bg-white rounded-lg shadow-md p-8">
