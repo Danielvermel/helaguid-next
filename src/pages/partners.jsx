@@ -56,22 +56,22 @@ export default function Partners() {
                         <Newsletter type="partners" onClose={handleCloseModal} />
                     </Modal>
                 )}
-                {/* <Header data={{ menus, type: "partners" }} /> */}
+                <Header data={{ menus, type: "partners" }} />
                 <Head>
                     <link rel="preload" href={hero.image} as="image" type="image/webp" />
                     <script type="application/ld+json">{JSON.stringify(jsonLdHero.conversation)}</script>
                 </Head>
-                <HeroLoop data={{ menus, type: "partners" }} />
-                <PractitionerCarousel data={{ practitioners }} />
-                <Approaches data={healingApproaches} />
+                {/* <HeroLoop data={{ menus, type: "partners" }} /> */}
+                {/* <PractitionerCarousel data={{ practitioners }} /> */}
+                {/* <Approaches data={healingApproaches} /> */}
 
-                {/* <Hero data={{ hero, type: "partners", isModalOpen, isSafari }} func={{ handleOpenModal }} /> */}
+                <Hero data={{ hero, type: "partners", isModalOpen, isSafari }} func={{ handleOpenModal }} />
                 {/* <HeroPartner data={{ hero, isModalOpen, isSafari }} func={{ handleOpenModal }} /> */}
                 <Cause data={{ causes, type: "partners" }} />
                 <WhyUs data={{ whyUs, comparisonTable, type: "partners", isModalOpen }} func={{ handleOpenModal }} />
                 <WhatWeOffer data={{ offers, type: "partners", isModalOpen }} func={{ handleOpenModal }} />
                 <HowItWorks data={{ howItWorks, type: "partners", isModalOpen, isSafari }} func={{ handleOpenModal }} />
-                {/* <AboutUs data={{ type: "partners", isSafari }} /> */}
+                <AboutUs data={{ type: "partners", isSafari }} />
                 <Footer data={{ type: "partners" }} />
             </main>
         </>

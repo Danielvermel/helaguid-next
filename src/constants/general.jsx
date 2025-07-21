@@ -128,11 +128,12 @@ export const footer = {
                     url: "#hero",
                     titleAttribute: "Go to the homepage section",
                 },
+
                 {
                     id: "1",
                     title: "About",
-                    url: "#about",
-                    titleAttribute: "Learn more about us",
+                    url: "/about",
+                    titleAttribute: "Learn more about our company and mission",
                 },
                 {
                     id: "2",
@@ -176,12 +177,6 @@ export const footer = {
                     title: "Privacy Policy",
                     url: "/privacy-policy",
                     titleAttribute: "Read our privacy policy",
-                },
-                {
-                    id: "3",
-                    title: "About Us",
-                    url: "/about",
-                    titleAttribute: "Learn more about our company and mission",
                 },
             ],
         },
@@ -233,7 +228,7 @@ export const aboutUs = {
         },
         {
             id: "1",
-            title: "Our Partners",
+            title: "For Practitioners",
             url: "https://book.healguid.com/",
             titleAttribute: "Open HealGuid practitioner directory in a new tab",
         },

@@ -93,10 +93,7 @@ export default function Privacy() {
                     </Modal>
                 )}
 
-                <Header
-                    data={{ menus: privacy.menus, type: "partners", extra: "privacy" }}
-                    func={{ handleOpenModal }}
-                />
+                <Header data={{ menus: privacy.menus, type: "privacy", extra: "privacy" }} func={{ handleOpenModal }} />
                 <div className="min-h-screen bg-b3 py-12 px-6 lg:px-16">
                     <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
                         {/* Visual header with icon */}

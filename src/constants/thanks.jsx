@@ -3,12 +3,12 @@ export const thankYouClients = {
     menus: [
         {
             id: "0",
-            title: "For Clients",
+            title: "For Patients",
             url: "/",
         },
         {
             id: "1",
-            title: "For Partners",
+            title: "For Practitioners",
             url: "/partners",
         },
         {

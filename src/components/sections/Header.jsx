@@ -142,7 +142,7 @@ const Header = ({ data }) => {
                 className={clsx(
                     "fixed xs:bg-b13 top-0 left-0 z-10 w-full transition-all duration-500 max-lg:py-4 max-sm:py-0",
                     hasScrolled ? "pt-2 pb-2" : "",
-                    data?.type?.includes("partner") ? "pt-12 pb-0" : "pt-12 pb-0",
+                    data?.type?.includes("partner") && "pt-4 pb-4",
                     data?.extra?.includes("privacy") && "pt-4 pb-4",
                     data?.extra?.includes("faq") && "pt-4 pb-4",
                     hasScrolled && "backdrop-blur-[24px] shadow-box"
@@ -175,20 +175,21 @@ const Header = ({ data }) => {
                                         </li>
                                     ))}
 
-                                    {/* <li className="nav-li">
-                                        <Button
-                                            containerClassName="bg-s1 m-6 mx-0"
-                                            textClassName="tracking-wide font-bold text-white"
-                                            href={
-                                                data?.type?.includes("client")
-                                                    ? "https://book.healguid.com/book-consultation"
-                                                    : "https://book.healguid.com/apply"
-                                            }
-                                        >
-                                        
-                                            {data?.type?.includes("client") ? "Get Matched" : "Apply Now"}
-                                        </Button>
-                                    </li> */}
+                                    {data?.type?.includes("partner") && (
+                                        <li className="nav-li">
+                                            <Button
+                                                containerClassName="bg-s1 m-6 mx-0"
+                                                textClassName="tracking-wide font-bold text-white"
+                                                href={
+                                                    data?.type?.includes("client")
+                                                        ? "https://book.healguid.com/book-consultation"
+                                                        : "https://book.healguid.com/apply"
+                                                }
+                                            >
+                                                {data?.type?.includes("client") ? "Get Matched" : "Apply Now"}
+                                            </Button>
+                                        </li>
+                                    )}
                                 </ul>
                             </nav>
 

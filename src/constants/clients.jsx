@@ -7,25 +7,25 @@ export const banner = {
 export const menus = [
     {
         id: "0",
-        title: "For Partners",
+        title: "For Practitioners",
         url: "/partners",
         titleAttribute: "For businesses interested in partnering with us",
     },
     {
         id: "1",
-        title: "Directory",
+        title: "Find a Specialist",
         url: "https://book.healguid.com/",
-        titleAttribute: "For businesses interested in partnering with us",
+        titleAttribute: "Find specialists",
     },
     {
         id: "2",
-        title: "How It Works",
+        title: "How We Works",
         url: "#how-it-works",
         titleAttribute: "Understand how our platform works",
     },
     {
         id: "3",
-        title: "About Us",
+        title: "About",
         url: "/about",
         titleAttribute: "Learn more about our company and mission",
     },
