@@ -197,9 +197,9 @@ const HeaderLoop = ({ data }) => {
                     </div>
 
                     <Button
-                        containerClassName={clsx(" m-0 text-sm text-white lg:hidden", hasScrolled ? "bg-p1" : "bg-s1")}
+                        containerClassName={clsx(" m-0 text-sm text-white ", hasScrolled ? "bg-p1" : "bg-s1")}
                         textClassName="tracking-wide font-semibold p-0 text-sm"
-                        textContainerClassName="min-h-[36px] px-2 mx-0"
+                        textContainerClassName="min-h-[36px] md:min-w-[130px] px-2 mx-0"
                         href={
                             data?.type?.includes("client")
                                 ? "https://book.healguid.com/book-consultation"

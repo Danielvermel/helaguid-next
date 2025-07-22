@@ -392,7 +392,7 @@ function MyApp({ Component, pageProps }) {
                 strategy="lazyOnload"
                 src="https://cloud.umami.is/script.js"
                 data-website-id="a3526664-8b36-4e89-bbe4-34bc9dd08830"
-                data-domains="healguid.com,book.healguid.com"
+                data-domains="healguid.com"
             ></Script>
 
             <noscript>
