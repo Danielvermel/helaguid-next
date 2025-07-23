@@ -392,8 +392,13 @@ function MyApp({ Component, pageProps }) {
                 strategy="afterInteractive"
                 src="https://cloud.umami.is/script.js"
                 data-website-id="a3526664-8b36-4e89-bbe4-34bc9dd08830"
-                data-domains="healguid.com"
             ></Script>
+
+            <script
+                defer
+                src="https://cloud.umami.is/script.js"
+                data-website-id="0d324ed4-26b2-4cd6-a8d0-f190d2f79fa7"
+            ></script>
 
             <noscript>
                 <iframe
