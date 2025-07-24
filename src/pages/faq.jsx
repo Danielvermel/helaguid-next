@@ -325,7 +325,7 @@ export default function FAQ() {
                                                                         return (
                                                                             <p
                                                                                 key={index}
-                                                                                className="text-lg mb-4 max-md:text-base"
+                                                                                className=" mb-4 max-md:text-base"
                                                                             >
                                                                                 {paragraph}
                                                                             </p>
@@ -369,7 +369,7 @@ export default function FAQ() {
                                                                         <p className="mt-4">{description}</p>
                                                                     )}
                                                                 </div>
-                                                                <div className="flex">
+                                                                <div className="flex max-sm:justify-center">
                                                                     {button.length > 1
                                                                         ? button.map((data) => {
                                                                               return (

@@ -66,8 +66,8 @@ export const faqs = {
                         hasButton: true,
                         alt: "Click to find a holistic health practitioner for your condition",
                         containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
                     },
                 },
                 {
@@ -100,8 +100,8 @@ export const faqs = {
                         hasButton: true,
                         alt: "Click to find a holistic health practitioner for your condition",
                         containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
                     },
                 },
                 {
@@ -112,10 +112,16 @@ export const faqs = {
                         {
                             title: "London Coverage:",
                             bullets: [
-                                { text: "Central London functional medicine doctors and integrative specialists." },
-                                { text: "North London naturopaths and nutritional therapists." },
-                                { text: "South London holistic health practitioners and TCM specialists." },
-                                { text: "East and West London comprehensive holistic care providers." },
+                                {
+                                    highlight: "Central London",
+                                    text: "functional medicine doctors and integrative specialists.",
+                                },
+                                { highlight: "North London", text: "naturopaths and nutritional therapists." },
+                                {
+                                    highlight: "South London",
+                                    text: "holistic health practitioners and TCM specialists.",
+                                },
+                                { highlight: "East and West London", text: "comprehensive holistic care providers." },
                             ],
                         },
                         {
@@ -148,8 +154,8 @@ export const faqs = {
                         hasButton: true,
                         alt: "Click to find a holistic health practitioner for your condition",
                         containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
                     },
                 },
                 {
@@ -190,8 +196,8 @@ export const faqs = {
                         hasButton: true,
                         alt: "Click to find a holistic health practitioner for your condition",
                         containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
                     },
                 },
             ],
@@ -278,8 +284,8 @@ export const faqs = {
                         hasButton: true,
                         alt: "Browse practitioners by specialty",
                         containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
                     },
                 },
                 {
@@ -332,8 +338,8 @@ export const faqs = {
                         href: "https://book.healguid.com/",
                         alt: "Browse practitioners now",
                         containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
                     },
                 },
                 {
@@ -389,8 +395,8 @@ export const faqs = {
                         href: "https://book.healguid.com/",
                         alt: "Browse specialists by condition",
                         containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
                     },
                 },
             ],
@@ -459,8 +465,8 @@ export const faqs = {
                         label: "Learn About Our Verification Standards →",
                         href: "https://book.healguid.com/verification",
                         containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
                         alt: "Learn about verification standards",
                     },
                 },
@@ -525,8 +531,8 @@ export const faqs = {
                         label: "Read Our Full Privacy Policy →",
                         href: "/privacy-policy",
                         containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
                         alt: "Read our privacy policy",
                     },
                 },
@@ -610,8 +616,8 @@ export const faqs = {
                         label: "View Pricing Information →",
                         href: "https://book.healguid.com",
                         containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
                         alt: "View pricing information",
                     },
                 },
@@ -650,10 +656,10 @@ export const faqs = {
                     button: {
                         hasButton: true,
                         label: "Create Your Free Profile →",
-                        href: "https://book.healguid.com/practitioners",
+                        href: "https://book.healguid.com/apply",
                         containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
                         alt: "Create a free practitioner profile",
                     },
                 },
@@ -733,8 +739,8 @@ export const faqs = {
                         label: "Choose Your Plan →",
                         href: "https://book.healguid.com/practitioners",
                         containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
                         alt: "Choose a practitioner plan",
                     },
                 },
@@ -808,8 +814,8 @@ export const faqs = {
                         label: "Learn More About Our Partnership →",
                         href: "https://book.healguid.com/practitioners",
                         containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
                         alt: "Learn about our partnership model",
                     },
                 },
@@ -888,8 +894,8 @@ export const faqs = {
                         href: "https://book.healguid.com/practitioners",
                         alt: "Apply to Join Our Founding Community",
                         containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
                     },
                 },
                 {
@@ -982,6 +988,9 @@ export const faqs = {
                         label: "Start Your Verification Process →",
                         href: "https://book.healguid.com/practitioners",
                         alt: "Start Your Verification Process",
+                        containerClass:
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
                     },
                 },
             ],
@@ -1069,8 +1078,8 @@ export const faqs = {
                         label: "Join Our Growing Community →",
                         href: "https://book.healguid.com",
                         containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
                         alt: "Join the HealGuid community",
                     },
                 },
@@ -1162,8 +1171,8 @@ export const faqs = {
                         label: "Contact Our Support Team →",
                         href: "/contact",
                         containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
                         alt: "Contact the HealGuid support team",
                     },
                 },
@@ -1258,8 +1267,8 @@ export const faqs = {
                         label: "Start Your Holistic Health Journey →",
                         href: "https://book.healguid.com",
                         containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
                         alt: "Start your holistic health journey",
                     },
                 },
@@ -1276,6 +1285,7 @@ export const faqs = {
                     points: [
                         {
                             title: "For Patients:",
+                            specialClasses: "list-decimal pl-10",
                             bullets: [
                                 {
                                     highlight: "Browse our practitioner directory",
@@ -1305,6 +1315,7 @@ export const faqs = {
                         },
                         {
                             title: "For Practitioners:",
+                            specialClasses: "list-decimal pl-10",
                             bullets: [
                                 { highlight: "Apply to join", text: "our verified practitioner network." },
                                 {
@@ -1351,18 +1362,18 @@ export const faqs = {
                             label: "Find Your Practitioner →",
                             href: "https://book.healguid.com/",
                             containerClass:
-                                "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer inline",
-                            textClass: "tracking-wide font-medium text-base",
+                                "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer inline",
+                            textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
                             alt: "Find a practitioner",
                         },
                         {
                             hasButton: true,
                             label: "Join as a Practitioner →",
-                            href: "https://book.healguid.com/practitioners",
+                            href: "https://book.healguid.com/apply",
                             alt: "Join as a practitioner",
                             containerClass:
-                                "cursor-pointer inline bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer inline ml-3",
-                            textClass: "tracking-wide font-medium text-base",
+                                "cursor-pointer inline bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2  sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer inline ml-3",
+                            textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
                         },
                     ],
                 },
