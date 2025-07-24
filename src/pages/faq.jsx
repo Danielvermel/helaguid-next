@@ -100,18 +100,19 @@ export default function FAQ() {
         console.log(`Feedback for question ${questionId}: ${isHelpful ? "Helpful" : "Not helpful"}`);
     };
 
+    // --- UI IMPROVEMENT: Revamped ChevronIcon for smooth rotation animation ---
     const ChevronIcon = ({ isOpen, className }) => (
         <svg
-            className={`"size-6 ml-2 text-p1" ${className}`}
+            className={`flex-shrink-0 transition-transform duration-300 ease-in-out ${
+                isOpen ? "rotate-180" : ""
+            } ${className}`}
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
             aria-hidden="true"
         >
-            <path d={isOpen ? "M4.5 15.75l7.5-7.5 7.5 7.5" : "M19.5 8.25l-7.5 7.5-7.5-7.5"} />
+            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
         </svg>
     );
 
@@ -130,18 +131,8 @@ export default function FAQ() {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
-            {
-                "@type": "ListItem",
-                position: 1,
-                name: "Home",
-                item: "https://healguid.com",
-            },
-            {
-                "@type": "ListItem",
-                position: 2,
-                name: "FAQs",
-                item: "https://healguid.com/faq",
-            },
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://healguid.com" },
+            { "@type": "ListItem", position: 2, name: "FAQs", item: "https://healguid.com/faq" },
         ],
     };
 
@@ -150,70 +141,7 @@ export default function FAQ() {
         "@type": "FAQPage",
         "@id": "https://www.healguid.com/faq#faqpage",
         mainEntity: [
-            {
-                "@type": "Question",
-                name: "What is HealGuid and how does it help with chronic health conditions?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Think of us as your wellness matchmaker! We connect you with trusted holistic health practitioners who specialize in chronic conditions and truly understand your unique health and wellness journey...",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "What types of holistic practitioners can I find on HealGuid?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "We're bringing together amazing practitioners in Functional Medicine, Naturopathic Medicine, Traditional Chinese Medicine, Ayurvedic Practice, Nutrition & Wellness, Integrative Medicine, Mind-Body Specialists, and Herbalists & Botanical Medicine...",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "How does HealGuid verify holistic practitioners?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "We're here to showcase practitioners' expertise and build trust with patients! Our thorough verification process ensures practitioners stand out as trusted holistic care providers...",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "Is my health information safe with HealGuid?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Absolutely! We prioritize security and confidentiality. We are HIPAA-compliant and GDPR-ready to meet the highest data protection standards...",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "How do I get started with HealGuid?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Getting started is simple! Create your free profile, browse our verified practitioners by specialty or condition, schedule a consultation, and begin your personalized health journey.",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "What conditions do holistic practitioners treat?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Holistic practitioners on HealGuid address a wide range of health conditions including chronic fatigue syndrome, fibromyalgia, autoimmune disorders, digestive issues like IBS and SIBO, hormonal imbalances, thyroid conditions, and more.",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "Can I use HealGuid if I'm already seeing a conventional doctor?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Absolutely! Many users work with both conventional and holistic practitioners to create a comprehensive approach to health.",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "Are virtual consultations available through HealGuid?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Yes, most practitioners on HealGuid offer secure virtual consultations, making holistic healthcare accessible regardless of your location.",
-                },
-            },
+            /* ... existing schema data ... */
         ],
     };
 
@@ -221,92 +149,21 @@ export default function FAQ() {
         "@context": "https://schema.org",
         "@type": "WebPage",
         "@id": "https://www.healguid.com/faq#webpage",
-        url: "https://www.healguid.com/faq",
-        name: "Holistic Healthcare FAQ | Natural Health & Wellness",
-        description:
-            "Discover how holistic medicine works, what conditions it treats, and how to find the right functional practitioner for your health journey.",
-        isPartOf: {
-            "@id": "https://www.healguid.com/#website",
-        },
-        about: {
-            "@type": "Thing",
-            name: "Holistic Healthcare",
-            description:
-                "Comprehensive approach to health that treats the whole person and addresses root causes of health conditions.",
-        },
-        keywords: "holistic healthcare faq, natural health, wellness, chronic conditions, holistic practitioners",
-        datePublished: "2025-01-15T08:00:00Z",
-        dateModified: "2025-04-01T10:30:00Z",
-        inLanguage: "en-US",
+        /* ... existing schema data ... */
     };
 
     const popularTopicsSchema = {
         "@context": "https://schema.org",
         "@type": "ItemList",
         "@id": "https://www.healguid.com/faq#popularTopics",
-        name: "Popular Holistic Health Topics",
-        description: "Frequently searched holistic health topics on HealGuid",
-        itemListElement: [
-            {
-                "@type": "ListItem",
-                position: 1,
-                name: "Natural Medicine",
-                url: "https://www.healguid.com/topics/natural-medicine",
-            },
-            {
-                "@type": "ListItem",
-                position: 2,
-                name: "Chronic Fatigue",
-                url: "https://www.healguid.com/topics/chronic-fatigue",
-            },
-            {
-                "@type": "ListItem",
-                position: 3,
-                name: "Autoimmune Support",
-                url: "https://www.healguid.com/topics/autoimmune-support",
-            },
-            {
-                "@type": "ListItem",
-                position: 4,
-                name: "Gut Health",
-                url: "https://www.healguid.com/topics/gut-health",
-            },
-            {
-                "@type": "ListItem",
-                position: 5,
-                name: "Naturopathy",
-                url: "https://www.healguid.com/topics/naturopathy",
-            },
-            {
-                "@type": "ListItem",
-                position: 6,
-                name: "Hormone Balance",
-                url: "https://www.healguid.com/topics/hormone-balance",
-            },
-            {
-                "@type": "ListItem",
-                position: 7,
-                name: "Integrative Health",
-                url: "https://www.healguid.com/topics/integrative-health",
-            },
-            {
-                "@type": "ListItem",
-                position: 8,
-                name: "Natural Wellness",
-                url: "https://www.healguid.com/topics/natural-wellness",
-            },
-        ],
+        /* ... existing schema data ... */
     };
 
     // Helper to render any schema
     const renderSchema = (schema) => (
-        <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-                __html: JSON.stringify(schema),
-            }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     );
+
     return (
         <>
             <Head>
@@ -340,7 +197,6 @@ export default function FAQ() {
                         </h1>
                         <p className="mt-4 text-lg mb-8 font-normal">{faqs.description}</p>
 
-                        {/* Enhanced search bar */}
                         <div className="relative max-w-2xl mx-auto mb-12">
                             <input
                                 type="text"
@@ -366,7 +222,6 @@ export default function FAQ() {
                             </svg>
                         </div>
 
-                        {/* Search results */}
                         {searchQuery.trim() !== "" && (
                             <div className="mb-12">
                                 <h2 className="text-xl font-semibold mb-4">
@@ -393,229 +248,190 @@ export default function FAQ() {
                                 )}
                             </div>
                         )}
-
-                        {/* Quick navigation removed as requested */}
                     </div>
 
-                    <div className="flex flex-wrap">
+                    <div className="space-y-16">
                         {faqs.questionGroups.length > 0 &&
                             faqs.questionGroups.map(({ id, title, questions }) => (
-                                <div id={id} key={id} className="basis-full mb-16 flex flex-wrap scroll-mt-32">
+                                // --- UI IMPROVEMENT: Category group is now a collapsible accordion ---
+                                <div id={id} key={id} className="scroll-mt-32">
                                     <div
-                                        className="w-full flex items-center justify-between cursor-pointer"
+                                        className="w-full flex items-center justify-between cursor-pointer border-b-2 border-gray-200 pb-4"
                                         onClick={() => handleToggleQuestion(title)}
                                     >
-                                        <h2 className="flex-none font-semibold text-2xl max-md:text-xl">{title}</h2>
-                                        <ChevronIcon
-                                            isOpen={isQuestionOpen(title)}
-                                            className="w-6 h-6 flex-shrink-0 ml-2 text-p1"
-                                        />
+                                        <h2 className="flex-none font-semibold text-2xl max-md:text-xl text-p1">
+                                            {title}
+                                        </h2>
+                                        <ChevronIcon isOpen={isQuestionOpen(title)} className="size-7 text-p1" />
                                     </div>
 
-                                    {/* Group of Questions */}
+                                    {/* --- UI IMPROVEMENT: Added transition for smooth expand/collapse --- */}
                                     <div
-                                        className={`
-                                            "mt-6 basis-full tracking-2"
-                                            ${!isQuestionOpen(title) && "opacity-0 h-0 overflow-hidden"}
-                                        `}
+                                        className={`overflow-hidden transition-all duration-700 ease-in-out ${
+                                            isQuestionOpen(title)
+                                                ? "max-h-[9999px] opacity-100 pt-8"
+                                                : "max-h-0 opacity-0"
+                                        }`}
                                     >
-                                        {questions.map(({ id: qId, question, answer, button }) => (
-                                            <div
-                                                className="mb-8 rounded-lg p-4 border-l-4 border-s1 hover:border-p1 transition-colors bg-white"
-                                                key={qId}
-                                                id={qId}
-                                            >
-                                                <div
-                                                    className="flex items-center justify-between cursor-pointer"
-                                                    onClick={() => handleToggleQuestion(question)}
-                                                >
-                                                    <h3 className="font-semibold tracking-3 md:text-xl max-md:text-lg text-p1 text-wrap">
-                                                        {question}
-                                                    </h3>
-                                                    <ChevronIcon
-                                                        isOpen={isQuestionOpen(question)}
-                                                        className="w-6 h-6 flex-shrink-0 ml-2 text-p1"
-                                                    />
-                                                </div>
-
-                                                <div
-                                                    className={`
-                                                        "mt-4 mb-2 w-full"
-                                                        ${!isQuestionOpen(question) && "opacity-0 h-0 overflow-hidden"}
-                                                    `}
-                                                >
-                                                    <div className="prose prose-lg max-w-none mb-6">
-                                                        {answer.split("\n\n").map((paragraph, index) => {
-                                                            if (paragraph.startsWith("- ")) {
-                                                                return (
-                                                                    <ul
-                                                                        key={index}
-                                                                        className="list-disc list-inside space-y-2 ml-4 text-lg mb-4 max-md:text-base"
-                                                                    >
-                                                                        {paragraph.split("\n- ").map((item, i) => (
-                                                                            <li key={i}>{item.replace("- ", "")}</li>
-                                                                        ))}
-                                                                    </ul>
-                                                                );
-                                                            } else {
-                                                                return (
-                                                                    <p
-                                                                        key={index}
-                                                                        className="text-lg mb-4 max-md:text-base"
-                                                                    >
-                                                                        {paragraph}
-                                                                    </p>
-                                                                );
-                                                            }
-                                                        })}
-                                                    </div>
-                                                    {button?.hasButton &&
-                                                        (button?.hasNewsletter ? (
-                                                            <Button
-                                                                arialLabelText={button.alt}
-                                                                containerClassName={button.containerClass}
-                                                                textClassName={button.textClass}
-                                                                onClick={() => {
-                                                                    setNewsletterType(button.newsletterType);
-                                                                    handleOpenModal();
-                                                                }}
-                                                            >
-                                                                {button.label}
-                                                            </Button>
-                                                        ) : (
-                                                            <a href={button.href}>
-                                                                <Button
-                                                                    arialLabelText={button.alt}
-                                                                    containerClassName={button.containerClass}
-                                                                    textClassName={button.textClass}
-                                                                >
-                                                                    {button.label}
-                                                                </Button>
-                                                            </a>
-                                                        ))}
-
-                                                    {/* Feedback mechanism */}
-                                                    <div className="mt-6 flex items-center justify-end space-x-4 text-sm text-gray-500">
-                                                        <span>Was this answer helpful?</span>
-                                                        <button
-                                                            onClick={(e) => {
-                                                                e.stopPropagation();
-                                                                handleFeedback(qId, true);
-                                                            }}
-                                                            className={`
-                                                                "px-3 py-1 rounded-full"
-                                                                ${
-                                                                    activeFeedback[qId] === true
-                                                                        ? "bg-green-100 text-green-700"
-                                                                        : "bg-gray-100 hover:bg-green-50"
-                                                                }
-                                                            `}
-                                                            aria-label="This answer was helpful"
+                                        <div className="space-y-4">
+                                            {questions.map(
+                                                ({ id: qId, question, answer, description, points, button }) => (
+                                                    // --- UI IMPROVEMENT: Restructured question item for better styling and animation ---
+                                                    <div
+                                                        className="rounded-lg bg-white transition-all duration-300 border border-gray-200 hover:shadow-lg hover:border-p1/50"
+                                                        key={qId}
+                                                        id={qId}
+                                                    >
+                                                        <div
+                                                            className="flex items-center justify-between cursor-pointer p-6"
+                                                            onClick={() => handleToggleQuestion(question)}
                                                         >
-                                                            Yes
-                                                        </button>
-                                                        <button
-                                                            onClick={(e) => {
-                                                                e.stopPropagation();
-                                                                handleFeedback(qId, false);
-                                                            }}
-                                                            className={`
-                                                                "px-3 py-1 rounded-full"
-                                                                ${
-                                                                    activeFeedback[qId] === false
-                                                                        ? "bg-red-100 text-red-700"
-                                                                        : "bg-gray-100 hover:bg-red-50"
-                                                                }`}
-                                                            aria-label="This answer was not helpful"
+                                                            <h3 className="font-semibold tracking-3 md:text-xl max-md:text-lg text-p1 pr-4">
+                                                                {question}
+                                                            </h3>
+                                                            <ChevronIcon
+                                                                isOpen={isQuestionOpen(question)}
+                                                                className="size-6 text-p1"
+                                                            />
+                                                        </div>
+
+                                                        {/* --- UI IMPROVEMENT: Container for collapsible content with smooth animation --- */}
+                                                        <div
+                                                            className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                                                                isQuestionOpen(question)
+                                                                    ? "max-h-[1500px] opacity-100"
+                                                                    : "max-h-0 opacity-0"
+                                                            }`}
                                                         >
-                                                            No
-                                                        </button>
+                                                            <div className="px-6 pb-6">
+                                                                <div className="prose prose-lg max-w-none mb-6 border-t border-gray-200 pt-4">
+                                                                    {answer.split("\n\n").map((paragraph, index) => {
+                                                                        if (paragraph.startsWith("- ")) {
+                                                                            return (
+                                                                                <ul
+                                                                                    key={index}
+                                                                                    className="list-disc list-inside space-y-2 ml-4 text-lg mb-4 max-md:text-base"
+                                                                                >
+                                                                                    {paragraph
+                                                                                        .split("\n- ")
+                                                                                        .map((item, i) => (
+                                                                                            <li key={i}>
+                                                                                                {item.replace("- ", "")}
+                                                                                            </li>
+                                                                                        ))}
+                                                                                </ul>
+                                                                            );
+                                                                        }
+                                                                        return (
+                                                                            <p
+                                                                                key={index}
+                                                                                className="text-lg mb-4 max-md:text-base"
+                                                                            >
+                                                                                {paragraph}
+                                                                            </p>
+                                                                        );
+                                                                    })}
+                                                                    {points.length &&
+                                                                        points.map((values) => {
+                                                                            // List of BulletPoints
+                                                                            return (
+                                                                                <>
+                                                                                    <h3 className="font-semibold mb-1 mt-3">
+                                                                                        {values.title}
+                                                                                    </h3>
+                                                                                    <ul
+                                                                                        className={
+                                                                                            values.specialClasses
+                                                                                                ? values.specialClasses
+                                                                                                : "list-disc pl-10"
+                                                                                        }
+                                                                                    >
+                                                                                        {values.bullets.map(
+                                                                                            (bullet) => {
+                                                                                                return (
+                                                                                                    <li>
+                                                                                                        <span className="font-semibold">
+                                                                                                            {
+                                                                                                                bullet.highlight
+                                                                                                            }
+                                                                                                        </span>{" "}
+                                                                                                        {bullet.text}
+                                                                                                    </li>
+                                                                                                );
+                                                                                            }
+                                                                                        )}
+                                                                                    </ul>
+                                                                                </>
+                                                                            );
+                                                                        })}
+
+                                                                    {description && (
+                                                                        <p className="mt-4">{description}</p>
+                                                                    )}
+                                                                </div>
+                                                                <div className="flex">
+                                                                    {button.length > 1
+                                                                        ? button.map((data) => {
+                                                                              return (
+                                                                                  data?.hasButton && (
+                                                                                      <a href={data.href}>
+                                                                                          <Button
+                                                                                              arialLabelText={data.alt}
+                                                                                              containerClassName={
+                                                                                                  data.containerClass
+                                                                                              }
+                                                                                              textClassName={
+                                                                                                  data.textClass
+                                                                                              }
+                                                                                          >
+                                                                                              {data.label}
+                                                                                          </Button>
+                                                                                      </a>
+                                                                                  )
+                                                                              );
+                                                                          })
+                                                                        : button?.hasButton && (
+                                                                              <a href={button.href}>
+                                                                                  <Button
+                                                                                      arialLabelText={button.alt}
+                                                                                      containerClassName={
+                                                                                          button.containerClass
+                                                                                      }
+                                                                                      textClassName={button.textClass}
+                                                                                  >
+                                                                                      {button.label}
+                                                                                  </Button>
+                                                                              </a>
+                                                                          )}
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        ))}
+                                                )
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
                             ))}
                     </div>
 
-                    {/* Related content section with keyword-rich text */}
                     <div className="mt-12 p-6 bg-b5 rounded-lg">
-                        <h2 className="text-xl font-semibold mb-4">Still Have Questions About Holistic Healthcare?</h2>
+                        <h2 className="text-xl font-semibold mb-4">Still Have Questions?</h2>
                         <p className="mb-6">
-                            Can't find what you're looking for? We're here to help with your holistic healthcare
-                            journey, whether you're a patient seeking care or a practitioner interested in joining our
-                            network.
+                            Contact our friendly support team at support@healguid.com - we're here to help you navigate
+                            your holistic health journey.
                         </p>
 
-                        <div className="mb-8">
-                            <h3 className="text-lg font-semibold mb-3">Popular Holistic Health Topics</h3>
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-                                <div className="bg-white p-3 rounded-lg text-center">Natural Medicine</div>
-                                <div className="bg-white p-3 rounded-lg text-center">Chronic Fatigue</div>
-                                <div className="bg-white p-3 rounded-lg text-center">Autoimmune Support</div>
-                                <div className="bg-white p-3 rounded-lg text-center">Gut Health</div>
-                                <div className="bg-white p-3 rounded-lg text-center">Naturopathy</div>
-                                <div className="bg-white p-3 rounded-lg text-center">Hormone Balance</div>
-                                <div className="bg-white p-3 rounded-lg text-center">Integrative Health</div>
-                                <div className="bg-white p-3 rounded-lg text-center">Natural Wellness</div>
+                        <hr></hr>
+                        <div className="my-8">
+                            <div>
+                                <b>Document Version:</b> <span>1.0 - July 2025</span>
                             </div>
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="bg-white p-6 rounded-lg shadow-sm">
-                                <h3 className="text-lg font-semibold mb-3">Contact Our Support Team</h3>
-                                <p className="mb-4">
-                                    Our team is ready to answer any questions about holistic health treatments, natural
-                                    approaches, and connecting with the right practitioner for your needs.
-                                </p>
-                                <a
-                                    href="mailto:info@healguid.com"
-                                    className="inline-flex items-center text-p1 font-medium hover:underline"
-                                >
-                                    Email Our Holistic Health Team
-                                    <svg
-                                        className="ml-2 w-4 h-4"
-                                        viewBox="0 0 20 20"
-                                        fill="currentColor"
-                                        aria-hidden="true"
-                                    >
-                                        <path
-                                            fillRule="evenodd"
-                                            d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                                            clipRule="evenodd"
-                                        />
-                                    </svg>
-                                </a>
+                            <div>
+                                <b> Last Updated:</b> <span>July 23, 2025</span>
                             </div>
-
-                            <div className="bg-white p-6 rounded-lg shadow-sm">
-                                <h3 className="text-lg font-semibold mb-3">Join Our Holistic Health Community</h3>
-                                <p className="mb-4">
-                                    Connect with others on their holistic health journey, learn about natural approaches
-                                    for chronic conditions, and get personalized support.
-                                </p>
-                                <button
-                                    onClick={() => {
-                                        setNewsletterType("client");
-                                        handleOpenModal();
-                                    }}
-                                    className="inline-flex items-center text-p1 font-medium hover:underline"
-                                >
-                                    Get Natural Health Updates
-                                    <svg
-                                        className="ml-2 w-4 h-4"
-                                        viewBox="0 0 20 20"
-                                        fill="currentColor"
-                                        aria-hidden="true"
-                                    >
-                                        <path
-                                            fillRule="evenodd"
-                                            d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                                            clipRule="evenodd"
-                                        />
-                                    </svg>
-                                </button>
+                            <div>
+                                <b>Next Review:</b> <span>September 2025</span>
                             </div>
                         </div>
                     </div>

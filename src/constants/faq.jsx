@@ -32,10 +32,37 @@ export const faqs = {
                 {
                     id: "what-is-healguid",
                     question: "What is HealGuid and how does it help with chronic health conditions?",
-                    answer: "✨ HealGuid connects you with trusted holistic practitioners who understand your unique health journey. Our platform specializes in matching patients with practitioners experienced in conditions like chronic fatigue syndrome, fibromyalgia, autoimmune disorders, and digestive issues.\n\nFor you, our approach means:\n- Access to verified experts in functional medicine, naturopathy, and integrative health\n- Practitioners experienced with chronic conditions who focus on root causes\n- Simple booking for both virtual and in-person consultations\n- A supportive community that understands your holistic health journey\n- Evidence-based approaches that combine conventional and traditional healing methods",
+                    answer: "✨ HealGuid connects you with rigorously verified holistic practitioners who understand your unique health journey. Our live platform provides immediate access to specialists in functional medicine, naturopathy, integrative health, and more.",
+                    points: [
+                        {
+                            title: "What sets us apart:",
+                            bullets: [
+                                {
+                                    highlight: "Premium-verified practitioners",
+                                    text: "across London and the UK specializing in chronic conditions.",
+                                },
+                                {
+                                    highlight: "Instant booking system",
+                                    text: "for virtual and in-person consultations.",
+                                },
+                                {
+                                    highlight: "Specialist matching",
+                                    text: "for chronic fatigue syndrome, fibromyalgia, autoimmune disorders, digestive issues, and more.",
+                                },
+                                {
+                                    highlight: "Evidence-based approaches",
+                                    text: "combining conventional insights with holistic methods.",
+                                },
+                                {
+                                    highlight: "Secure, GDPR-compliant platform",
+                                    text: "protecting your health information.",
+                                },
+                            ],
+                        },
+                    ],
                     button: {
                         label: "Find a Practitioner →",
-                        href: "",
+                        href: "https://book.healguid.com/",
                         hasButton: true,
                         alt: "Click to find a holistic health practitioner for your condition",
                         containerClass:
@@ -45,43 +72,123 @@ export const faqs = {
                 },
                 {
                     id: "early-access",
-                    question: "When is HealGuid launching and how can I get early access?",
-                    answer: "🚀 Our platform is launching in Q3 2025, and we'd love for you to be part of our founding community. Join our waitlist today for early access to our network of verified practitioners specializing in natural healthcare approaches.\n\nEarly members receive:\n- Priority access to our network of verified holistic practitioners\n- Exclusive early-bird pricing on consultations for chronic conditions\n- First access to educational resources about natural approaches to wellness\n- The chance to help shape a platform that's transforming healthcare delivery",
+                    question: "Is HealGuid available now, and when will the full platform launch?",
+                    answer: "✨ HealGuid's MVP is live! You can browse our founding network of verified practitioners and book consultations today.",
+                    points: [
+                        {
+                            title: "Available now:",
+                            bullets: [
+                                { text: "Directory of verified holistic practitioners across London and the UK." },
+                                { text: "Secure practitioner profiles with credentials and patient reviews." },
+                                { text: "Direct booking system for consultations." },
+                                { text: "Encrypted practitioner-patient messaging system." },
+                            ],
+                        },
+                        {
+                            title: "Enhanced features launching Q4 2025:",
+                            bullets: [
+                                { text: "Advanced AI matching algorithms." },
+                                { text: "Integrated payment processing." },
+                                { text: "Comprehensive health tracking tools." },
+                                { text: "Enhanced community features and support groups." },
+                            ],
+                        },
+                    ],
                     button: {
-                        label: "Join the Waitlist →",
-                        href: "",
-                        hasNewsletter: true,
-                        newsletterType: "client",
+                        label: "Start Your Search Today →",
+                        href: "https://book.healguid.com/",
                         hasButton: true,
-                        alt: "Click to join our waitlist for early access",
+                        alt: "Click to find a holistic health practitioner for your condition",
                         containerClass:
                             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
                         textClass: "tracking-wide font-medium text-base",
                     },
                 },
                 {
-                    id: "why-choose",
-                    question: "Why should I choose HealGuid for finding holistic healthcare?",
-                    answer: "💚 Finding the right holistic practitioner shouldn't be complicated, especially when you're dealing with complex conditions. We've created a platform where:\n\n- Finding the right practitioner for your needs feels as natural as talking to a friend\n- Every practitioner is verified and focused on personalized care and treating root causes\n- You're part of a community that understands and supports your path to wellness\n- You can easily find specialists in functional medicine, naturopathy, Traditional Chinese Medicine, and other evidence-based modalities\n- Your health journey is supported with practitioners experienced in conditions like yours",
+                    id: "uk-practitioners",
+                    question: "Can I find holistic practitioners in London and the UK through HealGuid?",
+                    answer: "🚀 Yes! HealGuid connects you with verified holistic practitioners across London and the UK. Our founding network includes practitioners in:",
+                    points: [
+                        {
+                            title: "London Coverage:",
+                            bullets: [
+                                { text: "Central London functional medicine doctors and integrative specialists." },
+                                { text: "North London naturopaths and nutritional therapists." },
+                                { text: "South London holistic health practitioners and TCM specialists." },
+                                { text: "East and West London comprehensive holistic care providers." },
+                            ],
+                        },
+                        {
+                            title: "UK-Wide Network:",
+                            bullets: [
+                                {
+                                    highlight: "Manchester",
+                                    text: "holistic health practitioners and functional medicine specialists.",
+                                },
+                                {
+                                    highlight: "Birmingham",
+                                    text: "naturopaths and integrative health experts.",
+                                },
+                                {
+                                    highlight: "Edinburgh",
+                                    text: "holistic practitioners and wellness specialists.",
+                                },
+                                {
+                                    highlight: "Growing coverage",
+                                    text: "across England, Scotland, and Wales.",
+                                },
+                            ],
+                        },
+                    ],
+                    description:
+                        "Whether you prefer in-person consultations in London or virtual appointments with UK-based practitioners, our platform makes it simple to find the right match.",
                     button: {
-                        label: "Learn How It Works →",
-                        href: "/#how-it-works",
+                        label: "Find Practitioners Near You →",
+                        href: "https://book.healguid.com/",
                         hasButton: true,
-                        alt: "Click to learn how holistic healthcare approaches work",
+                        alt: "Click to find a holistic health practitioner for your condition",
                         containerClass:
                             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
                         textClass: "tracking-wide font-medium text-base",
                     },
                 },
                 {
-                    id: "different-approach",
+                    id: "why-healguid-different",
                     question: "What makes HealGuid different from conventional healthcare platforms?",
-                    answer: "⭐ Our platform is reimagining how you access and experience holistic healthcare:\n\n- We focus on finding and treating root causes of chronic conditions, not just managing symptoms\n- Your wellness journey evolves with personalized care plans that adapt to your changing health needs\n- Our platform connects you with practitioners who understand complex conditions like chronic fatigue syndrome, fibromyalgia, autoimmune disorders, and digestive issues\n- You'll join a community that truly understands the challenges of chronic conditions\n- Every practitioner is verified and experienced with evidence-based holistic protocols\n- We bridge the gap between conventional healthcare and natural approaches for truly integrative care",
+                    answer: "⭐ HealGuid reimagines holistic healthcare access by focusing on what matters most:",
+                    points: [
+                        {
+                            title: "Root Cause Focus:",
+                            bullets: [
+                                { text: "Practitioners who investigate underlying causes of chronic conditions." },
+                                { text: "Personalized care plans that evolve with your healing journey." },
+                                { text: "Integration of functional testing, nutrition, and lifestyle approaches." },
+                            ],
+                        },
+                        {
+                            title: "Verified Expertise:",
+                            bullets: [
+                                { text: "Rigorous verification of all practitioner credentials and specializations." },
+                                { text: "Focus on evidence-based holistic protocols." },
+                                {
+                                    text: "Practitioners experienced with complex conditions like ME/CFS, fibromyalgia, and autoimmune disorders.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Patient-Centered Experience:",
+                            bullets: [
+                                { text: "Platform designed specifically for chronic condition management." },
+                                { text: "Community of practitioners who understand long-term health challenges." },
+                                { text: "Seamless connection between virtual and in-person care options." },
+                            ],
+                        },
+                    ],
                     button: {
                         label: "Discover Our Approach →",
-                        href: "/#how-it-works",
+                        href: "https://book.healguid.com/",
                         hasButton: true,
-                        alt: "Click to discover our holistic healthcare approach",
+                        alt: "Click to find a holistic health practitioner for your condition",
                         containerClass:
                             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
                         textClass: "tracking-wide font-medium text-base",
@@ -90,84 +197,86 @@ export const faqs = {
             ],
         },
         {
-            id: "for-practitioners",
-            title: "👩‍⚕️ For Holistic Healthcare Practitioners",
-            questions: [
-                {
-                    id: "practitioner-benefits",
-                    question: "What benefits do I get as a founding practitioner member?",
-                    answer: "We're excited to welcome holistic practitioners to our founding network! As one of our first practitioners specializing in natural approaches to chronic conditions, you'll receive:\n\n- Priority platform access with reduced fees for your first year\n- Input on platform development to better serve patients with chronic conditions\n- Premium features for managing your practice\n- Featured placement when we launch to patients seeking natural approaches to health\n- Connection with patients specifically seeking your expertise in areas like chronic fatigue, autoimmune conditions, hormonal health, and digestive wellness\n- Support in growing your holistic health practice",
-                    button: {
-                        label: "Apply As A Practitioner →",
-                        href: "",
-                        hasNewsletter: true,
-                        newsletterType: "partner",
-                        hasButton: true,
-                        alt: "Click to apply as a holistic health practitioner",
-                        containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
-                    },
-                },
-                {
-                    id: "practitioner-access",
-                    question: "How can I get early access to HealGuid as a holistic health practitioner?",
-                    answer: "Joining HealGuid's founding community of holistic practitioners is straightforward:\n\n1. **Sign up** using our Practitioner Early Access form\n2. **Share your expertise** in holistic healthcare modalities\n3. **Detail your experience** with conditions like chronic fatigue, autoimmune disorders, or gut health\n4. **Once verified**, you'll gain priority access to:\n   - Reduced first-year platform fees for your practice\n   - Premium practice management features\n   - Input on feature development to better serve patients with chronic conditions\n   - Early connections with patients seeking your specific expertise in natural healthcare",
-                    button: {
-                        label: "Join Our Practitioner Network →",
-                        href: "",
-                        hasNewsletter: true,
-                        newsletterType: "partner",
-                        hasButton: true,
-                        alt: "Click to join our network of holistic health practitioners",
-                        containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
-                    },
-                },
-                {
-                    id: "practice-tools",
-                    question: "What tools will HealGuid offer to help my holistic practice thrive?",
-                    answer: "HealGuid offers specialized tools designed for holistic health practitioners:\n\n- Smart tools to help create personalized care plans for chronic conditions\n- Virtual consultation capabilities for expanding your practice beyond geographical limitations\n- Secure patient communication systems compliant with healthcare privacy standards\n- Analytics to help your practice attract patients seeking holistic approaches\n- Efficient scheduling and practice management tools that reduce administrative burden\n- Resources for educating patients about holistic approaches to their conditions\n- Support for integrating lab testing and supplement recommendations into your practice workflow",
-                    button: {
-                        label: "See Our Practice Tools →",
-                        href: "",
-                        hasButton: true,
-                        alt: "Click to see our holistic practice tools",
-                        containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
-                    },
-                },
-                {
-                    id: "verification-process",
-                    question: "How does HealGuid verify holistic practitioners?",
-                    answer: "We're committed to showcasing your expertise and building trust with patients seeking natural approaches to health. Our thorough verification process for holistic practitioners includes:\n\n- Credential verification specific to your holistic specialties\n- Professional background checks and licensing confirmation\n- Review of your experience with specific chronic conditions\n- Verification of your training in holistic modalities\n- A trusted practitioner badge that sets you apart and builds patient confidence\n- Ongoing quality reviews designed to support your practice growth and maintain high standards\n- Patient feedback systems that highlight your expertise and patient satisfaction",
-                    button: {
-                        label: "Learn About Practitioner Verification →",
-                        href: "/partners#trust",
-                        hasButton: true,
-                        alt: "Click to learn about our practitioner verification process",
-                        containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
-                    },
-                },
-            ],
-        },
-        {
-            id: "for-patients",
-            title: "🌱 For Patients Seeking Holistic Care",
+            id: "finding-practitioner",
+            title: "🔍 Finding the Right Practitioner",
             questions: [
                 {
                     id: "practitioner-types",
                     question: "What types of holistic practitioners will I find on HealGuid?",
-                    answer: "Our platform connects you with a diverse range of holistic health practitioners specializing in natural approaches to chronic conditions:\n\n- Functional Medicine Doctors focusing on root causes of chronic illness\n- Naturopathic Physicians combining natural remedies with modern science\n- Traditional Chinese Medicine practitioners offering acupuncture and herbal medicine\n- Ayurvedic Specialists with expertise in India's ancient healing system\n- Nutrition & Wellness Coaches specializing in therapeutic diets for chronic conditions\n- Integrative Medicine Physicians blending conventional and alternative approaches\n- Mind-Body Specialists addressing the psychological aspects of chronic illness\n- Herbalists & Botanical Medicine experts skilled in natural remedies\n\nEvery practitioner is verified and experienced in supporting patients with chronic fatigue syndrome, fibromyalgia, autoimmune conditions, digestive issues, hormonal imbalances, and other complex health challenges.",
+                    answer: "Our platform connects you with verified specialists across multiple holistic healthcare modalities:",
+                    points: [
+                        {
+                            title: "Medical Integration Specialists:",
+                            bullets: [
+                                {
+                                    highlight: "Functional Medicine Doctors",
+                                    text: "focusing on root causes of chronic illness.",
+                                },
+                                {
+                                    highlight: "Integrative Medicine Physicians",
+                                    text: "blending conventional and holistic approaches.",
+                                },
+                                {
+                                    highlight: "GPs with Holistic Training",
+                                    text: "offering comprehensive care perspectives.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Natural Healthcare Specialists:",
+                            bullets: [
+                                {
+                                    highlight: "Naturopathic Physicians",
+                                    text: "combining natural remedies with modern science.",
+                                },
+                                {
+                                    highlight: "Nutritional Therapists",
+                                    text: "specializing in therapeutic diets for chronic conditions.",
+                                },
+                                {
+                                    highlight: "Clinical Nutritionists",
+                                    text: "with expertise in metabolic and digestive health.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Traditional Medicine Practitioners:",
+                            bullets: [
+                                {
+                                    highlight: "Traditional Chinese Medicine",
+                                    text: "practitioners offering acupuncture and herbal medicine.",
+                                },
+                                {
+                                    highlight: "Ayurvedic Specialists",
+                                    text: "with expertise in India's ancient healing system.",
+                                },
+                                {
+                                    highlight: "Medical Herbalists",
+                                    text: "skilled in botanical medicine approaches.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Specialized Support:",
+                            bullets: [
+                                {
+                                    highlight: "Mind-Body Specialists",
+                                    text: "addressing psychological aspects of chronic illness.",
+                                },
+                                {
+                                    highlight: "Health Coaches",
+                                    text: "providing ongoing support and lifestyle guidance.",
+                                },
+                            ],
+                        },
+                    ],
+                    description:
+                        "Every practitioner is verified and experienced in supporting patients with chronic fatigue syndrome, fibromyalgia, autoimmune conditions, digestive issues, hormonal imbalances, and other complex health challenges.",
                     button: {
-                        label: "Find Your Perfect Practitioner Match →",
-                        href: "",
+                        label: "Browse Practitioners by Specialty →",
+                        href: "https://book.healguid.com/",
                         hasButton: true,
-                        alt: "Click to find your perfect holistic practitioner match",
+                        alt: "Browse practitioners by specialty",
                         containerClass:
                             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
                         textClass: "tracking-wide font-medium text-base",
@@ -176,26 +285,52 @@ export const faqs = {
                 {
                     id: "booking-process",
                     question: "How does booking a holistic consultation work on HealGuid?",
-                    answer: "Finding and booking your ideal holistic practitioner is streamlined on our platform:\n\n- Use our matching system to find practitioners specializing in your specific condition, whether it's chronic fatigue, autoimmune issues, or digestive problems\n- Choose between virtual consultations or in-person appointments based on your preference and location\n- Select from available appointment times and book instantly at your convenience\n- Receive preparation guidance for making the most of your holistic consultation\n- Complete any necessary health intake forms securely through our platform\n- Begin your personalized wellness journey with a practitioner experienced in natural approaches to your condition\n- Access follow-up support and resources specific to your treatment plan",
+                    answer: "✨ Connecting with the right practitioner is straightforward through our live platform:",
+                    points: [
+                        {
+                            title: "Current Booking Process:",
+                            specialClasses: "list-decimal pl-10",
+                            bullets: [
+                                {
+                                    highlight: "Browse verified practitioners",
+                                    text: "by location, specialty, and condition focus.",
+                                },
+                                {
+                                    highlight: "Review detailed profiles",
+                                    text: "including credentials, patient reviews, and consultation fees.",
+                                },
+                                {
+                                    highlight: "Contact practitioners directly",
+                                    text: "through our secure messaging system.",
+                                },
+                                {
+                                    highlight: "Arrange consultations",
+                                    text: "(virtual or in-person) based on your preference.",
+                                },
+                                {
+                                    highlight: "Complete intake forms",
+                                    text: "if requested by your chosen practitioner.",
+                                },
+                                {
+                                    highlight: "Begin your personalized wellness journey",
+                                    text: "with ongoing support.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Enhanced Features Coming Q4 2025:",
+                            bullets: [
+                                { text: "One-click instant booking with real-time availability." },
+                                { text: "Automated appointment reminders and follow-up scheduling." },
+                                { text: "Integrated payment processing for seamless transactions." },
+                            ],
+                        },
+                    ],
                     button: {
-                        label: "Book a Consultation →",
-                        href: "",
                         hasButton: true,
-                        alt: "Click to book a holistic health consultation",
-                        containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
-                    },
-                },
-                {
-                    id: "cost-information",
-                    question: "What about the cost of holistic healthcare through HealGuid?",
-                    answer: "We believe everyone deserves access to effective holistic healthcare approaches:\n\n- Explore our platform basics and educational resources about holistic health for free\n- Review transparent pricing for all practitioner consultations before booking\n- Typical consultation fees range from £75-£150 per session, depending on the practitioner's credentials and the service provided\n- Many practitioners offer initial discovery calls to determine if they're the right fit for your needs\n- Our platform clearly indicates which practitioners accept insurance for holistic services\n- Early adopters may access special pricing and packages from our founding practitioners\n- We never charge additional booking fees for connecting with holistic healthcare providers",
-                    button: {
-                        label: "View Pricing Options →",
-                        href: "",
-                        hasButton: true,
-                        alt: "Click to view holistic healthcare pricing options",
+                        label: "Browse Practitioners Now →",
+                        href: "https://book.healguid.com/",
+                        alt: "Browse practitioners now",
                         containerClass:
                             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
                         textClass: "tracking-wide font-medium text-base",
@@ -205,12 +340,54 @@ export const faqs = {
                     id: "specific-conditions",
                     question:
                         "How can HealGuid help with specific conditions like chronic fatigue or autoimmune issues?",
-                    answer: "HealGuid specializes in connecting you with holistic practitioners experienced in complex chronic conditions:\n\n- Find experts in specific health challenges who understand the unique nature of conditions like chronic fatigue syndrome, fibromyalgia, and autoimmune disorders\n- Access holistic approaches that address root causes rather than just symptoms\n- Receive personalized care plans that evolve with your healing journey\n- Connect with a supportive community facing similar health challenges and exploring natural solutions\n- Discover educational resources about natural approaches to specific conditions\n- Learn how holistic care can complement conventional treatments\n- Understand how diet, lifestyle, stress management, and specialized testing can help identify underlying causes of your symptoms",
+                    answer: "🎯 HealGuid specializes in connecting you with practitioners experienced in complex chronic conditions:",
+                    points: [
+                        {
+                            title: "Chronic Fatigue Syndrome (CFS/ME):",
+                            bullets: [
+                                { text: "25+ specialist practitioners with CFS/ME expertise." },
+                                { text: "Functional medicine approaches to energy restoration." },
+                                { text: "Mitochondrial support and adrenal recovery protocols." },
+                            ],
+                        },
+                        {
+                            title: "Autoimmune Conditions:",
+                            bullets: [
+                                { text: "Specialists in rheumatoid arthritis, Hashimoto's thyroiditis, and IBD." },
+                                { text: "Anti-inflammatory dietary protocols and lifestyle interventions." },
+                                { text: "Functional testing to identify triggers and support immune balance." },
+                            ],
+                        },
+                        {
+                            title: "Digestive Health Disorders:",
+                            bullets: [
+                                { text: "IBS, SIBO, and leaky gut specialists." },
+                                { text: "Comprehensive gut microbiome restoration programs." },
+                                { text: "Food sensitivity testing and elimination diet support." },
+                            ],
+                        },
+                        {
+                            title: "Hormonal Imbalances:",
+                            bullets: [
+                                { text: "Thyroid disorder specialists using functional approaches." },
+                                { text: "Reproductive hormone balancing and fertility support." },
+                                { text: "Adrenal fatigue recovery and stress management." },
+                            ],
+                        },
+                        {
+                            title: "Additional Specialties:",
+                            bullets: [
+                                { text: "Fibromyalgia and chronic pain management." },
+                                { text: "Long COVID recovery protocols." },
+                                { text: "Environmental illness and detoxification support." },
+                            ],
+                        },
+                    ],
                     button: {
-                        label: "Explore Condition-Specific Care →",
-                        href: "",
                         hasButton: true,
-                        alt: "Click to explore condition-specific holistic approaches",
+                        label: "Browse Specialists by Condition →",
+                        href: "https://book.healguid.com/",
+                        alt: "Browse specialists by condition",
                         containerClass:
                             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
                         textClass: "tracking-wide font-medium text-base",
@@ -219,65 +396,975 @@ export const faqs = {
             ],
         },
         {
-            id: "privacy-support",
-            title: "💫 Privacy and Support",
+            id: "trust-verification",
+            title: "💚 Trust & Verification",
             questions: [
                 {
-                    id: "data-security",
+                    id: "how-verify",
+                    question: "How does HealGuid verify holistic practitioners?",
+                    answer: "✨ Every practitioner undergoes our comprehensive verification process before joining our network:",
+                    points: [
+                        {
+                            title: "Professional Qualification Verification:",
+                            bullets: [
+                                { text: "Review and verification of all degrees, diplomas, and certifications." },
+                                { text: "Confirmation of active professional registrations (GMC, CNHC, HCPC, etc.)." },
+                                { text: "Assessment of specialized training in holistic modalities." },
+                            ],
+                        },
+                        {
+                            title: "Professional Standards Check:",
+                            bullets: [
+                                { text: "Professional background verification and reference checks." },
+                                { text: "Confirmation of professional indemnity insurance coverage." },
+                                { text: "Review of any professional disciplinary history." },
+                            ],
+                        },
+                        {
+                            title: "Expertise Assessment:",
+                            bullets: [
+                                { text: "Evaluation of experience with specific chronic conditions." },
+                                { text: "Review of continuing professional development." },
+                                { text: "Assessment of evidence-based practice approaches." },
+                            ],
+                        },
+                        {
+                            title: "Ongoing Quality Monitoring:",
+                            bullets: [
+                                { text: "Regular review of patient feedback and satisfaction scores." },
+                                { text: "Continued professional development verification." },
+                                { text: "Compliance with platform quality standards." },
+                            ],
+                        },
+                        {
+                            title: "Practitioner Verification Levels:",
+                            bullets: [
+                                {
+                                    highlight: "✓ Verified Professional:",
+                                    text: "Met all basic verification requirements.",
+                                },
+                                {
+                                    highlight: "✓ Specialist Verified:",
+                                    text: "Additional expertise verification in specific conditions.",
+                                },
+                                {
+                                    highlight: "✓ Premium Verified:",
+                                    text: "Highest level including peer reviews and advanced credentials.",
+                                },
+                            ],
+                        },
+                    ],
+                    button: {
+                        hasButton: true,
+                        label: "Learn About Our Verification Standards →",
+                        href: "https://book.healguid.com/verification",
+                        containerClass:
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium text-base",
+                        alt: "Learn about verification standards",
+                    },
+                },
+                {
+                    id: "info-safe",
                     question: "Is my health information safe with HealGuid?",
-                    answer: "Your privacy is paramount when seeking holistic care! We've built HealGuid with healthcare-grade security measures:\n\n- HIPAA-compliant systems and protocols (the gold standard in healthcare privacy)\n- End-to-end encryption for all sensitive health information shared with holistic practitioners\n- Secure messaging with your healthcare provider\n- Strict access controls ensuring only your verified practitioners can access your health information\n- Regular security audits and updates to maintain the highest standards of data protection\n- Transparent privacy policies explaining exactly how your information is used\n- Option to control what information is shared with which practitioners",
+                    answer: "🔒 Your privacy and data security are our top priorities. HealGuid is built with healthcare-grade security measures:",
+                    points: [
+                        {
+                            title: "Data Protection Standards:",
+                            bullets: [
+                                {
+                                    highlight: "GDPR compliance",
+                                    text: "with explicit consent mechanisms for all data processing.",
+                                },
+                                {
+                                    highlight: "Healthcare-grade encryption",
+                                    text: "for all sensitive health information.",
+                                },
+                                {
+                                    highlight: "Secure messaging systems",
+                                    text: "between you and your practitioners.",
+                                },
+                                {
+                                    highlight: "Strict access controls",
+                                    text: "ensuring only your chosen practitioners can access your information.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Privacy Safeguards:",
+                            bullets: [
+                                {
+                                    highlight: "Regular security audits",
+                                    text: "and penetration testing.",
+                                },
+                                {
+                                    highlight: "Minimal data collection",
+                                    text: "- we only collect what's necessary for your care.",
+                                },
+                                {
+                                    highlight: "Transparent privacy policies",
+                                    text: "explaining exactly how your information is used.",
+                                },
+                                {
+                                    highlight: "Right to data portability",
+                                    text: "- your health information belongs to you.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Professional Standards:",
+                            bullets: [
+                                { text: "All practitioners bound by professional confidentiality requirements." },
+                                { text: "Secure video consultation technology with end-to-end encryption." },
+                                { text: "No sharing of personal information without explicit consent." },
+                            ],
+                        },
+                    ],
                     button: {
-                        label: "Read Our Privacy Policy →",
+                        hasButton: true,
+                        label: "Read Our Full Privacy Policy →",
                         href: "/privacy-policy",
+                        containerClass:
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium text-base",
+                        alt: "Read our privacy policy",
+                    },
+                },
+            ],
+        },
+        {
+            id: "pricing-costs",
+            title: "💰 Pricing & Costs",
+            questions: [
+                {
+                    id: "cost-of-care",
+                    question: "What about the cost of holistic healthcare through HealGuid?",
+                    answer: "💚 We believe holistic healthcare should be accessible and transparent:",
+                    points: [
+                        {
+                            title: "Platform Access:",
+                            bullets: [
+                                {
+                                    highlight: "Free to browse",
+                                    text: "our practitioner directory and educational resources.",
+                                },
+                                {
+                                    highlight: "No booking fees",
+                                    text: "- we never add charges to your consultation costs.",
+                                },
+                                {
+                                    highlight: "Transparent pricing",
+                                    text: "- all consultation fees clearly displayed before booking.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Consultation Costs:",
+                            bullets: [
+                                {
+                                    highlight: "Consultation fees typically range from £75-£200",
+                                    text: "depending on practitioner credentials and session length.",
+                                },
+                                {
+                                    highlight: "Initial consultations",
+                                    text: "often 60-90 minutes for comprehensive assessment.",
+                                },
+                                { highlight: "Follow-up sessions", text: "typically 30-45 minutes at reduced rates." },
+                                {
+                                    highlight: "Package deals",
+                                    text: "available from many practitioners for ongoing care.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Payment Options:",
+                            bullets: [
+                                { highlight: "Direct payment", text: "to practitioners through secure systems." },
+                                {
+                                    highlight: "Some practitioners accept insurance",
+                                    text: "for holistic services (clearly indicated).",
+                                },
+                                {
+                                    highlight: "Payment plans",
+                                    text: "available from select practitioners for comprehensive programs.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Value-Added Benefits:",
+                            bullets: [
+                                {
+                                    highlight: "Educational resources",
+                                    text: "and condition-specific guides included free.",
+                                },
+                                { highlight: "Community support", text: "access at no additional cost." },
+                                {
+                                    highlight: "Practitioner matching assistance",
+                                    text: "to ensure you find the right fit.",
+                                },
+                            ],
+                        },
+                    ],
+                    button: {
                         hasButton: true,
-                        alt: "Click to read our privacy policy",
+                        label: "View Pricing Information →",
+                        href: "https://book.healguid.com",
+                        containerClass:
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium text-base",
+                        alt: "View pricing information",
+                    },
+                },
+            ],
+        },
+        {
+            id: "for-practitioners",
+            title: "👩‍⚕️ For Holistic Healthcare Practitioners",
+            questions: [
+                {
+                    id: "cost-to-join",
+                    question: "How much does it cost to join HealGuid as a practitioner?",
+                    answer: "✨ Joining HealGuid is free with no upfront costs or setup fees. We want you to experience our platform's value before making any financial commitment.",
+                    points: [
+                        {
+                            title: "Getting Started:",
+                            bullets: [
+                                {
+                                    highlight: "Free profile creation",
+                                    text: "with professional verification.",
+                                },
+                                {
+                                    highlight: "No payment information required",
+                                    text: "to set up your listing.",
+                                },
+                                { highlight: "3-month free trial", text: "of all premium features." },
+                                {
+                                    highlight: "No long-term contracts",
+                                    text: "- complete flexibility to leave anytime.",
+                                },
+                            ],
+                        },
+                    ],
+                    description:
+                        "We don't get paid unless you do - our success is directly tied to helping you grow your practice and connect with patients who need your expertise.",
+                    button: {
+                        hasButton: true,
+                        label: "Create Your Free Profile →",
+                        href: "https://book.healguid.com/practitioners",
+                        containerClass:
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium text-base",
+                        alt: "Create a free practitioner profile",
+                    },
+                },
+                {
+                    id: "subscription-plans",
+                    question: "What are HealGuid's practitioner subscription plans?",
+                    answer: "🚀 We offer flexible options designed to support practitioners at every stage:",
+                    points: [
+                        {
+                            title: "Early Adopter Benefits (until Dec 2025):",
+                            bullets: [
+                                {
+                                    highlight: "3-month free trial",
+                                    text: "of Premium features for founding practitioners.",
+                                },
+                                {
+                                    highlight: "Locked-in pricing",
+                                    text: "protection as our founding community member.",
+                                },
+                                {
+                                    highlight: "Get matched to pre-qualified leads",
+                                    text: "and expand your network.",
+                                },
+                                {
+                                    highlight: "Priority support",
+                                    text: "and direct input on platform development.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Basic Plan - £49/month:",
+                            bullets: [
+                                { text: "Professional verified profile with credential badges." },
+                                { text: "Standard placement in practitioner search results." },
+                                { text: "Direct patient booking and messaging system." },
+                                { text: "Basic practice analytics and patient management tools." },
+                                { text: "Access to practitioner community and resources." },
+                            ],
+                        },
+                        {
+                            title: "Premium Plan - £99/month:",
+                            bullets: [
+                                {
+                                    highlight: "Priority placement",
+                                    text: "in patient search results (3x more visibility).",
+                                },
+                                {
+                                    highlight: "Advanced practice analytics",
+                                    text: "with detailed performance insights.",
+                                },
+                                {
+                                    highlight: "Enhanced profile features",
+                                    text: "including video introductions and additional media.",
+                                },
+                                {
+                                    highlight: "Educational content tools",
+                                    text: "for creating patient resources.",
+                                },
+                                { highlight: "Dedicated account support", text: "for practice optimization." },
+                                {
+                                    highlight: "First access to new features",
+                                    text: "and platform enhancements.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Enterprise Solutions:",
+                            bullets: [
+                                { text: "Custom pricing for multi-practitioner clinics." },
+                                { text: "White-label options for established practices." },
+                                { text: "Advanced integration capabilities." },
+                            ],
+                        },
+                    ],
+                    button: {
+                        hasButton: true,
+                        label: "Choose Your Plan →",
+                        href: "https://book.healguid.com/practitioners",
+                        containerClass:
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium text-base",
+                        alt: "Choose a practitioner plan",
+                    },
+                },
+                {
+                    id: "commission",
+                    question: "Does HealGuid take any commission or percentage of my earnings?",
+                    answer: "💚 Yes, we apply an 8-15% commission on consultations booked through our platform, depending on practitioner level and number of consultations. This creates perfect alignment between your success and ours - we only earn when we help you connect with new patients.",
+                    points: [
+                        {
+                            title: "How Our Commission Works:",
+                            bullets: [
+                                {
+                                    highlight: "8-15% of the consultation fee",
+                                    text: "for new patient bookings made through HealGuid.",
+                                },
+                                {
+                                    highlight: "Automatic calculation",
+                                    text: "when patients pay through our secure system.",
+                                },
+                                {
+                                    highlight: "No manual invoicing",
+                                    text: "- commission is handled seamlessly in the background.",
+                                },
+                                {
+                                    highlight: "Transparent reporting",
+                                    text: "so you always know exactly what you're earning.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "What's Included:",
+                            bullets: [
+                                {
+                                    highlight: "Patient acquisition",
+                                    text: "through our marketing and SEO efforts.",
+                                },
+                                {
+                                    highlight: "Secure payment processing",
+                                    text: "with patient and practitioner protection.",
+                                },
+                                {
+                                    highlight: "Professional platform presence",
+                                    text: "that builds trust with potential patients.",
+                                },
+                                {
+                                    highlight: "Administrative support",
+                                    text: "for booking management and patient communication.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Fair Partnership Approach:",
+                            bullets: [
+                                {
+                                    highlight: "No commission on existing patients",
+                                    text: "you bring to the platform.",
+                                },
+                                {
+                                    highlight: "Competitive industry rates",
+                                    text: "- many platforms charge 20-30%.",
+                                },
+                                {
+                                    highlight: "Volume discounts",
+                                    text: "available for high-booking practitioners.",
+                                },
+                            ],
+                        },
+                    ],
+                    button: {
+                        hasButton: true,
+                        label: "Learn More About Our Partnership →",
+                        href: "https://book.healguid.com/practitioners",
+                        containerClass:
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium text-base",
+                        alt: "Learn about our partnership model",
+                    },
+                },
+                {
+                    id: "founding-benefits",
+                    question: "What benefits do I get as a founding practitioner member?",
+                    answer: "🎉 As one of our founding practitioners, you'll receive exclusive benefits and priority access:",
+                    points: [
+                        {
+                            title: "Immediate Benefits:",
+                            bullets: [
+                                {
+                                    highlight: "Reduced platform fees",
+                                    text: "for your first year of membership.",
+                                },
+                                {
+                                    highlight: "Premium verification badge",
+                                    text: "highlighting your founding member status.",
+                                },
+                                {
+                                    highlight: "Enhanced visibility",
+                                    text: "when we launch to our patient community.",
+                                },
+                                {
+                                    highlight: "Direct input",
+                                    text: "on platform development and feature prioritization.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Long-term Advantages:",
+                            bullets: [
+                                {
+                                    highlight: "Locked-in pricing",
+                                    text: "protection as platform pricing evolves.",
+                                },
+                                {
+                                    highlight: "Priority customer support",
+                                    text: "with dedicated account management.",
+                                },
+                                {
+                                    highlight: "First access",
+                                    text: "to new features, integrations, and partnership opportunities.",
+                                },
+                                {
+                                    highlight: "Founding member recognition",
+                                    text: "in our marketing and patient communications.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Professional Development:",
+                            bullets: [
+                                {
+                                    highlight: "Exclusive practitioner events",
+                                    text: "and professional development opportunities.",
+                                },
+                                {
+                                    highlight: "Peer networking",
+                                    text: "with other leading holistic healthcare providers.",
+                                },
+                                {
+                                    highlight: "Platform training",
+                                    text: "and optimization support to maximize your success.",
+                                },
+                                {
+                                    highlight: "Thought leadership opportunities",
+                                    text: "through our content and educational programs.",
+                                },
+                            ],
+                        },
+                    ],
+                    button: {
+                        hasButton: true,
+                        label: "Apply to Join Our Founding Community →",
+                        href: "https://book.healguid.com/practitioners",
+                        alt: "Apply to Join Our Founding Community",
                         containerClass:
                             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
                         textClass: "tracking-wide font-medium text-base",
                     },
                 },
                 {
-                    id: "community-info",
-                    question: "Tell me more about the HealGuid holistic health community!",
-                    answer: "Our holistic health community is your wellness support circle! Within our community, you can:\n\n- Share your healing journey with others exploring natural approaches\n- Connect with patients managing similar chronic conditions through holistic methods\n- Join moderated support groups focused on specific conditions like chronic fatigue, autoimmune disorders, or gut health\n- Participate in healing challenges guided by holistic health principles\n- Access educational resources created by leading practitioners\n- Learn from others who have successfully improved their health through natural approaches\n- Get recommendations for supplements, books, and resources that support your holistic treatment plan",
+                    id: "practitioner-verification-process",
+                    question: "How does HealGuid verify holistic practitioners?",
+                    answer: "🔍 We're committed to maintaining the highest standards for practitioner verification while showcasing your expertise to build patient trust:",
+                    points: [
+                        {
+                            title: "Comprehensive Verification Process:",
+                            bullets: [
+                                {
+                                    highlight: "Credential verification",
+                                    text: "of all degrees, certifications, and professional qualifications.",
+                                },
+                                {
+                                    highlight: "Active license confirmation",
+                                    text: "with relevant regulatory bodies (GMC, CNHC, HCPC, etc.).",
+                                },
+                                {
+                                    highlight: "Professional background checks",
+                                    text: "including any disciplinary history review.",
+                                },
+                                {
+                                    highlight: "Insurance verification",
+                                    text: "to confirm active professional indemnity coverage.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Expertise Assessment:",
+                            bullets: [
+                                {
+                                    highlight: "Specialization review",
+                                    text: "to confirm experience with specific conditions and modalities.",
+                                },
+                                {
+                                    highlight: "Continuing education verification",
+                                    text: "demonstrating commitment to professional development.",
+                                },
+                                {
+                                    highlight: "Patient outcomes assessment",
+                                    text: "where available and appropriate.",
+                                },
+                                {
+                                    highlight: "Peer review process",
+                                    text: "for advanced verification levels.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Ongoing Quality Assurance:",
+                            bullets: [
+                                {
+                                    highlight: "Patient feedback monitoring",
+                                    text: "to maintain high satisfaction standards.",
+                                },
+                                {
+                                    highlight: "Regular credential updates",
+                                    text: "to ensure current professional status.",
+                                },
+                                {
+                                    highlight: "Platform compliance reviews",
+                                    text: "to maintain professional standards.",
+                                },
+                                {
+                                    highlight: "Continuous improvement",
+                                    text: "based on patient and practitioner feedback.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Verification Levels:",
+                            bullets: [
+                                { highlight: "Standard Verification:", text: "Core professional requirements met." },
+                                {
+                                    highlight: "Advanced Verification:",
+                                    text: "Additional specialization and experience confirmed.",
+                                },
+                                {
+                                    highlight: "Premium Verification:",
+                                    text: "Highest level including peer endorsements and outcomes data.",
+                                },
+                            ],
+                        },
+                    ],
+                    description:
+                        "This rigorous process ensures patients can trust your credentials while highlighting your expertise in holistic healthcare approaches.",
                     button: {
-                        label: "Join Our Community →",
-                        href: "",
                         hasButton: true,
-                        alt: "Click to join our holistic health community",
-                        containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
+                        label: "Start Your Verification Process →",
+                        href: "https://book.healguid.com/practitioners",
+                        alt: "Start Your Verification Process",
                     },
                 },
-                {
-                    id: "help-resources",
-                    question: "What if I need help using HealGuid?",
-                    answer: "We're committed to making your holistic health journey smooth and supportive! Our help resources include:\n\n- Friendly support specialists knowledgeable about holistic health available 24/7\n- Clear guides and tutorials for navigating the platform and finding the right practitioner\n- Quick responses to questions about holistic approaches and practitioner specialties\n- Community managers experienced in holistic healthcare to assist with finding the right match\n- Educational resources explaining different modalities and approaches\n- Help with preparing for your first consultation\n- Assistance with technical issues or questions about practitioner availability",
-                    button: {
-                        label: "Contact Support →",
-                        href: "mailto:info@healguid.com",
-                        hasButton: true,
-                        alt: "Click to contact support",
-                        containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium text-base",
-                    },
-                },
+            ],
+        },
 
+        {
+            id: "community-support",
+            title: "🌟 Community & Support",
+            questions: [
                 {
-                    id: "transition-care",
-                    question: "Can HealGuid help me transition from conventional to holistic healthcare?",
-                    answer: "Absolutely! Many HealGuid users are looking to complement conventional care with holistic approaches or transition to more holistic care models:\n\n- Find practitioners skilled in bridging conventional medicine with holistic approaches\n- Access educational resources explaining how holistic healthcare differs from and complements conventional medicine\n- Connect with others who have successfully integrated holistic approaches with traditional medical care\n- Learn how natural approaches address root causes while working alongside conventional treatments\n- Discover strategies for communicating effectively with your entire healthcare team\n- Understand which conditions respond well to holistic approaches\n- Find practitioners who can review your conventional medical test results through a holistic lens",
+                    id: "community",
+                    question: "Tell me more about the HealGuid holistic health community!",
+                    answer: "💚 We're building a supportive ecosystem for your holistic health journey:",
+                    points: [
+                        {
+                            title: "Currently Available:",
+                            bullets: [
+                                {
+                                    highlight: "Connect with verified practitioners",
+                                    text: "experienced in your specific conditions.",
+                                },
+                                {
+                                    highlight: "Access practitioner-created educational resources",
+                                    text: "about holistic approaches.",
+                                },
+                                {
+                                    highlight: "Read authentic patient experiences",
+                                    text: "and verified reviews.",
+                                },
+                                {
+                                    highlight: "Secure communication platform",
+                                    text: "for ongoing practitioner relationships.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Community Features Launching Q4 2025:",
+                            bullets: [
+                                {
+                                    highlight: "Condition-specific support groups",
+                                    text: "moderated by qualified practitioners.",
+                                },
+                                {
+                                    highlight: "Educational webinars and workshops",
+                                    text: "led by our verified practitioners.",
+                                },
+                                {
+                                    highlight: "Peer support networks",
+                                    text: "connecting patients with similar health journeys.",
+                                },
+                                {
+                                    highlight: "Resource sharing platform",
+                                    text: "for evidence-based holistic health information.",
+                                },
+                                {
+                                    highlight: "Healing challenges and wellness programs",
+                                    text: "designed by holistic health experts.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Educational Resources:",
+                            bullets: [
+                                {
+                                    highlight: "Condition-specific guides",
+                                    text: "written by verified practitioners.",
+                                },
+                                {
+                                    highlight: "Treatment approach explanations",
+                                    text: "helping you understand your options.",
+                                },
+                                {
+                                    highlight: "Practitioner spotlights",
+                                    text: "showcasing expertise and specializations.",
+                                },
+                                {
+                                    highlight: "Patient success stories",
+                                    text: "inspiring your healing journey.",
+                                },
+                            ],
+                        },
+                    ],
                     button: {
-                        label: "Start Your Holistic Health Journey →",
-                        href: "",
                         hasButton: true,
-                        alt: "Click to start your holistic health journey",
+                        label: "Join Our Growing Community →",
+                        href: "https://book.healguid.com",
                         containerClass:
                             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
                         textClass: "tracking-wide font-medium text-base",
+                        alt: "Join the HealGuid community",
                     },
+                },
+                {
+                    id: "help",
+                    question: "What if I need help using HealGuid?",
+                    answer: "🤝 We're committed to supporting your holistic health journey with comprehensive help resources:",
+                    points: [
+                        {
+                            title: "Immediate Support Available:",
+                            bullets: [
+                                {
+                                    highlight: "Friendly support team",
+                                    text: "knowledgeable about holistic healthcare approaches.",
+                                },
+                                {
+                                    highlight: "Platform tutorials",
+                                    text: "for navigating practitioner search and booking.",
+                                },
+                                {
+                                    highlight: "Live chat support",
+                                    text: "during business hours for immediate assistance.",
+                                },
+                                { highlight: "Email support", text: "with responses within 24 hours." },
+                            ],
+                        },
+                        {
+                            title: "Self-Help Resources:",
+                            bullets: [
+                                {
+                                    highlight: "Comprehensive FAQ section",
+                                    text: "covering common questions about holistic healthcare.",
+                                },
+                                {
+                                    highlight: "Video tutorials",
+                                    text: "for using platform features effectively.",
+                                },
+                                {
+                                    highlight: "Practitioner selection guides",
+                                    text: "to help you find the right match.",
+                                },
+                                {
+                                    highlight: "Condition-specific information",
+                                    text: "to help prepare for consultations.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Specialized Assistance:",
+                            bullets: [
+                                {
+                                    highlight: "Practitioner matching support",
+                                    text: "if you're unsure which specialist to choose",
+                                },
+                                {
+                                    highlight: "Technical support",
+                                    text: "for video consultations and platform issues",
+                                },
+                                {
+                                    highlight: "Educational resources",
+                                    text: "explaining different holistic modalities and approaches",
+                                },
+                                {
+                                    highlight: "Insurance and payment guidance",
+                                    text: "where applicable",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Community Support:",
+                            bullets: [
+                                {
+                                    highlight: "Patient community forums",
+                                    text: "launching Q4 2025 for peer support",
+                                },
+                                {
+                                    highlight: "Educational webinars",
+                                    text: "with Q&A sessions with verified practitioners",
+                                },
+                                {
+                                    highlight: "Resource recommendations",
+                                    text: "for books, supplements, and additional support",
+                                },
+                            ],
+                        },
+                    ],
+                    button: {
+                        hasButton: true,
+                        label: "Contact Our Support Team →",
+                        href: "/contact",
+                        containerClass:
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium text-base",
+                        alt: "Contact the HealGuid support team",
+                    },
+                },
+                {
+                    id: "transition",
+                    question: "Can HealGuid help me transition from conventional to holistic healthcare?",
+                    answer: "🌱 Absolutely! Many HealGuid users are exploring how holistic approaches can complement or enhance their conventional care:",
+                    points: [
+                        {
+                            title: "Bridging Healthcare Approaches:",
+                            bullets: [
+                                {
+                                    highlight: "Integrative practitioners",
+                                    text: "skilled in combining conventional insights with holistic methods.",
+                                },
+                                {
+                                    highlight: "Educational resources",
+                                    text: "explaining how different approaches can work together.",
+                                },
+                                {
+                                    highlight: "Patient stories",
+                                    text: "from others who've successfully integrated holistic and conventional care.",
+                                },
+                                {
+                                    highlight: "Communication strategies",
+                                    text: "for discussing holistic approaches with your conventional healthcare team",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Safe Transition Support:",
+                            bullets: [
+                                {
+                                    highlight: "Practitioners experienced",
+                                    text: "in working alongside conventional medical care.",
+                                },
+                                {
+                                    highlight: "Medication interaction awareness",
+                                    text: "among our verified practitioners.",
+                                },
+                                {
+                                    highlight: "Lab result interpretation",
+                                    text: "from both conventional and functional medicine perspectives.",
+                                },
+                                {
+                                    highlight: "Gradual integration approaches",
+                                    text: "that don't disrupt essential conventional treatments",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Understanding Your Options:",
+                            bullets: [
+                                {
+                                    highlight: "Modality explanations",
+                                    text: "helping you understand different holistic approaches",
+                                },
+                                {
+                                    highlight: "Condition-specific guidance",
+                                    text: "on which approaches work well for your health challenges",
+                                },
+                                {
+                                    highlight: "Practitioner specialization matching",
+                                    text: "to find experts in your specific transition needs",
+                                },
+                                {
+                                    highlight: "Evidence-based approaches",
+                                    text: "that complement rather than replace essential medical care",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Building Your Healthcare Team:",
+                            bullets: [
+                                {
+                                    highlight: "Collaborative practitioners",
+                                    text: "who communicate well with conventional providers",
+                                },
+                                {
+                                    highlight: "Comprehensive care coordination",
+                                    text: "o ensure all your providers work together effectively",
+                                },
+                                {
+                                    highlight: "Holistic assessment tools",
+                                    text: "that consider your complete health picture",
+                                },
+                            ],
+                        },
+                    ],
+                    button: {
+                        hasButton: true,
+                        label: "Start Your Holistic Health Journey →",
+                        href: "https://book.healguid.com",
+                        containerClass:
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium text-base",
+                        alt: "Start your holistic health journey",
+                    },
+                },
+            ],
+        },
+        {
+            id: "getting-started",
+            title: "📞 Getting Started",
+            questions: [
+                {
+                    id: "how-to-start",
+                    question: "How do I get started with HealGuid?",
+                    answer: "🚀 Beginning your holistic health journey with HealGuid is simple:",
+                    points: [
+                        {
+                            title: "For Patients:",
+                            bullets: [
+                                {
+                                    highlight: "Browse our practitioner directory",
+                                    text: "at book.healguid.com.",
+                                },
+                                {
+                                    highlight: "Filter by location, specialty, and condition",
+                                    text: "to find the right match.",
+                                },
+                                {
+                                    highlight: "Review practitioner profiles",
+                                    text: "including credentials, reviews, and approaches.",
+                                },
+                                {
+                                    highlight: "Contact practitioners directly",
+                                    text: "through our secure messaging system.",
+                                },
+                                {
+                                    highlight: "Schedule your consultation",
+                                    text: "(virtual or in-person based on preference).",
+                                },
+                                {
+                                    highlight: "Begin your personalized healing journey",
+                                    text: "with ongoing support.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "For Practitioners:",
+                            bullets: [
+                                { highlight: "Apply to join", text: "our verified practitioner network." },
+                                {
+                                    highlight: "Complete our verification process",
+                                    text: "(typically 5-7 business days).",
+                                },
+                                {
+                                    highlight: "Create your professional profile",
+                                    text: "showcasing your expertise.",
+                                },
+                                {
+                                    highlight: "Start connecting with patients",
+                                    text: "seeking your specific holistic specializations.",
+                                },
+                                {
+                                    highlight: "Grow your practice",
+                                    text: "with our platform tools and support.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "Get Additional Support:",
+                            bullets: [
+                                {
+                                    highlight: "Contact our team",
+                                    text: "if you need help choosing the right practitioner.",
+                                },
+                                {
+                                    highlight: "Join our educational webinars",
+                                    text: "to learn more about holistic approaches.",
+                                },
+                                {
+                                    highlight: "Access our resource library",
+                                    text: "for condition-specific information.",
+                                },
+                            ],
+                        },
+                    ],
+                    description: "Ready to Transform Your Health Journey?",
+                    // Special case: An array of buttons
+                    button: [
+                        {
+                            hasButton: true,
+                            label: "Find Your Practitioner →",
+                            href: "https://book.healguid.com/",
+                            containerClass:
+                                "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer inline",
+                            textClass: "tracking-wide font-medium text-base",
+                            alt: "Find a practitioner",
+                        },
+                        {
+                            hasButton: true,
+                            label: "Join as a Practitioner →",
+                            href: "https://book.healguid.com/practitioners",
+                            alt: "Join as a practitioner",
+                            containerClass:
+                                "cursor-pointer inline bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 px-4 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer inline ml-3",
+                            textClass: "tracking-wide font-medium text-base",
+                        },
+                    ],
                 },
             ],
         },
