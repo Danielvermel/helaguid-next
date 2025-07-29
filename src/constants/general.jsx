@@ -247,7 +247,7 @@ export const aboutUs = {
     subTitle: "Building the Future of Holistic Healthcare, Together.",
     mainMessage: "Health Isn't a Transaction. It's a Human Right.",
     description:
-        "For too long, healthcare has felt cold, fragmented and impersonal. Patients are oft left alone,bouncing between sterile waiting rooms and rushed consultations, while passionate healers—practitioners who trained for years to make a difference—find themselves buried in paperwork and marketing instead of helping people heal.",
+        "For too long, healthcare has felt cold, fragmented and impersonal. Patients with ME, chronic fatigue, autoimmune conditions and unexplained symptoms, are often left alone, bouncing between sterile waiting rooms and rushed consultations. Meanwhile passionate functional and holistic practitioners, naturopaths, nutritionists, who trained for years to make a difference—find themselves buried in paperwork and marketing instead of helping people heal.",
     points: [
         {
             id: "0",
@@ -264,22 +264,22 @@ export const aboutUs = {
             video: "/videos/about-us/trust.webm",
             img: "/images/about-us/trust.webp",
             jsonLdProperty: "trust",
-            title: "Building Trust as Our Holistic Foundation",
+            title: "Building Trust as Our Foundation with 100% verified experts",
             bgColor: "bg-b3",
             description:
                 "68% of patients seek holistic care but often feel lost and uncertain. At HealGuid, we hear you.",
             points: [
                 {
                     id: "0",
-                    text: "Our multi-layered accreditation process goes beyond basic credentials—we create a trusted bridge of care.",
+                    text: "Our multi-layered accreditation process goes beyond basic credentials—creating a trusted bridge of care.",
                 },
                 {
                     id: "1",
-                    text: "We meticulously select practitioners who blend scientific expertise with compassionate, whole-person healing approaches.",
+                    text: "We select practitioners specialising in functional medicine, naturopathy, nutritional therapy, and integrative approaches with proven experience treating chronic conditions.",
                 },
                 {
                     id: "2",
-                    text: "Every practitioner is carefully vetted to ensure they provide holistic care of quality and impact.",
+                    text: "Every practitioner have proven experience treating chronic conditions like fibromyalgia, ME/CFS, autoimmune disorders, gut health issues, among others.",
                 },
             ],
         },
@@ -292,12 +292,13 @@ export const aboutUs = {
             bgColor: "bg-b7",
             description:
                 "No more endless searches. No more uncertainty and misunderstandings. At HealGuid, we’re here for the moments when health challenges feel overwhelming — this is where they finally meet understanding through holistic guidance and trusted care. We believe in providing understanding to health challenges as the basis, in crafting personalized care journeys that empower you to not just survive, but truly thrive.",
+            
             joinButton: {
-                text: "Visit Our Client Page",
+                text: "Find Your Practitioner",
                 containerClass: "bg-s1 xs:w-72 xs:h-10 sm:w-96 sm:h-12",
                 textClass: "tracking-wide font-semibold xs:text-base sm:text-xl",
                 arial: "Button to find and connect with a trusted health partner.",
-                url: "/",
+                url: "https://book.healguid.com/",
             },
         },
         {

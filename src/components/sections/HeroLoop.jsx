@@ -2,6 +2,7 @@
 import HeaderLoop from "./HeaderLoop";
 import VideoBackground from "../ui/VideoBackground";
 import FeatureTags from "../ui/Tags";
+import StatItem from "../ui/StatItem";
 
 // A simple arrow icon component for the "See All" link
 
@@ -45,19 +46,19 @@ const HeroLoop = ({ data }) => {
             <div className="relative z-10 flex flex-col items-center text-center px-4 max-md:-mt-12">
                 {/* Main Headline */}
                 <h1 className="text-4xl sm:text-5xl md:text-6xl max-sm:text-4xl font-bold tracking-wide text-shadow-md max-md:mt-16 max-sm:-mt-8">
-                    <span className="block">
+                    <div>
                         Finally feeling <span className="text-orange-400">heard</span>
-                    </span>
-                    <span className="md:mt-3 block">
+                    </div>
+                    <div className="md:mt-3">
                         Finally finding <span className="text-orange-400">answers</span>
-                    </span>
+                    </div>
                 </h1>
 
                 {/* Sub-headline */}
-                <h2 className="lg:mt-24 max-lg:mt-20 max-sm:mt-10 max-w-2xl font-medium sm:text-xl tracking-wider md:text-xl bg-black/90 p-2 rounded-xl">
-                    100% verified holistic experts who uncover root causes of chronic fatigue, gut issues, pain and
+                <p className="lg:mt-24 max-lg:mt-20 max-sm:mt-10 max-w-2xl font-medium sm:text-xl tracking-wider md:text-xl bg-black/90 p-2 rounded-xl">
+                    100% verified holistic experts who uncover root causes of chronic fatigue, gut issues, pain &
                     more.
-                </h2>
+                </p>
                 {/* <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
                     {statsData.map((stat) => (
                         <StatItem key={stat.id} value={stat.value} label={stat.label} />

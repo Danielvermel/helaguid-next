@@ -13,12 +13,12 @@ export const practitioners = [
         imageUrl: "/images/practioners/jonas-m.jpg",
         profileUrl: "https://book.healguid.com/practitioners/jonas-m-ller/r/rec3cEG5DscPdKqe0",
     },
-    {
+     {
         id: 3,
-        name: "Julia K.",
-        specialty: "Digestive & Gut Health",
-        imageUrl: "/images/practioners/julia-k.jpg",
-        profileUrl: "https://book.healguid.com/practitioners/julia-kim/r/recyreL7Ss40h1DrB",
+        name: "Tatiana P.",
+        specialty: "Hormonal Imbalances",
+        imageUrl: "/images/practioners/tatiana-p.jpg",
+        profileUrl: "https://book.healguid.com/practitioners/tatiana-patel/r/recU7m4RiYJtsDSZD",
     },
     {
         id: 4,
@@ -71,9 +71,9 @@ export const practitioners = [
     },
     {
         id: 11,
-        name: "Tatiana P.",
-        specialty: "Hormonal Imbalances",
-        imageUrl: "/images/practioners/tatiana-p.jpg",
-        profileUrl: "https://book.healguid.com/practitioners/tatiana-patel/r/recU7m4RiYJtsDSZD",
+        name: "Julia K.",
+        specialty: "Digestive & Gut Health",
+        imageUrl: "/images/practioners/julia-k.jpg",
+        profileUrl: "https://book.healguid.com/practitioners/julia-kim/r/recyreL7Ss40h1DrB",
     },
 ];
