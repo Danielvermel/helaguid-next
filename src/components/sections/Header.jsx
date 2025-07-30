@@ -176,7 +176,7 @@ const Header = ({ data }) => {
                                         </li>
                                     ))}
 
-                                    {data?.type?.includes("partner") && (
+                                    {["partners", "faq", "privacy", "about"].includes(data?.type) && (
                                         <li className="nav-li">
                                             <Button
                                                 containerClassName="bg-s1 m-6 mx-0"
@@ -187,7 +187,9 @@ const Header = ({ data }) => {
                                                         : "https://book.healguid.com/apply"
                                                 }
                                             >
-                                                {data?.type?.includes("client") ? "Get Matched" : "Apply Now"}
+                                                {["clients", "faq", "privacy", "about"].includes(data?.type)
+                                                    ? "Get Matched"
+                                                    : "Apply Now"}
                                             </Button>
                                         </li>
                                     )}
