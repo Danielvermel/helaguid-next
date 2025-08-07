@@ -18,23 +18,6 @@ const Hero = ({ data, func }) => {
         return () => document.body.classList.remove("overflow-hidden");
     }, [data.isModalOpen]);
 
-    // Function to handle smooth scrolling when clicking on anchors
-    const scrollToSection = (e, targetId) => {
-        e.preventDefault();
-
-        // Update URL hash for bookmarking and history
-        window.history.pushState(null, null, `#${targetId}`);
-
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-            const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - 100;
-            window.scrollTo({
-                top: offsetTop,
-                behavior: "smooth",
-            });
-        }
-    };
-
     const processedTitle = useMemo(() => {
         if (!data?.hero?.title) return null;
 

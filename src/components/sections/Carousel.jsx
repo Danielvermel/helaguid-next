@@ -6,9 +6,9 @@ import PageTitle from "../ui/PageTitle.jsx";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+// import "swiper/css";
+// import "swiper/css/navigation";
+// import "swiper/css/pagination";
 // Import required modules
 import { Navigation, Pagination } from "swiper/modules";
 
@@ -66,6 +66,7 @@ const PractitionerCarousel = ({ data }) => {
                             <PractitionerCard practitioner={practitioner} />
                         </SwiperSlide>
                     ))}
+
                     {/* Add the custom navigation arrows inside the Swiper component */}
                     <div className="swiper-button-prev-carousel absolute top-1/2 -translate-y-1/2 left-[-25px] w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-teal-800 z-10 transition-all duration-300 hover:bg-teal-800 hover:text-white cursor-pointer max-md:hidden">
                         <ChevronIcon />
@@ -75,6 +76,18 @@ const PractitionerCarousel = ({ data }) => {
                     </div>
                 </Swiper>
             </div>
+
+            {data.practitioners.length > 0 && (
+                <div className="flex justify-center">
+                    <a
+                        className="block mx-auto mt-6 rounded-3xl bg-s1 px-4 py-2 text-lg font-semibold tracking-wide text-white"
+                        href="https://book.healguid.com/"
+                        role="button"
+                    >
+                        Browse Our Experts
+                    </a>
+                </div>
+            )}
         </section>
     );
 };

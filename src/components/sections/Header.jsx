@@ -146,6 +146,7 @@ const Header = ({ data }) => {
                     data?.extra?.includes("privacy") && "pt-4 pb-4",
                     data?.extra?.includes("faq") && "pt-4 pb-4",
                     data?.extra?.includes("thank") && "pt-4 pb-4",
+                    data?.extra?.includes("terms") && "pt-4 pb-4",
                     hasScrolled && "backdrop-blur-[24px] shadow-box"
                 )}
             >
@@ -176,7 +177,7 @@ const Header = ({ data }) => {
                                         </li>
                                     ))}
 
-                                    {["partners", "faq", "privacy", "about"].includes(data?.type) && (
+                                    {["partners", "faq", "privacy", "about", "terms"].includes(data?.type) && (
                                         <li className="nav-li">
                                             <Button
                                                 containerClassName="bg-s1 m-6 mx-0"
@@ -187,7 +188,7 @@ const Header = ({ data }) => {
                                                         : "https://book.healguid.com/apply"
                                                 }
                                             >
-                                                {["clients", "faq", "privacy", "about"].includes(data?.type)
+                                                {["clients", "faq", "privacy", "about", "terms"].includes(data?.type)
                                                     ? "Get Matched"
                                                     : "Apply Now"}
                                             </Button>
@@ -205,13 +206,16 @@ const Header = ({ data }) => {
                         textClassName="tracking-wide font-bold p-0 text-sm"
                         textContainerClassName="min-h-[32px] px-2 mx-0"
                         href={
-                            data?.type?.includes("client")
+                            ["clients", "faq", "privacy", "about", "terms"].includes(data?.type)
                                 ? "https://book.healguid.com/book-consultation"
                                 : "https://book.healguid.com/apply"
                         }
                     >
                         {/* Join Us */}
-                        {data?.type?.includes("client") ? "Get Matched" : "Apply Now"}
+
+                        {["clients", "faq", "privacy", "about", "terms"].includes(data?.type)
+                            ? "Get Matched"
+                            : "Apply Now"}
                     </Button>
 
                     <button

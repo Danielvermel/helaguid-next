@@ -38,6 +38,7 @@ const nextConfig = {
             "/404": { page: "/404" },
             "/thank-you": { page: "/thank-you" },
             "/about": { page: "/about" },
+            "/terms-and-conditions": { page: "/terms-and-conditions" },
         };
     },
 };

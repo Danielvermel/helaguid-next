@@ -111,7 +111,7 @@ export const partnerNewsletter = {
 //  2. Footer
 export const footer = {
     newsletter: {
-        logo: "/images/logos/2.png",
+        logo: "/images/logos/healGuid-v2.png",
         alt: "HealGuid logo - connecting patients with holistic health solutions",
         title: "Stay in the loop",
         description: "Be the first to know about our launch and get exclusive updates:",
@@ -177,6 +177,12 @@ export const footer = {
                     title: "Privacy Policy",
                     url: "/privacy-policy",
                     titleAttribute: "Read our privacy policy",
+                },
+                {
+                    id: "3",
+                    title: "Terms & Conditions",
+                    url: "/terms-and-conditions",
+                    titleAttribute: "Terms and Conditions",
                 },
             ],
         },
@@ -292,7 +298,7 @@ export const aboutUs = {
             bgColor: "bg-b7",
             description:
                 "No more endless searches. No more uncertainty and misunderstandings. At HealGuid, we’re here for the moments when health challenges feel overwhelming — this is where they finally meet understanding through holistic guidance and trusted care. We believe in providing understanding to health challenges as the basis, in crafting personalized care journeys that empower you to not just survive, but truly thrive.",
-            
+
             joinButton: {
                 text: "Find Your Practitioner",
                 containerClass: "bg-s1 xs:w-72 xs:h-10 sm:w-96 sm:h-12",

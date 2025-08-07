@@ -17,9 +17,17 @@ const PractitionerCard = ({ practitioner }) => {
                 </div>
                 <div className="p-4">
                     <span className="text-lg font-semibold text-gray-900 block">{practitioner.name}</span>
-                    <span className="inline-block mt-2 px-3 py-1 text-xs font-semibold text-white bg-p1 rounded-full tracking-wide">
+                    <span className="inline-block text-sm font-normal underline underline-offset-2">
                         {practitioner.specialty}
                     </span>
+                    <div className="flex justify-center">
+                        <a
+                            className="block mx-auto mt-6 rounded-3xl bg-s1 px-3 py-2 text-white"
+                            href={practitioner.profileUrl}
+                        >
+                            View Profile
+                        </a>
+                    </div>
                 </div>
             </div>
         </Link>

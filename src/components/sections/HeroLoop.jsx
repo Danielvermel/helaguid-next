@@ -31,7 +31,7 @@ const HeroLoop = ({ data }) => {
     const primaryCta = { name: "Get Matched", href: "/get-matched" };
 
     return (
-        <section className="relative flex flex-col justify-center items-center w-full min-h-screen text-white overflow-hidden ">
+        <section className="relative flex flex-col justify-center items-center w-full min-h-screen text-white overflow-hidden">
             {/* 1. Video Background */}
             <VideoBackground
                 videoSrc="/videos/hero/mountains_v2.webm" // Use your optimized .webm video
@@ -43,22 +43,27 @@ const HeroLoop = ({ data }) => {
             <HeaderLoop data={{ menus: data.menus, type: data.type }} />
 
             {/* 3. Centered Content Overlay */}
-            <div className="relative z-10 flex flex-col items-center text-center px-4 max-md:-mt-12">
+            <div className="relative z-10 flex flex-col items-center text-center px-4 max-md:-mt-12 max-sm:mt-18">
                 {/* Main Headline */}
-                <h1 className="text-4xl sm:text-5xl md:text-6xl max-sm:text-4xl font-bold tracking-wide text-shadow-md max-md:mt-16 max-sm:-mt-8">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl max-sm:text-4xl font-bold tracking-wide text-shadow-md max-md:mt-16 max-sm:-mt-2  max-sm:pt-12">
                     <div>
-                        Finally feeling <span className="text-orange-400">heard</span>
+                        Finally feeling <span className="text-orange-400">heard,</span>
                     </div>
                     <div className="md:mt-3">
+                        {" "}
                         Finally finding <span className="text-orange-400">answers</span>
                     </div>
                 </h1>
 
                 {/* Sub-headline */}
-                <p className="lg:mt-24 max-lg:mt-20 max-sm:mt-10 max-w-2xl font-medium sm:text-xl tracking-wider md:text-xl bg-black/90 p-2 rounded-xl">
-                    100% verified holistic experts who uncover root causes of chronic fatigue, gut issues, pain &
-                    more.
-                </p>
+                <div className="lg:mt-24 max-lg:mt-20 max-sm:mt-2 max-w-2xl font-medium bg-black/90 p-2 rounded-xl">
+                    <h2 className="block max-sm:text-base sm:text-lg md:text-xl tracking-wider">
+                        Verified Holistic & Functional Medicine Practitioners in the UK{" "}
+                    </h2>
+                    <p className="block max-sm:text-sm sm:text-base mt-2 tracking-wide">
+                        Expert care for chronic fatigue, digestive health, autoimmune conditions & hormonal imbalances.
+                    </p>
+                </div>
                 {/* <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
                     {statsData.map((stat) => (
                         <StatItem key={stat.id} value={stat.value} label={stat.label} />
@@ -74,12 +79,12 @@ const HeroLoop = ({ data }) => {
             </div> */}
             <a
                 href="https://book.healguid.com/"
-                className="bg-teal-500 hover:bg-teal-600 text-white font-semibold tracking-wide py-3 px-12 text-xl rounded-full transition-colors duration-300 mt-8 max-md:mt-24 max-sm:mt-4"
+                className="bg-teal-500 hover:bg-teal-600 text-white font-semibold tracking-wide py-3 px-12 text-xl rounded-full transition-colors duration-300 md:mt-8 max-md:mt-24 max-sm:mt-8"
             >
                 Find Your HealGuid
             </a>
 
-            <div className="absolute bottom-32 max-sm:bottom-12 z-10">
+            <div className="absolute sm:bottom-32 xl:bottom-20 max-sm:bottom-12 z-10">
                 <FeatureTags tags={tagsData} />
             </div>
 

@@ -1,5 +1,4 @@
 // src/pages/privacy-policy.js
-import Head from "next/head";
 import Header from "../components/sections/Header";
 import { privacy } from "../constants/privacy";
 import { useState, useEffect } from "react";

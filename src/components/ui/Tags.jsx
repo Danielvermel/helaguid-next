@@ -18,8 +18,8 @@ const Tag = ({ text, iconKey }) => {
         // 3. Updated styling to match the image
         <div className="flex items-center gap-2 rounded-full bg-black/50 backdrop-blur-sm px-3 py-2 shadow-md">
             {/* The color is now applied directly to the icon component */}
-            <Icon className="w-4 h-4 text-orange-500" />
-            <h3 className="sm:text-sm max-sm:text-xs font-medium text-white tracking-wide">{text}</h3>
+            <Icon className="w-4 h-4 text-orange-500 max-sm:hidden" />
+            <span className="sm:text-sm max-sm:text-xs font-medium text-white tracking-wide">{text}</span>
         </div>
     );
 };

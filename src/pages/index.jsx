@@ -12,17 +12,19 @@ import WhatWeOffer from "../components/sections/WhatWeOffer";
 import AboutUs from "../components/sections/AboutUs";
 import Footer from "../components/sections/Footer";
 import { practitioners } from "../constants/carousel";
-import PractitionerCarousel from "../components/sections/Carousel";
+// import PractitionerCarousel from "../components/sections/Carousel";
+import dynamic from "next/dynamic";
 import Approaches from "../components/sections/Approaches";
 
 import { banner, menus, hero, causes, whyUs, comparisonTable, howItWorks, offers } from "../constants/clients";
 import { healingApproaches } from "../constants/approaches";
 import { useState, useEffect } from "react";
-import dynamic from "next/dynamic";
 
 import { jsonLdHero } from "../constants/jsonLdData";
 
 import Meta from "../components/others/Meta";
+
+const PractitionerCarousel = dynamic(() => import("../components/sections/Carousel"), { ssr: false });
 
 // Dynamically import components that need browser APIs
 const Modal = dynamic(() => import("../components/ui/Modal"), { ssr: false });
