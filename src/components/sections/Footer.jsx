@@ -189,7 +189,7 @@ const Footer = ({ data }) => {
                 </div>
 
                 <div className="mt-12 text-left text-gray-500 text-sm w-full">
-                    <hr className="pb-3" />© HealGuid. All Rights Reserved {new Date().getFullYear()}
+                    <hr className="pb-3" />© HealGuid Ltd. All Rights Reserved {new Date().getFullYear()}
                 </div>
             </div>
         </footer>
