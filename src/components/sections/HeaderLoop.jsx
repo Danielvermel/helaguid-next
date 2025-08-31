@@ -202,7 +202,7 @@ const HeaderLoop = ({ data }) => {
                         textContainerClassName="min-h-[36px] md:min-w-[130px] px-2 mx-0"
                         href={
                             data?.type?.includes("client")
-                                ? "https://book.healguid.com/book-consultation"
+                                ? "https://book.healguid.com/get-matched"
                                 : "https://book.healguid.com/apply"
                         }
                     >

@@ -45,7 +45,7 @@ export default function Partners() {
     return (
         <>
             <Meta
-                title="Grow Your Holistic Practice & Connect with 500+ Monthly Patient Searches | HealGuid"
+                title="Grow Your Holistic Practice with HealGuid & Connect with More Patients"
                 description="Join 50+ verified holistic practitioners connecting with patients seeking holitisc and natural care. Get 3X more consultations with our trusted verification system."
                 path="partners"
             />

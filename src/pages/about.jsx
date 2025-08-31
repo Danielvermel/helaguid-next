@@ -7,6 +7,7 @@ import { aboutUs } from "../constants/general.jsx";
 import Button from "../components/ui/Button";
 import Header from "../components/sections/Header";
 
+import Meta from "../components/others/Meta";
 export default function FAQ() {
     const [videoErrors, setVideoErrors] = useState({}); // Track errors for each video
     const data = { type: "clients" };
@@ -35,18 +36,25 @@ export default function FAQ() {
     });
     return (
         <>
+            <Meta
+                title="About HealGuid | Verified Holistic Practitioners in the UK"
+                description="HealGuid connects UK patients with rigorously verified holistic & functional practitioners. Support for chronic conditions—gut, hormones and autoimmune."
+                keywords="about us, data protection, health information privacy, holistic healthcare privacy"
+                path="privacy-policy"
+                canonicalUrl="https://healguid.com/privacy-policy"
+            />
             <section className="py-16 max-md:pt-20 max-lg:pt-28 lg:pt-44 bg-b3 lg:min-h-lvh">
                 <Header data={{ menus: aboutUs.menus, type: "about", extra: "faq" }} />
                 <article className="flex flex-col ">
                     <div className="container lg:py-16 max-lg:py-12">
-                        <div className="max-lg:text-center">
+                        <h1 className="max-lg:text-center">
                             <PageTitle>{aboutUs.title}</PageTitle>
-                        </div>
+                        </h1>
 
                         <div className="lg:ml-auto flex mb-3 lg:-mt-8 container">
-                            <h3 className="lg:font-semibold max-lg:font-medium text-xl max-lg:mt-2 lg:ml-auto max-lg:mx-auto max-md:text-center">
+                            <h2 className="lg:font-semibold max-lg:font-medium text-xl max-lg:mt-2 lg:ml-auto max-lg:mx-auto max-md:text-center">
                                 {aboutUs.subTitle}
-                            </h3>
+                            </h2>
                         </div>
 
                         <h3 className="text-center text-p1 lg:text-3xl max-lg:text-2xl lg:mt-24 max-lg:mt-6 max-sm:mt-20 lg:mb-10 max-lg:mb-4 font-semibold">

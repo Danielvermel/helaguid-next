@@ -184,7 +184,7 @@ const Header = ({ data }) => {
                                                 textClassName="tracking-wide font-bold text-white"
                                                 href={
                                                     data?.type?.includes("client")
-                                                        ? "https://book.healguid.com/book-consultation"
+                                                        ? "https://book.healguid.com/get-matched"
                                                         : "https://book.healguid.com/apply"
                                                 }
                                             >
@@ -207,7 +207,7 @@ const Header = ({ data }) => {
                         textContainerClassName="min-h-[32px] px-2 mx-0"
                         href={
                             ["clients", "faq", "privacy", "about", "terms"].includes(data?.type)
-                                ? "https://book.healguid.com/book-consultation"
+                                ? "https://book.healguid.com/get-matched"
                                 : "https://book.healguid.com/apply"
                         }
                     >

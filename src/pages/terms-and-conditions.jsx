@@ -137,7 +137,7 @@ export default function TermsAndConditions() {
         <div className="min-h-screen bg-gray-50">
             <Meta
                 title="Terms & Conditions – HealGuid"
-                description="Review HealGuid’s Terms & Conditions governing trusted practitioner partnerships, platform use, clear rights, and fair responsibilities for both therapists and clients."
+                description="Read HealGuid’s Terms & Conditions covering verification, patient bookings, fees and platform use."
                 keywords="terms and conditions, partnership agreements, therapist terms, platform use, legal agreements, practitioner responsibilities, client rights, HealGuid terms"
                 path="terms-and-conditions"
                 canonicalUrl="https://healguid.com/terms-and-conditions"

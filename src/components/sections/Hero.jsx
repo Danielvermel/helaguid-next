@@ -131,7 +131,7 @@ const Hero = ({ data, func }) => {
                         <a
                             href={
                                 data.type.includes("client")
-                                    ? "https://book.healguid.com/book-consultation"
+                                    ? "https://book.healguid.com/get-matched"
                                     : "https://book.healguid.com/apply"
                             }
                         >
