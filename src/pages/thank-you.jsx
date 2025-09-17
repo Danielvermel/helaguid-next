@@ -11,6 +11,7 @@ import Schema from "../components/others/Schema";
 export default function ThankYou() {
     const [type, setType] = useState(null);
     const [thankYou, setThankYou] = useState({ ...thankYouClients });
+    const [description, setDescription] = useState("");
 
     useEffect(() => {
         // This runs only on the client
@@ -23,11 +24,17 @@ export default function ThankYou() {
         if (type && type === "client") {
             // Show client-specific message or actions
             setThankYou(() => ({ ...thankYouClients }));
-            console.log("thankYou: ", thankYou);
+            setDescription(
+                () =>
+                    "Thanks for joining HealGuid. We’ll email you 1–2 carefully matched practitioners within 3–5 business days so you can book with confidence."
+            );
         } else {
             // Show patient-specific message or actions
             setThankYou(() => ({ ...thankYouPartners }));
-            console.log("thankYou: ", thankYou);
+            setDescription(
+                () =>
+                    "Welcome to the HealGuid community—your early access is confirmed! Discover holistic practitioners matching your needs and personalized wellness insights."
+            );
         }
     }, [type]);
 
@@ -62,10 +69,11 @@ export default function ThankYou() {
         <>
             <Meta
                 title="Thank You for Joining HealGuid | Holistic Health Community"
-                description="Welcome to the HealGuid community—your early access is confirmed! Discover holistic practitioners matching your needs and personalized wellness insights."
+                description={description}
                 keywords="thank you, welcome, holistic health, wellness platform, community, early access"
                 path="thank-you"
                 canonicalUrl="https://healguid.com/thank-you"
+                robotContent="noindex, follow"
             />
             {/* 
             <Schema
@@ -122,13 +130,26 @@ export default function ThankYou() {
                         {thankYou.sections?.[0] && (
                             <div className="mb-8">
                                 <h2 className="text-2xl font-semibold text-p1 mb-4">{thankYou.sections[0].title}</h2>
-                                <ul className="space-y-3">
-                                    {thankYou.sections[0].content.map((item, idx) => (
-                                        <li key={idx} className="flex items-start">
-                                            <span className="mr-2">{item.split(" ")[0]}</span>
-                                            <span>{item.substring(item.indexOf(" ") + 1)}</span>
-                                        </li>
-                                    ))}
+                                <ul className="space-y-3 ml-6">
+                                    {thankYou.sections[0].content.map((item, idx) => {
+                                        // split into main + extra (using /n)
+                                        const [main, extra] = item.split("/n");
+
+                                        // format bold in the main part
+                                        const formattedMain = main.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+
+                                        return (
+                                            <li key={idx} className="flex flex-col items-start">
+                                                {/* main line (emoji + step) */}
+                                                <span
+                                                    dangerouslySetInnerHTML={{ __html: formattedMain }}
+                                                    className="mb-1"
+                                                />
+                                                {/* extra line, aligned left */}
+                                                {extra && <span>{extra.trim()}</span>}
+                                            </li>
+                                        );
+                                    })}
                                 </ul>
                             </div>
                         )}
@@ -138,12 +159,25 @@ export default function ThankYou() {
                             <div className="mb-8">
                                 <h2 className="text-2xl font-semibold text-p1 mb-4">{thankYou.sections[1].title}</h2>
                                 <ul className="space-y-3">
-                                    {thankYou.sections[1].content.map((item, idx) => (
-                                        <li key={idx} className="flex items-start">
-                                            <span className="mr-2">{item.split(" ")[0]}</span>
-                                            <span>{item.substring(item.indexOf(" ") + 1)}</span>
-                                        </li>
-                                    ))}
+                                    {thankYou.sections[1].content.map((item, idx) => {
+                                        // split into main + extra (using /n)
+                                        const [main, extra] = item.split("/n");
+
+                                        // format bold in the main part
+                                        const formattedMain = main.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+
+                                        return (
+                                            <li key={idx} className="flex flex-col items-start">
+                                                {/* main line (emoji + step) */}
+                                                <span
+                                                    dangerouslySetInnerHTML={{ __html: formattedMain }}
+                                                    className="mb-1"
+                                                />
+                                                {/* extra line, aligned left */}
+                                                {extra && <span>{extra.trim()}</span>}
+                                            </li>
+                                        );
+                                    })}
                                 </ul>
                             </div>
                         )}

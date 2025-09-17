@@ -1,7 +1,13 @@
 // components/Meta.jsx
 import Head from "next/head";
 
-export default function Meta({ title, description, path = "", ogImage = "/images/logos/healGuid.webp" }) {
+export default function Meta({
+    title,
+    description,
+    path = "",
+    ogImage = "/images/logos/healGuid.webp",
+    robotContent = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+}) {
     const canonicalUrl = `https://www.healguid.com${path ? `/${path}` : ""}`;
 
     return (
@@ -34,10 +40,7 @@ export default function Meta({ title, description, path = "", ogImage = "/images
             />
 
             {/* Robots */}
-            <meta
-                name="robots"
-                content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-            />
+            <meta name="robots" content={robotContent} />
 
             {/* Keywords */}
             <meta

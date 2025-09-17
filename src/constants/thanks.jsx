@@ -24,48 +24,47 @@ export const thankYouClients = {
     ],
     title: "You're In! Welcome to HealGuid 🌿",
     subtitle:
-        "Thank you for joining the HealGuid community—your early access is confirmed, and we're so glad you're here.",
+        "Thank you for trusting us with your health journey. Your request is confirmed, and we're already working on it.",
     sections: [
         {
             id: "next-steps",
-            title: "What happens next:",
+            title: "What to do next:",
             content: [
-                `✨ Check your inbox — We just sent you a welcome email.`,
-                `👉 Make sure to open it and click "Confirm" so you don't miss updates and early invites. (Psst... if you don't see it, check your spam or promotions tab!)`,
+                `**✅ 1. Check your email (now)** /n We've sent your welcome email with the next steps
+                `,
+                `**🎯 2. Within 3–5 business days** /n We’ll send you 1–2 carefully matched practitioners.`,
+                `**📞 3. Then: Book your consultation** /n Choose your preferred practitioner and schedule directly`,
             ],
         },
         {
             id: "founding-member",
-            title: "As a founding community member, you'll:",
+            title: "Why HealGuid is different:",
             content: [
-                "💬 Get first access to our carefully selected holistic practitioners who match your needs",
-                "📊 Receive personalized wellness insights you can actually use",
-                "🌱 Help shape a platform designed with real patient journeys in mind",
+                `🔬 **Rigorously verified practitioners** who understand that "normal" test results don't always reflect how you feel`,
+                "🎯 **Personalised matching** based on your specific health concerns and practitioner preferences",
             ],
         },
         {
             id: "movement",
             title: "",
-            content: [
-                "Your well-being matters — and you're now part of a movement to make integrative, holistic, evidence-based care more accessible, human, and empowering.",
-            ],
+            content: [``],
         },
         {
             id: "pro-tip",
             title: "",
             content: [
-                `💡 Pro tip: Reply to our welcome email with a quick "Hi" or move it to your Primary tab to help future updates land in your inbox.`,
+                `💡 Pro tip: Reply to our welcome email with a quick "Hi" to help future updates land in your Primary tab (not spam/promotions). If you don’t see it, check your Spam/Promotions tab.`,
             ],
         },
         {
             id: "closing",
             title: "",
-            content: ["We're building this with you. Let's change healthcare, together.", "— The HealGuid Team"],
+            content: ["Ready to find healthcare that actually listens?", "— The HealGuid Team"],
         },
         {
             id: "support",
             title: "",
-            content: ["Having trouble? Contact Us | Privacy Policy", "Stay in touch:"],
+            content: ["Let's build something revolutionary—together."],
         },
     ],
     socialLinks: [
