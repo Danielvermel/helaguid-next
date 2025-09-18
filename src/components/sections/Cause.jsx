@@ -128,15 +128,7 @@ const Cause = ({ data }) => {
                             href={`#${data.causes.jumpToNext}`}
                             className=""
                             onClick={(e) => scrollToSection(e, data.causes.jumpToNext)}
-                        >
-                            <img
-                                src="/images/causes/arrow-down.svg"
-                                loading="lazy"
-                                title="Scroll down or expand"
-                                alt="arrow down"
-                                className="cursor-pointer lg:ml-4"
-                            />
-                        </a>
+                        ></a>
                     </div>
                 </div>
             </div>
