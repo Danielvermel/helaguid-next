@@ -14,7 +14,7 @@ export const menus = [
     {
         id: "1",
         title: "Find a Specialist",
-        url: "https://book.healguid.com/",
+        url: "/book",
         titleAttribute: "Find specialists",
     },
     {

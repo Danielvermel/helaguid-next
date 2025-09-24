@@ -235,7 +235,7 @@ export const aboutUs = {
         {
             id: "1",
             title: "For Practitioners",
-            url: "https://book.healguid.com/",
+            url: "/book",
             titleAttribute: "Open HealGuid practitioner directory in a new tab",
         },
         {
@@ -304,7 +304,7 @@ export const aboutUs = {
                 containerClass: "bg-s1 xs:w-72 xs:h-10 sm:w-96 sm:h-12",
                 textClass: "tracking-wide font-semibold xs:text-base sm:text-xl",
                 arial: "Button to find and connect with a trusted health partner.",
-                url: "https://book.healguid.com/",
+                url: "/book",
             },
         },
         {

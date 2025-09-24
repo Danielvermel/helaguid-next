@@ -182,8 +182,8 @@ const HeaderLoop = ({ data }) => {
                                             textClassName="tracking-wide font-bold text-white"
                                             href={
                                                 data?.type?.includes("client")
-                                                    ? "https://book.healguid.com/book-consultation"
-                                                    : "https://book.healguid.com/apply"
+                                                    ? "/book-consultation"
+                                                    : "/apply"
                                             }
                                         >
                                             {data?.type?.includes("client") ? "Get Matched" : "Apply Now"}
@@ -200,11 +200,7 @@ const HeaderLoop = ({ data }) => {
                         containerClassName={clsx(" m-0 text-sm text-white ", hasScrolled ? "bg-p1" : "bg-s1")}
                         textClassName="tracking-wide font-semibold p-0 text-sm"
                         textContainerClassName="min-h-[36px] md:min-w-[130px] px-2 mx-0"
-                        href={
-                            data?.type?.includes("client")
-                                ? "https://book.healguid.com/get-matched"
-                                : "https://book.healguid.com/apply"
-                        }
+                        href={data?.type?.includes("client") ? "/get-matched" : "/apply"}
                     >
                         {/* Join Us */}
                         {data?.type?.includes("client") ? "Get Matched" : "Apply Now"}
