@@ -78,7 +78,7 @@ export const clientNewsletter = {
 export const partnerNewsletter = {
     bgColor: "bg-s3",
     bgFormColor: "bg-lime-200",
-    title: "Grow Your Holistic Practice with HealGuid",
+    title: "Grow Your Holistic Practice with HealGuid & Find Patients",
     description: "Join our Founding Partners Program, and be part of transforming holistic healthcare delivery.",
 
     newsletter: "I’m interested in learning more about joining the HealGuid Partner Network.",

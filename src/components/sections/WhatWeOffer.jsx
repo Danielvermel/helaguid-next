@@ -215,9 +215,9 @@ const WhatWeOffer = ({ data, func }) => {
                                                             ))
                                                         ) : (
                                                             <div>
-                                                                <b className="lg:min-h-32 text-base font-normal">
+                                                                <p className="lg:min-h-32 text-base font-normal">
                                                                     {categories.description}
-                                                                </b>
+                                                                </p>
                                                                 <div className="mt-4">
                                                                     {categories.offers.map(
                                                                         ({ id: categoriesId, title, points }) => (

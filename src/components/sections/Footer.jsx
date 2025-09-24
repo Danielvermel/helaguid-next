@@ -160,7 +160,7 @@ const Footer = ({ data }) => {
                     <div className="flex md:ml-auto">
                         {footer?.links.map(({ id, title: mainTitle, list }) => (
                             <div className="md:px-10 max-md:px-4" key={id + "_" + mainTitle}>
-                                <strong className="text-p1 font-semibold mb-4">{mainTitle}</strong>
+                                <span className="text-p1 font-semibold mb-4">{mainTitle}</span>
                                 <ul>
                                     {list.map(({ id, title, url, alt, titleAttribute }) => (
                                         <li

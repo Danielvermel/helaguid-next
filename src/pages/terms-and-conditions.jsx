@@ -276,7 +276,7 @@ export default function TermsAndConditions() {
                                         {section.id === "introduction" && (
                                             <div className="mt-6">
                                                 <a
-                                                    href="https://drive.google.com/file/d/1N1_AhDzc-wChk2s3YT84XivwTy5l-pEd/view?usp=sharing"
+                                                    href="/files/HealGuid_Practitioner_Terms_and_Conditions_v1.pdf"
                                                     className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-orange-500 hover:bg-orange-600 transition-colors"
                                                 >
                                                     Download PDF Copy →

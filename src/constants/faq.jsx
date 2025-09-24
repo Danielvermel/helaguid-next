@@ -405,71 +405,71 @@ export const faqs = {
             id: "trust-verification",
             title: "💚 Trust & Verification",
             questions: [
-                {
-                    id: "how-verify",
-                    question: "How does HealGuid verify holistic practitioners?",
-                    answer: "✨ Every practitioner undergoes our comprehensive verification process before joining our network:",
-                    points: [
-                        {
-                            title: "Professional Qualification Verification:",
-                            bullets: [
-                                { text: "Review and verification of all degrees, diplomas, and certifications." },
-                                { text: "Confirmation of active professional registrations (GMC, CNHC, HCPC, etc.)." },
-                                { text: "Assessment of specialized training in holistic modalities." },
-                            ],
-                        },
-                        {
-                            title: "Professional Standards Check:",
-                            bullets: [
-                                { text: "Professional background verification and reference checks." },
-                                { text: "Confirmation of professional indemnity insurance coverage." },
-                                { text: "Review of any professional disciplinary history." },
-                            ],
-                        },
-                        {
-                            title: "Expertise Assessment:",
-                            bullets: [
-                                { text: "Evaluation of experience with specific chronic conditions." },
-                                { text: "Review of continuing professional development." },
-                                { text: "Assessment of evidence-based practice approaches." },
-                            ],
-                        },
-                        {
-                            title: "Ongoing Quality Monitoring:",
-                            bullets: [
-                                { text: "Regular review of patient feedback and satisfaction scores." },
-                                { text: "Continued professional development verification." },
-                                { text: "Compliance with platform quality standards." },
-                            ],
-                        },
-                        {
-                            title: "Practitioner Verification Levels:",
-                            bullets: [
-                                {
-                                    highlight: "✓ Verified Professional:",
-                                    text: "Met all basic verification requirements.",
-                                },
-                                {
-                                    highlight: "✓ Specialist Verified:",
-                                    text: "Additional expertise verification in specific conditions.",
-                                },
-                                {
-                                    highlight: "✓ Premium Verified:",
-                                    text: "Highest level including peer reviews and advanced credentials.",
-                                },
-                            ],
-                        },
-                    ],
-                    button: {
-                        hasButton: true,
-                        label: "Learn About Our Verification Standards →",
-                        href: "/verification",
-                        containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
-                        alt: "Learn about verification standards",
-                    },
-                },
+                // {
+                //     id: "how-verify",
+                //     question: "How does HealGuid verify holistic practitioners?",
+                //     answer: "✨ Every practitioner undergoes our comprehensive verification process before joining our network:",
+                //     points: [
+                //         {
+                //             title: "Professional Qualification Verification:",
+                //             bullets: [
+                //                 { text: "Review and verification of all degrees, diplomas, and certifications." },
+                //                 { text: "Confirmation of active professional registrations (GMC, CNHC, HCPC, etc.)." },
+                //                 { text: "Assessment of specialized training in holistic modalities." },
+                //             ],
+                //         },
+                //         {
+                //             title: "Professional Standards Check:",
+                //             bullets: [
+                //                 { text: "Professional background verification and reference checks." },
+                //                 { text: "Confirmation of professional indemnity insurance coverage." },
+                //                 { text: "Review of any professional disciplinary history." },
+                //             ],
+                //         },
+                //         {
+                //             title: "Expertise Assessment:",
+                //             bullets: [
+                //                 { text: "Evaluation of experience with specific chronic conditions." },
+                //                 { text: "Review of continuing professional development." },
+                //                 { text: "Assessment of evidence-based practice approaches." },
+                //             ],
+                //         },
+                //         {
+                //             title: "Ongoing Quality Monitoring:",
+                //             bullets: [
+                //                 { text: "Regular review of patient feedback and satisfaction scores." },
+                //                 { text: "Continued professional development verification." },
+                //                 { text: "Compliance with platform quality standards." },
+                //             ],
+                //         },
+                //         {
+                //             title: "Practitioner Verification Levels:",
+                //             bullets: [
+                //                 {
+                //                     highlight: "✓ Verified Professional:",
+                //                     text: "Met all basic verification requirements.",
+                //                 },
+                //                 {
+                //                     highlight: "✓ Specialist Verified:",
+                //                     text: "Additional expertise verification in specific conditions.",
+                //                 },
+                //                 {
+                //                     highlight: "✓ Premium Verified:",
+                //                     text: "Highest level including peer reviews and advanced credentials.",
+                //                 },
+                //             ],
+                //         },
+                //     ],
+                //     button: {
+                //         hasButton: true,
+                //         label: "Learn About Our Verification Standards →",
+                //         href: "/verification",
+                //         containerClass:
+                //             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                //         textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
+                //         alt: "Learn about verification standards",
+                //     },
+                // },
                 {
                     id: "info-safe",
                     question: "Is my health information safe with HealGuid?",
@@ -1169,7 +1169,7 @@ export const faqs = {
                     button: {
                         hasButton: true,
                         label: "Contact Our Support Team →",
-                        href: "/contact",
+                        href: "mailto:info@healguid.com",
                         containerClass:
                             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
                         textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
