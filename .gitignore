@@ -1,41 +1,16 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Ignore everything by default (repo root)
+*
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+# But keep .gitignore itself so rules persist
+!.gitignore
 
-# testing
-/coverage
+# Keep the out folder and all its contents
+!/out/
+!/out/**
 
-# next.js
-/.next/
-/out/
+# (optional) keep a README at root
+!README.md
 
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# (optional) keep GitHub workflows
+!/.github/
+!/.github/**
