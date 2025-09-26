@@ -336,9 +336,9 @@ export default function FAQ() {
                                                                             // List of BulletPoints
                                                                             return (
                                                                                 <>
-                                                                                    <h3 className="font-semibold mb-1 mt-3">
+                                                                                    <b className="font-semibold mb-1 mt-3">
                                                                                         {values.title}
-                                                                                    </h3>
+                                                                                    </b>
                                                                                     <ul
                                                                                         className={
                                                                                             values.specialClasses

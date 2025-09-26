@@ -75,9 +75,9 @@ export default function TermsAndConditions() {
                     <div key={index} className="mb-4">
                         {parts.map((part, i) =>
                             i % 2 === 1 ? (
-                                <h4 key={i} className="font-semibold text-lg mb-2 text-teal-700">
+                                <span key={i} className="font-semibold text-lg mb-2 text-teal-700">
                                     {part}
-                                </h4>
+                                </span>
                             ) : (
                                 part && (
                                     <p key={i} className="mb-2 text-gray-800">
