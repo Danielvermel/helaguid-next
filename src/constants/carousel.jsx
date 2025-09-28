@@ -32,7 +32,7 @@ export const practitioners = [
         name: "Lucia S.",
         specialty: "Nutritional Therapist",
         imageUrl: "/images/practioners/lucia-s.jpg",
-        profileUrl: "/practitioners/r/UxE7KAcpjlAdxT",
+        profileUrl: "/practitioners/r/27XIGqfL9hyeF2",
     },
     {
         id: 6,
@@ -46,8 +46,7 @@ export const practitioners = [
         name: "Christelle S.",
         specialty: "Functional Medicine Practitioner",
         imageUrl: "/images/practioners/christelle-s.jpg",
-        profileUrl:
-            "/practitioners?recordId=YHTcQSEdUIxYZZ",
+        profileUrl: "/practitioners?recordId=YHTcQSEdUIxYZZ",
     },
     {
         id: 8,
