@@ -128,13 +128,7 @@ const Hero = ({ data, func }) => {
                             {data.hero.newsletter.title}
                         </h3>
 
-                        <a
-                            href={
-                                data.type.includes("client")
-                                    ? "https://book.healguid.com/get-matched"
-                                    : "https://book.healguid.com/apply"
-                            }
-                        >
+                        <a href={data.type.includes("client") ? "/get-matched" : "/apply"}>
                             <button
                                 className="group bg-s1 hover:bg-p1 border-p1 mx-auto flex items-center justify-center font-medium md:h-14 md:w-38 max-md:h-10 max-md:w-56 text-white  md:px-6 md:py-2 rounded-full mb-4"
                                 aria-label="Submit button with arrow icon to join the HealGuid mailing list."

@@ -78,7 +78,7 @@ const HeroLoop = ({ data }) => {
                 <FeatureTags tags={tagsData} />
             </div> */}
             <a
-                href="https://book.healguid.com/"
+                href="/book"
                 className="bg-teal-500 hover:bg-teal-600 text-white font-semibold tracking-wide py-3 px-12 text-xl rounded-full transition-colors duration-300 md:mt-8 max-md:mt-24 max-sm:mt-8"
             >
                 Find Your HealGuid
@@ -90,7 +90,7 @@ const HeroLoop = ({ data }) => {
 
             {/* <div className="mt-16 flex flex-col sm:flex-row gap-4">
                 <a
-                    href="https://book.healguid.com/"
+                    href="/book"
                     className="bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 px-8 rounded-full transition-colors duration-300"
                 >
                     Find Your Specialist

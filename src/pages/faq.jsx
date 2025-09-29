@@ -141,7 +141,126 @@ export default function FAQ() {
         "@type": "FAQPage",
         "@id": "https://www.healguid.com/faq#faqpage",
         mainEntity: [
-            /* ... existing schema data ... */
+            {
+                "@type": "Question",
+                name: "What is HealGuid and how does it help with chronic health conditions?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "HealGuid connects you with rigorously verified holistic practitioners who understand your unique health journey. Our live platform provides immediate access to specialists in functional medicine, naturopathy, integrative health, and more. We offer premium-verified practitioners across London and the UK specializing in chronic conditions, with an instant booking system for virtual and in-person consultations.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "Is HealGuid available now, and when will the full platform launch?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "HealGuids MVP is live! You can browse our founding network of verified practitioners and book consultations today. Available now: Directory of verified holistic practitioners across London and the UK, secure practitioner profiles with credentials and patient reviews, direct booking system for consultations, and encrypted practitioner-patient messaging system.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "Can I find holistic practitioners in London and the UK through HealGuid?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes! HealGuid connects you with verified holistic practitioners across London and the UK. Our founding network includes practitioners in Central London, North London, South London, East and West London, as well as Manchester, Birmingham, Edinburgh, with growing coverage across England, Scotland, and Wales.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "What makes HealGuid different from conventional healthcare platforms?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "HealGuid reimagines holistic healthcare access by focusing on root cause approaches, verified expertise, and patient-centered experience. Practitioners investigate underlying causes of chronic conditions, provide personalized care plans, and integrate functional testing, nutrition, and lifestyle approaches.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "What types of holistic practitioners will I find on HealGuid?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Our platform connects you with verified specialists including Functional Medicine Doctors, Integrative Medicine Physicians, Naturopathic Physicians, Nutritional Therapists, Clinical Nutritionists, Traditional Chinese Medicine practitioners, Ayurvedic Specialists, Medical Herbalists, Mind-Body Specialists, and Health Coaches.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "How does booking a holistic consultation work on HealGuid?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Browse verified practitioners by location, specialty, and condition focus. Review detailed profiles including credentials, patient reviews, and consultation fees. Contact practitioners directly through our secure messaging system. Arrange consultations (virtual or in-person) based on your preference. Complete intake forms if requested and begin your personalized wellness journey.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "How can HealGuid help with specific conditions like chronic fatigue or autoimmune issues?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "HealGuid specializes in connecting you with practitioners experienced in complex chronic conditions. We have specialists for Chronic Fatigue SyndromeME, autoimmune conditions like rheumatoid arthritis and Hashimotos, digestive health disorders including IBS and SIBO, hormonal imbalances, fibromyalgia, Long COVID recovery, and environmental illness.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "Is my health information safe with HealGuid?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Your privacy and data security are our top priorities. HealGuid is built with healthcare-grade security measures including GDPR compliance with explicit consent mechanisms, healthcare-grade encryption for all sensitive health information, secure messaging systems, and strict access controls ensuring only your chosen practitioners can access your information.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "What about the cost of holistic healthcare through HealGuid?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "We believe holistic healthcare should be accessible and transparent. Platform access is free to browse our practitioner directory and educational resources with no booking fees. Consultation fees typically range from 75-200 depending on practitioner credentials and session length. We offer transparent pricing with all consultation fees clearly displayed before booking.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "How much does it cost to join HealGuid as a practitioner?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Joining HealGuid is free with no upfront costs or setup fees. We offer free profile creation with professional verification, no payment information required to set up your listing, 3-month free trial of all premium features, and no long-term contracts with complete flexibility to leave anytime.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "What are HealGuids practitioner subscription plans?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "We offer flexible options including Early Adopter Benefits with 3-month free trial until Dec 2025, Basic Plan at 49month with professional verified profile and standard placement, Premium Plan at 99month with priority placement and enhanced features, and Enterprise Solutions with custom pricing for multi-practitioner clinics.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "Does HealGuid take any commission or percentage of my earnings?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes, we apply an 8-15 commission on consultations booked through our platform, depending on practitioner level and number of consultations. This creates perfect alignment between your success and ours - we only earn when we help you connect with new patients. No commission on existing patients you bring to the platform.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "How does HealGuid verify holistic practitioners?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Were committed to maintaining the highest standards through comprehensive verification including credential verification of all degrees and certifications, active license confirmation with regulatory bodies, professional background checks, insurance verification, specialization review, continuing education verification, and ongoing quality assurance through patient feedback monitoring.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "What if I need help using HealGuid?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Were committed to supporting your holistic health journey with comprehensive help resources including a friendly support team knowledgeable about holistic healthcare, platform tutorials, live chat support during business hours, email support with responses within 24 hours, comprehensive FAQ section, and practitioner matching support.",
+                },
+            },
+            {
+                "@type": "Question",
+                name: "How do I get started with HealGuid?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "For patients: Browse our practitioner directory at healguid.combook, filter by location and specialty, review practitioner profiles, contact practitioners directly through our secure messaging system, schedule your consultation, and begin your personalized healing journey. For practitioners: Apply to join our verified network, complete verification process, create your professional profile, and start connecting with patients.",
+                },
+            },
         ],
     };
 
@@ -336,9 +455,9 @@ export default function FAQ() {
                                                                             // List of BulletPoints
                                                                             return (
                                                                                 <>
-                                                                                    <h3 className="font-semibold mb-1 mt-3">
+                                                                                    <b className="font-semibold mb-1 mt-3">
                                                                                         {values.title}
-                                                                                    </h3>
+                                                                                    </b>
                                                                                     <ul
                                                                                         className={
                                                                                             values.specialClasses

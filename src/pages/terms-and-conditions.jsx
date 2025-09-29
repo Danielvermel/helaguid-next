@@ -75,9 +75,9 @@ export default function TermsAndConditions() {
                     <div key={index} className="mb-4">
                         {parts.map((part, i) =>
                             i % 2 === 1 ? (
-                                <h4 key={i} className="font-semibold text-lg mb-2 text-teal-700">
+                                <span key={i} className="font-semibold text-lg mb-2 text-teal-700">
                                     {part}
-                                </h4>
+                                </span>
                             ) : (
                                 part && (
                                     <p key={i} className="mb-2 text-gray-800">
@@ -276,7 +276,7 @@ export default function TermsAndConditions() {
                                         {section.id === "introduction" && (
                                             <div className="mt-6">
                                                 <a
-                                                    href="https://drive.google.com/file/d/1N1_AhDzc-wChk2s3YT84XivwTy5l-pEd/view?usp=sharing"
+                                                    href="/files/HealGuid_Practitioner_Terms_and_Conditions_v1.pdf"
                                                     className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-orange-500 hover:bg-orange-600 transition-colors"
                                                 >
                                                     Download PDF Copy →

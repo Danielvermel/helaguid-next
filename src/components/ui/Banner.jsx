@@ -27,7 +27,7 @@ const Banner = ({ data }) => {
         >
             <span className="flex justify-center text-base">
                 {data.banner.text}
-                <a href="https://book.healguid.com/apply">
+                <a href="/apply">
                     <strong className="underline underline-offset-2">{data.banner.boldText}</strong>
                 </a>
             </span>

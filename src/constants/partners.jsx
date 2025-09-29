@@ -13,8 +13,8 @@ export const menus = [
     },
     {
         id: "1",
-        title: "Our Partners",
-        url: "https://book.healguid.com/",
+        title: "Find a Specialist",
+        url: "/book",
         titleAttribute: "Find specialists",
     },
     {

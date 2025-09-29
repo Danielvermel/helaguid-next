@@ -30,7 +30,7 @@ const ApproachCard = ({ approach }) => {
                 {/* Top Row: Icon and Title */}
                 <div className="p-8 pb-0">
                     <span className="text-5xl mb-5 block">{approach.icon}</span>
-                    <h3 className="text-xl font-semibold text-teal-800 mb-4 leading-tight">{approach.title}</h3>
+                    <b className="text-xl font-semibold text-teal-800 mb-4 leading-tight">{approach.title}</b>
                 </div>
 
                 {/* Middle Row: Description (stretches to fill available space) */}

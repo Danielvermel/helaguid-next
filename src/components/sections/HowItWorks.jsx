@@ -169,7 +169,7 @@ const HowItWorks = ({ data, func }) => {
                                 </div>
                                 <div className="relative">
                                     <div className={clsx("sm:py-4 max-sm:py-2", "arrow-step", iconColor)}>
-                                        <h4 className="sm:text-xl max-sm:text-lg font-semibold">{title}</h4>
+                                        <strong className="sm:text-xl max-sm:text-lg font-semibold">{title}</strong>
                                         <p className="max-lg:text-base lg:text-base text-gray-800 mt-1 italic tracking-2">
                                             {caption}
                                         </p>
