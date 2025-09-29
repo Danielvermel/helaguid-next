@@ -49,10 +49,10 @@ export const hero = {
     imageMobile: "/images/hero/patient-practitioner-v2-mobile.webp",
     altTitleMobile: "Patient-Practitioner Mobile Connection",
     imageClass: " scale-x-[-1]",
-    title: "Grow Your Holistic Practice — 500+ Patients Waiting",
-    description: "Join Healguid and connect with hundreds of people who searched for holistic care only this month",
+    title: "Grow Your Holistic Practice. 500+ Patients Waiting",
+    description: "Join Healguid and connect with hundreds of people who searched for holistic care",
     secondDescription:
-        "Patients come to us actively seeking for verified holistic and functional experts in the UK — your credentials become their reason to choose you.",
+        "Patients come to us seeking verified holistic and functional experts in the UK — your credentials become their reason to choose you.",
     buttons: {
         id: "1",
         label: "Learn About Early Access",
@@ -102,9 +102,9 @@ export const hero = {
 
 export const causes = {
     title: "Ready for a Better Way  \r\n to Reach and Help Patients?",
-    description: "We understand the unique challenges in holistic care",
+    description: "We understand the unique challenges in holistic care ",
     thirdDescription: "and are here to help you overcome:",
-    subDescription: "We're building HealGuid to change this—and we want your input as a founding member.",
+    subDescription: "HealGuid is here to change this and we want you as a founding member.",
     buttonText: "Help Shape the Future of Holistic Practice",
     jumpToNext: "our-offer",
     points: [
@@ -372,7 +372,7 @@ export const howItWorks = {
         },
     ],
 
-    jumpToNext: "trust",
+    ToNext: "trust",
     buttonArialLabelText: "A button called verification process that jumps you to the trust information",
 };
 

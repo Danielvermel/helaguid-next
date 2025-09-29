@@ -78,7 +78,7 @@ export const clientNewsletter = {
 export const partnerNewsletter = {
     bgColor: "bg-s3",
     bgFormColor: "bg-lime-200",
-    title: "Grow Your Holistic Practice with HealGuid & Find Patients",
+    title: "Grow Your Holistic Practice with HealGuid",
     description: "Join our Founding Partners Program, and be part of transforming holistic healthcare delivery.",
 
     newsletter: "I’m interested in learning more about joining the HealGuid Partner Network.",
@@ -125,7 +125,7 @@ export const footer = {
                 {
                     id: "0",
                     title: "Home",
-                    url: "#hero",
+                    url: "/",
                     titleAttribute: "Go to the homepage section",
                 },
 
@@ -138,7 +138,7 @@ export const footer = {
                 {
                     id: "2",
                     title: "Why Us",
-                    url: "#why-us",
+                    url: "/why-us",
                     titleAttribute: "Discover why you should choose us",
                 },
                 {
@@ -235,7 +235,7 @@ export const aboutUs = {
         {
             id: "1",
             title: "For Practitioners",
-            url: "/book",
+            url: "https://book.healguid.com/",
             titleAttribute: "Open HealGuid practitioner directory in a new tab",
         },
         {
@@ -304,7 +304,7 @@ export const aboutUs = {
                 containerClass: "bg-s1 xs:w-72 xs:h-10 sm:w-96 sm:h-12",
                 textClass: "tracking-wide font-semibold xs:text-base sm:text-xl",
                 arial: "Button to find and connect with a trusted health partner.",
-                url: "/book",
+                url: "https://book.healguid.com/",
             },
         },
         {
