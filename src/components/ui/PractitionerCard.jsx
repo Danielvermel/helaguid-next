@@ -15,7 +15,7 @@ const PractitionerCard = ({ practitioner }) => {
                         sizes="(max-width: 768px) 100vw, 33vw"
                     />
                 </div>
-                <div className="p-4 sm: min-h-72 md:min-h-[22.4rem] flex flex-col ">
+                <div className="p-4 sm:h-72 md:h-[20.4rem] lg:h-[20rem] xl:h-[18rem] flex flex-col ">
                     <span className="text-lg font-bold text-gray-900 block">{practitioner.name}</span>
                     <span className="inline-block text-sm font-medium  font-sans underline-offset-2">
                         {practitioner.specialty}
