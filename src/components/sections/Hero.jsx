@@ -180,7 +180,7 @@ const Hero = ({ data, func }) => {
                 <div className="lg:w-7/12 max-lg:w-full max-lg:order-4 lg:mt-2 2xl:mt-2 max-lg:mt-8 flex flex-col items-center">
                     <Review
                         item={data.hero.review}
-                        containerClassName="flex flex-row max-lg:flex-wrap 2xl:w-10/12 xl:w-10/12 lg:w-10/12 max-lg:mx-12 max-sm:mx-0"
+                        containerClassName="flex flex-row max-lg:flex-wrap 2xl:w-10/12 xl:w-10/12 lg:w-10/12 max-lg:mx-12 max-sm:mx-0 gap-4"
                         commentClassName="lg:mr-auto lg:basis-10/12 max-lg:basis-full italic text-center tracking-2 lg:mr-4 lg:font-medium text-lg max-lg:text-base"
                         userClassName="lg:ml-auto max-lg:mx-auto max-lg:basis-12/12"
                     />
@@ -214,7 +214,7 @@ const Hero = ({ data, func }) => {
                         )} */}
                         <div className="lg:mr-20">
                             <div className="flex flex-wrap lg:justify-center items-center lg:mt-auto max-lg:mt-8 w-full">
-                                <span
+                                {/* <span
                                     className={`
                                     text-lg max-lg:justify-center max-lg:mb-4 tracking-2 mb-3 mt-4 text-center w-full
                                     ${
@@ -225,8 +225,8 @@ const Hero = ({ data, func }) => {
                                 `}
                                 >
                                     Want to learn more first?
-                                </span>
-                                <div
+                                </span> */}
+                                {/* <div
                                     className={`flex rounded-full overflow-hidden mx-auto bg-transparent 
                                 ${!isEmailValid ? "border-rose-600 border-1" : ""}
                                 ${data.type.includes("client") ? "border-p1 border-2 basis-3/5" : "lg:my-4"}`}
@@ -260,15 +260,11 @@ const Hero = ({ data, func }) => {
                                             <button
                                                 className="group bg-b10 hover:bg-p1 border-p1 border-2 text-p1 hover:text-white mx-auto flex items-center justify-center font-medium md:h-14 md:w-38 max-md:h-10 max-md:w-60  md:px-8 md:py-2 rounded-full"
                                                 aria-label="Submit button with arrow icon to join the HealGuid mailing list."
-                                            >
-                                                <span className="md:text-xl transition-transform duration-200 ease-in-out group-hover:scale-110">
-                                                    Book Your Free Discovery Call
-                                                </span>
-                                            </button>
+                                            ></button>
                                         </a>
                                     )}
-                                </div>
-                                {data.type.includes("client") && (
+                                </div> */}
+                                {/* {data.type.includes("client") && (
                                     <div className="basis-full flex justify-center">
                                         <button
                                             className="group md:hidden text-sm bg-p1 h-10 w-28 mx-auto text-white rounded-full hover:bg-p1 my-2"
@@ -286,11 +282,11 @@ const Hero = ({ data, func }) => {
                                         {" "}
                                         ➔ email is not valid!
                                     </span>
-                                )}
+                                )} */}
 
-                                <span className="text-xs block opacity-70 text-center w-full mt-2">
+                                {/* <span className="text-xs block opacity-70 text-center w-full mt-2">
                                     {data.hero.newsletter.privacyPolicy}
-                                </span>
+                                </span> */}
                             </div>
                         </div>
                     </div>
