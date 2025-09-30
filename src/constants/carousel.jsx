@@ -14,7 +14,7 @@ export const practitioners = [
         specialty: "Functional Medicine Practitioner",
         imageUrl: "/images/practioners/christelle-s.jpg",
         profileUrl:
-            "/practitioners/christelle-stockdale-functional-medicine-practitioner-united-kingdom/r/en5dEK0cxgsVgw",
+            "/practitioners/christelle-stockdale-functional-medicine-practitioner-united-kingdom/r/YHTcQSEdUIxYZZ",
         bio: "I was drawn to holistic and functional medicine because I wanted to help people get to the true root of their health issues. Not just manage symptoms but understand why they’re unwell and how to restore balance naturally. What makes my approach unique? I combine deep listening with detailed investigation. My focus is on treating the whole person, creating clear, realistic plans, and empowering my patients to take charge of their own health. What do patients value most? They appreciate that I truly listen, explain things clearly, and work with them to make treatment plans that are manageable. Many say they finally feel seen, understood, and supported. ",
         ratings: "5",
     },
@@ -50,7 +50,7 @@ export const practitioners = [
         name: "Lucia S.",
         specialty: "Nutritional Therapist",
         imageUrl: "/images/practioners/lucia-s.jpg",
-        profileUrl: "/practitioners/lucia-stansbie-nutritional-therapist-united-kingdom/r/UxE7KAcpjlAdxT",
+        profileUrl: "/practitioners/lucia-stansbie-nutritional-therapist-united-kingdom/r/27XIGqfL9hyeF2",
         bio: "I am a London-based registered nutritional therapist helping my patients reaching their health goals through the power of personalised nutrition. The foundations of my expertise are rooted in functional medicine, with a detailed understanding of the intricate connections between the different body systems. I employ functional testing, tailored dietary adjustments and targeted nutrition to address the root causes behind a client’s health concerns, collaborating closely with each client to chart a path towards optimum health and well-being. I am a food lover, so my plans are focused on introducing foods and nutrients rather than excluding them and include plenty tasty and easy to execute recipes. Through professional guidance and support I can help you thrive and fall in love with food again!",
         ratings: "5",
     },
