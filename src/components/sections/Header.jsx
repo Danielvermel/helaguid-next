@@ -182,11 +182,7 @@ const Header = ({ data }) => {
                                             <Button
                                                 containerClassName="bg-s1 m-6 mx-0"
                                                 textClassName="tracking-wide font-bold text-white"
-                                                href={
-                                                    data?.type?.includes("client")
-                                                        ? "https://book.healguid.com/get-matched"
-                                                        : "https://book.healguid.com/apply"
-                                                }
+                                                href={data?.type?.includes("client") ? "/get-matched" : "/apply"}
                                             >
                                                 {["clients", "faq", "privacy", "about", "terms"].includes(data?.type)
                                                     ? "Get Matched"
@@ -207,8 +203,8 @@ const Header = ({ data }) => {
                         textContainerClassName="min-h-[32px] px-2 mx-0"
                         href={
                             ["clients", "faq", "privacy", "about", "terms"].includes(data?.type)
-                                ? "https://book.healguid.com/get-matched"
-                                : "https://book.healguid.com/apply"
+                                ? "/get-matched"
+                                : "/apply"
                         }
                     >
                         {/* Join Us */}

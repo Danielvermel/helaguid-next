@@ -166,9 +166,9 @@ const WhatWeOffer = ({ data, func }) => {
                                                         </div>
                                                     )}
 
-                                                    <h4 className="flex-1 sm:font-semibold max-sm:font-semibold sm:text-lg max-sm:text-lg text-center m-auto">
+                                                    <b className="flex-1 sm:font-semibold max-sm:font-semibold sm:text-lg max-sm:text-lg text-center m-auto">
                                                         {title}
-                                                    </h4>
+                                                    </b>
                                                     <div className="flex items-center w-1/12">
                                                         {!!index && (
                                                             <img
@@ -215,9 +215,9 @@ const WhatWeOffer = ({ data, func }) => {
                                                             ))
                                                         ) : (
                                                             <div>
-                                                                <b className="lg:min-h-32 text-base font-normal">
+                                                                <p className="lg:min-h-32 text-base font-normal">
                                                                     {categories.description}
-                                                                </b>
+                                                                </p>
                                                                 <div className="mt-4">
                                                                     {categories.offers.map(
                                                                         ({ id: categoriesId, title, points }) => (

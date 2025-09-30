@@ -62,7 +62,7 @@ export const faqs = {
                     ],
                     button: {
                         label: "Find a Practitioner →",
-                        href: "https://book.healguid.com/",
+                        href: "/book",
                         hasButton: true,
                         alt: "Click to find a holistic health practitioner for your condition",
                         containerClass:
@@ -96,7 +96,7 @@ export const faqs = {
                     ],
                     button: {
                         label: "Start Your Search Today →",
-                        href: "https://book.healguid.com/",
+                        href: "/book",
                         hasButton: true,
                         alt: "Click to find a holistic health practitioner for your condition",
                         containerClass:
@@ -150,7 +150,7 @@ export const faqs = {
                         "Whether you prefer in-person consultations in London or virtual appointments with UK-based practitioners, our platform makes it simple to find the right match.",
                     button: {
                         label: "Find Practitioners Near You →",
-                        href: "https://book.healguid.com/",
+                        href: "/book",
                         hasButton: true,
                         alt: "Click to find a holistic health practitioner for your condition",
                         containerClass:
@@ -192,7 +192,7 @@ export const faqs = {
                     ],
                     button: {
                         label: "Discover Our Approach →",
-                        href: "https://book.healguid.com/",
+                        href: "/book",
                         hasButton: true,
                         alt: "Click to find a holistic health practitioner for your condition",
                         containerClass:
@@ -280,7 +280,7 @@ export const faqs = {
                         "Every practitioner is verified and experienced in supporting patients with chronic fatigue syndrome, fibromyalgia, autoimmune conditions, digestive issues, hormonal imbalances, and other complex health challenges.",
                     button: {
                         label: "Browse Practitioners by Specialty →",
-                        href: "https://book.healguid.com/",
+                        href: "/book",
                         hasButton: true,
                         alt: "Browse practitioners by specialty",
                         containerClass:
@@ -335,7 +335,7 @@ export const faqs = {
                     button: {
                         hasButton: true,
                         label: "Browse Practitioners Now →",
-                        href: "https://book.healguid.com/",
+                        href: "/book",
                         alt: "Browse practitioners now",
                         containerClass:
                             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
@@ -392,7 +392,7 @@ export const faqs = {
                     button: {
                         hasButton: true,
                         label: "Browse Specialists by Condition →",
-                        href: "https://book.healguid.com/",
+                        href: "/book",
                         alt: "Browse specialists by condition",
                         containerClass:
                             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
@@ -405,71 +405,71 @@ export const faqs = {
             id: "trust-verification",
             title: "💚 Trust & Verification",
             questions: [
-                {
-                    id: "how-verify",
-                    question: "How does HealGuid verify holistic practitioners?",
-                    answer: "✨ Every practitioner undergoes our comprehensive verification process before joining our network:",
-                    points: [
-                        {
-                            title: "Professional Qualification Verification:",
-                            bullets: [
-                                { text: "Review and verification of all degrees, diplomas, and certifications." },
-                                { text: "Confirmation of active professional registrations (GMC, CNHC, HCPC, etc.)." },
-                                { text: "Assessment of specialized training in holistic modalities." },
-                            ],
-                        },
-                        {
-                            title: "Professional Standards Check:",
-                            bullets: [
-                                { text: "Professional background verification and reference checks." },
-                                { text: "Confirmation of professional indemnity insurance coverage." },
-                                { text: "Review of any professional disciplinary history." },
-                            ],
-                        },
-                        {
-                            title: "Expertise Assessment:",
-                            bullets: [
-                                { text: "Evaluation of experience with specific chronic conditions." },
-                                { text: "Review of continuing professional development." },
-                                { text: "Assessment of evidence-based practice approaches." },
-                            ],
-                        },
-                        {
-                            title: "Ongoing Quality Monitoring:",
-                            bullets: [
-                                { text: "Regular review of patient feedback and satisfaction scores." },
-                                { text: "Continued professional development verification." },
-                                { text: "Compliance with platform quality standards." },
-                            ],
-                        },
-                        {
-                            title: "Practitioner Verification Levels:",
-                            bullets: [
-                                {
-                                    highlight: "✓ Verified Professional:",
-                                    text: "Met all basic verification requirements.",
-                                },
-                                {
-                                    highlight: "✓ Specialist Verified:",
-                                    text: "Additional expertise verification in specific conditions.",
-                                },
-                                {
-                                    highlight: "✓ Premium Verified:",
-                                    text: "Highest level including peer reviews and advanced credentials.",
-                                },
-                            ],
-                        },
-                    ],
-                    button: {
-                        hasButton: true,
-                        label: "Learn About Our Verification Standards →",
-                        href: "https://book.healguid.com/verification",
-                        containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
-                        alt: "Learn about verification standards",
-                    },
-                },
+                // {
+                //     id: "how-verify",
+                //     question: "How does HealGuid verify holistic practitioners?",
+                //     answer: "✨ Every practitioner undergoes our comprehensive verification process before joining our network:",
+                //     points: [
+                //         {
+                //             title: "Professional Qualification Verification:",
+                //             bullets: [
+                //                 { text: "Review and verification of all degrees, diplomas, and certifications." },
+                //                 { text: "Confirmation of active professional registrations (GMC, CNHC, HCPC, etc.)." },
+                //                 { text: "Assessment of specialized training in holistic modalities." },
+                //             ],
+                //         },
+                //         {
+                //             title: "Professional Standards Check:",
+                //             bullets: [
+                //                 { text: "Professional background verification and reference checks." },
+                //                 { text: "Confirmation of professional indemnity insurance coverage." },
+                //                 { text: "Review of any professional disciplinary history." },
+                //             ],
+                //         },
+                //         {
+                //             title: "Expertise Assessment:",
+                //             bullets: [
+                //                 { text: "Evaluation of experience with specific chronic conditions." },
+                //                 { text: "Review of continuing professional development." },
+                //                 { text: "Assessment of evidence-based practice approaches." },
+                //             ],
+                //         },
+                //         {
+                //             title: "Ongoing Quality Monitoring:",
+                //             bullets: [
+                //                 { text: "Regular review of patient feedback and satisfaction scores." },
+                //                 { text: "Continued professional development verification." },
+                //                 { text: "Compliance with platform quality standards." },
+                //             ],
+                //         },
+                //         {
+                //             title: "Practitioner Verification Levels:",
+                //             bullets: [
+                //                 {
+                //                     highlight: "✓ Verified Professional:",
+                //                     text: "Met all basic verification requirements.",
+                //                 },
+                //                 {
+                //                     highlight: "✓ Specialist Verified:",
+                //                     text: "Additional expertise verification in specific conditions.",
+                //                 },
+                //                 {
+                //                     highlight: "✓ Premium Verified:",
+                //                     text: "Highest level including peer reviews and advanced credentials.",
+                //                 },
+                //             ],
+                //         },
+                //     ],
+                //     button: {
+                //         hasButton: true,
+                //         label: "Learn About Our Verification Standards →",
+                //         href: "/verification",
+                //         containerClass:
+                //             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                //         textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
+                //         alt: "Learn about verification standards",
+                //     },
+                // },
                 {
                     id: "info-safe",
                     question: "Is my health information safe with HealGuid?",
@@ -614,7 +614,7 @@ export const faqs = {
                     button: {
                         hasButton: true,
                         label: "View Pricing Information →",
-                        href: "https://book.healguid.com",
+                        href: "/book",
                         containerClass:
                             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
                         textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
@@ -656,7 +656,7 @@ export const faqs = {
                     button: {
                         hasButton: true,
                         label: "Create Your Free Profile →",
-                        href: "https://book.healguid.com/apply",
+                        href: "/apply",
                         containerClass:
                             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
                         textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
@@ -737,7 +737,7 @@ export const faqs = {
                     button: {
                         hasButton: true,
                         label: "Choose Your Plan →",
-                        href: "https://book.healguid.com/practitioners",
+                        href: "/book",
                         containerClass:
                             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
                         textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
@@ -812,7 +812,7 @@ export const faqs = {
                     button: {
                         hasButton: true,
                         label: "Learn More About Our Partnership →",
-                        href: "https://book.healguid.com/practitioners",
+                        href: "/book",
                         containerClass:
                             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
                         textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
@@ -891,7 +891,7 @@ export const faqs = {
                     button: {
                         hasButton: true,
                         label: "Apply to Join Our Founding Community →",
-                        href: "https://book.healguid.com/practitioners",
+                        href: "/book",
                         alt: "Apply to Join Our Founding Community",
                         containerClass:
                             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
@@ -986,7 +986,7 @@ export const faqs = {
                     button: {
                         hasButton: true,
                         label: "Start Your Verification Process →",
-                        href: "https://book.healguid.com/practitioners",
+                        href: "/book",
                         alt: "Start Your Verification Process",
                         containerClass:
                             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
@@ -1076,7 +1076,7 @@ export const faqs = {
                     button: {
                         hasButton: true,
                         label: "Join Our Growing Community →",
-                        href: "https://book.healguid.com",
+                        href: "/book",
                         containerClass:
                             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
                         textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
@@ -1169,7 +1169,7 @@ export const faqs = {
                     button: {
                         hasButton: true,
                         label: "Contact Our Support Team →",
-                        href: "/contact",
+                        href: "mailto:info@healguid.com",
                         containerClass:
                             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
                         textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
@@ -1265,7 +1265,7 @@ export const faqs = {
                     button: {
                         hasButton: true,
                         label: "Start Your Holistic Health Journey →",
-                        href: "https://book.healguid.com",
+                        href: "/book",
                         containerClass:
                             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
                         textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
@@ -1289,7 +1289,7 @@ export const faqs = {
                             bullets: [
                                 {
                                     highlight: "Browse our practitioner directory",
-                                    text: "at book.healguid.com.",
+                                    text: "healguid.com/book .",
                                 },
                                 {
                                     highlight: "Filter by location, specialty, and condition",
@@ -1360,7 +1360,7 @@ export const faqs = {
                         {
                             hasButton: true,
                             label: "Find Your Practitioner →",
-                            href: "https://book.healguid.com/",
+                            href: "/book",
                             containerClass:
                                 "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0 sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer inline",
                             textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
@@ -1369,7 +1369,7 @@ export const faqs = {
                         {
                             hasButton: true,
                             label: "Join as a Practitioner →",
-                            href: "https://book.healguid.com/apply",
+                            href: "/apply",
                             alt: "Join as a practitioner",
                             containerClass:
                                 "cursor-pointer inline bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2  sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer inline ml-3",

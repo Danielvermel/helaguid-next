@@ -81,7 +81,7 @@ const PractitionerCarousel = ({ data }) => {
                 <div className="flex justify-center">
                     <a
                         className="block mx-auto mt-6 rounded-3xl bg-s1 px-4 py-2 text-lg font-semibold tracking-wide text-white"
-                        href="https://book.healguid.com/"
+                        href="https://healguid.com/book"
                         role="button"
                     >
                         Browse Our Experts
