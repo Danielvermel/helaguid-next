@@ -114,7 +114,7 @@ export const footer = {
         logo: "/images/logos/healGuid-v2.png",
         alt: "HealGuid logo - connecting patients with holistic health solutions",
         title: "Stay in the loop",
-        description: "Be the first to know about our launch and get exclusive updates:",
+        description: "Join thousands finding their path to better health:",
         privacyPolicy: "By clicking you accept you agree to receive updates and accept our Privacy Policy",
     },
     links: [
