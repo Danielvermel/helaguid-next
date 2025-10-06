@@ -138,7 +138,7 @@ export const footer = {
                 {
                     id: "2",
                     title: "Why Us",
-                    url: "/why-us",
+                    url: "#why-us",
                     titleAttribute: "Discover why you should choose us",
                 },
                 {

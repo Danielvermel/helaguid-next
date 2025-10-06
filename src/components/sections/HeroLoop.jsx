@@ -81,7 +81,7 @@ const HeroLoop = ({ data }) => {
                 href="/book"
                 className="bg-teal-500 hover:bg-teal-600 text-white font-semibold tracking-wide py-3 px-12 text-xl rounded-full transition-colors duration-300 md:mt-8 max-md:mt-24 max-sm:mt-8"
             >
-                Find a practitioner
+                Find a Practitioner
             </a>
 
             <div className="absolute sm:bottom-32 xl:bottom-20 max-sm:bottom-12 z-10">
