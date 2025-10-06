@@ -494,10 +494,27 @@
     }
 
     /* Base styles for our custom navigation arrows */
-    .swiper-button-prev-custom,
     .swiper-button-prev-carousel,
-    .swiper-button-next-custom,
     .swiper-button-next-carousel {
+        position: absolute;
+        top: 40%; /* Adjust vertical position */
+        transform: translateY(-50%);
+        z-index: 10;
+
+        /* Appearance */
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+    .swiper-button-prev-custom,
+    .swiper-button-next-custom {
         position: absolute;
         top: 40%; /* Adjust vertical position */
         transform: translateY(-50%);

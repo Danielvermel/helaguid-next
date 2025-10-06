@@ -68,10 +68,10 @@ const PractitionerCarousel = ({ data }) => {
                     ))}
 
                     {/* Add the custom navigation arrows inside the Swiper component */}
-                    <div className="swiper-button-prev-carousel absolute top-1/2 -translate-y-1/2 left-[-25px] w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-teal-800 z-10 transition-all duration-300 hover:bg-teal-800 hover:text-white cursor-pointer max-md:hidden">
+                    <div className="swiper-button-prev-carousel absolute top-1/2 -translate-y-1/2 left-[-25px] w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-teal-800 z-10 transition-all duration-300 bg-teal-800 hover:text-white cursor-pointer max-md:hidden">
                         <ChevronIcon />
                     </div>
-                    <div className="swiper-button-next-carousel absolute top-1/2 -translate-y-1/2 right-[-25px] w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-teal-800 z-10 transition-all duration-300 hover:bg-teal-800 hover:text-white cursor-pointer max-md:hidden">
+                    <div className="swiper-button-next-carousel absolute top-1/2 -translate-y-1/2 right-[-25px] w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-teal-800 z-10 transition-all duration-300 bg-teal-800 hover:text-white cursor-pointer max-md:hidden">
                         <ChevronIcon />
                     </div>
                 </Swiper>

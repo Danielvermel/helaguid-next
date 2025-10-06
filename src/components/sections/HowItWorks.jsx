@@ -222,7 +222,7 @@ const HowItWorks = ({ data, func }) => {
                                     className=" mx-auto mt-8 mb-6"
                                 />
                             )}
-                            {data.type.includes("client") ? (
+                            {data.type.includes("client") && (
                                 <Button
                                     containerClassName="border-2 border-s1 w-full rounded-2xl mt-10 text-xl py-2"
                                     arialLabelText={data?.howItWorks?.buttonArialLabel}
@@ -230,18 +230,6 @@ const HowItWorks = ({ data, func }) => {
                                 >
                                     See a Profile Preview
                                 </Button>
-                            ) : (
-                                <a
-                                    href={`#${data.howItWorks.jumpToNext}`}
-                                    onClick={(e) => scrollToSection(e, data.howItWorks.jumpToNext)}
-                                >
-                                    <Button
-                                        containerClassName="border-2 border-s1 w-full rounded-2xl mt-10 text-xl py-2"
-                                        aria-label={data.howItWorks.buttonArialLabelText}
-                                    >
-                                        See Verification Process
-                                    </Button>
-                                </a>
                             )}
                         </div>
                     </div>
