@@ -39,6 +39,11 @@ const ApproachCard = ({ approach }) => {
                 </div>
 
                 {/* Bottom Row: Tag (aligned to the bottom of the grid) */}
+                <div className="p-8 self-end">
+                    <span className={clsx("text-white text-xs font-medium px-4 py-2 rounded-full", styles.badge)}>
+                        {approach.tag}
+                    </span>
+                </div>
             </div>
         </div>
     );
