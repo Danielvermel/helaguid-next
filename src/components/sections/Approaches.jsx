@@ -56,7 +56,7 @@ const Approaches = ({ data }) => {
                     >
                         {data.map((approach) => (
                             <SwiperSlide key={approach.id}>
-                                <ApproachCard approach={approach} />
+                                <ApproachCard approach={approach} key={"appr-" + approach.id} />
                             </SwiperSlide>
                         ))}
 

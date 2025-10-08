@@ -16,11 +16,11 @@ const ApproachCard = ({ approach }) => {
     const styles = themeStyles[approach.theme] || themeStyles.functional;
 
     return (
-        <div className="block group">
+        <div className="block group" id={"approach-" + approach.id}>
             <div
                 className={clsx(
                     // Base layout: a 3-row grid that fills the parent's height
-                    "h-full",
+                    "h-full flex flex-col",
                     // Styling: size, color, rounding, shadow, etc.
                     "min-h-[350px] bg-white shadow-lg rounded-2xl transition-all duration-300 text-center cursor-pointer border-t-4 ",
                     // Dynamic border color
@@ -34,16 +34,22 @@ const ApproachCard = ({ approach }) => {
                 </div>
 
                 {/* Middle Row: Description (stretches to fill available space) */}
-                <div className="p-8 py-0">
+                <div className="p-8 py-0 min-h-24">
                     <p className="text-gray-600 text-[0.95rem] leading-relaxed">{approach.description}</p>
                 </div>
 
                 {/* Bottom Row: Tag (aligned to the bottom of the grid) */}
-                <div className="p-8 self-end">
-                    <span className={clsx("text-white text-xs font-medium px-4 py-2 rounded-full", styles.badge)}>
-                        {approach.tag}
-                    </span>
-                </div>
+                {approach?.link && (
+                    <a href={approach?.link} className="justify-self-end">
+                        <div className="p-8 self-end">
+                            <span
+                                className={clsx("text-white text-xs font-medium px-4 py-2 rounded-full", styles.badge)}
+                            >
+                                {approach.tag}
+                            </span>
+                        </div>
+                    </a>
+                )}
             </div>
         </div>
     );

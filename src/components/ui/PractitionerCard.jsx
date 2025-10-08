@@ -21,10 +21,10 @@ const PractitionerCard = ({ practitioner }) => {
                         {practitioner.specialty}
                     </span>
                     {practitioner.ratings > 0 && (
-                        <div class="flex items-center mt-3">
+                        <div className="flex items-center mt-3">
                             {Array.from({ length: parseInt(practitioner.ratings) }, () => (
                                 <svg
-                                    class="w-4 h-4 text-yellow-300 ms-1"
+                                    className="w-4 h-4 text-yellow-300 ms-1"
                                     aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="currentColor"
