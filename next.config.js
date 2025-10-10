@@ -37,7 +37,7 @@ const nextConfig = {
             "/privacy-policy": { page: "/privacy-policy" },
             "/404": { page: "/404" },
             "/thank-you": { page: "/thank-you" },
-            "/thank-you": { page: "/thank-you" },
+            "/book-confirmation": { page: "/book-confirmation" },
             "/about": { page: "/about" },
             "/terms-and-conditions": { page: "/terms-and-conditions" },
         };
