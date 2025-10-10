@@ -186,7 +186,7 @@ export const causes = {
 export const whyUs = {
     title: "Why Trust HealGuid?",
     tableTitle: "The HealGuid Difference",
-    company: "HealGuid's Vision",
+    company: "HealGuid",
     competitor: "Mainstream Approach",
     exclusiveBenefits: {
         title: "A Different Approach to Holistic Healthcare",
@@ -272,33 +272,39 @@ export const whyUs = {
 export const comparisonTable = [
     {
         id: "0",
-        feature: "Treatment Philosophy",
-        companyInfo: "Holistic: Focus on your whole history",
-        conventionMedicineInfo: "Specialized: focuses on treating symptoms",
+        feature: "Trust",
+        companyInfo: "Verified credentials + insurance badges",
+        conventionMedicineInfo: "Self-reported profiles",
     },
     {
         id: "1",
-        feature: "Care Options",
-        companyInfo: "Personalized: Natural & holistic treatments",
-        conventionMedicineInfo: "Standardized: Primarily conventional treatments",
+        feature: "Patients",
+        companyInfo: "Pre-qualified chronic condition seekers",
+        conventionMedicineInfo: "Broad, mixed-intent traffic",
     },
     {
         id: "2",
-        feature: "Practitioner Access",
-        companyInfo: "Virtual + flexible in-person options",
-        conventionMedicineInfo: "Often long wait times and limited to office hours",
+        feature: "Bookings",
+        companyInfo: "Integrated scheduling + auto-reminders",
+        conventionMedicineInfo: "External links, manual follow-up",
     },
     {
         id: "3",
-        feature: "Appointment Style",
-        companyInfo: "Longer sessions, whole-person focus",
-        conventionMedicineInfo: "Typically brief, focused visits",
+        feature: "Payments",
+        companyInfo: "Secure weekly payouts via Stripe",
+        conventionMedicineInfo: "Fragmented systems, delays",
     },
     {
         id: "4",
-        feature: "Preventative Care",
-        companyInfo: "Main focus on lifestyle, diet, and prevention",
-        conventionMedicineInfo: "Mostly reactive, focused on managing diseases",
+        feature: "Pricing",
+        companyInfo: "Fair tiers; lower commission as you grow",
+        conventionMedicineInfo: "Flat fees or pay-per-lead",
+    },
+    {
+        id: "5",
+        feature: "Growth",
+        companyInfo: "Active patient acquisition + co-marketing",
+        conventionMedicineInfo: "DIY marketing, no referrals",
     },
 ];
 

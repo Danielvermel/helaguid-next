@@ -45,7 +45,7 @@ const PractitionerCard = ({ practitioner }) => {
                             className="block text-sm mx-auto rounded-2xl bg-teal-800 px-3 py-2 text-white"
                             href={practitioner.profileUrl}
                         >
-                            View Profile
+                            Book Now
                         </a>
                     </div>
                 </div>

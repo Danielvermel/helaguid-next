@@ -43,7 +43,10 @@ const ApproachCard = ({ approach }) => {
                     <a href={approach?.link} className="justify-self-end">
                         <div className="p-8 self-end">
                             <span
-                                className={clsx("text-white text-xs font-medium px-4 py-2 rounded-full", styles.badge)}
+                                className={clsx(
+                                    "text-white hover:bg-gray-600 text-xs font-medium px-4 py-2 rounded-full",
+                                    styles.badge
+                                )}
                             >
                                 {approach.tag}
                             </span>

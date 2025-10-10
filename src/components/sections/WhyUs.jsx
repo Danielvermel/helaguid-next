@@ -105,7 +105,9 @@ const WhyUs = ({ data, func }) => {
                         <div className="max-sm:hidden">
                             {/* Header Row */}
                             <div className="grid sm:grid-cols-11 max-sm:grid-cols-9 sm:gap-3 max-sm:gap-2 mb-3 text-center text-white">
-                                <div className="bg-p1 rounded-lg p-4 sm:col-span-3 max-sm:col-span-3 opacity-0"></div>
+                                <div className="bg-p1 rounded-lg p-4 sm:col-span-3 max-sm:col-span-3 flex items-center">
+                                    <span className="m-auto">{data.whyUs.matterText}</span>
+                                </div>
                                 <div className="bg-p1 tracking-wider rounded-lg sm:p-4 max-sm:p-3 max-sm:text-xs sm:font-medium max-sm:font-semibold sm:col-span-4 max-sm:col-span-3 flex items-center">
                                     <span className="m-auto">{data.whyUs.company}</span>
                                 </div>
