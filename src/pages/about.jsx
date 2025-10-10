@@ -41,7 +41,7 @@ export default function FAQ() {
                 description="HealGuid connects UK patients with rigorously verified holistic & functional practitioners. Support for chronic conditions—gut, hormones and autoimmune."
                 keywords="about us, data protection, health information privacy, holistic healthcare privacy"
                 path="privacy-policy"
-                canonicalUrl="https://healguid.com/privacy-policy"
+                canonicalUrl="https://healguid.com/about"
             />
             <section className="py-16 max-md:pt-20 max-lg:pt-28 lg:pt-44 bg-b3 lg:min-h-lvh">
                 <Header data={{ menus: aboutUs.menus, type: "about", extra: "faq" }} />

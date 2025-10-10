@@ -7,6 +7,7 @@ export const healingApproaches = [
         icon: "🔬",
         tag: "Root Cause Focus",
         theme: "functional",
+        link: "/functional-medicine",
     },
     {
         id: 2,
@@ -16,6 +17,7 @@ export const healingApproaches = [
         icon: "🥗",
         tag: "Food as Medicine",
         theme: "nutritional",
+        link: "/nutritional-medicine",
     },
     {
         id: 3,
@@ -25,6 +27,7 @@ export const healingApproaches = [
         icon: "⚖️",
         tag: "Best of Both",
         theme: "integrative",
+        link: "/integrative-medicine",
     },
     {
         id: 4,
