@@ -214,6 +214,19 @@ const Hero = ({ data, func }) => {
                         )} */}
                         <div className="lg:mr-20">
                             <div className="flex flex-wrap lg:justify-center items-center lg:mt-auto max-lg:mt-8 w-full">
+                                <span
+                                    className={`
+                                    text-lg max-lg:justify-center max-lg:mb-4 tracking-2 mb-3 mt-4 text-center w-full
+                                    ${
+                                        data.type.includes("partner")
+                                            ? "lg:basis-1/2 lg:my-4 max-lg:basis-full"
+                                            : "basis-full"
+                                    }
+                                `}
+                                >
+                                    Already a partner?
+                                </span>
+
                                 {/* <span
                                     className={`
                                     text-lg max-lg:justify-center max-lg:mb-4 tracking-2 mb-3 mt-4 text-center w-full
@@ -283,7 +296,6 @@ const Hero = ({ data, func }) => {
                                         ➔ email is not valid!
                                     </span>
                                 )} */}
-
                                 {/* <span className="text-xs block opacity-70 text-center w-full mt-2">
                                     {data.hero.newsletter.privacyPolicy}
                                 </span> */}
