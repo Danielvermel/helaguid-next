@@ -1,4 +1,4 @@
-// src/pages/thank-you.js
+
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import Header from "../components/sections/Header";
