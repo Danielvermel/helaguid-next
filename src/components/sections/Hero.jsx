@@ -214,18 +214,33 @@ const Hero = ({ data, func }) => {
                         )} */}
                         <div className="lg:mr-20">
                             <div className="flex flex-wrap lg:justify-center items-center lg:mt-auto max-lg:mt-8 w-full">
-                                <span
+                                {/* <span
                                     className={`
                                     text-lg max-lg:justify-center max-lg:mb-4 tracking-2 mb-3 mt-4 text-center w-full
-                                    ${
-                                        data.type.includes("partner")
-                                            ? "lg:basis-1/2 lg:my-4 max-lg:basis-full"
-                                            : "basis-full"
-                                    }
+                                   
                                 `}
                                 >
                                     Already a partner?
-                                </span>
+                                </span> */}
+
+                                <section className="py-8">
+                                    <div className="container mx-auto px-4">
+                                        <p className="text-center md:text-lg">Already a partner?</p>
+
+                                        <div className="mt-4 flex justify-center">
+                                            <a
+                                                href="/login"
+                                                className="inline-flex items-center justify-center
+                   border-2 border-p1 text-p1 bg-white font-medium
+                   hover:bg-p1 hover:text-white transition-all duration-300
+                   rounded-full px-6 py-2 md:px-8 md:py-3
+                   text-sm md:text-base w-auto"
+                                            >
+                                                Log In
+                                            </a>
+                                        </div>
+                                    </div>
+                                </section>
 
                                 {/* <span
                                     className={`
