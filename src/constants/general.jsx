@@ -365,6 +365,6 @@ export const aboutUs = {
         subTitle: "We will keep pushing forward...",
         description:
             "...Until evidence-based holistic care becomes accessible to all. \n Until healthcare is driven by patient needs and practitioner expertise. \n Until practitioners can breathe easier and patients feel truly seen, supported, and hopeful.",
-        text: "This isn't just our mission—it's our life's work.",
+        text: "This isn't just our mission, it's our life's work.",
     },
 };

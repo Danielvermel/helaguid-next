@@ -200,7 +200,7 @@ const HowItWorks = ({ data, func }) => {
                             {!videoError && !data.isSafari ? (
                                 <video
                                     id="banner-video"
-                                    className="size-max max-md:h-auto w-full"
+                                    className="size-max max-md:h-auto w-full mb-8"
                                     aria-label={data.howItWorks.sideAlt}
                                     autoPlay
                                     muted
