@@ -17,7 +17,7 @@ export const healingApproaches = [
         icon: "🥗",
         tag: "Find Practitioners",
         theme: "nutritional",
-        link: "/nutritional-medicine",
+        link: "/nutritional-therapy",
     },
     {
         id: 3,
@@ -36,7 +36,7 @@ export const healingApproaches = [
         icon: "🌿",
         tag: "Find Practioners",
         theme: "naturopathic",
-        link: "/book",
+        link: "/naturopathic-medicine",
     },
     {
         id: 5,
