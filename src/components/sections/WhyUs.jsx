@@ -37,8 +37,8 @@ const WhyUs = ({ data, func }) => {
             id="why-us"
         >
             <div className="container max-lg:flex max-lg:flex-wrap">
-                <PageTitle containerClass="max-lg:basis-full max-lg:text-center">{data.whyUs.title}</PageTitle>
-                <div className="lg:text-xl max-lg:text-base flex flex-row lg:justify-end lg:-mt-16 max-lg:mt-8 lg:mb-12 max-lg:mb-6 max-lg:hidden">
+                <PageTitle containerClass="max-lg:basis-full max-lg:text-center mb-8">{data.whyUs.title}</PageTitle>
+                <div className="lg:text-xl max-lg:text-base flex flex-row lg:justify-end lg:-mt-16 max-lg:mt-8 lg:mb-12 max-lg:mb-6 mt-8 max-lg:hidden">
                     <Button
                         containerClassName={clsx("lg:w-72 max-lg:w-64 mt-6 mx-0 h-12", data.whyUs.buttonColor)}
                         textClassName="tracking-wide md:font-semibold lg:text-lg max-lg:text-normal"

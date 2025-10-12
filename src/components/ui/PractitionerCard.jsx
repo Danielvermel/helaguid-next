@@ -5,7 +5,11 @@ import Image from "next/image";
 const PractitionerCard = ({ practitioner }) => {
     return (
         <Link href={practitioner.profileUrl} className="block group">
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden h-full">
+            <div
+                className="bg-white rounded-lg border border-gray-200 overflow-hidden h-full shadow-lg
+
+"
+            >
                 <div className="relative w-full aspect-[3/3]">
                     <Image
                         src={practitioner.imageUrl}

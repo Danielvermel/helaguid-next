@@ -72,7 +72,10 @@ export default function Partners() {
                 <Cause data={{ causes, type: "partners" }} />
                 <WhyUs data={{ whyUs, comparisonTable, type: "partners", isModalOpen }} func={{ handleOpenModal }} />
 
-                <HowItWorks data={{ howItWorks, type: "partners", isModalOpen, isSafari }} func={{ handleOpenModal }} />
+                <HowItWorks
+                    data={{ howItWorks, offers, type: "partners", isModalOpen, isSafari }}
+                    func={{ handleOpenModal }}
+                />
                 <WhatWeOffer data={{ offers, type: "partners", isModalOpen }} func={{ handleOpenModal }} />
                 <AboutUs data={{ type: "partners", isSafari }} />
                 <Footer data={{ type: "partners" }} />

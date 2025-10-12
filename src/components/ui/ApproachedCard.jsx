@@ -17,7 +17,8 @@ const ApproachCard = ({ approach }) => {
 
     return (
         <div className="block group" id={"approach-" + approach.id}>
-            <div
+            <a
+                href={approach?.link}
                 className={clsx(
                     // Base layout: a 3-row grid that fills the parent's height
                     "h-full flex flex-col",
@@ -35,25 +36,25 @@ const ApproachCard = ({ approach }) => {
 
                 {/* Middle Row: Description (stretches to fill available space) */}
                 <div className="p-8 py-0 min-h-24">
-                    <p className="text-gray-600 text-[0.95rem] leading-relaxed">{approach.description}</p>
+                    <p className="text-gray-600 text-[0.95rem] ">{approach.description}</p>
                 </div>
 
                 {/* Bottom Row: Tag (aligned to the bottom of the grid) */}
                 {approach?.link && (
-                    <a href={approach?.link} className="justify-self-end">
+                    <button href={approach?.link} className="justify-self-end">
                         <div className="p-8 self-end">
                             <span
                                 className={clsx(
-                                    "text-white hover:bg-gray-600 text-xs font-medium px-4 py-2 rounded-full",
+                                    "text-white hover:bg-gray-600 text-sm font-medium px-4 py-2 rounded-full",
                                     styles.badge
                                 )}
                             >
                                 {approach.tag}
                             </span>
                         </div>
-                    </a>
+                    </button>
                 )}
-            </div>
+            </a>
         </div>
     );
 };

@@ -229,7 +229,7 @@ const Hero = ({ data, func }) => {
 
                                         <div className="mt-4 flex justify-center">
                                             <a
-                                                href="/login"
+                                                href="/log-in"
                                                 className="inline-flex items-center justify-center
                    border-2 border-p1 text-p1 bg-white font-medium
                    hover:bg-p1 hover:text-white transition-all duration-300

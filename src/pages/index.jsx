@@ -72,7 +72,10 @@ export default function Home() {
                 <WhyUs data={{ whyUs, comparisonTable, type: "clients", isModalOpen }} func={{ handleOpenModal }} />
                 <Cause data={{ causes, type: "clients" }} />
                 <WhatWeOffer data={{ offers, type: "clients", isModalOpen }} func={{ handleOpenModal }} />
-                <HowItWorks data={{ howItWorks, type: "clients", isModalOpen, isSafari }} func={{ handleOpenModal }} />
+                <HowItWorks
+                    data={{ howItWorks, offers, type: "clients", isModalOpen, isSafari }}
+                    func={{ handleOpenModal }}
+                />
                 <AboutUs data={{ type: "clients", isSafari }} />
                 <Footer data={{ type: "clients" }} />
             </main>

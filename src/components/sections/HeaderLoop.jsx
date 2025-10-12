@@ -214,7 +214,7 @@ const HeaderLoop = ({ data }) => {
                         <img
                             src={
                                 "/images/header/" +
-                                (isOpen ? "close" : hasScrolled ? "hamburger-white" : "hamburger") +
+                                (isOpen ? "close" : hasScrolled ? "hamburger" : "hamburger-white") +
                                 ".svg"
                             }
                             alt={isOpen ? "Close menu" : "Open menu"}

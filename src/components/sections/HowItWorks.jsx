@@ -6,7 +6,20 @@ import Head from "next/head";
 import { jsonLdHowItWorks } from "../../constants/jsonLdData.jsx";
 
 const HowItWorks = ({ data, func }) => {
-    const [videoError, setVideoError] = useState(false);
+    const [openBenefit, setOpenBenefit] = useState(new Set([]));
+
+    const handleOpenBenefit = (benefit) => {
+        setOpenBenefit((prev) => {
+            const newSet = new Set(prev); // Clone the previous set
+            isSetOpenBenefit(benefit) ? newSet.delete(benefit) : newSet.add(benefit);
+
+            return newSet; // Return the updated set
+        });
+    };
+
+    const isSetOpenBenefit = (benefit) => {
+        return openBenefit.has(benefit); // Check if the benefit is in the set
+    };
 
     useEffect(() => {
         if (data.isModalOpen) {
@@ -137,7 +150,7 @@ const HowItWorks = ({ data, func }) => {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-row flex-wrap items-start text-center lg:gap-8 max-lg:gap-4 lg:-mt-12 justify-center">
+                <div className="flex flex-row flex-wrap items-start text-center lg:gap-8 max-lg:gap-4 lg:-mt-12 justify-center lg:mt-4">
                     {data.howItWorks.steps.map(
                         ({
                             id,
@@ -195,7 +208,7 @@ const HowItWorks = ({ data, func }) => {
                             </div>
                         )
                     )}
-                    <div className="flex-1 flex flex-wrap max-w-72 mt-auto justify-center max-lg:hidden">
+                    {/* <div className="flex-1 flex flex-wrap max-w-72 mt-auto justify-center max-lg:hidden">
                         <div>
                             {!videoError && !data.isSafari ? (
                                 <video
@@ -232,6 +245,138 @@ const HowItWorks = ({ data, func }) => {
                                 </Button>
                             )}
                         </div>
+                    </div> */}
+
+                    {/* Data Offers - Trust */}
+                    <div>
+                        <section className="flex-1 mb-8">
+                            <h3 className="text-p1 text-2xl max-lg:mt-2 font-semibold mb-4">
+                                {data.offers.list[2].type}
+                            </h3>
+                            <article className={clsx("flex flex-wrap flex-row items-stretch")}>
+                                {data.offers.list[2].points.map(
+                                    ({
+                                        id: cardId,
+                                        image,
+                                        alt,
+                                        altTitle,
+                                        bgColor,
+                                        bgTitleColor,
+                                        title,
+                                        description,
+                                        benefits = false,
+                                        categories = false,
+                                    }) => (
+                                        <div
+                                            className={clsx(
+                                                "rounded-xl cursor-pointer mb-6",
+                                                "lg:w-3/12 max-lg:w-6/12 max-md:w-full"
+                                            )}
+                                            key={cardId}
+                                            onClick={() => handleOpenBenefit(title)}
+                                        >
+                                            <div
+                                                className={clsx(
+                                                    "flex flex-col mr-4 rounded-xl h-full",
+                                                    isSetOpenBenefit(title) && bgColor
+                                                )}
+                                            >
+                                                <div
+                                                    className={clsx(
+                                                        "flex rounded-xl p-3 md:min-h-20 hover:shadow-2xl",
+                                                        bgTitleColor
+                                                    )}
+                                                >
+                                                    {image && (
+                                                        <div className="flex items-center w-1/5">
+                                                            <img
+                                                                src={image}
+                                                                alt={alt}
+                                                                title={altTitle}
+                                                                loading="lazy"
+                                                                className="h-8 mx-auto"
+                                                            />
+                                                        </div>
+                                                    )}
+
+                                                    <b className="flex-1 sm:font-semibold max-sm:font-semibold sm:text-lg max-sm:text-lg text-center m-auto">
+                                                        {title}
+                                                    </b>
+                                                    <div className="flex items-center w-1/12">
+                                                        <img
+                                                            src={"/images/offers/pointer.png"}
+                                                            alt="chevron"
+                                                            title="Click to expand or collapse the section"
+                                                            loading="lazy"
+                                                            className={clsx("h-3 mx-auto mt-auto", {
+                                                                "rotate-90": isSetOpenBenefit(title),
+                                                            })}
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    className={clsx(
+                                                        "col-span-2 pt-4 pb-4 pl-3 pr-2 rounded-xl",
+                                                        bgColor,
+                                                        data.offers.list[2].containerClass,
+                                                        {
+                                                            "h-auto max-h-[1000px] block transition-all duration-300":
+                                                                isSetOpenBenefit(title),
+                                                            "h-0 max-h-0 hidden overflow-hidden transition-all duration-0":
+                                                                !isSetOpenBenefit(title),
+                                                        }
+                                                    )}
+                                                >
+                                                    {data.type.includes("client") && (
+                                                        <p className="text-p1 sm:text-normal max-sm:text-sm">
+                                                            {description}
+                                                        </p>
+                                                    )}
+                                                    <ul className="list-disc max-lg:pl-8 max-sm:pl-4 lg:pl-4 mt-2 sm:text-normal max-sm:text-sm">
+                                                        {!!benefits ? (
+                                                            benefits.map(({ id: beneId, boldText, description }) => (
+                                                                <li key={beneId} className="mt-2 text-base tracking-2">
+                                                                    {boldText && (
+                                                                        <span className="font-semibold">
+                                                                            {boldText}{" "}
+                                                                        </span>
+                                                                    )}
+                                                                    {description}
+                                                                </li>
+                                                            ))
+                                                        ) : (
+                                                            <div>
+                                                                <p className="lg:min-h-32 text-base font-normal">
+                                                                    {categories.description}
+                                                                </p>
+                                                                <div className="mt-4">
+                                                                    {categories.offers.map(
+                                                                        ({ id: categoriesId, title, points }) => (
+                                                                            <div key={categoriesId}>
+                                                                                <span className="font-semibold text-lg">
+                                                                                    {title}
+                                                                                </span>
+                                                                                <ul className="list-disc pl-5 mb-4 text-base">
+                                                                                    {points.map(({ id, text }) => (
+                                                                                        <li key={id + "_" + text}>
+                                                                                            {text}
+                                                                                        </li>
+                                                                                    ))}
+                                                                                </ul>
+                                                                            </div>
+                                                                        )
+                                                                    )}
+                                                                </div>
+                                                            </div>
+                                                        )}
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )
+                                )}
+                            </article>
+                        </section>
                     </div>
                 </div>
             </div>

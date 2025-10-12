@@ -87,9 +87,6 @@ const Cause = ({ data }) => {
                                         {description}
                                     </p>
                                 )}
-
-                                {/* subtle divider accent */}
-                                <div className="mt-5 border-t border-gray-100" />
                             </article>
                         ))}
                     </div>

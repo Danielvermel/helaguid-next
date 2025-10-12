@@ -184,7 +184,9 @@ const Header = ({ data }) => {
                                                 textClassName="tracking-wide font-bold text-white"
                                                 href={data?.type?.includes("client") ? "/get-matched" : "/apply"}
                                             >
-                                                {["clients", "faq", "privacy", "about", "terms"].includes(data?.type)
+                                                {["partners", "clients", "faq", "privacy", "about", "terms"].includes(
+                                                    data?.type
+                                                )
                                                     ? "Get Matched"
                                                     : "Apply Now"}
                                             </Button>
@@ -198,7 +200,7 @@ const Header = ({ data }) => {
                     </div>
 
                     <Button
-                        containerClassName="bg-s1 m-0 text-sm text-white sm:hidden"
+                        containerClassName="bg-s1 m-0 text-sm text-white lg:hidden max-sm:hidden ml-auto"
                         textClassName="tracking-wide font-bold p-0 text-sm"
                         textContainerClassName="min-h-[32px] px-2 mx-0"
                         href={
