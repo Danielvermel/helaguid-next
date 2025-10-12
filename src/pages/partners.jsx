@@ -6,12 +6,12 @@ import Header from "../components/sections/Header";
 import HeroLoop from "../components/sections/HeroLoop";
 import Hero from "../components/sections/Hero";
 import Cause from "../components/sections/Cause";
-import WhyUs from "../components/sections/WhyUS2";
+import WhyUs from "../components/sections/WhyUs";
 import HowItWorks from "../components/sections/HowItWorks";
 import WhatWeOffer from "../components/sections/WhatWeOffer";
 import AboutUs from "../components/sections/AboutUs";
 import Footer from "../components/sections/Footer";
-import { banner, menus, hero, causes, whyUs, comparisonTable, howItWorks, offers } from "../constants/partners2";
+import { banner, menus, hero, causes, whyUs, comparisonTable, howItWorks, offers } from "../constants/partners";
 import { healingApproaches } from "../constants/approaches";
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
@@ -70,7 +70,7 @@ export default function Partners() {
                 <Hero data={{ hero, type: "partners", isModalOpen, isSafari }} func={{ handleOpenModal }} />
                 {/* <HeroPartner data={{ hero, isModalOpen, isSafari }} func={{ handleOpenModal }} /> */}
                 <Cause data={{ causes, type: "partners" }} />
-                <WhyUs data={{ whyUs, type: "partners", isModalOpen }} func={{ handleOpenModal }} />
+                <WhyUs data={{ whyUs, comparisonTable, type: "partners", isModalOpen }} func={{ handleOpenModal }} />
 
                 <HowItWorks data={{ howItWorks, type: "partners", isModalOpen, isSafari }} func={{ handleOpenModal }} />
                 <WhatWeOffer data={{ offers, type: "partners", isModalOpen }} func={{ handleOpenModal }} />

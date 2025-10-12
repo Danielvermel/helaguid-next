@@ -5,7 +5,7 @@ export const healingApproaches = [
         description:
             "Science-based approach that identifies and addresses the root causes of illness through personalized treatment.",
         icon: "🔬",
-        tag: "Root Cause Focus",
+        tag: "Find Practitioners",
         theme: "functional",
         link: "/functional-medicine",
     },
@@ -15,7 +15,7 @@ export const healingApproaches = [
         description:
             "Personalized nutrition plans and therapeutic protocols to optimize health through food as medicine.",
         icon: "🥗",
-        tag: "Food as Medicine",
+        tag: "Find Practitioners",
         theme: "nutritional",
         link: "/nutritional-medicine",
     },
@@ -25,7 +25,7 @@ export const healingApproaches = [
         description:
             "Combines conventional medicine with evidence-based complementary therapies for comprehensive care.",
         icon: "⚖️",
-        tag: "Best of Both",
+        tag: "Find Practitioners",
         theme: "integrative",
         link: "/integrative-medicine",
     },
@@ -34,8 +34,9 @@ export const healingApproaches = [
         title: "Naturopathic Medicine",
         description: "Natural healing approaches that support your body's inherent ability to heal itself safely.",
         icon: "🌿",
-        tag: "Natural Healing",
+        tag: "Find Practioners",
         theme: "naturopathic",
+        link: "/book",
     },
     {
         id: 5,
@@ -43,16 +44,18 @@ export const healingApproaches = [
         description:
             "Manual therapy and structural approaches focusing on the musculoskeletal system for whole-body wellness.",
         icon: "🦴",
-        tag: "Hands-On Healing",
+        tag: "Find Practioners",
         theme: "osteopathic",
+        link: "/book",
     },
     {
         id: 6,
         title: "Holistic Health Coaching",
         description: "Personalized guidance supporting sustainable lifestyle changes for optimal health and wellbeing.",
         icon: "💫",
-        tag: "Lifestyle Focus",
+        tag: "Find Practioners",
         theme: "holistic-coach",
+        link: "/book",
     },
     {
         id: 7,
@@ -60,15 +63,17 @@ export const healingApproaches = [
         description:
             "Explores the powerful connections between thoughts, emotions, and physical health for complete wellness.",
         icon: "🧘",
-        tag: "Whole Person",
+        tag: "Find Practioners",
         theme: "mind-body",
+        link: "/book",
     },
     {
         id: 8,
         title: "Holistic Physiotherapy",
         description: "Movement-based therapy that addresses not just symptoms but underlying patterns and imbalances.",
         icon: "🏃",
-        tag: "Movement Medicine",
+        tag: "Find Practioners",
         theme: "physiotherapy",
+        link: "/book",
     },
 ];

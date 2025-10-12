@@ -217,6 +217,34 @@ const Hero = ({ data, func }) => {
                                 {/* <span
                                     className={`
                                     text-lg max-lg:justify-center max-lg:mb-4 tracking-2 mb-3 mt-4 text-center w-full
+                                   
+                                `}
+                                >
+                                    Already a partner?
+                                </span> */}
+
+                                <section className="py-8">
+                                    <div className="container mx-auto px-4">
+                                        <p className="text-center md:text-lg">Already a partner?</p>
+
+                                        <div className="mt-4 flex justify-center">
+                                            <a
+                                                href="/login"
+                                                className="inline-flex items-center justify-center
+                   border-2 border-p1 text-p1 bg-white font-medium
+                   hover:bg-p1 hover:text-white transition-all duration-300
+                   rounded-full px-6 py-2 md:px-8 md:py-3
+                   text-sm md:text-base w-auto"
+                                            >
+                                                Log In
+                                            </a>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                {/* <span
+                                    className={`
+                                    text-lg max-lg:justify-center max-lg:mb-4 tracking-2 mb-3 mt-4 text-center w-full
                                     ${
                                         data.type.includes("partner")
                                             ? "lg:basis-1/2 lg:my-4 max-lg:basis-full"
@@ -283,7 +311,6 @@ const Hero = ({ data, func }) => {
                                         ➔ email is not valid!
                                     </span>
                                 )} */}
-
                                 {/* <span className="text-xs block opacity-70 text-center w-full mt-2">
                                     {data.hero.newsletter.privacyPolicy}
                                 </span> */}

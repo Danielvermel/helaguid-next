@@ -4,109 +4,93 @@ import { jsonLdCauses } from "../../constants/jsonLdData.jsx";
 import { useEffect } from "react";
 
 const Cause = ({ data }) => {
-    // Handle smooth scrolling when hash changes
     useEffect(() => {
-        // Function to handle smooth scrolling
         const handleSmoothScroll = (e) => {
-            // Check if the hash exists
             if (window.location.hash) {
                 e.preventDefault();
-
                 const targetId = window.location.hash.substring(1);
                 const targetElement = document.getElementById(targetId);
-
                 if (targetElement) {
-                    // Add offset to account for fixed header
                     const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - 100;
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: "smooth",
-                    });
+                    window.scrollTo({ top: offsetTop, behavior: "smooth" });
                 }
             }
         };
 
-        // Handle initial load with hash
         if (window.location.hash) {
             setTimeout(() => {
                 const targetId = window.location.hash.substring(1);
                 const targetElement = document.getElementById(targetId);
-
                 if (targetElement) {
                     const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - 100;
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: "smooth",
-                    });
+                    window.scrollTo({ top: offsetTop, behavior: "smooth" });
                 }
             }, 100);
         }
 
-        // Listen for hash changes
         window.addEventListener("hashchange", handleSmoothScroll);
         return () => window.removeEventListener("hashchange", handleSmoothScroll);
     }, []);
 
-    // Function to handle smooth scrolling when clicking on anchors
     const scrollToSection = (e, targetId) => {
-        console.log("targetId: ", targetId);
         e.preventDefault();
-
-        // Update URL hash for bookmarking and history
         window.history.pushState(null, null, `#${targetId}`);
-
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
             const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - 100;
-            window.scrollTo({
-                top: offsetTop,
-                behavior: "smooth",
-            });
+            window.scrollTo({ top: offsetTop, behavior: "smooth" });
         }
     };
 
     return (
         <section
-            className={` ${
+            className={`${
                 data.type.includes("partner") ? "bg-white" : "bg-b3"
             } min-h-screen flex flex-col justify-center lg:p-8 max-lg:py-8 max-sm:py-20`}
         >
             <div id="Cause" className="container">
                 <div className="flex flex-col">
                     <PageTitle containerClass="text-center mx-auto">{data.causes.title}</PageTitle>
-                    <div className="text-center sm:mx-10 max-lg:mx-28 max-md:mx-12 max-sm:mx-2 font-light lg:mt-6 max-lg:mt-6  max-md:mt-4 lg:text-2xl max-lg:text-xl max-md:text-lg max-sm:text-base leading-8">
+
+                    <div className="text-center sm:mx-10 max-lg:mx-28 max-md:mx-12 max-sm:mx-2 font-light lg:mt-6 max-lg:mt-6 max-md:mt-4 lg:text-2xl max-lg:text-xl max-md:text-lg max-sm:text-base leading-8">
                         <span className="inline">{data.causes?.secondDescription}</span>
                         <h3 className="inline">{data.causes.description}</h3>
                         <span className="inline">{data.causes?.thirdDescription}</span>
                     </div>
 
-                    <div className="sm:mt-8 max-sm:mt-4 flex-row flex flex-wrap justify-center max-md:mx-0 md:gap-4 xl:mx-8 lg:mx-12 max-lg:mx-4 max-sm:mx-2">
-                        {data.causes.points.map(({ id, icon, text, alt, altTitle, description, jsonLdProperty }) => (
-                            <div
-                                key={`cause_` + id}
-                                className="items-center flex-1 sm:min-w-[calc(50%-1rem)] sm:px-2 max-sm:basis-full flex flex-row lg:gap-3 max-lg:gap-x-2 sm:my-2 max-sm:my-5"
+                    {/* Cards grid */}
+                    <div className="sm:mt-8 max-sm:mt-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 xl:mx-8 lg:mx-12 max-lg:mx-4 max-sm:mx-2">
+                        {data.causes.points.map(({ id, icon, text, alt, altTitle, description }) => (
+                            <article
+                                key={`cause_${id}`}
+                                className="bg-white rounded-2xl border border-gray-200 shadow-sm p-5 sm:p-6 flex flex-col h-full"
+                                aria-labelledby={`cause_title_${id}`}
                             >
-                                {/* <Head>
-                                    <script type="application/ld+json">
-                                        {JSON.stringify(jsonLdCauses[jsonLdProperty])}
-                                    </script>
-                                </Head> */}
-                                <img
-                                    src={`/images/causes/${icon}`}
-                                    alt={alt}
-                                    title={altTitle}
-                                    loading="lazy"
-                                    className="sm:w-12 sm:h-12 max-sm:w-7 max-sm:h-7"
-                                />
-                                <div className="sm:font-semibold max-sm:font-medium tracking-2">
-                                    <h4 className="font-semibold md:text-xl max-md:text-lg text-p1">{text}</h4>
-                                    {description && (
-                                        <span className="block font-light text-p1 md:text-lg max-md:text-base">
-                                            {description}
-                                        </span>
-                                    )}
+                                <div className="flex items-start gap-3">
+                                    <img
+                                        src={`/images/causes/${icon}`}
+                                        alt={alt}
+                                        title={altTitle}
+                                        loading="lazy"
+                                        className="w-10 h-10 sm:w-12 sm:h-12 shrink-0"
+                                    />
+                                    <h4
+                                        id={`cause_title_${id}`}
+                                        className="font-semibold md:text-xl max-md:text-lg text-p1 leading-snug"
+                                    >
+                                        {text}
+                                    </h4>
                                 </div>
-                            </div>
+
+                                {description && (
+                                    <p className="mt-3 md:text-lg max-md:text-base font-light text-p1 leading-relaxed">
+                                        {description}
+                                    </p>
+                                )}
+
+                                {/* subtle divider accent */}
+                                <div className="mt-5 border-t border-gray-100" />
+                            </article>
                         ))}
                     </div>
 
@@ -123,16 +107,18 @@ const Cause = ({ data }) => {
                         >
                             {data.causes.buttonText}
                         </a>
-
                         <a
                             href={`#${data.causes.jumpToNext}`}
-                            className=""
                             onClick={(e) => scrollToSection(e, data.causes.jumpToNext)}
-                        ></a>
+                            className="sr-only"
+                        >
+                            {data.causes.buttonText}
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
     );
 };
+
 export default Cause;

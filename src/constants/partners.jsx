@@ -154,8 +154,9 @@ export const causes = {
 export const whyUs = {
     title: "Why Join HealGuid Early?",
     tableTitle: "The HealGuid Difference",
-    company: "HealGuid's Vision",
+    company: "HealGuid",
     competitor: "Mainstream Approach",
+    matterText: "What matters",
     exclusiveBenefits: {
         title: "Founding Member Exclusive Benefits",
         majorPoints: [
@@ -237,33 +238,39 @@ export const whyUs = {
 export const comparisonTable = [
     {
         id: "0",
-        feature: "Treatment Approach",
-        companyInfo: "Holistic: Body, mind, and environment",
-        conventionMedicineInfo: "Specialized: focuses on treating isolated symptoms",
+        feature: "Trust",
+        companyInfo: "Verified credentials + insurance badges",
+        conventionMedicineInfo: "Self-reported profiles",
     },
     {
         id: "1",
-        feature: "Access to Practitioners",
-        companyInfo: " 24/7 virtual and in-person consultations worldwide",
-        conventionMedicineInfo: " Often long wait times for in-person visits",
+        feature: "Patients",
+        companyInfo: "Pre-qualified chronic condition seekers",
+        conventionMedicineInfo: "Broad, mixed-intent traffic",
     },
     {
         id: "2",
-        feature: "Personalized Plans",
-        companyInfo: "Personalized plans tailored to your needs",
-        conventionMedicineInfo: "Standardized treatments due to general protocols",
+        feature: "Bookings",
+        companyInfo: "Integrated scheduling + auto-reminders",
+        conventionMedicineInfo: "External links, manual follow-up",
     },
     {
         id: "3",
-        feature: "Remedies",
-        companyInfo: "Natural medicines, vitamins, supplements",
-        conventionMedicineInfo: "Pharmaceutical chemical interventions",
+        feature: "Payments",
+        companyInfo: "Secure weekly payouts via Stripe",
+        conventionMedicineInfo: "Fragmented systems, delays",
     },
     {
         id: "4",
-        feature: "Preventative Care",
-        companyInfo: "Main focus on lifestyle, diet, and prevention",
-        conventionMedicineInfo: "Mostly reactive, focused on managing diseases",
+        feature: "Pricing",
+        companyInfo: "Fair tiers; lower commission as you grow",
+        conventionMedicineInfo: "Flat fees or pay-per-lead",
+    },
+    {
+        id: "5",
+        feature: "Growth",
+        companyInfo: "Active patient acquisition + co-marketing",
+        conventionMedicineInfo: "DIY marketing, no referrals",
     },
 ];
 
