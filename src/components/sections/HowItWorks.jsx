@@ -168,9 +168,12 @@ const HowItWorks = ({ data, func }) => {
                             <div className="flex-1 min-w-60 max-w-72" key={`steps_` + id}>
                                 <div className={clsx("rounded-full inline-flex")}>
                                     <Head>
-                                        <script type="application/ld+json">
-                                            {JSON.stringify(jsonLdHowItWorks[jsonLdProperty])}
-                                        </script>
+                                        <script
+                                            type="application/ld+json"
+                                            dangerouslySetInnerHTML={{
+                                                __html: JSON.stringify(jsonLdHowItWorks[jsonLdProperty]),
+                                            }}
+                                        />
                                     </Head>
                                     <img
                                         src={"/images/how-it-works/" + icon}

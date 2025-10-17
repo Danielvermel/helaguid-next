@@ -61,7 +61,12 @@ export default function Partners() {
                 <Header data={{ menus, type: "partners" }} />
                 <Head>
                     <link rel="preload" href={hero.image} as="image" type="image/webp" />
-                    <script type="application/ld+json">{JSON.stringify(jsonLdHero.conversation)}</script>
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{
+                            __html: JSON.stringify(jsonLdHero.conversation),
+                        }}
+                    />
                 </Head>
                 {/* <HeroLoop data={{ menus, type: "partners" }} /> */}
                 {/* <PractitionerCarousel data={{ practitioners }} /> */}

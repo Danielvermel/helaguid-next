@@ -104,9 +104,12 @@ export default function FAQ() {
                                                 ) : (
                                                     <>
                                                         <Head>
-                                                            <script type="application/ld+json">
-                                                                {JSON.stringify(jsonLdAbout[jsonLdProperty])}
-                                                            </script>
+                                                            <script
+                                                                type="application/ld+json"
+                                                                dangerouslySetInnerHTML={{
+                                                                    __html: JSON.stringify(jsonLdAbout[jsonLdProperty]),
+                                                                }}
+                                                            />
                                                         </Head>
                                                         <video
                                                             id={`banner-video-${id}`}
@@ -197,9 +200,12 @@ export default function FAQ() {
                                 ) : (
                                     <>
                                         <Head>
-                                            <script type="application/ld+json">
-                                                {JSON.stringify(jsonLdAbout.celebrate)}
-                                            </script>
+                                            <script
+                                                type="application/ld+json"
+                                                dangerouslySetInnerHTML={{
+                                                    __html: JSON.stringify(jsonLdAbout.celebrate),
+                                                }}
+                                            />
                                         </Head>
                                         <video
                                             id="banner-video"
@@ -234,9 +240,12 @@ export default function FAQ() {
                                 ) : (
                                     <>
                                         <Head>
-                                            <script type="application/ld+json">
-                                                {JSON.stringify(jsonLdAbout.cog)}
-                                            </script>
+                                            <script
+                                                type="application/ld+json"
+                                                dangerouslySetInnerHTML={{
+                                                    __html: JSON.stringify(jsonLdAbout.cog),
+                                                }}
+                                            />
                                         </Head>
                                         <video
                                             id="banner-video"

@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import Button from "../ui/Button.jsx";
 import clsx from "clsx";
-import Head from "next/head";
-import { jsonLdHeader } from "../../constants/jsonLdData.jsx";
 
 const HeaderLoop = ({ data }) => {
     const [progress, setProgress] = useState(0);
@@ -151,9 +149,6 @@ const HeaderLoop = ({ data }) => {
                     )}
                 >
                     <a className="max-lg:flex-1 cursor-pointer z-2" href="/">
-                        <Head>
-                            <script type="application/ld+json">{JSON.stringify(jsonLdHeader.logo)}</script>
-                        </Head>
                         <img
                             src="/images/logos/healGuid-v2.svg"
                             className="lg:w-72 h-auto max-lg:w-44 lg:-mt-2"

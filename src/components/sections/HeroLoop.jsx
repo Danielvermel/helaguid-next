@@ -45,7 +45,7 @@ const HeroLoop = ({ data }) => {
             {/* 3. Centered Content Overlay */}
             <div className="relative z-10 flex flex-col items-center text-center px-4 max-md:-mt-12 max-sm:mt-18">
                 {/* Main Headline */}
-                <h1 className="text-4xl sm:text-5xl md:text-6xl max-sm:text-4xl font-bold tracking-wide text-shadow-md max-md:mt-16 max-sm:-mt-2  max-sm:pt-12">
+                <h2 className="text-4xl sm:text-5xl md:text-6xl max-sm:text-4xl font-bold tracking-wide text-shadow-md max-md:mt-16 max-sm:-mt-2  max-sm:pt-12">
                     <div>
                         Finally feeling <span className="text-orange-400">heard,</span>
                     </div>
@@ -53,13 +53,13 @@ const HeroLoop = ({ data }) => {
                         {" "}
                         Finally finding <span className="text-orange-400">answers</span>
                     </div>
-                </h1>
+                </h2>
 
                 {/* Sub-headline */}
                 <div className="lg:mt-24 max-lg:mt-20 max-sm:mt-2 max-w-2xl font-medium bg-black/90 p-2 rounded-xl">
-                    <h2 className="block max-sm:text-base sm:text-lg md:text-xl tracking-wider">
+                    <h1 className="block max-sm:text-base sm:text-lg md:text-xl tracking-wider">
                         Verified Holistic & Functional Medicine Practitioners in the UK{" "}
-                    </h2>
+                    </h1>
                     <p className="block max-sm:text-sm sm:text-base mt-2 tracking-wide">
                         Expert care for chronic fatigue, digestive health, autoimmune conditions & hormonal imbalances.
                     </p>

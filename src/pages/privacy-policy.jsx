@@ -28,47 +28,6 @@ export default function Privacy() {
                 canonicalUrl="https://healguid.com/privacy-policy"
             />
 
-            {/* <Schema
-                schemas={[
-                    {
-                        "@context": "https://schema.org",
-                        "@type": "WebPage",
-                        name: "Privacy Policy | How HealGuid Protects Your Health Data",
-                        description:
-                            "HealGuid protects your health data with strong encryption, strict confidentiality, and privacy-first practices connecting you to trusted practitioners.",
-                        mainEntity: {
-                            "@type": "WebContent",
-                            about: {
-                                "@type": "Thing",
-                                name: "Healthcare Privacy",
-                            },
-                        },
-                        audience: {
-                            "@type": "Audience",
-                            audienceType: ["Patients", "Healthcare Practitioners"],
-                        },
-                    },
-                    {
-                        "@context": "https://schema.org",
-                        "@type": "BreadcrumbList",
-                        itemListElement: [
-                            {
-                                "@type": "ListItem",
-                                position: 1,
-                                name: "Home",
-                                item: "https://healguid.com",
-                            },
-                            {
-                                "@type": "ListItem",
-                                position: 2,
-                                name: "Privacy Policy",
-                                item: "https://healguid.com/privacy-policy",
-                            },
-                        ],
-                    },
-                ]}
-            /> */}
-
             <Schema
                 schemas={[
                     {

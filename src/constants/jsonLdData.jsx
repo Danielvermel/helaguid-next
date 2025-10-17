@@ -1,24 +1,24 @@
-export const jsonLdHeader = {
-    logo: {
-        "@context": "https://schema.org",
-        "@type": "ImageObject",
-        name: "HealGuid Logo",
-        url: "https://www.healguid.com/images/logos/healGuid.png",
-        description: "The official logo of HealGuid, connecting patients with holistic health solutions.",
-        contentUrl: "https://www.healguid.com/images/logos/healGuid.png",
-        creator: {
-            "@type": "Organization",
-            name: "HealGuid",
-            url: "https://www.healguid.com/",
-        },
-        copyrightHolder: {
-            "@type": "Organization",
-            name: "HealGuid",
-            url: "https://www.healguid.com/",
-        },
-        copyrightYear: 2024,
-    },
-};
+// export const jsonLdHeader = {
+//     logo: {
+//         "@context": "https://schema.org",
+//         "@type": "ImageObject",
+//         name: "HealGuid Logo",
+//         url: "https://www.healguid.com/images/logos/healGuid.png",
+//         description: "The official logo of HealGuid, connecting patients with holistic health solutions.",
+//         contentUrl: "https://www.healguid.com/images/logos/healGuid.png",
+//         creator: {
+//             "@type": "Organization",
+//             name: "HealGuid",
+//             url: "https://www.healguid.com/",
+//         },
+//         copyrightHolder: {
+//             "@type": "Organization",
+//             name: "HealGuid",
+//             url: "https://www.healguid.com/",
+//         },
+//         copyrightYear: 2024,
+//     },
+// };
 
 export const jsonLdHero = {
     conversation: {
