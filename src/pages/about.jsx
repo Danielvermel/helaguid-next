@@ -40,16 +40,16 @@ export default function FAQ() {
                 title="About HealGuid | Verified Holistic Practitioners in the UK"
                 description="HealGuid connects UK patients with rigorously verified holistic & functional practitioners. Support for chronic conditions—gut, hormones and autoimmune."
                 keywords="about us, data protection, health information privacy, holistic healthcare privacy"
-                path="privacy-policy"
+                path="about"
                 canonicalUrl="https://healguid.com/about"
             />
             <section className="py-16 max-md:pt-20 max-lg:pt-28 lg:pt-44 bg-b3 lg:min-h-lvh">
                 <Header data={{ menus: aboutUs.menus, type: "about", extra: "faq" }} />
                 <article className="flex flex-col ">
                     <div className="container lg:py-16 max-lg:py-12">
-                        <h1 className="max-lg:text-center">
-                            <PageTitle>{aboutUs.title}</PageTitle>
-                        </h1>
+                        <PageTitle as="h1" containerClass="max-lg:text-center">
+                            {aboutUs.title}
+                        </PageTitle>
 
                         <div className="lg:ml-auto flex mb-3 lg:-mt-8 container">
                             <h2 className="lg:font-semibold max-lg:font-medium text-xl max-lg:mt-2 lg:ml-auto max-lg:mx-auto max-md:text-center">
