@@ -36,13 +36,13 @@ const globalSchema = {
                 "@type": "ContactPoint",
                 email: "info@healguid.com",
                 contactType: "Customer Support",
-            },
-            openingHoursSpecification: {
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-                opens: "00:00",
-                closes: "23:59",
-                description: "Platform available 24/7. Practitioner availability typically 9am-6pm local time.",
+                hoursAvailable: {
+                    "@type": "OpeningHoursSpecification",
+                    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                    opens: "00:00",
+                    closes: "23:59",
+                    description: "Platform available 24/7. Practitioner availability typically 9am-6pm local time.",
+                },
             },
         },
         {
