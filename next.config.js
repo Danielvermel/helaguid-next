@@ -35,6 +35,7 @@ const nextConfig = {
             "/partners": { page: "/partners" },
             "/faq": { page: "/faq" },
             "/privacy-policy": { page: "/privacy-policy" },
+            "/blog": { page: "/blog" },
             "/404": { page: "/404" },
             "/thank-you": { page: "/thank-you" },
             "/book-confirmation": { page: "/book-confirmation" },
