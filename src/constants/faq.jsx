@@ -27,7 +27,7 @@ export const faqs = {
     questionGroups: [
         {
             id: "holistic-basics",
-            title: "🌿 The Basics of Holistic Healthcare",
+            title: "The Basics of Holistic Healthcare",
             questions: [
                 {
                     id: "what-is-healguid",
@@ -39,10 +39,10 @@ export const faqs = {
                             bullets: [
                                 {
                                     highlight: "Premium-verified practitioners",
-                                    text: "across London and the UK specializing in chronic conditions.",
+                                    text: "across London and the UK specialising in chronic conditions.",
                                 },
                                 {
-                                    highlight: "Instant booking system",
+                                    highlight: "Book directly with verified practitioners",
                                     text: "for virtual and in-person consultations.",
                                 },
                                 {
@@ -107,7 +107,7 @@ export const faqs = {
                 {
                     id: "uk-practitioners",
                     question: "Can I find holistic practitioners in London and the UK through HealGuid?",
-                    answer: "🚀 Yes! HealGuid connects you with verified holistic practitioners across London and the UK. Our founding network includes practitioners in:",
+                    answer: "Yes! HealGuid connects you with verified holistic practitioners across London and the UK. Our founding network includes practitioners in:",
                     points: [
                         {
                             title: "London Coverage:",
@@ -167,7 +167,7 @@ export const faqs = {
                             title: "Root Cause Focus:",
                             bullets: [
                                 { text: "Practitioners who investigate underlying causes of chronic conditions." },
-                                { text: "Personalized care plans that evolve with your healing journey." },
+                                { text: "Personalised care plans that evolve with your healing journey." },
                                 { text: "Integration of functional testing, nutrition, and lifestyle approaches." },
                             ],
                         },
@@ -182,7 +182,7 @@ export const faqs = {
                             ],
                         },
                         {
-                            title: "Patient-Centered Experience:",
+                            title: "Patient-Centred Experience:",
                             bullets: [
                                 { text: "Platform designed specifically for chronic condition management." },
                                 { text: "Community of practitioners who understand long-term health challenges." },
@@ -204,7 +204,7 @@ export const faqs = {
         },
         {
             id: "finding-practitioner",
-            title: "🔍 Finding the Right Practitioner",
+            title: "Finding the Right Practitioner",
             questions: [
                 {
                     id: "practitioner-types",
@@ -219,7 +219,7 @@ export const faqs = {
                                     text: "focusing on root causes of chronic illness.",
                                 },
                                 {
-                                    highlight: "Integrative Medicine Physicians",
+                                    highlight: "Integrative Medicine Doctor",
                                     text: "blending conventional and holistic approaches.",
                                 },
                                 {
@@ -232,12 +232,12 @@ export const faqs = {
                             title: "Natural Healthcare Specialists:",
                             bullets: [
                                 {
-                                    highlight: "Naturopathic Physicians",
+                                    highlight: "Naturopathic Practitioners",
                                     text: "combining natural remedies with modern science.",
                                 },
                                 {
                                     highlight: "Nutritional Therapists",
-                                    text: "specializing in therapeutic diets for chronic conditions.",
+                                    text: "specialising in therapeutic diets for chronic conditions.",
                                 },
                                 {
                                     highlight: "Clinical Nutritionists",
@@ -318,7 +318,7 @@ export const faqs = {
                                     text: "if requested by your chosen practitioner.",
                                 },
                                 {
-                                    highlight: "Begin your personalized wellness journey",
+                                    highlight: "Begin your personalised wellness journey",
                                     text: "with ongoing support.",
                                 },
                             ],
@@ -368,7 +368,7 @@ export const faqs = {
                             title: "Digestive Health Disorders:",
                             bullets: [
                                 { text: "IBS, SIBO, and leaky gut specialists." },
-                                { text: "Comprehensive gut microbiome restoration programs." },
+                                { text: "Comprehensive gut microbiome restoration programmes." },
                                 { text: "Food sensitivity testing and elimination diet support." },
                             ],
                         },
@@ -403,7 +403,7 @@ export const faqs = {
         },
         {
             id: "trust-verification",
-            title: "💚 Trust & Verification",
+            title: "Trust & Verification: Why HealGuid Practitioners Are More Trustworthy",
             questions: [
                 // {
                 //     id: "how-verify",
@@ -540,7 +540,7 @@ export const faqs = {
         },
         {
             id: "pricing-costs",
-            title: "💰 Pricing & Costs",
+            title: "Pricing & Costs",
             questions: [
                 {
                     id: "cost-of-care",
@@ -592,7 +592,7 @@ export const faqs = {
                                 },
                                 {
                                     highlight: "Payment plans",
-                                    text: "available from select practitioners for comprehensive programs.",
+                                    text: "available from select practitioners for comprehensive programmes.",
                                 },
                             ],
                         },
@@ -625,7 +625,7 @@ export const faqs = {
         },
         {
             id: "for-practitioners",
-            title: "👩‍⚕️ For Holistic Healthcare Practitioners",
+            title: "For Holistic Healthcare Practitioners",
             questions: [
                 {
                     id: "cost-to-join",
@@ -883,7 +883,7 @@ export const faqs = {
                                 },
                                 {
                                     highlight: "Thought leadership opportunities",
-                                    text: "through our content and educational programs.",
+                                    text: "through our content and educational programmes.",
                                 },
                             ],
                         },
@@ -998,7 +998,7 @@ export const faqs = {
 
         {
             id: "community-support",
-            title: "🌟 Community & Support",
+            title: "Community & Support",
             questions: [
                 {
                     id: "community",
@@ -1308,7 +1308,7 @@ export const faqs = {
                                     text: "(virtual or in-person based on preference).",
                                 },
                                 {
-                                    highlight: "Begin your personalized healing journey",
+                                    highlight: "Begin your personalised healing journey",
                                     text: "with ongoing support.",
                                 },
                             ],
