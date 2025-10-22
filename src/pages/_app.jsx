@@ -342,6 +342,16 @@ function MyApp({ Component, pageProps }) {
         <>
             <Head>
                 {/* Google Consent Mode initialization - MUST come first, before CookieYes */}
+
+                {/* Previous */}
+                {/* gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied', // Allow analytics by default
+                'functionality_storage': 'granted',
+                'security_storage': 'granted',
+            }); */}
                 <script
                     type="text/javascript"
                     dangerouslySetInnerHTML={{
@@ -352,10 +362,10 @@ function MyApp({ Component, pageProps }) {
             
             // Set default consent - leveraging our new Basic Consent Configuration in GTM
             gtag('consent', 'default', {
-                'ad_storage': 'denied',
-                'ad_user_data': 'denied',
-                'ad_personalization': 'denied',
-                'analytics_storage': 'denied', // Allow analytics by default
+                'ad_storage': 'granted',
+                'ad_user_data': 'granted',
+                'ad_personalization': 'granted',
+                'analytics_storage': 'granted',
                 'functionality_storage': 'granted',
                 'security_storage': 'granted',
             });
