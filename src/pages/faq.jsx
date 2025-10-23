@@ -397,13 +397,13 @@ export default function FAQ() {
                         <hr></hr>
                         <div className="my-8">
                             <div>
-                                <b>Document Version:</b> <span>1.0 - July 2025</span>
+                                <b>Document Version:</b> <span>2.0 - Oct 2025</span>
                             </div>
                             <div>
-                                <b> Last Updated:</b> <span>July 23, 2025</span>
+                                <b> Last Updated:</b> <span>Oct 23, 2025</span>
                             </div>
                             <div>
-                                <b>Next Review:</b> <span>September 2025</span>
+                                <b>Next Review:</b> <span>November 2025</span>
                             </div>
                         </div>
                     </div>
