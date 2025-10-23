@@ -13,13 +13,10 @@ const globalSchema = {
             "@type": "Organization",
             "@id": "https://www.healguid.com/#organization",
             name: "HealGuid",
+            alternateName: ["Heal Guid", "HealGuide"],
             url: "https://www.healguid.com",
-            logo: {
-                "@type": "ImageObject",
-                url: "https://www.healguid.com/images/logos/healguid-social.png",
-                width: "180",
-                height: "60",
-            },
+            logo: { "@type": "ImageObject", url: "https://www.healguid.com/logo.png", width: 600, height: 60 },
+            image: { "@type": "ImageObject", url: "https://www.healguid.com/logo.png", width: 600, height: 60 },
             description:
                 "HealGuid is a holistic healthcare platform connecting individuals with certified, evidence-based holistic and functional medicine practitioners. Designed to support those with chronic illness, unexplained symptoms, and fatigue, HealGuid empowers patients to find personalised care that truly listens, understands, and heals.",
             sameAs: [

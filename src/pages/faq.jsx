@@ -143,13 +143,11 @@ export default function FAQ() {
 
     return (
         <>
-            <Head>
-                {renderSchema(breadcrumbSchema)}
-            </Head>
+            <Head>{renderSchema(breadcrumbSchema)}</Head>
 
             <Meta
-                title="Holistic Healthcare FAQ | Natural Health & Wellness"
-                description="Discover how holistic medicine works, what conditions it treats, and how to find the right functional practitioner for your health journey."
+                title="Holistic Healthcare FAQ | Verified Practitioners UK | HealGuid"
+                description="Find answers about verified holistic practitioners in the UK. Learn how HealGuid verifies functional medicine doctors, naturopaths, and specialists for chronic conditions."
                 keywords="holistic healthcare faq, natural health, wellness, chronic conditions, holistic practitioners"
                 path="faq"
                 canonicalUrl="https://healguid.com/faq"
@@ -317,7 +315,7 @@ export default function FAQ() {
                                                                                         className={
                                                                                             values.specialClasses
                                                                                                 ? values.specialClasses
-                                                                                                : "list-disc pl-10"
+                                                                                                : "list-disc pl-10 mb-1"
                                                                                         }
                                                                                     >
                                                                                         {values.bullets.map(
@@ -339,12 +337,12 @@ export default function FAQ() {
                                                                             );
                                                                         })}
 
-                                                                    {description && (
+                                                                    {points.length && description && (
                                                                         <p className="mt-4">{description}</p>
                                                                     )}
                                                                 </div>
                                                                 <div className="flex max-sm:justify-center">
-                                                                    {button.length > 1
+                                                                    {points.length && button.length > 1
                                                                         ? button.map((data) => {
                                                                               return (
                                                                                   data?.hasButton && (
