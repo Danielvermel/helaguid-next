@@ -466,44 +466,44 @@ export const faqs = {
                         alt: "Learn about verification standards",
                     },
                 },
-                {
-                    id: "info-safe",
-                    question: "Is my health information safe with HealGuid?",
-                    answer: "Absolutely. Your privacy and data security are our top priorities. HealGuid is built with healthcare-grade security measures:",
-                    points: [
-                        {
-                            title: "Your privacy is protected by:",
-                            bullets: [
-                                {
-                                    text: "Encrypted data storage and transmission.",
-                                },
-                                {
-                                    text: "Strict access controls (only you and your chosen practitioners can view your information)",
-                                },
-                                {
-                                    text: "Regular security audits and penetration testing",
-                                },
-                                {
-                                    text: "No selling or sharing of patient data with third parties",
-                                },
-                                {
-                                    text: "Right to data deletion at any time",
-                                },
-                            ],
-                        },
-                    ],
-                    description:
-                        "All practitioners on HealGuid are also bound by professional confidentiality standards and GDPR compliance.",
-                    button: {
-                        hasButton: true,
-                        label: "Read Our Full Privacy Policy →",
-                        href: "/privacy-policy",
-                        containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
-                        alt: "Read our privacy policy",
-                    },
-                },
+                // {
+                //     id: "info-safe",
+                //     question: "Is my health information safe with HealGuid?",
+                //     answer: "Absolutely. Your privacy and data security are our top priorities. HealGuid is built with healthcare-grade security measures:",
+                //     points: [
+                //         {
+                //             title: "Your privacy is protected by:",
+                //             bullets: [
+                //                 {
+                //                     text: "Encrypted data storage and transmission.",
+                //                 },
+                //                 {
+                //                     text: "Strict access controls (only you and your chosen practitioners can view your information)",
+                //                 },
+                //                 {
+                //                     text: "Regular security audits and penetration testing",
+                //                 },
+                //                 {
+                //                     text: "No selling or sharing of patient data with third parties",
+                //                 },
+                //                 {
+                //                     text: "Right to data deletion at any time",
+                //                 },
+                //             ],
+                //         },
+                //     ],
+                //     description:
+                //         "All practitioners on HealGuid are also bound by professional confidentiality standards and GDPR compliance.",
+                //     button: {
+                //         hasButton: true,
+                //         label: "Read Our Full Privacy Policy →",
+                //         href: "/privacy-policy",
+                //         containerClass:
+                //             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                //         textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
+                //         alt: "Read our privacy policy",
+                //     },
+                // },
             ],
         },
         {
@@ -587,6 +587,113 @@ export const faqs = {
                             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
                         textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
                         alt: "View pricing information",
+                    },
+                },
+
+                {
+                    id: "cost-of-consultation",
+                    question: "How much does a holistic consultation cost in the UK?",
+                    answer: "Consultation costs vary by practitioner speciality and experience.",
+                    points: [
+                        {
+                            title: "Typical UK Rates:",
+                            bullets: [
+                                {
+                                    text: "Conventional Doctor Appointments (ca. 15min): 200-300",
+                                },
+                                {
+                                    text: "Initial Functional Medicine Consultation (ca. 90 mins): £150-£350",
+                                },
+                                {
+                                    text: "Follow-up Sessions (ca. 45-60 mins): £80-£150",
+                                },
+                                {
+                                    text: "Nutritional Therapy Consultation: £80-£120",
+                                },
+                                {
+                                    text: "Naturopathic Consultation: £70-£130",
+                                },
+                            ],
+                        },
+                        {
+                            title: "What's Included:",
+                            bullets: [
+                                {
+                                    text: "Comprehensive health history review",
+                                },
+                                {
+                                    text: "Personalised treatment plans",
+                                },
+                                { text: "Follow-up support via HealGuid messaging" },
+                                {
+                                    text: "Supplement or lifestyle recommendations",
+                                },
+                            ],
+                        },
+                    ],
+                    description:
+                        "All fees are clearly displayed on practitioner profiles before booking. Many practitioners offer package deals or sliding scale fees for financial accessibility.",
+                    button: {
+                        hasButton: true,
+                        label: "Browse Practitioners →",
+                        href: "/book",
+                        containerClass:
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
+                        alt: "View pricing information",
+                    },
+                },
+
+                {
+                    id: "cost-of-consultation",
+                    question: "Does insurance cover holistic healthcare?",
+                    answer: "Coverage varies, but growing numbers of insurers recognise holistic approaches:",
+                    points: [
+                        {
+                            title: "Currently Often Covered:",
+                            bullets: [
+                                {
+                                    text: "Osteopathy",
+                                },
+                                {
+                                    text: "Some nutritional therapy",
+                                },
+                                {
+                                    text: "Acupuncture (select plans)",
+                                },
+                                {
+                                    text: "Functional medicine consultations (private insurance)",
+                                },
+                            ],
+                        },
+                        {
+                            title: "HealGuid's Insurance Support:",
+                            bullets: [
+                                {
+                                    text: "Practitioner profiles indicate insurance acceptance",
+                                },
+                                {
+                                    text: "Superbill generation for reimbursement claims",
+                                },
+                                { text: "Partnership with [insurer names] for select coverage" },
+                            ],
+                        },
+                        {
+                            title: "Cost Transparency:",
+                            bullets: [
+                                {
+                                    text: "Average consultation costs: £80-200",
+                                },
+                                {
+                                    text: "Package pricing available",
+                                },
+                                { text: "Payment plans through selected practitioners" },
+                            ],
+                        },
+                    ],
+
+                    button: {
+                        hasButton: false,
                     },
                 },
             ],
