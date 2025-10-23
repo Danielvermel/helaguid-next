@@ -190,7 +190,7 @@ export const whyUs = {
     competitor: "Mainstream Approach",
     exclusiveBenefits: {
         title: "Why Trust HealGuid?",
-        description: "Most health platforms only show your profile. We verify 5 times more.",
+        description: "Most directories only show you profiles. We verify every practitioner, every time.",
         pointTitle: "Our 5-Point Verification",
         majorPoints: [
             {
@@ -210,7 +210,7 @@ export const whyUs = {
                 points: [
                     {
                         id: "0",
-                        text: "We check for display actions and active good standing.",
+                        text: "We check for disciplinary actions and current good standing.",
                     },
                 ],
             },
@@ -220,7 +220,7 @@ export const whyUs = {
                 points: [
                     {
                         id: "0",
-                        text: "We verify health training, and relevant professional memberships",
+                        text: "We verify health training and relevant professional memberships.",
                     },
                 ],
             },
@@ -230,7 +230,7 @@ export const whyUs = {
                 points: [
                     {
                         id: "0",
-                        text: "Active professional indemnity/liability insurance required.",
+                        text: "Active professional indemnity/liability cover required.",
                     },
                 ],
             },
@@ -240,7 +240,7 @@ export const whyUs = {
                 points: [
                     {
                         id: "0",
-                        text: "Services match verified training, evidence-based approach, and patient-centric",
+                        text: "Services match verified training and evidence-based care—no over-claiming.",
                     },
                 ],
             },

@@ -66,20 +66,25 @@ const WhyUs = ({ data, func }) => {
                             <h3 className="text-2xl font-semibold mb-2 text-p1">
                                 {data.whyUs.exclusiveBenefits.pointTitle}
                             </h3>
-                            <p className="mb-6 text-lg text-gray-600 text-center max-w-2xl">
+                            <p className="mb-6 text-lg text-gray-600 text-left max-w-2xl">
                                 {data.whyUs.exclusiveBenefits.description}
                             </p>
-                            <div className="w-full max-w-3xl flex flex-col gap-4">
+                            <div className="w-full max-w-3xl flex flex-col md:gap-4 max-md:gap-2">
                                 {data.whyUs.exclusiveBenefits.majorPoints.map(({ id, subTitle, points }) => (
-                                    <div key={id} className="bg-gray-50 rounded-xl shadow flex items-center px-6 py-4">
+                                    <div
+                                        key={id}
+                                        className="bg-gray-50 rounded-xl shadow flex items-center md:px-6 md:py-4 max-md:px-4 max-md:py-2"
+                                    >
                                         <div className="flex-shrink-0 h-8 w-8 rounded-full bg-p1 text-white flex items-center justify-center text-xl font-semibold mr-6">
                                             {id}
                                         </div>
                                         <div className="flex flex-col">
-                                            <h4 className="text-xl font-semibold text-p1">{subTitle}</h4>
+                                            <h4 className="md:text-xl max-md:text-lg font-semibold text-p1">
+                                                {subTitle}
+                                            </h4>
                                             <ul className="pl-0">
                                                 {points.map(({ id, text }) => (
-                                                    <li key={id} className="text-base text-gray-700">
+                                                    <li key={id} className="md:text-base max-md:text-sm text-gray-700">
                                                         {text}
                                                     </li>
                                                 ))}
@@ -88,7 +93,12 @@ const WhyUs = ({ data, func }) => {
                                     </div>
                                 ))}
                             </div>
-                            <div className="mt-8 text-gray-500 italic text-sm">Standards last reviewed: Oct 2025</div>
+                            <div className="mt-8 text-gray-500 italic text-sm">
+                                Standards last reviewed: Oct 2025&nbsp;•&nbsp;
+                                <a href="/faq" className="text-primary-600 hover:underline font-semibold not-italic">
+                                    See here
+                                </a>
+                            </div>
                         </div>
                     </div>
 
