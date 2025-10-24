@@ -136,6 +136,37 @@ export default function FAQ() {
         ],
     };
 
+    // Generate FAQPage JSON-LD schema dynamically from your faqs data
+    const generateFAQSchema = () => {
+        const mainEntity = [];
+
+        faqs.questionGroups.forEach((group) => {
+            group.questions.forEach((q) => {
+                console.log("Processing question for schema:", q.question);
+                console.log("Processing answer for schema:", q.answer);
+                if (q.question && q.answer) {
+                    const cleanAnswer = processAnswerForSchema(q.answer);
+                    mainEntity.push({
+                        "@type": "Question",
+                        name: q.question,
+                        acceptedAnswer: {
+                            "@type": "Answer",
+                            text: cleanAnswer,
+                        },
+                    });
+                }
+            });
+        });
+
+        return {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity,
+        };
+    };
+
+    const faqSchema = generateFAQSchema();
+
     // Helper to render any schema
     const renderSchema = (schema) => (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
@@ -143,7 +174,12 @@ export default function FAQ() {
 
     return (
         <>
-            <Head>{renderSchema(breadcrumbSchema)}</Head>
+            <Head>
+                {/* Breadcrumb schema */}
+                {renderSchema(breadcrumbSchema)}
+                {/* Full FAQPage schema with all questions and answers */}
+                {renderSchema(faqSchema)}
+            </Head>
 
             <Meta
                 title="Holistic Healthcare FAQ | Verified Practitioners UK | HealGuid"
@@ -390,8 +426,11 @@ export default function FAQ() {
                     <div className="mt-12 p-6 bg-b5 rounded-lg">
                         <h2 className="text-xl font-semibold mb-4">Still Have Questions?</h2>
                         <p className="mb-6">
-                            Contact our friendly support team at support@healguid.com - we're here to help you navigate
-                            your holistic health journey.
+                            Contact our friendly support team at{" "}
+                            <a href="mailto:support@healguid.com" className="underline">
+                                support@healguid.com
+                            </a>{" "}
+                            - we're here to help you navigate your holistic health journey.
                         </p>
 
                         <hr></hr>

@@ -645,7 +645,7 @@ export const faqs = {
                 },
 
                 {
-                    id: "cost-of-consultation",
+                    id: "cost-of-consultation-insurance",
                     question: "Does insurance cover holistic healthcare?",
                     answer: "Coverage varies, but growing numbers of insurers recognise holistic approaches:",
                     points: [
