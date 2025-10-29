@@ -21,13 +21,13 @@ export const faqs = {
             url: "/about",
         },
     ],
-    title: "Holistic Healthcare FAQs",
+    title: "Holistic Healthcare FAQ: Find Verified Practitioners in the UK",
     description:
-        "Find holistic healthcare FAQs, our approach at HealGuid as an advocator for functional medicine to support patients dealing with chronic conditions. Whether you're a patient seeking natural approaches or a practitioner looking to join our network, discover how HealGuid connects patients with verified holistic healthcare experts",
+        "Get answers about HealGuid's rigorously verified holistic practitioners, how we support patients with chronic conditions, and how to find functional medicine doctors, naturopaths, and specialists across the UK.",
     questionGroups: [
         {
             id: "holistic-basics",
-            title: "🌿 The Basics of Holistic Healthcare",
+            title: "The Basics of Holistic Healthcare",
             questions: [
                 {
                     id: "what-is-healguid",
@@ -39,10 +39,10 @@ export const faqs = {
                             bullets: [
                                 {
                                     highlight: "Premium-verified practitioners",
-                                    text: "across London and the UK specializing in chronic conditions.",
+                                    text: "across London and the UK specialising in chronic conditions.",
                                 },
                                 {
-                                    highlight: "Instant booking system",
+                                    highlight: "Book directly with verified practitioners",
                                     text: "for virtual and in-person consultations.",
                                 },
                                 {
@@ -107,7 +107,7 @@ export const faqs = {
                 {
                     id: "uk-practitioners",
                     question: "Can I find holistic practitioners in London and the UK through HealGuid?",
-                    answer: "🚀 Yes! HealGuid connects you with verified holistic practitioners across London and the UK. Our founding network includes practitioners in:",
+                    answer: "Yes! HealGuid connects you with verified holistic practitioners across London and the UK. Our founding network includes practitioners in:",
                     points: [
                         {
                             title: "London Coverage:",
@@ -161,37 +161,40 @@ export const faqs = {
                 {
                     id: "why-healguid-different",
                     question: "What makes HealGuid different from conventional healthcare platforms?",
-                    answer: "⭐ HealGuid reimagines holistic healthcare access by focusing on what matters most:",
+                    answer: "HealGuid connects you with rigorously verified holistic practitioners who understand your unique health journey. Unlike generic directories where anyone can list themselves, every HealGuid practitioner is thoroughly vetted for safety, credibility, and expertise.",
                     points: [
                         {
-                            title: "Root Cause Focus:",
+                            title: "What sets us apart:",
                             bullets: [
-                                { text: "Practitioners who investigate underlying causes of chronic conditions." },
-                                { text: "Personalized care plans that evolve with your healing journey." },
-                                { text: "Integration of functional testing, nutrition, and lifestyle approaches." },
-                            ],
-                        },
-                        {
-                            title: "Verified Expertise:",
-                            bullets: [
-                                { text: "Rigorous verification of all practitioner credentials and specializations." },
-                                { text: "Focus on evidence-based holistic protocols." },
                                 {
-                                    text: "Practitioners experienced with complex conditions like ME/CFS, fibromyalgia, and autoimmune disorders.",
+                                    highlight: "Multi-step practitioner verification",
+                                    text: 'We verify credentials, certifications, professional indemnity insurance, and conduct reference checks. Every profile displays a "Last Verified" date for transparency.',
                                 },
-                            ],
-                        },
-                        {
-                            title: "Patient-Centered Experience:",
-                            bullets: [
-                                { text: "Platform designed specifically for chronic condition management." },
-                                { text: "Community of practitioners who understand long-term health challenges." },
-                                { text: "Seamless connection between virtual and in-person care options." },
+                                {
+                                    highlight: "Specialist matching for chronic conditions",
+                                    text: "Our practitioners specialize in autoimmune disorders, chronic fatigue syndrome, fibromyalgia, IBS, hormonal imbalances, and other complex conditions often overlooked by conventional care.",
+                                },
+                                {
+                                    highlight: "Evidence-based holistic approaches",
+                                    text: "Combining functional medicine insights with natural therapies, our practitioners treat root causes, not just symptoms.",
+                                },
+                                {
+                                    highlight: "Instant booking system",
+                                    text: "Book virtual or in-person consultations across London and the UK in seconds, with automatic appointment reminders.",
+                                },
+                                {
+                                    highlight: "GDPR-compliant platform",
+                                    text: "Your health information is protected with bank-level encryption and strict privacy standards.",
+                                },
+                                {
+                                    highlight: "Ongoing quality monitoring",
+                                    text: "Annual re-verification ensures practitioners maintain our high standards.",
+                                },
                             ],
                         },
                     ],
                     button: {
-                        label: "Discover Our Approach →",
+                        label: "Find a Verified Practitioner →",
                         href: "/book",
                         hasButton: true,
                         alt: "Click to find a holistic health practitioner for your condition",
@@ -204,7 +207,7 @@ export const faqs = {
         },
         {
             id: "finding-practitioner",
-            title: "🔍 Finding the Right Practitioner",
+            title: "Finding the Right Practitioner",
             questions: [
                 {
                     id: "practitioner-types",
@@ -219,7 +222,7 @@ export const faqs = {
                                     text: "focusing on root causes of chronic illness.",
                                 },
                                 {
-                                    highlight: "Integrative Medicine Physicians",
+                                    highlight: "Integrative Medicine Doctor",
                                     text: "blending conventional and holistic approaches.",
                                 },
                                 {
@@ -232,12 +235,12 @@ export const faqs = {
                             title: "Natural Healthcare Specialists:",
                             bullets: [
                                 {
-                                    highlight: "Naturopathic Physicians",
+                                    highlight: "Naturopathic Practitioners",
                                     text: "combining natural remedies with modern science.",
                                 },
                                 {
                                     highlight: "Nutritional Therapists",
-                                    text: "specializing in therapeutic diets for chronic conditions.",
+                                    text: "specialising in therapeutic diets for chronic conditions.",
                                 },
                                 {
                                     highlight: "Clinical Nutritionists",
@@ -318,7 +321,7 @@ export const faqs = {
                                     text: "if requested by your chosen practitioner.",
                                 },
                                 {
-                                    highlight: "Begin your personalized wellness journey",
+                                    highlight: "Begin your personalised wellness journey",
                                     text: "with ongoing support.",
                                 },
                             ],
@@ -368,7 +371,7 @@ export const faqs = {
                             title: "Digestive Health Disorders:",
                             bullets: [
                                 { text: "IBS, SIBO, and leaky gut specialists." },
-                                { text: "Comprehensive gut microbiome restoration programs." },
+                                { text: "Comprehensive gut microbiome restoration programmes." },
                                 { text: "Food sensitivity testing and elimination diet support." },
                             ],
                         },
@@ -403,144 +406,109 @@ export const faqs = {
         },
         {
             id: "trust-verification",
-            title: "💚 Trust & Verification",
+            title: "Trust & Verification: Why HealGuid Practitioners Are More Trustworthy",
             questions: [
+                {
+                    id: "how-verify",
+                    question: "How does HealGuid verify holistic practitioners?",
+                    answer: "Every HealGuid practitioner undergoes our rigorous 5-step verification process before they can accept patients through our platform:",
+                    points: [
+                        {
+                            title: "1. License Verification ✓",
+                            bullets: [
+                                {
+                                    text: " We confirm all professional licenses and registrations with relevant governing bodies (e.g., GPhC, NMC, HCPC, CNHC).",
+                                },
+                            ],
+                        },
+                        {
+                            title: "2. Certification Review ✓",
+                            bullets: [
+                                {
+                                    text: "Verification of specialist holistic certifications from recognised bodies, including: Institute for Functional Medicine (IFM), British Association for Applied Nutrition & Nutritional Therapy (BANT), Complementary & Natural Healthcare Council (CNHC), and Other accredited holistic health organisations",
+                                },
+                            ],
+                        },
+                        {
+                            title: "3. Reference Validation ✓",
+                            bullets: [
+                                {
+                                    text: "We contact professional references and review practitioner backgrounds to ensure ethical practice and patient safety.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "4. Professional Indemnity Insurance ✓",
+                            bullets: [
+                                {
+                                    text: "Confirmation that practitioners carry current professional indemnity insurance covering their scope of practice.",
+                                },
+                            ],
+                        },
+                        {
+                            title: "5. Ongoing Monitoring & Annual Re-verification ✓",
+                            bullets: [
+                                {
+                                    text: "Practitioners are re-verified annually to maintain our standards. Any changes in license status, insurance, or certifications trigger immediate review.",
+                                },
+                            ],
+                        },
+                    ],
+                    description:
+                        "You'll see a 'HealGuid Verified ✓' badge on every practitioner profile along with the last verification date. This transparency is unique to HealGuid – most directories don't verify credentials at all.",
+                    button: {
+                        hasButton: true,
+                        label: "Start Your Verification Process →",
+                        href: "/book",
+                        containerClass:
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
+                        alt: "Learn about verification standards",
+                    },
+                },
                 // {
-                //     id: "how-verify",
-                //     question: "How does HealGuid verify holistic practitioners?",
-                //     answer: "✨ Every practitioner undergoes our comprehensive verification process before joining our network:",
+                //     id: "info-safe",
+                //     question: "Is my health information safe with HealGuid?",
+                //     answer: "Absolutely. Your privacy and data security are our top priorities. HealGuid is built with healthcare-grade security measures:",
                 //     points: [
                 //         {
-                //             title: "Professional Qualification Verification:",
-                //             bullets: [
-                //                 { text: "Review and verification of all degrees, diplomas, and certifications." },
-                //                 { text: "Confirmation of active professional registrations (GMC, CNHC, HCPC, etc.)." },
-                //                 { text: "Assessment of specialized training in holistic modalities." },
-                //             ],
-                //         },
-                //         {
-                //             title: "Professional Standards Check:",
-                //             bullets: [
-                //                 { text: "Professional background verification and reference checks." },
-                //                 { text: "Confirmation of professional indemnity insurance coverage." },
-                //                 { text: "Review of any professional disciplinary history." },
-                //             ],
-                //         },
-                //         {
-                //             title: "Expertise Assessment:",
-                //             bullets: [
-                //                 { text: "Evaluation of experience with specific chronic conditions." },
-                //                 { text: "Review of continuing professional development." },
-                //                 { text: "Assessment of evidence-based practice approaches." },
-                //             ],
-                //         },
-                //         {
-                //             title: "Ongoing Quality Monitoring:",
-                //             bullets: [
-                //                 { text: "Regular review of patient feedback and satisfaction scores." },
-                //                 { text: "Continued professional development verification." },
-                //                 { text: "Compliance with platform quality standards." },
-                //             ],
-                //         },
-                //         {
-                //             title: "Practitioner Verification Levels:",
+                //             title: "Your privacy is protected by:",
                 //             bullets: [
                 //                 {
-                //                     highlight: "✓ Verified Professional:",
-                //                     text: "Met all basic verification requirements.",
+                //                     text: "Encrypted data storage and transmission.",
                 //                 },
                 //                 {
-                //                     highlight: "✓ Specialist Verified:",
-                //                     text: "Additional expertise verification in specific conditions.",
+                //                     text: "Strict access controls (only you and your chosen practitioners can view your information)",
                 //                 },
                 //                 {
-                //                     highlight: "✓ Premium Verified:",
-                //                     text: "Highest level including peer reviews and advanced credentials.",
+                //                     text: "Regular security audits and penetration testing",
+                //                 },
+                //                 {
+                //                     text: "No selling or sharing of patient data with third parties",
+                //                 },
+                //                 {
+                //                     text: "Right to data deletion at any time",
                 //                 },
                 //             ],
                 //         },
                 //     ],
+                //     description:
+                //         "All practitioners on HealGuid are also bound by professional confidentiality standards and GDPR compliance.",
                 //     button: {
                 //         hasButton: true,
-                //         label: "Learn About Our Verification Standards →",
-                //         href: "/verification",
+                //         label: "Read Our Full Privacy Policy →",
+                //         href: "/privacy-policy",
                 //         containerClass:
                 //             "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
                 //         textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
-                //         alt: "Learn about verification standards",
+                //         alt: "Read our privacy policy",
                 //     },
                 // },
-                {
-                    id: "info-safe",
-                    question: "Is my health information safe with HealGuid?",
-                    answer: "🔒 Your privacy and data security are our top priorities. HealGuid is built with healthcare-grade security measures:",
-                    points: [
-                        {
-                            title: "Data Protection Standards:",
-                            bullets: [
-                                {
-                                    highlight: "GDPR compliance",
-                                    text: "with explicit consent mechanisms for all data processing.",
-                                },
-                                {
-                                    highlight: "Healthcare-grade encryption",
-                                    text: "for all sensitive health information.",
-                                },
-                                {
-                                    highlight: "Secure messaging systems",
-                                    text: "between you and your practitioners.",
-                                },
-                                {
-                                    highlight: "Strict access controls",
-                                    text: "ensuring only your chosen practitioners can access your information.",
-                                },
-                            ],
-                        },
-                        {
-                            title: "Privacy Safeguards:",
-                            bullets: [
-                                {
-                                    highlight: "Regular security audits",
-                                    text: "and penetration testing.",
-                                },
-                                {
-                                    highlight: "Minimal data collection",
-                                    text: "- we only collect what's necessary for your care.",
-                                },
-                                {
-                                    highlight: "Transparent privacy policies",
-                                    text: "explaining exactly how your information is used.",
-                                },
-                                {
-                                    highlight: "Right to data portability",
-                                    text: "- your health information belongs to you.",
-                                },
-                            ],
-                        },
-                        {
-                            title: "Professional Standards:",
-                            bullets: [
-                                { text: "All practitioners bound by professional confidentiality requirements." },
-                                { text: "Secure video consultation technology with end-to-end encryption." },
-                                { text: "No sharing of personal information without explicit consent." },
-                            ],
-                        },
-                    ],
-                    button: {
-                        hasButton: true,
-                        label: "Read Our Full Privacy Policy →",
-                        href: "/privacy-policy",
-                        containerClass:
-                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
-                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
-                        alt: "Read our privacy policy",
-                    },
-                },
             ],
         },
         {
             id: "pricing-costs",
-            title: "💰 Pricing & Costs",
+            title: "Pricing & Costs",
             questions: [
                 {
                     id: "cost-of-care",
@@ -592,7 +560,7 @@ export const faqs = {
                                 },
                                 {
                                     highlight: "Payment plans",
-                                    text: "available from select practitioners for comprehensive programs.",
+                                    text: "available from select practitioners for comprehensive programmes.",
                                 },
                             ],
                         },
@@ -621,11 +589,118 @@ export const faqs = {
                         alt: "View pricing information",
                     },
                 },
+
+                {
+                    id: "cost-of-consultation",
+                    question: "How much does a holistic consultation cost in the UK?",
+                    answer: "Consultation costs vary by practitioner speciality and experience.",
+                    points: [
+                        {
+                            title: "Typical UK Rates:",
+                            bullets: [
+                                {
+                                    text: "Conventional Doctor Appointments (ca. 15min): 200-300",
+                                },
+                                {
+                                    text: "Initial Functional Medicine Consultation (ca. 90 mins): £150-£350",
+                                },
+                                {
+                                    text: "Follow-up Sessions (ca. 45-60 mins): £80-£150",
+                                },
+                                {
+                                    text: "Nutritional Therapy Consultation: £80-£120",
+                                },
+                                {
+                                    text: "Naturopathic Consultation: £70-£130",
+                                },
+                            ],
+                        },
+                        {
+                            title: "What's Included:",
+                            bullets: [
+                                {
+                                    text: "Comprehensive health history review",
+                                },
+                                {
+                                    text: "Personalised treatment plans",
+                                },
+                                { text: "Follow-up support via HealGuid messaging" },
+                                {
+                                    text: "Supplement or lifestyle recommendations",
+                                },
+                            ],
+                        },
+                    ],
+                    description:
+                        "All fees are clearly displayed on practitioner profiles before booking. Many practitioners offer package deals or sliding scale fees for financial accessibility.",
+                    button: {
+                        hasButton: true,
+                        label: "Browse Practitioners →",
+                        href: "/book",
+                        containerClass:
+                            "cursor-pointer bg-transparent hover:bg-s1 hover:text-white border-2 border-s1 tracking-2 sm:px-4 max-sm:px-0  sm:h-12 rounded-3xl relative flex justify-center items-center cursor-pointer",
+                        textClass: "tracking-wide font-medium sm:text-base max-sm:text-sm",
+                        alt: "View pricing information",
+                    },
+                },
+
+                {
+                    id: "cost-of-consultation-insurance",
+                    question: "Does insurance cover holistic healthcare?",
+                    answer: "Coverage varies, but growing numbers of insurers recognise holistic approaches:",
+                    points: [
+                        {
+                            title: "Currently Often Covered:",
+                            bullets: [
+                                {
+                                    text: "Osteopathy",
+                                },
+                                {
+                                    text: "Some nutritional therapy",
+                                },
+                                {
+                                    text: "Acupuncture (select plans)",
+                                },
+                                {
+                                    text: "Functional medicine consultations (private insurance)",
+                                },
+                            ],
+                        },
+                        {
+                            title: "HealGuid's Insurance Support:",
+                            bullets: [
+                                {
+                                    text: "Practitioner profiles indicate insurance acceptance",
+                                },
+                                {
+                                    text: "Superbill generation for reimbursement claims",
+                                },
+                                { text: "Partnership with [insurer names] for select coverage" },
+                            ],
+                        },
+                        {
+                            title: "Cost Transparency:",
+                            bullets: [
+                                {
+                                    text: "Average consultation costs: £80-200",
+                                },
+                                {
+                                    text: "Package pricing available",
+                                },
+                                { text: "Payment plans through selected practitioners" },
+                            ],
+                        },
+                    ],
+
+                    button: {
+                        hasButton: false,
+                    },
+                },
             ],
         },
         {
             id: "for-practitioners",
-            title: "👩‍⚕️ For Holistic Healthcare Practitioners",
+            title: "For Holistic Healthcare Practitioners",
             questions: [
                 {
                     id: "cost-to-join",
@@ -883,7 +958,7 @@ export const faqs = {
                                 },
                                 {
                                     highlight: "Thought leadership opportunities",
-                                    text: "through our content and educational programs.",
+                                    text: "through our content and educational programmes.",
                                 },
                             ],
                         },
@@ -998,7 +1073,7 @@ export const faqs = {
 
         {
             id: "community-support",
-            title: "🌟 Community & Support",
+            title: "Community & Support",
             questions: [
                 {
                     id: "community",
@@ -1272,8 +1347,15 @@ export const faqs = {
                         alt: "Start your holistic health journey",
                     },
                 },
+                {
+                    id: "how-to-pronounce",
+                    question: "How do you pronounce HealGuid?",
+                    answer: 'It\'s "heel-guide" – like "heal" and "guide" combined. aWe help you find your guide to health and healing.  Our mission is to empower you to find evidence-based and up to date medical practitioners working as "guides" to help you take back control of your health.',
+                    points: [],
+                },
             ],
         },
+
         {
             id: "getting-started",
             title: "📞 Getting Started",
@@ -1308,7 +1390,7 @@ export const faqs = {
                                     text: "(virtual or in-person based on preference).",
                                 },
                                 {
-                                    highlight: "Begin your personalized healing journey",
+                                    highlight: "Begin your personalised healing journey",
                                     text: "with ongoing support.",
                                 },
                             ],

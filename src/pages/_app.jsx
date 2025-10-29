@@ -1,11 +1,11 @@
 // src/pages/_app.js
 import Head from "next/head";
-import Script from "next/script"; // 1. Import the Script component
-// import { useEffect } from "react";
+import Script from "next/script";
 import "../styles/global.css";
 import { poppins, inter } from "../lib/fonts";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
-// Global Schema - contains all site-wide structured data
 const globalSchema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -13,13 +13,10 @@ const globalSchema = {
             "@type": "Organization",
             "@id": "https://www.healguid.com/#organization",
             name: "HealGuid",
+            alternateName: ["Heal Guid", "HealGuide"],
             url: "https://www.healguid.com",
-            logo: {
-                "@type": "ImageObject",
-                url: "https://www.healguid.com/images/logos/healguid-social.png",
-                width: "180",
-                height: "60",
-            },
+            logo: { "@type": "ImageObject", url: "https://www.healguid.com/logo.png", width: 600, height: 60 },
+            image: { "@type": "ImageObject", url: "https://www.healguid.com/logo.png", width: 600, height: 60 },
             description:
                 "HealGuid is a holistic healthcare platform connecting individuals with certified, evidence-based holistic and functional medicine practitioners. Designed to support those with chronic illness, unexplained symptoms, and fatigue, HealGuid empowers patients to find personalised care that truly listens, understands, and heals.",
             sameAs: [
@@ -141,7 +138,6 @@ const globalSchema = {
                 },
             ],
         },
-
         {
             "@context": "https://schema.org",
             "@type": "HealthcareService",
@@ -227,7 +223,6 @@ const globalSchema = {
                 },
             ],
         },
-
         {
             "@type": "ItemList",
             "@id": "https://www.healguid.com/#treatment-solutions",
@@ -328,7 +323,25 @@ const globalSchema = {
 };
 
 function MyApp({ Component, pageProps }) {
-    // Safely stringify the schema with error handling
+    const router = useRouter();
+
+    // Handle client-side route changes for virtual pageviews in GTM dataLayer
+    useEffect(() => {
+        function handleRouteChange(url) {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: "pageview",
+                page: url,
+            });
+        }
+
+        router.events.on("routeChangeComplete", handleRouteChange);
+        return () => {
+            router.events.off("routeChangeComplete", handleRouteChange);
+        };
+    }, [router.events]);
+
+    // Safely stringify global schema for structured data
     const schemaString = (() => {
         try {
             return JSON.stringify(globalSchema);
@@ -340,74 +353,47 @@ function MyApp({ Component, pageProps }) {
 
     return (
         <>
-            <Head>
-                {/* Google Consent Mode initialization - MUST come first, before CookieYes */}
-                <script
-                    type="text/javascript"
-                    dangerouslySetInnerHTML={{
-                        __html: `
-            // Define dataLayer
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            
-            // Set default consent - leveraging our new Basic Consent Configuration in GTM
-            gtag('consent', 'default', {
-                'ad_storage': 'denied',
-                'ad_user_data': 'denied',
-                'ad_personalization': 'denied',
-                'analytics_storage': 'denied', // Allow analytics by default
-                'functionality_storage': 'granted',
-                'security_storage': 'granted',
-            });
-        
-            `,
-                    }}
-                />
-            </Head>
+            <Head>{/* Remove any old inline consent scripts */}</Head>
+
+            {/* Google Consent Mode initialization - MUST run BEFORE GTM */}
+            <Script id="gtm-consent" strategy="beforeInteractive">
+                {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('consent', 'default', {
+            'ad_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted',
+            'analytics_storage': 'granted',
+            'functionality_storage': 'granted',
+            'security_storage': 'granted',
+          });
+        `}
+            </Script>
+
             {/* Google Tag Manager */}
             <Script
-                type="text/javascript"
                 id="google-tag-manager"
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
                     __html: `
-                        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                        })(window,document,'script','dataLayer','GTM-K476PRB8');
-                        `,
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-K476PRB8');
+        `,
                 }}
             />
 
-            {/* Schema data */}
+            {/* Structured Data Schema */}
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: schemaString }}
                 key="navigation-schema"
             />
 
-            {/* Umami Analytics */}
-            <Script
-                strategy="afterInteractive"
-                src="https://cloud.umami.is/script.js"
-                data-website-id="a3526664-8b36-4e89-bbe4-34bc9dd08830"
-            ></Script>
-
-            <script
-                defer
-                src="https://cloud.umami.is/script.js"
-                data-website-id="0d324ed4-26b2-4cd6-a8d0-f190d2f79fa7"
-            ></script>
-
-            <noscript>
-                <iframe
-                    src="https://www.googletagmanager.com/ns.html?id=GTM-K476PRB8"
-                    height="0"
-                    width="0"
-                    style={{ display: "none", visibility: "hidden" }}
-                ></iframe>
-            </noscript>
+            {/* Your other tracking scripts (e.g. Umami) as needed */}
 
             <div className={`${poppins.variable} ${inter.variable}`}>
                 <Component {...pageProps} />

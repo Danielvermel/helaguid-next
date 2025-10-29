@@ -189,60 +189,58 @@ export const whyUs = {
     company: "HealGuid's Vision",
     competitor: "Mainstream Approach",
     exclusiveBenefits: {
-        title: "A Different Approach to Holistic Healthcare",
+        title: "Why Trust HealGuid?",
+        description: "Most directories only show you profiles. We verify every practitioner, every time.",
+        pointTitle: "Our 5-Point Verification",
         majorPoints: [
             {
                 id: "1",
-                subTitle: "Care That Adapts to You",
+                subTitle: "Registered & Real",
                 points: [
                     {
                         id: "0",
-                        text: "Flexible consultation options",
-                    },
-                    {
-                        id: "1",
-                        text: "Direct communication with your practitioner",
-                    },
-                    {
-                        id: "2",
-                        text: "Ongoing support & guidance",
+                        text: "We confirm official registration and the right to practise.",
                     },
                 ],
             },
 
             {
                 id: "2",
-                subTitle: "Result-driven Healing Journeys",
+                subTitle: "Clean Record Check",
                 points: [
                     {
                         id: "0",
-                        text: "Comprehensive health assessment",
-                    },
-                    {
-                        id: "1",
-                        text: "Systematic root cause assessment",
-                    },
-                    {
-                        id: "2",
-                        text: "Personalized healing pathways",
+                        text: "We check for disciplinary actions and current good standing.",
                     },
                 ],
             },
             {
-                id: "0",
-                subTitle: "Evidence-Based & Verified Excellence",
+                id: "3",
+                subTitle: "Qualified & Recognised",
                 points: [
                     {
                         id: "0",
-                        text: "Research-backed holistic approaches",
+                        text: "We verify health training and relevant professional memberships.",
                     },
+                ],
+            },
+            {
+                id: "4",
+                subTitle: "Fully Insured",
+                points: [
                     {
-                        id: "1",
-                        text: "Verified practitioners using scientific-proven protocols",
+                        id: "0",
+                        text: "Active professional indemnity/liability cover required.",
                     },
+                ],
+            },
+            {
+                id: "5",
+                subTitle: "Right Care, Right Scope",
+                points: [
                     {
-                        id: "2",
-                        text: "Two-way review system ensuring quality care",
+                        id: "0",
+                        text: "Services match verified training and evidence-based care—no over-claiming.",
                     },
                 ],
             },

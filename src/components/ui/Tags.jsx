@@ -1,8 +1,6 @@
 // components/FeatureTags.jsx
-// 1. Change the import path from 'outline' to 'solid'
 import { StarIcon, ShieldCheckIcon, ClockIcon } from "@heroicons/react/24/solid";
 
-// 2. The iconMap now points directly to the imported solid icons
 const iconMap = {
     star: StarIcon,
     shield: ShieldCheckIcon,
@@ -14,12 +12,30 @@ const Tag = ({ text, iconKey }) => {
 
     if (!Icon) return null;
 
+    // Tooltip content for verified tags
+    const tooltipText = `✓ License verified
+✓ Background checked
+✓ Association membership confirmed
+✓ Professional insurance verified`;
+
+    const hasVerifiedText = text.toLowerCase().includes("100% verified");
+
     return (
-        // 3. Updated styling to match the image
-        <div className="flex items-center gap-2 rounded-full bg-black/50 backdrop-blur-sm px-3 py-2 shadow-md">
-            {/* The color is now applied directly to the icon component */}
+        <div className="relative group flex items-center gap-2 rounded-full bg-black/50 backdrop-blur-sm px-3 py-2 shadow-md">
             <Icon className="w-4 h-4 text-orange-500 max-sm:hidden" />
             <span className="sm:text-sm max-sm:text-xs font-medium text-white tracking-wide">{text}</span>
+
+            {hasVerifiedText && (
+                <>
+                    {/* Small pulsing dot to indicate tooltip */}
+                    <div className="w-2 h-2 bg-orange-400 rounded-full animate-pulse ml-1 cursor-pointer" />
+
+                    {/* Tooltip on hover */}
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block whitespace-pre text-left bg-gray-900 text-white text-xs rounded-lg px-3 py-2 shadow-lg border border-gray-700">
+                        {tooltipText}
+                    </div>
+                </>
+            )}
         </div>
     );
 };
