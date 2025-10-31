@@ -54,6 +54,7 @@ export default function BlogPost({ post }) {
 
     return (
         <>
+
             <Header data={{ menus: faqs.menus, type: "faq", extra: "faq" }} />
 
             <main className="min-h-screen">
