@@ -36,7 +36,7 @@ export const healingApproaches = [
         icon: "🌿",
         tag: "Find Practioners",
         theme: "naturopathic",
-        link: "/naturopathic-medicine",
+        link: "/naturopathy",
     },
     {
         id: 5,
