@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Header from "../../components/sections/Header";
 import Footer from "../../components/sections/Footer";
-import { menus } from "../../constants/clients";
+import { faqs } from "../../constants/faq";
 import { posts } from "../../constants/posts";
 
 function Tag({ children }) {
@@ -54,7 +54,7 @@ export default function BlogPost({ post }) {
 
     return (
         <>
-            <Header data={{ menus }} />
+            <Header data={{ menus: faqs.menus, type: "faq", extra: "faq" }} />
 
             <main className="min-h-screen">
                 {/* Hero/Header */}
