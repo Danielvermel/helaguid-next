@@ -184,6 +184,12 @@ export const footer = {
                     url: "/terms-and-conditions",
                     titleAttribute: "Terms and Conditions",
                 },
+                {
+                    id: "4",
+                    title: "Blog",
+                    url: "/blog",
+                    titleAttribute: "Blog",
+                },
             ],
         },
         {
