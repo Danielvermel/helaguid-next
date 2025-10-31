@@ -1,4 +1,6 @@
 // next.config.js
+import { posts } from "./src/constants/posts.js"; // update path as needed
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
@@ -30,7 +32,7 @@ const nextConfig = {
 
     // Keep your existing exportPathMap
     exportPathMap: async function () {
-        return {
+        const map = {
             "/": { page: "/" },
             "/partners": { page: "/partners" },
             "/faq": { page: "/faq" },
@@ -42,6 +44,13 @@ const nextConfig = {
             "/about": { page: "/about" },
             "/terms-and-conditions": { page: "/terms-and-conditions" },
         };
+
+        // Add each dynamic blog post
+        posts.forEach((post) => {
+            map[`/blog/${post.slug}`] = { page: "/blog/[slug]", query: { slug: post.slug } };
+        });
+
+        return map;
     },
 };
 
