@@ -353,37 +353,77 @@ function MyApp({ Component, pageProps }) {
 
     return (
         <>
-            <Head>{/* Remove any old inline consent scripts */}</Head>
+            <Head>
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+            </Head>
 
-            {/* Google Consent Mode initialization - MUST run BEFORE GTM */}
-            <Script id="gtm-consent" strategy="beforeInteractive">
+            {/* 1. FIRST: Google Consent Mode Default - Sets consent BEFORE everything */}
+            {/* <Script id="gtm-consent-default" strategy="beforeInteractive">
                 {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('consent', 'default', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted',
-            'functionality_storage': 'granted',
-            'security_storage': 'granted',
-          });
-        `}
-            </Script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('consent', 'default', {
+                    'ad_storage': 'denied',
+                    'ad_user_data': 'denied',
+                    'ad_personalization': 'denied',
+                    'analytics_storage': 'denied',
+                    'functionality_storage': 'denied',
+                    'personalization_storage': 'denied',
+                    'security_storage': 'granted',
+                    'wait_for_update': 2000
+                });
+                gtag('set', 'ads_data_redaction', true);
+                gtag('set', 'url_passthrough', true);
+                `}
+            </Script> */}
 
-            {/* Google Tag Manager */}
+            {/* 2. SECOND: CookieYes Banner - Loads after consent defaults, before GTM (Basic Mode) */}
+            {/* <Script
+                id="cookieyes-banner"
+                strategy="beforeInteractive"
+                src="https://cdn-cookieyes.com/client_data/b8b1ed4e2593d5b6b308d727/script.js"
+            /> */}
+
+            {/* 3. THIRD: Google Tag Manager - Loads AFTER CookieYes (Basic Consent Mode) */}
             <Script
                 id="google-tag-manager"
-                strategy="afterInteractive"
+                strategy="beforeInteractive"
                 dangerouslySetInnerHTML={{
                     __html: `
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-K476PRB8');
-        `,
+                    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                    })(window,document,'script','dataLayer','GTM-K476PRB8');
+                    `,
                 }}
+            />
+
+            {/* GTM noscript fallback - should be in <body> but Next.js handles this */}
+            <noscript>
+                <iframe
+                    src="https://www.googletagmanager.com/ns.html?id=GTM-K476PRB8"
+                    height="0"
+                    width="0"
+                    style={{ display: "none", visibility: "hidden" }}
+                    title="Google Tag Manager"
+                ></iframe>
+            </noscript>
+
+            {/* Umami Analytics (Landing) */}
+            <Script
+                defer
+                src="https://cloud.umami.is/script.js"
+                data-website-id="a3526664-8b36-4e89-bbe4-34bc9dd08830"
+                strategy="afterInteractive"
+            />
+
+            {/* Umami Analytics (Landing + Book) */}
+            <Script
+                defer
+                src="https://cloud.umami.is/script.js"
+                data-website-id="0d324ed4-26b2-4cd6-a8d0-f190d2f79fa7"
+                strategy="afterInteractive"
             />
 
             {/* Structured Data Schema */}
@@ -392,8 +432,6 @@ function MyApp({ Component, pageProps }) {
                 dangerouslySetInnerHTML={{ __html: schemaString }}
                 key="navigation-schema"
             />
-
-            {/* Your other tracking scripts (e.g. Umami) as needed */}
 
             <div className={`${poppins.variable} ${inter.variable}`}>
                 <Component {...pageProps} />

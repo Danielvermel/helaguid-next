@@ -48,8 +48,8 @@ export default function Home() {
     return (
         <>
             <Meta
-                title=" Find Certified Experts for Chronic Illness Near You | HealGuid"
-                description="Struggling with chronic fatigue, fibromyalgia, or long COVID? HealGuid connects you with trusted holistic specialists online or near you. Start healing today"
+                title="Find Verified Functional & Holistic Practitioners UK | HealGuid"
+                description="When tests say “normal” but you don’t feel normal. HealGuid connects you with verified holistic & functional medicine specialists for ME/chronic fatigue, gut issues, autoimmunity and hormonal imbalances across the UK."
             />
 
             <main className="overflow-hidden">

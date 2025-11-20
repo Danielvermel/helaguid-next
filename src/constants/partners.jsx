@@ -156,12 +156,12 @@ export const whyUs = {
     tableTitle: "The HealGuid Difference",
     company: "HealGuid",
     competitor: "Mainstream Approach",
-    matterText: "What matters",
+    matterText: "",
     exclusiveBenefits: {
         title: "Founding Member Exclusive Benefits",
         majorPoints: [
             {
-                id: "0",
+                id: "1",
                 subTitle: "Lock in These Unique Advantages:",
                 points: [
                     {
@@ -182,7 +182,7 @@ export const whyUs = {
                 ],
             },
             {
-                id: "1",
+                id: "2",
                 subTitle: "Grow and Shape the Future of Holistic Care:",
                 points: [
                     {

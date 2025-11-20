@@ -1,7 +1,7 @@
 export const posts = [
   {
     title: "Chronic Fatigue Treatment UK: Functional Medicine Guide 2025",
-    slug: "chronic-fatigue-treatment-uk-functional-medicine-guide-2025",
+    slug: "functional-medicine-chronic-fatigue-uk-2025",
     date: "2025-10-31",
     excerpt:
       "A realistic, UK-specific guide to ME/CFS and Long COVID fatigue: what the NHS offers, where functional medicine can add value, evidence signals, costs, and how to build a safe, practical plan.",
