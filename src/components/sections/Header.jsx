@@ -178,11 +178,9 @@ const Header = ({ data }) => {
                                             <Button
                                                 containerClassName="bg-s1 m-6 mx-0"
                                                 textClassName="tracking-wide font-bold text-white"
-                                                href={data?.type?.includes("client") ? "/get-matched" : "/apply"}
+                                                href={data?.type?.includes("partners") ? "/apply" : "/get-matched"}
                                             >
-                                                {["partners", "clients", "faq", "privacy", "about", "terms"].includes(
-                                                    data?.type
-                                                )
+                                                {["clients", "faq", "privacy", "about", "terms"].includes(data?.type)
                                                     ? "Get Matched"
                                                     : "Apply Now"}
                                             </Button>

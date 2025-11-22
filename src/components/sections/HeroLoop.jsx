@@ -223,7 +223,7 @@ const HeroLoop = ({ data }) => {
             <div className="relative z-10 flex flex-col-reverse items-center text-center px-4 sm:px-6 gap-6 sm:gap-8 md:gap-12 animate-fadeIn">
                 {/* Sub-headline - Enhanced glassmorphism */}
                 <div className="group w-full max-w-2xl bg-gradient-to-br from-black/70 via-black/60 to-black/70 backdrop-blur-lg px-5 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 rounded-2xl border border-white/20 shadow-2xl hover:border-white/30 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] transition-all duration-500 ease-out">
-                    <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl tracking-wider text-white leading-relaxed font-semibold mb-1">
+                    <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl tracking-wider text-white leading-relaxed font-bold mb-1">
                         Verified Holistic & Functional Medicine Practitioners in the UK
                     </h1>
                     <p className="text-sm sm:text-base md:text-lg mt-3 sm:mt-4 tracking-wide text-gray-100/85 leading-relaxed font-normal">
@@ -233,7 +233,7 @@ const HeroLoop = ({ data }) => {
                 </div>
 
                 {/* Main Headline with gradient accent */}
-                <h2 className="text-5xl max-sm:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold max-sm:-mt-16 tracking-wide text-shadow-lg leading-tight">
+                <h2 className="text-3xl max-sm:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold max-sm:-mt-16 tracking-wide text-shadow-lg leading-tight">
                     <div className="animate-slideInLeft">
                         Finally feeling{" "}
                         <span className="text-orange-400 bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text">
