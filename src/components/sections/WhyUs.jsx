@@ -60,7 +60,7 @@ const WhyUs = ({ data, func }) => {
                 <div className="flex lg:gap-16 lg:flex-nowrap flex-wrap max-md:gap-5 lg:-mt-8 max-lg:basis-full max-lg:mx-auto">
                     {/* Points */}
                     <div className="lg:basis-1/2 max-lg:basis-full lg:mt-8 max-lg:mt-4 max-md:mt-2 mb-3 flex">
-                        <div className="flex flex-col items-center">
+                        <div className="flex flex-col ">
                             {/* <h2 className="text-4xl font-bold mb-3 text-[#146869]">{data.whyUs.title}</h2> */}
 
                             <h3 className="text-2xl font-semibold mb-2 text-p1">
@@ -70,28 +70,34 @@ const WhyUs = ({ data, func }) => {
                                 {data.whyUs.exclusiveBenefits.description}
                             </p>
                             <div className="w-full max-w-3xl flex flex-col md:gap-4 max-md:gap-2">
-                                {data.whyUs.exclusiveBenefits.majorPoints.map(({ id, subTitle, points }) => (
-                                    <div
-                                        key={id}
-                                        className="bg-gray-50 rounded-xl shadow flex items-center md:px-6 md:py-4 max-md:px-4 max-md:py-2"
-                                    >
-                                        <div className="flex-shrink-0 h-8 w-8 rounded-full bg-p1 text-white flex items-center justify-center text-xl font-semibold mr-6">
-                                            {id}
+                                {data.whyUs.exclusiveBenefits.majorPoints.map(
+                                    ({ id, subTitle, description, points }) => (
+                                        <div
+                                            key={id}
+                                            className="bg-gray-50 rounded-xl shadow flex items-center md:px-6 md:py-4 max-md:px-4 max-md:py-2"
+                                        >
+                                            <div className="flex-shrink-0 h-8 w-8 rounded-full bg-p1 text-white flex items-center justify-center text-xl font-semibold mr-6">
+                                                {id}
+                                            </div>
+                                            <div className="flex flex-col">
+                                                <h4 className="md:text-xl max-md:text-lg text-left font-semibold text-p1">
+                                                    {subTitle}
+                                                </h4>
+                                                <h5>{description}</h5>
+                                                <ul className="pl-4 list-disc">
+                                                    {points.map(({ id, text }) => (
+                                                        <li
+                                                            key={id}
+                                                            className="md:text-base max-md:text-sm text-gray-700"
+                                                        >
+                                                            {text}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div className="flex flex-col">
-                                            <h4 className="md:text-xl max-md:text-lg font-semibold text-p1">
-                                                {subTitle}
-                                            </h4>
-                                            <ul className="pl-0">
-                                                {points.map(({ id, text }) => (
-                                                    <li key={id} className="md:text-base max-md:text-sm text-gray-700">
-                                                        {text}
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    </div>
-                                ))}
+                                    )
+                                )}
                             </div>
                             <div className="mt-8 text-gray-500 italic text-sm">
                                 Standards last reviewed: Oct 2025&nbsp;•&nbsp;
@@ -175,7 +181,7 @@ const WhyUs = ({ data, func }) => {
                 </div>
 
                 {/* Data Offers - Trust */}
-                <div>
+                {/* <div>
                     { data.type.includes("partner") && (
                         <section className="flex-1 mb-8 lg:mt-4">
                             <h3 className="text-p1 text-2xl max-lg:mt-2 font-semibold mb-4">{data.offers.list[2].type}</h3>
@@ -306,7 +312,7 @@ const WhyUs = ({ data, func }) => {
 
                     }
 
-                </div>
+                </div> */}
             </div>
         </section>
     );

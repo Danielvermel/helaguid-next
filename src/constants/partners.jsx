@@ -50,7 +50,7 @@ export const hero = {
     altTitleMobile: "Patient-Practitioner Mobile Connection",
     imageClass: " scale-x-[-1]",
     title: "Grow Your Holistic Practice. 500+ Patients Waiting",
-    description: "Join Healguid and connect with hundreds of people who searched for holistic care",
+    description: "Join HealGuid and connect with hundreds of people who searched for holistic care",
     secondDescription:
         "Patients come to us seeking verified holistic and functional experts in the UK — your credentials become their reason to choose you.",
     buttons: {
@@ -152,53 +152,74 @@ export const causes = {
 //  3. Why Us
 
 export const whyUs = {
-    title: "Why Join HealGuid Early?",
+    title: "Why Grow Your Practice with HealGuid?",
     tableTitle: "The HealGuid Difference",
     company: "HealGuid",
     competitor: "Mainstream Approach",
     matterText: "",
     exclusiveBenefits: {
         title: "Founding Member Exclusive Benefits",
+        description:
+            "We connect verified holistic practitioners with pre-qualified chronic-care patients and streamline bookings, payments, and reminders for you.",
+        pointTitle: "The HealGuid Advantage",
         majorPoints: [
             {
                 id: "1",
-                subTitle: "Lock in These Unique Advantages:",
+                subTitle: "Better-Fit Patients",
+                description: "Pre-qualified chronic-care patients ready to start care.",
                 points: [
                     {
                         id: "0",
-                        text: "Get Early-Bird Pricing",
+                        text: "Guided matching improves fit",
                         strong: "Pricing",
                     },
                     {
                         id: "1",
-                        text: "Receive Priority Patient Matching",
+                        text: "ntake forms upfront",
                         strong: "Priority",
                     },
                     {
                         id: "2",
-                        text: "Display Founding Member Badge",
+                        text: "Higher show-up + longer retention",
                         strong: "Badge",
                     },
                 ],
             },
             {
                 id: "2",
-                subTitle: "Grow and Shape the Future of Holistic Care:",
+                subTitle: "Trust That Converts",
+                description: "Stand out in a curated, verified network.",
                 points: [
                     {
                         id: "0",
-                        text: "Be a Spotlight in Launch Marketing",
-                        strong: "Spotlight",
+                        text: "Credentials + insurance badges displayed",
                     },
                     {
                         id: "1",
-                        text: "Shape Platform Development",
-                        strong: "Development",
+                        text: "5-point verification boosts confidence",
                     },
                     {
                         id: "2",
-                        text: "Access Premium Support",
-                        strong: "Premium",
+                        text: "Higher booking conversion",
+                    },
+                ],
+            },
+            {
+                id: "3",
+                subTitle: "Simple, Fair Earnings",
+                description: "Transparent, predictable, practitioner-friendly.",
+                points: [
+                    {
+                        id: "0",
+                        text: "Clear commission, no hidden fees",
+                    },
+                    {
+                        id: "1",
+                        text: "Secure Stripe payouts weekly",
+                    },
+                    {
+                        id: "2",
+                        text: "No pay-per-lead, no ads required",
                     },
                 ],
             },

@@ -134,7 +134,7 @@ const Hero = ({ data, func }) => {
                                 aria-label="Submit button with arrow icon to join the HealGuid mailing list."
                             >
                                 <span className="md:text-xl transition-transform duration-200 ease-in-out group-hover:scale-110">
-                                    {data.type.includes("partner") ? "Become a Healguid Partner" : "Get Matched Now"}
+                                    {data.type.includes("partner") ? "Become a HealGuid Partner" : "Get Matched Now"}
                                 </span>
                             </button>
                         </a>

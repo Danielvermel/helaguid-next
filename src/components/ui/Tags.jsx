@@ -19,9 +19,9 @@ const Tag = ({ text, iconKey }) => {
 ✓ Insurance & Right Scope`;
 
     // Tooltip content - desktop version (more detailed)
-    const desktopTooltipText = `✓ License verified
+    const desktopTooltipText = `✓ Licenses verified
 ✓ Background checked
-✓ Association membership confirmed
+✓ Associations confirmed
 ✓ Professional insurance verified`;
 
     const hasVerifiedText = text.toLowerCase().includes("100% verified");
@@ -34,20 +34,20 @@ const Tag = ({ text, iconKey }) => {
             </span>
 
             {hasVerifiedText && (
-                <>
+                <span className="max-sm:hidden">
                     {/* Small pulsing dot to indicate tooltip */}
-                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-orange-400 rounded-full animate-pulse ml-0.5 sm:ml-1 cursor-pointer" />
+                    <div className="max-sm:hidden w-1.5 h-1.5 sm:w-2 sm:h-2 bg-orange-400 rounded-full animate-pulse ml-0.5 sm:ml-1 cursor-pointer" />
 
                     {/* Tooltip on hover - mobile (shorter text) */}
-                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block sm:hidden whitespace-pre text-left bg-gray-900 text-white text-xs rounded-lg px-3 py-2 shadow-lg border border-gray-700 z-50">
+                    <div className="max-sm:hidden absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block sm:hidden whitespace-pre text-left bg-gray-900 text-white text-xs rounded-lg px-3 py-2 shadow-lg border border-gray-700 z-50">
                         {mobileTooltipText}
                     </div>
 
                     {/* Tooltip on hover - desktop (detailed text) */}
-                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden sm:group-hover:block whitespace-pre text-left bg-gray-900 text-white text-xs rounded-lg px-3 py-2 shadow-lg border border-gray-700 z-50">
+                    <div className="max-sm:hidden absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden sm:group-hover:block whitespace-pre text-left bg-gray-900 text-white text-xs rounded-lg px-3 py-2 shadow-lg border border-gray-700 z-50">
                         {desktopTooltipText}
                     </div>
-                </>
+                </span>
             )}
         </div>
     );

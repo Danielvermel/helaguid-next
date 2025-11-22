@@ -195,6 +195,191 @@
 
 // export default HeroLoop;
 
+// // components/Hero.jsx
+// import HeaderLoop from "./HeaderLoop";
+// import VideoBackground from "../ui/VideoBackground";
+// import FeatureTags from "../ui/Tags";
+
+// const tagsData = [
+//     { id: 1, text: "60-90 Min Consultations", icon: "star" },
+//     { id: 2, text: "Free Patient Matching", icon: "clock" },
+//     { id: 3, text: "100% Verified Practitioners", icon: "shield" },
+// ];
+
+// const HeroLoop = ({ data }) => {
+//     return (
+//         <section className="relative flex flex-col justify-center items-center w-full min-h-screen text-white overflow-hidden">
+//             {/* 1. Video Background */}
+//             <VideoBackground
+//                 videoSrc="/videos/hero/mountains_v2.webm"
+//                 posterSrc="videos/hero/poster-mountains-v2.jpg"
+//                 fallbackSrc="/videos/hero/mountains-trimmed.mp4"
+//             />
+
+//             {/* 2. Header */}
+//             <HeaderLoop data={{ menus: data.menus, type: data.type }} />
+
+//             {/* 3. Centered Content Overlay with fade-in animation */}
+//             <div className="relative z-10 flex flex-col-reverse items-center text-center px-4 sm:px-6 gap-6 sm:gap-8 md:gap-12 animate-fadeIn">
+//                 {/* Sub-headline - Enhanced glassmorphism */}
+//                 <div className="group w-full max-w-2xl bg-gradient-to-br from-black/70 via-black/60 to-black/70 backdrop-blur-lg px-5 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 rounded-2xl border border-white/20 shadow-2xl hover:border-white/30 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] transition-all duration-500 ease-out">
+//                     <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl tracking-wider text-white leading-relaxed font-bold mb-1">
+//                         Verified Holistic & Functional Medicine Practitioners in the UK
+//                     </h1>
+//                     <p className="text-sm sm:text-base md:text-lg mt-3 sm:mt-4 tracking-wide text-gray-100/85 leading-relaxed font-normal">
+//                         HealGuid connects you with verified holistic and functional medicine practitioners who treat the
+//                         root cause of chronic fatigue, gut issues, autoimmunity and hormone imbalances.
+//                     </p>
+//                 </div>
+
+//                 {/* Main Headline with gradient accent */}
+//                 <h2 className="text-3xl max-sm:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold max-sm:-mt-16 tracking-wide text-shadow-lg leading-tight">
+//                     <div className="animate-slideInLeft">
+//                         Finally feeling{" "}
+//                         <span className="text-orange-400 bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text">
+//                             heard,{" "}
+//                         </span>
+//                     </div>
+//                     <div className="mt-2 sm:mt-3 animate-slideInRight">
+//                         Finally finding{" "}
+//                         <span className="text-orange-400 bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text">
+//                             answers
+//                         </span>
+//                     </div>
+//                 </h2>
+//             </div>
+
+//             {/* Enhanced CTA Button */}
+//             <a
+//                 href="/book"
+//                 className="group relative z-10 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 active:scale-95 text-white font-semibold tracking-wide py-2.5 px-10 sm:py-3 sm:px-12 md:py-3.5 md:px-14 text-base sm:text-lg md:text-xl rounded-full transition-all duration-300 shadow-lg hover:shadow-[0_10px_40px_-10px_rgba(20,184,166,0.6)] overflow-hidden mt-6 sm:mt-8 md:mt-10"
+//             >
+//                 <span className="relative z-10">Find a Practitioner</span>
+//                 <div className="absolute inset-0 bg-white/20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+//             </a>
+
+//             {/* Feature Tags with stagger animation */}
+//             <div className="absolute bottom-14 sm:bottom-20 md:bottom-24 lg:bottom-20 z-10 w-full px-4 animate-fadeInUp">
+//                 <FeatureTags tags={tagsData} />
+//             </div>
+
+//             {/* "Browse Our Specialists" Link with animated arrow */}
+//             <div className="absolute bottom-4 sm:bottom-6 z-10 animate-fadeIn">
+//                 <a
+//                     href="#practioners-cards"
+//                     className="group flex items-center gap-2 text-sm sm:text-base hover:text-teal-300 tracking-wide font-light transition-all duration-300"
+//                 >
+//                     <span className="border-b border-transparent group-hover:border-teal-300 transition-all duration-300">
+//                         Browse Our Specialists
+//                     </span>
+//                     <img
+//                         src="/images/causes/arrow-down.svg"
+//                         loading="lazy"
+//                         title="Scroll down or expand"
+//                         alt="arrow down"
+//                         className="size-4 sm:size-5 transition-all duration-300 group-hover:translate-y-1 group-hover:brightness-125"
+//                     />
+//                 </a>
+//             </div>
+//         </section>
+//     );
+// };
+
+// export default HeroLoop;
+
+// components/Hero.jsx
+// import HeaderLoop from "./HeaderLoop";
+// import VideoBackground from "../ui/VideoBackground";
+// import FeatureTags from "../ui/Tags";
+
+// const tagsData = [
+//     { id: 1, text: "60-90 Min Consultations", icon: "star" },
+//     { id: 2, text: "Free Patient Matching", icon: "clock" },
+//     { id: 3, text: "100% Verified Practitioners", icon: "shield" },
+// ];
+
+// const HeroLoop = ({ data }) => {
+//     return (
+//         <section className="relative flex flex-col justify-center items-center w-full min-h-screen text-white overflow-hidden">
+//             <VideoBackground
+//                 videoSrc="/videos/hero/mountains_v2.webm"
+//                 posterSrc="videos/hero/poster-mountains-v2.jpg"
+//                 fallbackSrc="/videos/hero/mountains-trimmed.mp4"
+//             />
+//             <HeaderLoop data={{ menus: data.menus, type: data.type }} />
+
+//             {/* Correct Heading Hierarchy and Visual Importance */}
+//             <div className="relative z-10 flex flex-col items-center text-center px-4 sm:px-6 gap-3 sm:gap-8 md:gap-12 animate-fadeIn">
+//                 {/* MAIN HEADLINE */}
+//                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-extrabold tracking-wide text-shadow-xl leading-tight mb-3">
+//                     {/* Desktop & Tablet: Three lines */}
+//                     <span className="hidden sm:block">Verified Holistic &</span>
+//                     <span className="hidden sm:block">Functional Medicine</span>
+//                     <span className="hidden sm:block">Practitioners in the UK</span>
+//                     {/* Mobile: Two lines */}
+//                     <span className="block sm:hidden">Verified Holistic & Functional Medicine</span>
+//                     <span className="block sm:hidden">Practitioners in the UK</span>
+//                 </h1>
+
+//                 {/* SUBHEADLINE EMOTIONAL TAGLINE */}
+//                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-wide leading-relaxed mt-2 mb-3">
+//                     <span className="block">
+//                         Finally feeling{" "}
+//                         <span className="text-orange-400 bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text">
+//                             heard
+//                         </span>
+//                         ,
+//                     </span>
+//                     <span className="block mt-2">
+//                         Finally finding{" "}
+//                         <span className="text-orange-400 bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text">
+//                             answers
+//                         </span>
+//                     </span>
+//                 </h2>
+//                 {/* Description */}
+//                 <div className="w-full max-w-2xl bg-gradient-to-br from-black/70 via-black/60 to-black/70 backdrop-blur-lg px-5 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 rounded-2xl border border-white/20 shadow-2xl">
+//                     <p className="text-lg text-gray-100/85 leading-relaxed font-normal mb-0">
+//                         HealGuid connects you with verified holistic and functional medicine practitioners who treat the
+//                         root cause of chronic fatigue, gut issues, autoimmunity and hormone imbalances.
+//                     </p>
+//                 </div>
+//             </div>
+//             {/* CTA Button */}
+//             <a
+//                 href="/book"
+//                 className="group relative z-10 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 active:scale-95 text-white font-semibold tracking-wide py-2.5 px-10 sm:py-3 sm:px-12 md:py-3.5 md:px-14 text-base sm:text-lg md:text-xl rounded-full transition-all duration-300 shadow-lg hover:shadow-[0_10px_40px_-10px_rgba(20,184,166,0.6)] overflow-hidden mt-6 sm:mt-8 md:mt-10"
+//             >
+//                 <span className="relative z-10">Find a Practitioner</span>
+//                 <div className="absolute inset-0 bg-white/20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+//             </a>
+//             {/* Feature Tags */}
+//             <div className="absolute bottom-14 sm:bottom-20 md:bottom-24 lg:bottom-20 z-10 w-full px-4 animate-fadeInUp">
+//                 <FeatureTags tags={tagsData} />
+//             </div>
+//             {/* Browse Specialists */}
+//             <div className="absolute bottom-4 sm:bottom-6 z-10 animate-fadeIn">
+//                 <a
+//                     href="#practioners-cards"
+//                     className="group flex items-center gap-2 text-sm sm:text-base hover:text-teal-300 tracking-wide font-light transition-all duration-300"
+//                 >
+//                     <span className="border-b border-transparent group-hover:border-teal-300 transition-all duration-300">
+//                         Browse Our Specialists
+//                     </span>
+//                     <img
+//                         src="/images/causes/arrow-down.svg"
+//                         loading="lazy"
+//                         title="Scroll down or expand"
+//                         alt="arrow down"
+//                         className="size-4 sm:size-5 transition-all duration-300 group-hover:translate-y-1 group-hover:brightness-125"
+//                     />
+//                 </a>
+//             </div>
+//         </section>
+//     );
+// };
+
+// export default HeroLoop;
 // components/Hero.jsx
 import HeaderLoop from "./HeaderLoop";
 import VideoBackground from "../ui/VideoBackground";
@@ -209,61 +394,89 @@ const tagsData = [
 const HeroLoop = ({ data }) => {
     return (
         <section className="relative flex flex-col justify-center items-center w-full min-h-screen text-white overflow-hidden">
-            {/* 1. Video Background */}
             <VideoBackground
                 videoSrc="/videos/hero/mountains_v2.webm"
                 posterSrc="videos/hero/poster-mountains-v2.jpg"
                 fallbackSrc="/videos/hero/mountains-trimmed.mp4"
             />
-
-            {/* 2. Header */}
             <HeaderLoop data={{ menus: data.menus, type: data.type }} />
 
-            {/* 3. Centered Content Overlay with fade-in animation */}
-            <div className="relative z-10 flex flex-col-reverse items-center text-center px-4 sm:px-6 gap-6 sm:gap-8 md:gap-12 animate-fadeIn">
-                {/* Sub-headline - Enhanced glassmorphism */}
-                <div className="group w-full max-w-2xl bg-gradient-to-br from-black/70 via-black/60 to-black/70 backdrop-blur-lg px-5 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 rounded-2xl border border-white/20 shadow-2xl hover:border-white/30 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] transition-all duration-500 ease-out">
-                    <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl tracking-wider text-white leading-relaxed font-bold mb-1">
-                        Verified Holistic & Functional Medicine Practitioners in the UK
-                    </h1>
-                    <p className="text-sm sm:text-base md:text-lg mt-3 sm:mt-4 tracking-wide text-gray-100/85 leading-relaxed font-normal">
+            {/* Centered Hero Content */}
+            <div className="relative z-10 flex flex-col items-center text-center sm:px-10 max-sm:px-2 max-md:gap-8 max-sm:gap-2 md:gap-4 animate-fadeIn">
+                {/* MAIN HEADLINE */}
+                <h1
+                    className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white  to-white 
+                    max-xs:text-xl max-md:text-[2rem] md:text-6xl xl:text-6xl sm:tracking-wide max-sm:tracking-none drop-shadow-xl leading-tight"
+                >
+                    {/* Desktop & Tablet: Three lines */}
+                    <span className="hidden md:block">
+                        Verified{" "}
+                        <span className="text-orange-400 bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text animate-gradient">
+                            Holistic
+                        </span>{" "}
+                        &
+                    </span>
+                    <span className="hidden md:block">
+                        <span className="text-orange-400 bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text animate-gradient">
+                            Functional
+                        </span>{" "}
+                        Medicine
+                    </span>
+                    <span className="hidden md:block">Practitioners in the UK</span>
+                    {/* Mobile: Two lines */}
+                    <span className="block md:hidden">
+                        Verified{" "}
+                        <span className="text-orange-400 bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text animate-gradient">
+                            Holistic
+                        </span>{" "}
+                        &{" "}
+                        <span className="text-orange-400 bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text animate-gradient">
+                            Functional
+                        </span>{" "}
+                        Medicine Practitioners in the UK
+                    </span>
+                </h1>
+                {/* SUBHEADLINE EMOTIONAL TAGLINE */}
+                {/* Description */}
+                <div className="group w-full max-w-2xl bg-gradient-to-br from-black/70 via-black/60 to-black/70 backdrop-blur-lg px-2 py-2 sm:px-6 sm:py-5 md:px-4 md:py-4 rounded-2xl border border-white/20 shadow-2xl hover:border-white/30 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] transition-all duration-500 ease-out">
+                    <h2 className="text-xl max-md:text-[1.1rem] md:text-2xl font-bold max-md:tracking-tight tracking-wide leading-relaxed mt-2 mb-2">
+                        <span className="inline">
+                            Finally feeling{" "}
+                            <span className="text-orange-400 bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text animate-gradient">
+                                heard
+                            </span>{" "}
+                            ,
+                        </span>
+                        <span className="inline">
+                            {" "}
+                            finally finding{" "}
+                            <span className="text-orange-400 bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text animate-gradient">
+                                answers
+                            </span>
+                        </span>
+                    </h2>
+                    <p className="max-md:text-sm md:text-lg tracking-wide text-gray-100/85 max-md:leading-tight md:leading-relaxed font-normal max-sm:px-2 max-sm:py-1">
                         HealGuid connects you with verified holistic and functional medicine practitioners who treat the
                         root cause of chronic fatigue, gut issues, autoimmunity and hormone imbalances.
                     </p>
                 </div>
-
-                {/* Main Headline with gradient accent */}
-                <h2 className="text-3xl max-sm:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold max-sm:-mt-16 tracking-wide text-shadow-lg leading-tight">
-                    <div className="animate-slideInLeft">
-                        Finally feeling{" "}
-                        <span className="text-orange-400 bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text">
-                            heard,{" "}
-                        </span>
-                    </div>
-                    <div className="mt-2 sm:mt-3 animate-slideInRight">
-                        Finally finding{" "}
-                        <span className="text-orange-400 bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text">
-                            answers
-                        </span>
-                    </div>
-                </h2>
             </div>
 
-            {/* Enhanced CTA Button */}
+            {/* CTA Button */}
             <a
                 href="/book"
-                className="group relative z-10 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 active:scale-95 text-white font-semibold tracking-wide py-2.5 px-10 sm:py-3 sm:px-12 md:py-3.5 md:px-14 text-base sm:text-lg md:text-xl rounded-full transition-all duration-300 shadow-lg hover:shadow-[0_10px_40px_-10px_rgba(20,184,166,0.6)] overflow-hidden mt-6 sm:mt-8 md:mt-10"
+                className="group relative z-10 bg-gradient-to-r from-teal-400 to-teal-600 hover:from-teal-500 hover:to-teal-700 active:scale-95 text-white font-semibold tracking-wide py-3 px-10 sm:py-3.5 sm:px-14 md:py-4 md:px-16 text-base sm:text-lg md:text-xl rounded-full transition-all duration-300 shadow-xl hover:shadow-[0_10px_40px_-10px_rgba(20,184,166,0.6)] overflow-hidden sm:mt-10 max-sm:mt-4"
             >
                 <span className="relative z-10">Find a Practitioner</span>
-                <div className="absolute inset-0 bg-white/20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+                <div className="absolute inset-0 bg-white/10 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
             </a>
 
-            {/* Feature Tags with stagger animation */}
-            <div className="absolute bottom-14 sm:bottom-20 md:bottom-24 lg:bottom-20 z-10 w-full px-4 animate-fadeInUp">
+            {/* Feature Tags */}
+            <div className="absolute max-md:bottom-16 md:bottom-16 lg:bottom-20 z-10 w-full px-4 animate-fadeInUp">
                 <FeatureTags tags={tagsData} />
             </div>
 
-            {/* "Browse Our Specialists" Link with animated arrow */}
+            {/* Browse Specialists */}
             <div className="absolute bottom-4 sm:bottom-6 z-10 animate-fadeIn">
                 <a
                     href="#practioners-cards"
