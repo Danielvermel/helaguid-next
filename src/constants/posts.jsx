@@ -78,7 +78,7 @@ export const posts = [
             },
             {
                 type: "image",
-                src: "/images/blog/2025-10-31/image_2.png",
+                src: "/images/blog/2025-10-31/image_2.jpg",
                 alt: "functional medicine fatigue",
             },
             { type: "heading", level: 2, text: "What a Functional Medicine Plan looks like" },
@@ -100,7 +100,7 @@ export const posts = [
             },
             {
                 type: "image",
-                src: "/images/blog/2025-10-31/image_1.png",
+                src: "/images/blog/2025-10-31/image_1.jpg",
                 alt: "ME/CFS and Long COVID fast facts visual",
                 caption: "Fast facts on ME/CFS and Long COVID in the UK, including prevalence and wait times.",
             },
