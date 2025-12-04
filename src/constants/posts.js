@@ -7,8 +7,7 @@ export const posts = [
             "A realistic, UK-specific guide to ME/CFS and Long COVID fatigue: what the NHS offers, where functional medicine can add value, evidence signals, costs, and how to build a safe, practical plan.",
         tags: ["Functional Medicine", "ME/CFS", "Long COVID", "UK Health", "Patient Guide"],
         hero: {
-            summary:
-                'You’ve 1 done the GP rounds. Bloods are "fine." You’re still exhausted. This guide is for careful skeptics: UK numbers, NHS context, realistic expectations, and an evidence-aware functional medicine pathway.',
+            summary: `If you’re reading this, you’ve probably done the usual GP visits. Your blood tests come back “fine”, yet you’re still exhausted, foggy, wired-but-tired, and wondering if anyone is truly listening and understanding.\n\nYou’re not overthinking it; this is the reality for thousands of us. More and more people turn to functional medicine not for miracle cures, but because they want someone who actually looks deeper, connects the dots and has a plan that actually makes sense for their day-to-day life.\n\nThis guide walks you through what’s happening in the UK right now, what functional medicine really offers, and what’s worth paying attention to.`,
         },
         blocks: [
             { type: "heading", level: 2, text: "ME/CFS and Long COVID in the UK (Fast facts)" },
@@ -43,10 +42,10 @@ export const posts = [
                 ],
             },
             {
-                type: "paragraph",
+                type: "italic",
                 text: "The need is massive, the waits are long, and that’s why many people explore options beyond the standard pathway.",
             },
-            { type: "heading", level: 2, text: "Where Functional Medicine Fits in" },
+            { type: "heading", level: 2, text: "So…what does functional medicine actually claim to do?" },
             {
                 type: "paragraph",
                 text: "Functional Medicine (FM) is a holistic approach that looks beyond individual symptoms to understand how different systems in the body may be influencing one another. Instead of focusing on isolated issues, FM aims to identify underlying factors that may be contributing to chronic fatigue, such as disrupted sleep, nutrient deficiencies, thyroid or iron imbalances, gut dysfunction, pain pathways, autonomic stress, or post-viral changes.",
@@ -63,37 +62,24 @@ export const posts = [
             },
             {
                 type: "paragraph",
-                text: "FM also has limitations. Some protocols lack strong evidence, over-testing can be costly, and standards vary between practitioners. This is why it is important to ask: Why is this test being recommended? How will the result change my treatment plan? A verified practitioner should be able to answer both clearly.",
-            },
-            { type: "heading", level: 2, text: "Evidence Check: What Often Helps and What Usually Doesn’t" },
-            { type: "heading", level: 3, text: "Sleep and energy management (green light)" },
-            {
-                type: "paragraph",
-                text: "NICE/NHS place pacing and sleep support at the core—aligns with FM foundations and has consensus support.",
-            },
-            { type: "heading", level: 3, text: "Nutrition basics and eating enough (green/yellow)" },
-            {
-                type: "paragraph",
-                text: "Adequate protein, iron/B12, hydration, and glucose stability help—especially with low ferritin or under‑eating. Elimination diets lack strong evidence for ME/CFS and aren’t routinely recommended without clear indication.",
-            },
-            { type: "heading", level: 3, text: "Microbiome & gut‑directed care (yellow)" },
-            {
-                type: "paragraph",
-                text: "ME/CFS cohorts often show reduced butyrate‑producing bacteria and disrupted networks—biologically plausible link. Which intervention reliably improves fatigue remains unclear; probiotics/fibre/SIBO treatment can help GI symptoms; fatigue results are still emerging.",
-            },
-            { type: "heading", level: 3, text: "Mitochondrial support supplements (yellow)" },
-            {
-                type: "paragraph",
-                text: "CoQ10 + NADH for ~8 weeks reduced fatigue vs placebo in an RCT—encouraging but not definitive. Meta‑analytic signals for CoQ10 across fatigue conditions are positive. NHS notes insufficient evidence to recommend routine use in ME/CFS. Reasonable to trial with monitoring and realistic expectations.",
+                text: "FM also has limitations. Some protocols lack strong evidence, over-testing can be costly, and standards vary between practitioners. This is why it is important to ask:",
             },
             {
-                type: "heading",
-                level: 3,
-                text: "Nervous‑system regulation / mind–body tools (yellow/green for coping)",
+                type: "bold",
+                text: "Why is this test being recommended?",
             },
             {
-                type: "paragraph",
-                text: "Mindfulness‑based and related mind–body interventions show modest benefits for fatigue and mood in small RCTs/systematic reviews. Not a cure, but can improve quality of life and help the ‘wired‑but‑tired’ physiology.",
+                type: "bold",
+                text: "How will the result change my treatment plan?",
+            },
+            {
+                type: "italic",
+                text: "A verified practitioner should be able to answer both clearly.",
+            },
+            {
+                type: "image",
+                src: "/images/blog/2025-10-31/image_2.png",
+                alt: "functional medicine fatigue",
             },
             { type: "heading", level: 2, text: "What a Functional Medicine Plan looks like" },
             {
@@ -124,27 +110,22 @@ export const posts = [
                 type: "paragraph",
                 text: "If you’re curious about trying functional medicine, the next step doesn’t need to be overwhelming or expensive. A safe, grounded approach starts small. Before investing in tests or supplements, it’s worth building a stable foundation so you can clearly see what’s helping and what isn’t. Below is a simple, evidence-aware way to begin.",
             },
-            { type: "heading", level: 3, text: "1. Start by Stabilising Your Foundations (First 4–6 Weeks)" },
             {
                 type: "paragraph",
                 text: "The first step is not advanced testing — it’s creating stability. A consistent sleep window, gentle pacing throughout the day, and three protein-rich meals can make a surprising difference in energy and symptom patterns. Staying hydrated and tracking your daily capacity also helps you understand your baseline and avoid post-exertional crashes.",
             },
-            { type: "heading", level: 3, text: "2. Explore Low-Risk Options With Some Evidence" },
             {
                 type: "paragraph",
                 text: "Once your foundations feel steadier, you can trial a few low-risk interventions. CoQ10 with or without NADH has been studied in chronic fatigue syndrome, with small RCTs showing improvements in fatigue over 8–12 weeks. Mind–body practices can support coping. If you struggle with IBS-type symptoms, simple gut support like fibre-rich foods and a basic probiotic may help.",
             },
-            { type: "heading", level: 3, text: "3. Test Selectively — Only When It Guides a Real Decision" },
             {
                 type: "paragraph",
                 text: "It’s easy to feel pressured into ordering multiple private tests. But in functional medicine, the most effective approach is usually the simplest. If you haven’t checked them recently, ferritin/iron, B12, vitamin D, and thyroid function can be genuinely helpful. More advanced testing (stool/OATs) should only be considered when results would directly influence treatment.",
             },
-            { type: "heading", level: 3, text: "4. Adjust Slowly and Make Each Change Count" },
             {
                 type: "paragraph",
                 text: "Functional medicine works best when you make changes one step at a time. Introduce one new supplement, habit, or test — then watch how your body responds. Keep what noticeably helps. Stop what doesn’t.",
             },
-            { type: "heading", level: 2, text: "What “good” looks like when choosing a practitioner" },
             {
                 type: "list",
                 ordered: false,
@@ -164,7 +145,6 @@ export const posts = [
                 href: "/book",
                 ctaLabel: "Search Verified Practitioners",
             },
-            { type: "heading", level: 2, text: "What Improvement Actually Looks Like" },
             {
                 type: "paragraph",
                 text: "One of the hardest parts of living with ME/CFS or Long COVID fatigue is managing your expectations. NHS guidance, research bodies, and experienced practitioners all say the same thing: There is no proven cure for ME/CFS or Long COVID. But that doesn’t mean you’re stuck.",
