@@ -41,6 +41,7 @@ const nextConfig = {
             "/404": { page: "/404" },
             "/thank-you": { page: "/thank-you" },
             "/book-confirmation": { page: "/book-confirmation" },
+            "/request-received": { page: "/request-received" },
             "/about": { page: "/about" },
             "/terms-and-conditions": { page: "/terms-and-conditions" },
         };

@@ -8,36 +8,64 @@ export const posts = [
         tags: ["Functional Medicine", "ME/CFS", "Long COVID", "UK Health", "Patient Guide"],
         hero: {
             summary:
-                'You’ve done the GP rounds. Bloods are "fine." You’re still exhausted. This guide is for careful skeptics: UK numbers, NHS context, realistic expectations, and an evidence-aware functional medicine pathway.',
+                'You’ve 1 done the GP rounds. Bloods are "fine." You’re still exhausted. This guide is for careful skeptics: UK numbers, NHS context, realistic expectations, and an evidence-aware functional medicine pathway.',
         },
         blocks: [
-            { type: "heading", level: 2, text: "First, ME/CFS and Long COVID in the UK" },
+            { type: "heading", level: 2, text: "ME/CFS and Long COVID in the UK (Fast facts)" },
             {
                 type: "paragraph",
-                text: "A 2025 analysis estimates ~404,000 people in England live with ME/CFS (~0.6% of the population), with regional disparities—the postcode lottery. Long COVID adds further pressure: in early 2024, about 3.3% reported symptoms >4 weeks, with fatigue among the most common.",
+                text: "One of the things people with fatigue often hear is, “You look fine.” But the numbers tell a completely different story.",
+            },
+            {
+                type: "list",
+                ordered: false,
+                items: [
+                    "404,000 people in England are living with ME/CFS (2025 NHS data)",
+                    "Long COVID adds another ~2 million people with ongoing symptoms",
+                    "Fatigue is one of the most common complaints",
+                    "NHS services are overwhelmed — some clinics have 25+ week waits and even pause referrals",
+                    "Many patients wait years for a diagnosis",
+                ],
             },
             {
                 type: "paragraph",
-                text: "Access exists but waits are long. Parliamentary data show some clinics with hundreds waiting >25 weeks; referrals are sometimes paused. Many patients report multi‑year diagnostic journeys. Following NICE 2021, NHS care emphasises pacing/energy management, CBT as a coping tool (not a cure), and symptom meds; GET is not recommended, and NHS cites insufficient evidence to recommend routine supplements like B12, magnesium, or CoQ10 for ME/CFS.",
-            },
-
-            { type: "heading", level: 2, text: "So…what does functional medicine actually claim to do?" },
-            {
-                type: "paragraph",
-                text: "Functional medicine is a framework: longer visits, a detailed health timeline, and a hunt for friction factors spanning sleep, diet, nutrient status, thyroid and iron indices, gut health, pain, autonomic response, and post‑viral aftermath. Foundations (sleep, pacing, food) come first; selected tests/supplements may be added when they change decisions.",
+                text: "What the NHS offers right now:",
             },
             {
+                type: "list",
+                ordered: false,
+                items: [
+                    "Energy management and pacing",
+                    "CBT as a coping tool (not a cure)",
+                    "Symptom-focused medications",
+                    "No graded exercise therapy (GET)",
+                    "No routine supplements like B12, magnesium or CoQ10 (insufficient evidence)",
+                ],
+            },
+            {
                 type: "paragraph",
-                text: "Outcomes data on the model (not disease‑specific) show that at the Cleveland Clinic, patients receiving functional‑medicine care reported greater improvements in PROMIS Global Physical Health at 6 months than matched primary‑care patients; the gap narrowed but remained by 12 months.",
+                text: "The need is massive, the waits are long, and that’s why many people explore options beyond the standard pathway.",
+            },
+            { type: "heading", level: 2, text: "Where Functional Medicine Fits in" },
+            {
+                type: "paragraph",
+                text: "Functional Medicine (FM) is a holistic approach that looks beyond individual symptoms to understand how different systems in the body may be influencing one another. Instead of focusing on isolated issues, FM aims to identify underlying factors that may be contributing to chronic fatigue, such as disrupted sleep, nutrient deficiencies, thyroid or iron imbalances, gut dysfunction, pain pathways, autonomic stress, or post-viral changes.",
+            },
+            {
+                type: "paragraph",
+                text: "Consultations are typically longer to allow clinicians to build a detailed health timeline and identify patterns that might be missed in shorter appointments. Most FM plans begin with core foundations, such as optimising sleep, pacing energy, stabilising meals, and supporting daily routines. Targeted tests or supplements are added only when they are likely to change the treatment plan.",
             },
             {
                 type: "callout",
-                tone: "warn",
-                title: "Where critics push back",
-                text: 'Evidence gaps for specific protocols, risk of over‑testing and false positives, and cost. Some professional bodies have restricted CME credit for applied FM training. Treat labs and supplements as trials with a clear "why" and an exit plan.',
+                tone: "info",
+                title: "Does this approach help?",
+                text: "There is some evidence that the care model can be beneficial. A large Cleveland Clinic study of 7,252 patients found that those receiving functional-medicine care reported greater improvements in quality of life at six months compared with standard primary care. This does not prove specific FM protocols, but suggests that time, personalisation, and lifestyle-based support may help individuals with complex, multi-symptom conditions.",
             },
-
-            { type: "heading", level: 2, text: "Evidence check: common elements in fatigue care" },
+            {
+                type: "paragraph",
+                text: "FM also has limitations. Some protocols lack strong evidence, over-testing can be costly, and standards vary between practitioners. This is why it is important to ask: Why is this test being recommended? How will the result change my treatment plan? A verified practitioner should be able to answer both clearly.",
+            },
+            { type: "heading", level: 2, text: "Evidence Check: What Often Helps and What Usually Doesn’t" },
             { type: "heading", level: 3, text: "Sleep and energy management (green light)" },
             {
                 type: "paragraph",
@@ -67,182 +95,87 @@ export const posts = [
                 type: "paragraph",
                 text: "Mindfulness‑based and related mind–body interventions show modest benefits for fatigue and mood in small RCTs/systematic reviews. Not a cure, but can improve quality of life and help the ‘wired‑but‑tired’ physiology.",
             },
-            { type: "heading", level: 3, text: "Exercise therapy (red unless personalised and symptom‑safe)" },
-            {
-                type: "paragraph",
-                text: "GET is not recommended. Any movement trial must be patient‑led and clinician‑guided; many worsen with over‑exertion. Emphasise pacing first.",
-            },
-            { type: "heading", level: 3, text: "Hormones and borderline thyroid (mixed; proceed carefully)" },
-            {
-                type: "paragraph",
-                text: "Address documented thyroid issues, peri‑menopause, or dysautonomia where present. Avoid treating ‘adrenal fatigue’ (not a recognised diagnosis) and avoid pushing thyroid when labs are normal without clear rationale and monitoring.",
-            },
-
-            { type: "heading", level: 2, text: "What a functional‑medicine pathway looks like" },
+            { type: "heading", level: 2, text: "What a Functional Medicine Plan looks like" },
             {
                 type: "list",
                 ordered: false,
                 items: [
-                    "Assessment (60–90 min): timeline, symptoms, sleep, stress, diet, work; review NHS bloods (FBC, ferritin/iron, thyroid, B12/folate, glucose, renal/liver, CRP).",
-                    "Foundations (first 4–8 weeks): sleep routine; pacing plan; protein‑anchored meals; hydration; gentle breathwork; GP‑guided meds for pain/sleep as needed.",
-                    "Targeted tests (only if they change decisions): full thyroid evaluation; iron studies if not recent; selected cases: stool microbiome, organic acids, SIBO.",
-                    "Adjustments (8–12+ weeks): add/remove supplements based on response; consider physio/OT, psychotherapy, autonomic strategies; coordinate with GP for monitoring/prescribing.",
+                    "Assessment (60–90 minutes): A long consult to map your timeline, symptoms, sleep, stress, diet, work demands; review NHS bloods (FBC, ferritin/iron, thyroid, B12/folate, glucose, renal/liver, CRP) and identify gaps.",
+                    "Foundations (first 4–8 weeks): practical sleep routine; pacing plan; protein-anchored meals; hydration; gentle breathwork; pain/sleep meds with your GP as needed.",
+                    "Targeted tests (only if they change decisions): full thyroid evaluation, iron studies if not done recently; in selected cases, stool microbiome, organic acids, or SIBO testing.",
+                    "Adjustments (8–12+ weeks): add/remove supplements based on response; consider physio/OT, psychotherapy, or autonomic strategies; coordinate with your GP for anything that needs NHS prescribing or safety monitoring.",
                 ],
             },
             {
                 type: "callout",
-                tone: "info",
-                title: "Avoid the £1,000‑of‑tests trap",
-                text: "Ask of every test: what decision would this change now?",
+                tone: "warn",
+                title: "Rule to remember",
+                text: "If you haven’t improved your sleep, pacing, and nutrition, don’t spend £1,000 on tests yet.",
             },
-
-            { type: "heading", level: 2, text: "Costs in the UK (2024/2025)—real numbers" },
             {
-                type: "list",
-                ordered: false,
-                items: [
-                    "Initial consult (60–90 min): ~£200–£500+ (example: £450 for 75 min at a London clinic; tests extra).",
-                    "Follow‑ups: ~£100–£300 (examples: £320 doctor, ~£90 nutritional therapist).",
-                    "Packages: 3‑month plans around ~£990 at some clinics; doctor‑led packages higher (e.g., ~£1,975–£2,495).",
-                    "Tests: stool ~£300–£400; organic acids ~£250–£300; adrenal/cortisol ~£100–£150; private full thyroid ~£100+. Budget £500–£1,000 if indicated.",
-                    "Supplements: £50–£120/month common for a basic mitochondrial bundle.",
-                    "Insurance: expect to self‑fund; occasional partial reimbursement via private GP billing; labs/supplements rarely covered.",
-                ],
+                type: "image",
+                src: "/images/blog/2025-10-31/image_1.png",
+                alt: "ME/CFS and Long COVID fast facts visual",
+                caption: "Fast facts on ME/CFS and Long COVID in the UK, including prevalence and wait times.",
             },
 
-            { type: "heading", level: 2, text: "How functional medicine fits with NHS care" },
+            { type: "heading", level: 2, text: "A Practical Starting Point" },
             {
                 type: "paragraph",
-                text: "They should collaborate. A good FM clinician works alongside your GP, respects red flags, avoids over‑promising, and keeps NHS pathways as the safety net.",
+                text: "If you’re curious about trying functional medicine, the next step doesn’t need to be overwhelming or expensive. A safe, grounded approach starts small. Before investing in tests or supplements, it’s worth building a stable foundation so you can clearly see what’s helping and what isn’t. Below is a simple, evidence-aware way to begin.",
             },
-            {
-                type: "list",
-                ordered: false,
-                items: [
-                    "Care model evidence exists (time + coordination + lifestyle).",
-                    "Specific protocols (stacks of supplements, certain specialty tests) remain unevenly supported; NHS does not endorse routine supplements for ME/CFS.",
-                    "Critics highlight over‑testing and cost—use this as a cue to ask questions, not to lose hope.",
-                ],
-            },
-            {
-                type: "callout",
-                tone: "danger",
-                title: "Red‑flag symptoms—seek urgent care",
-                text: "Unintentional weight loss, persistent fever/night sweats, chest pain/shortness of breath, fainting, new neurological deficits, blood in stool/urine, or suicidal thoughts.",
-            },
-
-            { type: "heading", level: 2, text: "If you try functional medicine: a practical plan" },
-            {
-                type: "list",
-                ordered: false,
-                items: [
-                    "Get the basics right (4–6 weeks): sleep window, pacing, three protein‑anchored meals, hydration; track capacity and PEM triggers.",
-                    "Low‑risk trials with plausible benefit: CoQ10 ± NADH for 8–12 weeks; mind–body training for coping; gut basics (fibre, simple probiotic) if IBS‑type symptoms.",
-                    "Test selectively: repeat ferritin/iron, B12, vitamin D, thyroid if not recent; consider GI/organic acids only when results would trigger treatment.",
-                    'Review and iterate: change one thing at a time; keep what helps, stop what doesn’t; insist on the "why" for tests and therapies.',
-                ],
-            },
-
-            { type: "heading", level: 2, text: "ME/CFS vs Long COVID fatigue—similar problems, different labels" },
+            { type: "heading", level: 3, text: "1. Start by Stabilising Your Foundations (First 4–6 Weeks)" },
             {
                 type: "paragraph",
-                text: "Large overlap: post‑exertional symptom exacerbation, unrefreshing sleep, brain fog, pain, dysautonomia. Long COVID has scale (~2 million reporting symptoms in early 2024). Self‑management (pacing, sleep, nervous‑system regulation) and careful experiments are shared ground.",
+                text: "The first step is not advanced testing — it’s creating stability. A consistent sleep window, gentle pacing throughout the day, and three protein-rich meals can make a surprising difference in energy and symptom patterns. Staying hydrated and tracking your daily capacity also helps you understand your baseline and avoid post-exertional crashes.",
             },
-
-            { type: "heading", level: 2, text: 'What "good" looks like when choosing a practitioner' },
+            { type: "heading", level: 3, text: "2. Explore Low-Risk Options With Some Evidence" },
+            {
+                type: "paragraph",
+                text: "Once your foundations feel steadier, you can trial a few low-risk interventions. CoQ10 with or without NADH has been studied in chronic fatigue syndrome, with small RCTs showing improvements in fatigue over 8–12 weeks. Mind–body practices can support coping. If you struggle with IBS-type symptoms, simple gut support like fibre-rich foods and a basic probiotic may help.",
+            },
+            { type: "heading", level: 3, text: "3. Test Selectively — Only When It Guides a Real Decision" },
+            {
+                type: "paragraph",
+                text: "It’s easy to feel pressured into ordering multiple private tests. But in functional medicine, the most effective approach is usually the simplest. If you haven’t checked them recently, ferritin/iron, B12, vitamin D, and thyroid function can be genuinely helpful. More advanced testing (stool/OATs) should only be considered when results would directly influence treatment.",
+            },
+            { type: "heading", level: 3, text: "4. Adjust Slowly and Make Each Change Count" },
+            {
+                type: "paragraph",
+                text: "Functional medicine works best when you make changes one step at a time. Introduce one new supplement, habit, or test — then watch how your body responds. Keep what noticeably helps. Stop what doesn’t.",
+            },
+            { type: "heading", level: 2, text: "What “good” looks like when choosing a practitioner" },
             {
                 type: "list",
                 ordered: false,
                 items: [
-                    "Transparent collaboration with your GP; clear scope.",
-                    "Test discipline: explains how each test changes a decision; no shotgun panels.",
-                    "Evidence‑aware: cites NICE/NHS where relevant; supplements as monitored trials, not cures.",
-                    "Safety and ethics: screens red flags; GDPR‑compliant; no pressure‑selling.",
-                    "Clear pricing and a written 8–12 week estimate (consults, likely tests, supplement range).",
-                    "Follow‑up plan with concrete milestones (sleep hours, crash frequency, step capacity, work tolerance).",
+                    "Transparent scope and collaboration: works with your GP; clear about what they can and can’t treat.",
+                    "Test discipline: can explain how a test changes a decision; avoids shotgun panels “just to see.”",
+                    "Evidence-aware: cites NICE/NHS where relevant; positions supplements as trials, not cures.",
+                    "Safety and ethics: screening for red flags, GDPR-compliant records, no pressure-selling tests or supplements.",
+                    "Clear pricing: a written estimate for the first 8–12 weeks.",
+                    "Follow-up plan: concrete milestones (sleep hours, crash frequency, step capacity, work tolerance).",
                 ],
             },
             {
                 type: "cta",
                 title: "Ready to compare verified practitioners?",
-                text: "Find HealGuid‑verified Functional practitioners who meet strict safety and ethics checks.",
+                text: "HealGuid’s verification flow checks training, insurance, and ethical sales practices—so you can compare options side-by-side.",
                 href: "/book",
-                ctaLabel: "Search ",
+                ctaLabel: "Search Verified Practitioners",
             },
-
-            { type: "heading", level: 2, text: "Realistic expectations (and why realism is empowering)" },
-            {
-                type: "list",
-                ordered: false,
-                items: [
-                    "No single proven cure for ME/CFS or Long COVID fatigue; NHS is candid; FM should be too.",
-                    "Expect incremental improvements—fewer crashes, clearer mornings, more consistent work hours.",
-                    "Time horizons are months, not days; meaningful gains in outcomes data appear at 6–12 months.",
-                    "Skepticism is healthy—use it to shape smarter questions and avoid wasted cost.",
-                ],
-            },
-
-            { type: "heading", level: 2, text: "Frequently Asked Questions" },
-            { type: "heading", level: 3, text: "Is functional medicine ‘legit’?" },
+            { type: "heading", level: 2, text: "What Improvement Actually Looks Like" },
             {
                 type: "paragraph",
-                text: 'It’s a care model that invests time and coordinates lifestyle and, sometimes, specialty tests. Outcomes research from a large US centre shows patient‑reported gains at 6 months; UK NICE guidance does not endorse FM‑specific supplements/tests for ME/CFS. Both can be true—ask for the "why" behind each step.',
+                text: "One of the hardest parts of living with ME/CFS or Long COVID fatigue is managing your expectations. NHS guidance, research bodies, and experienced practitioners all say the same thing: There is no proven cure for ME/CFS or Long COVID. But that doesn’t mean you’re stuck.",
             },
-            { type: "heading", level: 3, text: "Will the NHS cover any of this?" },
             {
                 type: "paragraph",
-                text: "Consults and most specialty tests/supplements are self‑funded. Occasionally insurers reimburse part of a consult if billed via a private GP pathway; labs and supplements are rarely covered.",
+                text: "For many people, improvement shows up as fewer energy crashes, less “wired but tired” at night, slightly clearer mornings, being able to work or study a little longer, or better digestion. These shifts may not feel life-changing week by week, but they stack up.",
             },
-            { type: "heading", level: 3, text: "How much should I budget?" },
             {
                 type: "paragraph",
-                text: "A realistic first‑quarter budget for a doctor‑led London pathway: £1,500–£3,000 including consults, £500–£1,000 of tests if indicated, plus £50–£120/month supplements. Nutritional‑therapist routes can be cheaper but may still recommend private labs.",
-            },
-            { type: "heading", level: 3, text: "Isn’t graded exercise recommended?" },
-            {
-                type: "paragraph",
-                text: "Not anymore. GET is not recommended by NHS/NICE. If increasing activity, do so gradually with experienced support, staying within your energy envelope to avoid PEM.",
-            },
-            { type: "heading", level: 3, text: "One supplement worth trying first?" },
-            {
-                type: "paragraph",
-                text: "If you and your clinician agree, CoQ10 (± NADH) has the best early signal in RCTs for fatigue reduction and is generally well‑tolerated. Not a cure; treat as a monitored trial.",
-            },
-
-            { type: "hr" },
-            {
-                type: "paragraph",
-                text: "Educational information only. It does not replace medical advice. If you develop red‑flag symptoms, seek urgent NHS care.",
-            },
-
-            {
-                type: "sources",
-                items: [
-                    {
-                        label: "NHS guidance on ME/CFS (2021 NICE update)",
-                        url: "https://www.nhs.uk/conditions/chronic-fatigue-syndrome-cfs/treatment/",
-                    },
-                    {
-                        label: "Prevalence in England (2025) – Institute of Genetics and Cancer",
-                        url: "https://www.ed.ac.uk/igm",
-                    },
-                    { label: "ONS Long COVID prevalence (2024)", url: "https://www.ons.gov.uk/" },
-                    { label: "ME Association – delays to diagnosis", url: "https://meassociation.org.uk/" },
-                    {
-                        label: "Cleveland Clinic Functional Medicine outcomes – JAMA Network Open",
-                        url: "https://jamanetwork.com/",
-                    },
-                    { label: "CoQ10 + NADH RCT in CFS – PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/" },
-                    { label: "ME/CFS microbiome findings (2023)", url: "https://www.cell.com/cell-host-microbe" },
-                    {
-                        label: "Mind–body interventions systematic reviews – PMC",
-                        url: "https://www.ncbi.nlm.nih.gov/pmc/",
-                    },
-                    { label: "AAFP CME context; SBM critique", url: "https://www.aafp.org/" },
-                    { label: "UK pricing examples – Marion Gluck Clinic", url: "https://www.mariongluckclinic.com/" },
-                    { label: "London Centre for Functional Medicine", url: "https://www.londoncfm.co.uk/" },
-                    { label: "Functional Nexus (Dr Sarah Davies)", url: "https://www.functional-nexus.co.uk/" },
-                ],
+                text: "Realism keeps you safe (and saves you money). Having realistic expectations doesn’t mean giving up hope. It means avoiding unnecessary private testing, extreme diets, supplement overload, and miracle-cure promises. A grounded mindset helps you make smarter choices — and notice progress you might otherwise dismiss.",
             },
         ],
     },

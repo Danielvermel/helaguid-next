@@ -1,6 +1,7 @@
 // src/pages/blog/index.jsx
 "use client";
 
+import Head from "next/head";
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { posts } from "../../constants/posts";
@@ -9,13 +10,7 @@ import Header from "../../components/sections/Header";
 import { faqs } from "../../constants/faq";
 
 // Fixed tag list for blog filtering/search
-const ALL_TAGS = [
-    "All",
-    "Functional Medicine",
-    "Nutritional Therapy",
-    "Integrative Medicine",
-    "Naturopathic Medicine",
-];
+const ALL_TAGS = ["All", "Functional Medicine", "Nutritional Therapy", "Integrative Medicine", "Naturopathic Medicine"];
 
 export default function BlogIndex() {
     const [query, setQuery] = useState("");
@@ -52,7 +47,9 @@ export default function BlogIndex() {
             const tagsNormalizedJoined = normalizedTags.join(" ");
 
             // Include normalized tags in search so queries like "functional-medicine" match
-            const searchString = `${post.title} ${post.excerpt ?? ""} ${rawTags.join(" ")} ${tagsNormalizedJoined}`.toLowerCase();
+            const searchString = `${post.title} ${post.excerpt ?? ""} ${rawTags.join(
+                " "
+            )} ${tagsNormalizedJoined}`.toLowerCase();
 
             const matchesQuery = q === "" || searchString.includes(q);
             const matchesTag = activeTag === "All" || normalizedTags.includes(normalizedActive);
@@ -63,8 +60,56 @@ export default function BlogIndex() {
     const featured = filteredPosts[0];
     const others = filteredPosts.slice(1);
 
+    // --- JSON-LD DEFINITION ---
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": "https://www.healguid.com/blog",
+        },
+        headline: "Insights on holistic and functional health",
+        description: "Read practical tips, expert advice, and the latest updates from HealGuid.",
+        url: "https://www.healguid.com/blog",
+        publisher: {
+            "@type": "Organization",
+            name: "HealGuid",
+            url: "https://www.healguid.com",
+            logo: {
+                "@type": "ImageObject",
+                url: "https://www.healguid.com/images/logo.png", // Update with your actual logo path
+            },
+        },
+        breadcrumb: {
+            "@type": "BreadcrumbList",
+            itemListElement: [
+                {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Home",
+                    item: "https://www.healguid.com",
+                },
+                {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Blog",
+                    item: "https://www.healguid.com/blog",
+                },
+            ],
+        },
+    };
+
     return (
         <>
+            <Head>
+                <title>HealGuid Blog | Holistic & Functional Medicine Insights</title>
+                <meta
+                    name="description"
+                    content="Read practical tips, expert advice, and the latest updates from HealGuid on functional medicine, nutritional therapy, and holistic health."
+                />
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+            </Head>
+
             <Header data={{ menus: faqs.menus, type: "faq", extra: "faq" }} />
 
             {/* Hero / Page Intro */}
@@ -74,13 +119,19 @@ export default function BlogIndex() {
                         <nav className="text-sm text-gray-500 mb-3" aria-label="Breadcrumb">
                             <ol className="flex items-center gap-2">
                                 <li>
-                                    <Link href="/" className="hover:text-p1">Home</Link>
+                                    <Link href="/" className="hover:text-p1">
+                                        Home
+                                    </Link>
                                 </li>
-                                <li aria-hidden className="text-gray-300">/</li>
+                                <li aria-hidden className="text-gray-300">
+                                    /
+                                </li>
                                 <li className="text-p3">Blog</li>
                             </ol>
                         </nav>
-                        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-p3">Insights on holistic and functional health</h1>
+                        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-p3">
+                            Insights on holistic and functional health
+                        </h1>
                         <p className="mt-3 md:mt-4 text-lg text-gray-600">
                             Read practical tips, expert advice, and the latest updates from HealGuid.
                         </p>
@@ -90,9 +141,27 @@ export default function BlogIndex() {
                             <div className="relative max-w-xl">
                                 <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
                                     {/* Search icon */}
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M21 21L16.65 16.65" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                        <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    <svg
+                                        width="18"
+                                        height="18"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M21 21L16.65 16.65"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
+                                        <path
+                                            d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
                                     </svg>
                                 </span>
                                 <input
@@ -144,7 +213,10 @@ export default function BlogIndex() {
                                             <time>{featured.date}</time>
                                         </div>
                                         <h2 className="mt-2 md:mt-3 text-2xl md:text-3xl font-semibold text-p3">
-                                            <Link href={`/blog/${featured.slug}`} className="hover:text-p1 transition-colors">
+                                            <Link
+                                                href={`/blog/${featured.slug}`}
+                                                className="hover:text-p1 transition-colors"
+                                            >
                                                 {featured.title}
                                             </Link>
                                         </h2>
@@ -154,12 +226,20 @@ export default function BlogIndex() {
                                         {featured.tags?.length > 0 && (
                                             <div className="mt-4 flex flex-wrap gap-2">
                                                 {featured.tags.map((t) => (
-                                                    <span key={t} className="text-xs px-2.5 py-1 rounded-full bg-b3 text-p3 border border-b11">#{t}</span>
+                                                    <span
+                                                        key={t}
+                                                        className="text-xs px-2.5 py-1 rounded-full bg-b3 text-p3 border border-b11"
+                                                    >
+                                                        #{t}
+                                                    </span>
                                                 ))}
                                             </div>
                                         )}
                                         <div className="mt-6">
-                                            <Link href={`/blog/${featured.slug}`} className="inline-flex items-center gap-2 text-p1 font-medium">
+                                            <Link
+                                                href={`/blog/${featured.slug}`}
+                                                className="inline-flex items-center gap-2 text-p1 font-medium"
+                                            >
                                                 Read more
                                                 <span aria-hidden>→</span>
                                             </Link>
@@ -170,7 +250,9 @@ export default function BlogIndex() {
                                 <div className="rounded-2xl border border-b11 bg-b3/30 p-6 md:p-8 flex items-center justify-center text-center">
                                     <div>
                                         <p className="text-p3 font-semibold text-lg">Your guide to better health</p>
-                                        <p className="mt-2 text-gray-600">Explore curated articles from practitioners and the HealGuid team.</p>
+                                        <p className="mt-2 text-gray-600">
+                                            Explore curated articles from practitioners and the HealGuid team.
+                                        </p>
                                     </div>
                                 </div>
                             </section>
